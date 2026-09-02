@@ -1,0 +1,14 @@
+---
+title: "Foundational ideas"
+---
+
+# Goals {.unnumbered}
+
+- Meet and get to know your peers
+- Gain an understanding of what this course is about
+- Develop intuition for how we can study causation
+- Get acquainted with a framework for thinking about causal effects
+
+<br>
+
+Slides for today are available [here](https://docs.google.com/presentation/d/1j8wHD_ppQpSdGBTUH5gTI09qdWSLbPkwRfvFGg3YMqA/edit?usp=sharing).

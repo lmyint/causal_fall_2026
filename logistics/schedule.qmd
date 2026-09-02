@@ -1,0 +1,630 @@
+# Schedule {.unnumbered}
+
+Check here to see what you should be doing before, during, and after each class day.
+
+# Overview
+
+```{=html}
+<table class="tabsched"><thead>
+  <tr>
+    <th class="topleft" style="width:13%">Week</th>
+    <th class="topleft" style="width:33%">Tuesday</th>
+    <th class="topleft" style="width:33%">Thursday</th>
+    <th class="topleft" style="width:21%">Announcements</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="topleft">1 (9/7 - 9/11)</td>
+    <td class="topleft">First day of class! <a href="#day1">Foundational ideas</a></td>
+    <td class="topleft"><a href="#day2">Introduction to causal graphs</a></td>
+    <td class="topleft"><a href="../hw/assignment1.html">Assignment 1</a> due Fri 9/11 at midnight</td>
+  </tr>
+  <tr>
+    <td class="topleft">2 (9/14 - 9/18)</td>
+    <td class="topleft"><a href="#day3">Simulating data using causal graphs</a></td>
+    <td class="topleft"><a href="#day4">Identifying causal effects with causal graphs</a>
+    <td class="topleft"><a href="../hw/assignment2.html">Assignment 2</a> due Thurs 9/17 at midnight</td>
+  </tr>
+  <tr>
+    <td class="topleft">3 (9/21 - 9/25)</td>
+    <td class="topleft"><a href="#day5">Synthesis: causal graphs</a></td>
+    <td class="topleft"><a href="#day6">Matching</a></td>
+    <td class="topleft"><a href="../hw/assignment3.html">Assignment 2</a> due Thurs 9/24 at midnight</td>
+  </tr>
+  
+  
+  
+  
+  
+  <!--
+  <tr>
+    <td class="topleft">4 (9/23 - 9/27)</td>
+    <td class="topleft"><a href="#day9">Randomized experiments</a></td>
+    <td class="topleft"><a href="#day10">Target trial framework</a></td>
+    <td class="topleft">
+        <a href="#day11">Matching (Part 1)</a><br><br>
+        <b><a href="assignments.html#assignment-2">Assignment 2</a> due today at 5pm</b>
+    </td>
+    <td class="topleft"></td>
+  </tr>
+  <tr>
+    <td class="topleft">5 (9/30 - 10/4)</td>
+    <td class="topleft"><a href="#day12">Matching (Part 2)</a></td>
+    <td class="topleft"><a href="#day13">Weighting</a></td>
+    <td class="topleft"><a href="#day14">Weighting (continued)</a></td>
+    <td class="topleft">Work on <a href="assignments.html#assignment-3">Assignment 3</a> and addressing feedback on Assignment 2. Both due Wed, 10/9.</td>
+  </tr>
+  <tr>
+    <td class="topleft">6 (10/7 - 10/11)</td>
+    <td class="topleft"><a href="#day15">Regression discontinuity designs</a></td>
+    <td class="topleft"><a href="#day16">Event studies / interrupted time series</a></td>
+    <td class="topleft">Leslie won't be in class today but start thinking about project topics and finding data if pursuing the data analysis option</td>
+    <td class="topleft">Work on <a href="assignments.html#assignment-3">Assignment 3</a> and addressing feedback on Assignment 2. Both due Wed, 10/9.</td>
+  </tr>
+  <tr>
+    <td class="topleft">7 (10/14 - 10/18)</td>
+    <td class="topleft"><a href="#day18">Interrupted time series and synthetic control</a></td>
+    <td class="topleft"><a href="#day19">Synthetic control</a></td>
+    <td class="topleft">Fall Break!</td>
+    <td class="topleft"></td>
+  </tr>
+  <tr>
+    <td class="topleft">8 (10/21 - 10/25)</td>
+    <td class="topleft"><a href="#day20">Synthesis day</a></td>
+    <td class="topleft"><a href="#day21">Synthesis day</a></td>
+    <td class="topleft"><a href="#day22">Fixed effects models</a></td>
+    <td class="topleft">Work on <a href="assignments.html#assignment-4">Assignment 4</a> due Wed 10/30 at 5pm</td>
+  </tr>
+  <tr>
+    <td class="topleft">9 (10/28 - 11/1)</td>
+    <td class="topleft"><a href="#day23">Difference-in-differences (DiD)</a></td>
+    <td class="topleft"><a href="#day24">DiD continued</a></td>
+    <td class="topleft"><a href="#day25">Sensitivity analyses for unmeasured confounding</a></td>
+    <td class="topleft">
+        <a href="assignments.html#assignment-4">Assignment 4</a> due Wed 10/30 at 5pm.<br>
+        Work on <a href="assignments.html#addressing-feedback-1">Assignment 3 revisions</a> due Mon 11/4 at 5pm.<br>
+        Work on <a href="project.html#milestone-1">Project Milestone 1</a> due Fri 11/8 at 5pm.
+    </td>
+  </tr>
+  <tr>
+    <td class="topleft">10 (11/4 - 11/8)</td>
+    <td class="topleft"><a href="#day26">Instrumental variables</a></td>
+    <td class="topleft">Project work day</td>
+    <td class="topleft">Project work day</td>
+    <td class="topleft">
+        <a href="assignments.html#addressing-feedback-1">Assignment 3 revisions</a> due Mon 11/4 at 5pm.<br>
+        <a href="project.html#milestone-1">Project Milestone 1</a> due Fri 11/8 at 5pm.
+    </td>
+  </tr>
+  <tr>
+    <td class="topleft">11 (11/11 - 11/15)</td>
+    <td class="topleft">Project work day</td>
+    <td class="topleft">
+        Mini-lesson: mediation analysis<br>
+        <a href="https://docs.google.com/presentation/d/1yasbrk1KGdigCvxtoqd9ZbjEmlk8LPxNLkLtcpcBTSI/edit?usp=sharing">Slides</a>
+    </td>
+    <td class="topleft">
+        Mini-lesson: time-varying treatments<br>
+        <a href="https://docs.google.com/presentation/d/1FWBor_r8sx5q6Q2q6-yGuKx9oc29NcTwHeD5bm4so1c/edit?usp=sharing">Slides</a>
+    </td>
+    <td class="topleft">
+        <a href="project.html#milestone-2">Project Milestone 1</a> due Fri 11/22 at 5pm.
+    </td>
+  </tr>
+  <tr>
+    <td class="topleft">12 (11/18 - 11/22)</td>
+    <td class="topleft">
+        Mini-lesson: causal discovery<br>
+        <a href="https://docs.google.com/presentation/d/1A-SvP5VMA5hchCzelZ0xCFGU1g_we76LU0jZwb89Glc/edit?usp=sharing">Slides</a>
+    </td>
+    <td class="topleft">
+        Mini-lesson: doubly robust estimation<br>
+        <a href="https://docs.google.com/presentation/d/1N7_DAmbtjqNv_kTS6WniAna0CPfqXoE8bXt9eO0oDw0/edit?usp=sharing">Slides</a>
+    </td>
+    <td class="topleft">
+        Mini-lesson: generalizability/transportability<br>
+        Slides
+    </td>
+    <td class="topleft">
+        <a href="assignments.html#assignment-5">Assignment 5</a> due Wed 11/20 at 5pm.<br>
+        <a href="project.html#milestone-2">Project Milestone 2</a> due Fri 11/22 at 5pm.
+    </td>
+  </tr>
+  <tr>
+    <td class="topleft">13 (11/25 - 11/29)</td>
+    <td class="topleft">
+        How do we make the world a better place? How can we make Macalester a better place? How can we make our home departments better communities?
+    </td>
+    <td class="topleft">
+        🦃 Thanksgiving Break
+    </td>
+    <td class="topleft">
+        🦃 Thanksgiving Break
+    </td>
+    <td class="topleft"></td>
+  </tr>
+  <tr>
+    <td class="topleft">14 (12/2 - 12/6)</td>
+    <td class="topleft">
+    </td>
+    <td class="topleft">
+    </td>
+    <td class="topleft">
+    </td>
+    <td class="topleft">
+    </td>
+  </tr>
+  <tr>
+    <td class="topleft">15 (12/9 - 12/13)</td>
+    <td class="topleft">
+        Project presentations (day 1 of 3)
+    </td>
+    <td class="topleft">
+        Project presentations (day 2 of 3)<br>
+        <b>(last day of classes)</b>
+    </td>
+    <td class="topleft">
+    </td>
+    <td class="topleft">
+    </td>
+  </tr>
+  <tr>
+    <td class="topleft">16 (12/16 - 12/20)</td>
+    <td class="topleft" colspan=2>
+        <b>Tuesday 12/17</b><br>
+        Project presentations (day 3 of 3)
+    </td>
+    <td class="topleft">
+    </td>
+    <td class="topleft">
+        Final project paper due Wed 12/18 at 5pm
+    </td>
+  </tr>
+  -->
+</tbody>
+</table>
+```
+
+
+
+# Week 1: Foundations
+
+## Day 1: Foundational Ideas (9/8) {#day1}
+
+**Before class:**
+
+- Get acquainted with our course by **reading the syllabus** and **touring our course website and Moodle page**.
+
+**During class:** [Introductions and foundations](../activities/01-foundations.qmd)
+
+**After class:**
+
+::: {.callout-note title="Required" icon=false}
+The following chapters from *The Effect* lay the foundation for asking good questions. They're written in a fun, conversational style and have some nice humor interspersed throughout.
+
+- *The Effect* [Chapter 1: Designing Research](https://www.theeffectbook.net/ch-TheDesignofResearch.html) (~10 minutes)
+    - Video alternative: [Designing Research](https://youtu.be/yQXqdmenc6M) (~8 minutes)
+- *The Effect* [Chapter 2: Research Questions](https://www.theeffectbook.net/ch-ResearchQuestions.html) (~30 minutes)
+    - Video alternative: [Research Questions](https://youtu.be/ZPuEFjJ2us8) (~11 minutes)
+:::
+
+::: {.callout-note title="Optional" appearance="simple" collapse="true"}
+If you would like to have an additional reference throughout the course that leans more technical and economics-leaning, I recommend starting *Causal Inference: The Mixtape* by reading [Chapter 1: Introduction](https://mixtape.scunning.com/01-introduction) (~35 minutes).
+
+- *Note:* Scott uses the term **endogenous** in Section 1.3 without defining it. This is an economics term that essentially parallels the term **confounding** in statistics. That is, an endogenous variable is (often) one that is a confounder.
+:::
+
+
+## Day 2: Introduction to Causal Graphs (9/10) {#day2}
+
+**Before class:**
+
+::: {.callout-note title="Required" icon=false}
+- *The Effect* [Chapter 5: Identification](https://www.theeffectbook.net/ch-Identification.html) (~50 minutes)
+    - Video alternatives:
+        - [Identification: Data Generating Processes](https://youtu.be/JWNN46aiIAE) (~8 minutes)
+        - [Identification: Alternative Explanations](https://youtu.be/pR_m0HjEcjU) (~9 minutes)
+        - [Identification: Alcohol and Mortality](https://youtu.be/xP_mVOh2R3w) (~9 minutes)
+:::
+
+::: {.callout-note title="Required" icon=false}
+- *The Effect* [Chapter 6: Causal Diagrams](https://www.theeffectbook.net/ch-CausalDiagrams.html) (~40 min)
+    - Video alternatives:
+        - [Causal Diagrams: Causality](https://youtu.be/J6P4RwWdGBw) (~9 minutes)
+        - [Causal Diagrams](https://youtu.be/aMNGfodzKO8) (~12 minutes)
+- *The Effect* [Chapter 7: Drawing Causal Diagrams](https://www.theeffectbook.net/ch-DrawingCausalDiagrams.html) (~30 min)
+    - Video alternatives:
+        - [Drawing Causal Diagrams](https://youtu.be/NOslfkYr_II) (~13 minutes)
+        - [Simplifying Causal Diagrams](https://youtu.be/h5C2iMoHFag) (~12 minutes)
+
+Formulate a research question that relates to an area that you're interested in. In class, we will be using the principles in Chapters 6 and 7 to draw a causal diagram that addresses this research question.
+:::
+
+::: {.callout-note title="Optional" appearance="simple" collapse="true"}
+- *Mixtape* [Chapter 3: Directed Acyclic Graphs](https://mixtape.scunning.com/03-directed_acyclical_graphs) but skip 3.1.3 Backdoor Criterion (~40 minutes)
+:::
+
+<!-- **During class:** [Causal identification](../activities/02-causal-graphs-intro.qmd) -->
+
+
+
+<!-- ============================================================= -->
+
+
+
+# Week 2: Causal graphs
+
+## Day 1: Simulating data using causal graphs (9/15) {#day3}
+
+**Before class:**
+
+::: {.callout-note title="Required" icon=false}
+- Video: [Key structures in causal graphs](https://youtu.be/UA0vyBnzi9U) (~12 min) ([slides](https://drive.google.com/file/d/1aMWXmbqouuf_IdU9CeY2BfncihyY1AwS/view?usp=sharing))
+    - Note 1: In this video, I refer to a concept called "exchangeability". This is a concept that I included in the last offering of this course. Exchangeability is a causal identification assumption. When the exchangeability assumption is satisfied, we can identify causal effects. When it is not satisfied, I call this "a lack of exchangeability". In the language we have used, this happens when there are alternate (noncausal) explanations for a relationship between two variables. So in the video, whenever you hear "creates a lack of exchangeability", replace that with "leads to the presence of alternate (noncausal) explanations for the relationship between two variables". When you hear "achieve conditional exchangeability", replace that with "we are able to address this alternate explanation when analyzing the data".
+    - Note 2: I use the formal probability ideas of marginal and conditional dependence and independence. You can get the essential ideas from this video by replacing terms in the list below. (If you want to learn or review these probability ideas (not required!), watch my [Probability Essentials](https://youtu.be/acofPsJDq5Y) video.)
+        - "A and B are marginally [independent/dependent]" = "A and B are [unrelated/related] in a general population"
+        - "A and B are conditionally independent" = "A and B are [unrelated/related] in subgroups (in each group defined by one or more variables)"
+
+- 2 readings from [Andrew Heiss's](https://www.andrewheiss.com/) Program Evaluation course:
+    - [Generating random numbers](https://evalsp24.classes.andrewheiss.com/example/random-numbers.html) (~35 min)
+    - [The ultimate guide to generating synthetic data for causal inference](https://evalsp24.classes.andrewheiss.com/example/synthetic-data.html) (Stop when you get to the subsection "Visualizing one variable") (~25 min)
+:::
+
+<!-- **During class:** [Simulating data using causal graphs](../activities/03-causal-graphs-simulation.qmd) -->
+
+
+## Day 2: Identifying causal effects with causal graphs (9/17) {#day4}
+
+**Before class:**
+
+::: {.callout-note title="Required" icon=false}
+- Video: [Causal and Noncausal Paths](https://youtu.be/ShZP9SR2fbs) (~5 min)
+- Video: [D-Separation](https://youtu.be/eYtSHAlbWYw) (~8 min)
+- Reading: *The Effect* [Chapter 8: Causal Paths and Closing Back Doors](https://www.theeffectbook.net/ch-CausalPaths.html) (~35 minutes)
+    - Video alternatives:
+        - [Causal Pathways](https://youtu.be/ZTSgNR_PiXo) (~9 minutes)
+        - [Closing Causal Pathways, and Collider Variables](https://youtu.be/PJMVtpogJnQ) (~11 minutes)
+        - [Testing Causal Diagrams, and Placebo Tests](https://youtu.be/Zdbuf71i_Mg) (~8 minutes)
+:::
+
+::: {.callout-note title="Optional" appearance="simple" collapse="true"}
+- *Mixtape* [Section 3.1.3: Backdoor criterion](https://mixtape.scunning.com/03-directed_acyclical_graphs#backdoor-criterion) (~5 minutes)
+:::
+
+<!-- **During class:** [Identifying causal effects using causal graphs](../activities/04-causal-graphs-identification.qmd) -->
+
+
+
+<!-- ============================================================= -->
+
+
+
+# Week 3: Causal graph wrap-up, matching
+
+## Day 1: Testing causal graphs; synthesis (9/22) {#day5}
+
+**Before class:**
+
+- No pre-class material
+
+<!-- **During class:** [Testing causal graphs](../activities/05-causal-graphs-testing.qmd) -->
+
+## Day 2: Matching (9/24) {#day6}
+
+::: {.callout-note title="Required" icon=false}
+- *The Effect* [Chapter 14: Matching](https://www.theeffectbook.net/ch-Matching.html) (~160 minutes)
+    - Video alternatives:
+        - [Matching](https://youtu.be/nRfRswoZlqo) (~11 minutes)
+        - [Five Questions About Matching](https://youtu.be/bafdI39LcoE) (~13 minutes)
+        - [Distance Matching](https://youtu.be/wMQTuRX3XmM) (~9 minutes)
+        - [Propensity Score Matching](https://youtu.be/1T3JYjhrNwE) (~10 minutes)
+        - [Coarsened Exact Matching and Entropy Balancing](https://youtu.be/Pp-qs-mNEjI) (~8 minutes)
+        - [When Matching Goes Wrong](https://youtu.be/M6AsS4zaWQk) (~14 minutes)
+        - [Treatment Effect Estimation with Matching](https://youtu.be/OE_KzNJl75k) (~7 minutes)
+:::
+
+::: {.callout-note title="Optional" appearance="simple" collapse="true"}
+- *Mixtape* [Chapter 5: Matching and Subclassification](https://mixtape.scunning.com/05-matching_and_subclassification) (~140 minutes)
+- Journal article: [Matching Methods for Causal Inference: A Review and a Look Forward](http://dx.doi.org/10.1214/09-STS313) (~60 minutes)
+:::
+
+<!-- **During class:** [Matching](../activities/06-matching.qmd) -->
+
+
+
+<!-- ============================================================= -->
+
+
+::: {.content-hidden}
+# Week 4: Randomized experiments, target trials, matching
+
+## Day 1: Randomized experiments (9/23) {#day9}
+
+**Before class:** No required reading or videos for today.
+
+::: {.callout-note title="Optional" appearance="simple" collapse="true"}
+- Reading: [Treatment Allocation and Randomization](https://online.stat.psu.edu/stat509/lesson/8) (~20 minutes) from Penn State's online notes for the course Design and Analysis of Clinical Trials
+:::
+
+**During class:** [Randomized experiments](07-rct.qmd)
+
+## Day 2: Target trial framework (9/25) {#day10}
+
+::: {.callout-note title="Required" icon=false}
+- Reading: Hernán, M. A., Sauer, B. C., Hernández-Díaz, S., Platt, R., Shrier, I. (2016). [Specifying a target trial prevents immortal time bias and other self-inflicted injuries in observational analyses](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5124536/pdf/nihms-790601.pdf). *Journal of Clinical Epidemiology*, *79*, 70–75. (~35 minutes)
+:::
+
+**During class:** [Target trial framework](08-target-trial.qmd)
+
+## Day 3: Matching (9/27) {#day11}
+
+**Before class:**
+
+
+
+
+
+
+
+<!-- ============================================================= -->
+
+
+
+# Week 5: Matching and weighting
+
+## Day 1: Matching (9/30) {#day12}
+
+- Continuation of previous class
+
+**During class:** [Matching (Part 2)](09-matching-part2.qmd)
+
+## Day 2: Weighting (10/2) {#day13}
+
+**Before class:**
+
+::: {.callout-note title="Required" icon=false}
+- Video: [Inverse Probability Weighting](https://youtu.be/PfLYPt9ur4g) (Time: 10:24) ([Slides](https://drive.google.com/file/d/1c99hoAOspc0S-SmB3DJjD2UO_-1YRtRX/view?usp=sharing))
+:::
+
+**During class:** [Weighting](10-weighting.qmd)
+
+## Day 3: Weighting (10/4) {#day14}
+
+- Continuation of previous class
+
+**During class:** [Weighting](10-weighting.qmd)
+
+
+
+<!-- ============================================================= -->
+
+
+
+# Week 6: Regression discontinuity and longitudinal/panel data
+
+## Day 1: Regression discontinuity (10/7) {#day15}
+
+**Before class:**
+
+::: {.callout-note title="Required" icon=false}
+- *The Effect* [Chapter 20: Regression Discontinuity](https://www.theeffectbook.net/ch-RegressionDiscontinuity.html) (~130 minutes)
+    - Video alternatives:
+        - [Regression Discontinuity](https://youtu.be/5FM4-xbaS58) (~10 minutes)
+        - [Estimating Regression Discontinuity](https://youtu.be/FPBQL0OKmI0) (~11 minutes)
+        - [Adjustments to Regression Discontinuity](https://youtu.be/3HazJ8Tv6d0) (~8 minutes)
+        - [Checking Regression Discontinuity Assumptions](https://youtu.be/WJ7j08xVegY) (~11 minutes)
+:::
+
+::: {.callout-note title="Optional" appearance="simple" collapse="true"}
+- *Mixtape* [Chapter 6: Regression Discontinuity](https://mixtape.scunning.com/06-regression_discontinuity) (~170 minutes)
+:::
+
+**During class:** [Regression discontinuity designs](11-rdd.qmd)
+
+## Day 2: Event studies / interrupted times series (10/9) {#day16}
+
+**Before class:**
+
+::: {.callout-note title="Required" icon=false}
+- *The Effect* [Chapter 17: Event Studies](https://www.theeffectbook.net/ch-EventStudies.html) (~70 minutes)
+    - Video alternatives:
+        - [Event Studies](https://youtu.be/_N9u9p-kNgg) (~12 minutes)
+        - [Interrupted Time Series](https://youtu.be/C3PnQxW9LiE) (~8 minutes)
+        - [Event Studies in Finance](https://youtu.be/1cBKzjp4_MI) (~11 minutes)
+:::
+
+**During class:** [Event studies / interrupted time series](12-es-its-synth.qmd)
+
+
+## Day 3: Flex Day (10/11) {#day17}
+
+No class today because I will be attending a workshop.
+
+**On your own:** Start exploring options for the course project.
+
+
+
+
+<!-- ============================================================= -->
+
+
+
+# Week 7: Synthetic control
+
+## Day 1: Synthetic control (10/14) {#day18}
+
+**Before class:**
+
+::: {.callout-note title="Required" icon=false}
+- *The Effect* [Section 21.2.1: Synthetic Control](https://www.theeffectbook.net/ch-TheEdge.html#synthetic-control) (~10 minutes)
+    - Video alternatives:
+        - [Other Standard Research Designs](https://youtu.be/csEV78U367Y&t=57) (~5 minutes) (Just the part on the synthetic control method)
+:::
+
+::: {.callout-note title="Optional" appearance="simple" collapse="true"}
+- *Mixtape* [Chapter 10: Synthetic Control](https://mixtape.scunning.com/10-synthetic_control) (~70 minutes)
+:::
+
+**During class:** [Interrupted time series and synthetic control](12-es-its-synth.qmd)
+
+## Day 2: Synthetic control (10/16) {#day19}
+
+**During class:** [Interrupted time series and synthetic control](12-es-its-synth.qmd)
+
+---
+
+🍁 Fall Break: Thursday, October 17 - Sunday, October 20 🍁
+
+🍁 No class on Friday, October 18 🍁
+
+
+
+<!-- ============================================================= -->
+
+
+# Week 8: Fixed effects models
+
+## Day 1: Synthesis day (10/21) {#day20}
+
+**During class:** Working on [Assignment 4](assignments.qmd#assignment-4)
+
+## Day 2: Synthesis day (10/23) {#day21}
+
+**During class:** Working on [Assignment 4](assignments.qmd#assignment-4)
+
+## Day 3: Fixed effects models (10/25) {#day22}
+
+**Before class:**
+
+::: {.callout-note title="Required" icon=false}
+- *The Effect* [Chapter 16: Fixed Effects](https://www.theeffectbook.net/ch-FixedEffects.html) (~70 minutes)
+    - Video alternatives:
+        - [Fixed Effects](https://youtu.be/Z1QmFuPV9JA) (~12 minutes)
+        - [Estimating Fixed Effects](https://youtu.be/2Kz1g0RoTtI) (~8 minutes)
+        - [Random Effects](https://youtu.be/Esp0LWTBuk4) (~6 minutes)
+:::
+
+**During class:** [Fixed effects models](13-fe.qmd)
+
+
+<!-- ============================================================= -->
+
+
+# Week 9: Diff-in-diff, sensitivity analyses
+
+## Day 1: Difference-in-differences designs (10/28) {#day23}
+
+**Before class:**
+
+::: {.callout-note title="Required" icon=false}
+- *The Effect* [Chapter 18: Difference-in-Differences](https://www.theeffectbook.net/ch-DifferenceinDifference.html) (Section 18.1: How Does it Work? and Section 18.2: How Is It Performed?) (~60 minutes)
+    - Video alternatives:
+        - [Difference in Differences](https://youtu.be/ggYnrOGG97o) (~11 minutes)
+        - [Parallel Trends](https://youtu.be/NcHT8pl57HY) (~9 minutes)
+        - [Estimating Difference in Differences](https://youtu.be/95HxUdn-BJg) (~10 minutes)
+        - [Supporting Parallel Trends](https://youtu.be/ihIWuC6ULjo) (~9 minutes)
+:::
+
+::: {.callout-note title="Optional" appearance="simple" collapse="true"}
+- *Mixtape* [Chapter 9: Difference-in-Differences](https://mixtape.scunning.com/09-difference_in_differences) (~230 minutes)
+:::
+
+**During class:** [Difference-in-Differences](14-did.qmd)
+
+## Day 2: DiD continued (10/30) {#day24}
+
+**Before class:**
+
+::: {.callout-note title="Required" icon=false}
+- *The Effect* [Chapter 18: Difference-in-Differences](https://www.theeffectbook.net/ch-DifferenceinDifference.html) (Section 18.3: How the Pros Do It) (~20 minutes)
+    - Video alternatives:
+        - [Dynamic Difference-in-Differences](https://youtu.be/_nknBbw-HFQ) (~10 minutes)
+        - [Staggered Treatment in Difference-in-Differences](https://youtu.be/hu2nDbnpALA) (~9 minutes)
+:::
+
+**During class:** [Difference-in-Differences](14-did.qmd)
+
+
+## Day 3: Sensitivity analyses (11/1) {#day25}
+
+**Before class:** No required reading or videos for today.
+
+**During class:** [Sensitivity Analyses](15-sensitivity-analyses.qmd)
+
+
+<!-- ============================================================= -->
+
+
+# Week 10: Instrumental variables and project work
+
+## Day 1: Instrumental variables (11/4) {#day26}
+
+**Before class:**
+
+::: {.callout-note title="Required" icon=false}
+- *The Effect* [Chapter 19: Instrumental Variables](https://www.theeffectbook.net/ch-InstrumentalVariables.html) (~85 minutes)
+    - Video alternatives:
+        - [Instrumental Variables](https://youtu.be/bfQgLnFdLSg) (~10 minutes)
+        - [Instrumental Variable Validity](https://youtu.be/HL8jR9CDlfA) (~10 minutes)
+        - [Estimating Instrumental Variables](https://youtu.be/DjLXqFTvVWg) (~12 minutes)
+        - [Testing Instrumental Variables Assumptions](https://youtu.be/B8MUeudCoWo) (~11 minutes)
+:::
+
+::: {.callout-note title="Optional" appearance="simple" collapse="true"}
+- *Mixtape* [Chapter 7: Instrumental Variables](https://mixtape.scunning.com/07-instrumental_variables) (~150 minutes)
+:::
+
+**During class:** [Instrumental Variables](16-iv.qmd)
+
+
+# Weeks 11-14: Assorted topics, project work time
+
+Potential topics
+
+- Doubly robust estimation
+- Causal discovery
+- Interference
+- Generalizability/transportability
+- Machine learning and causal inference
+- Time-varying treatments framework
+- Dynamic treatment regimes
+- Mediation analysis
+
+
+🦃 Thanksgiving Break: Wednesday, November 27 - Sunday, December 1 🦃
+
+
+
+<!-- ============================================================= -->
+
+
+
+# Week 15: Project presentations
+
+## Day 1: TBD
+
+**Before class:**
+
+::: {.callout-note title="Required" icon=false}
+- (~xx minutes)
+:::
+
+::: {.callout-note title="Optional" appearance="simple" collapse="true"}
+- (~xx)
+:::
+
+## Day 2: Last day of class!
+
+**Before class:**
+
+::: {.callout-note title="Required" icon=false}
+- (~xx minutes)
+:::
+
+::: {.callout-note title="Optional" appearance="simple" collapse="true"}
+- (~xx)
+:::
+
+**During class:** 
+
+:::

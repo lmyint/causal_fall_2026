@@ -1,0 +1,11 @@
+date-format: iso
+
+execute:
+  warning: false
+  cache: false
+  freeze: false
+
+profile:
+  default: book
+  group:
+  - [slides, book]

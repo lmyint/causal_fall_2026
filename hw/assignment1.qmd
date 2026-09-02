@@ -1,0 +1,21 @@
+# Assignment 1 {.unnumbered}
+
+**Due:** Friday, 9/11 at midnight on Moodle
+
+**Context:** This first assignment is a short writing piece for me to get to know you. There are no length requirements---just use as many words as needed to convey your ideas.
+
+**Format:** Please submit a link to a Google Doc, and make sure that I am added as an Editor or Commenter.
+
+**Prompt:**
+
+First read the essay [An Education of His Own](https://lathamt.substack.com/p/an-education-of-his-own) by Latham Turner.
+
+I'm curious to hear what thoughts and ideas it inspires with regards to your education at Mac and the experience you're hoping for in this course. As you write your response, consider the following:
+
+- Latham's goal is to create high quality and satisfying learning experiences for his son. What has been a particularly satisfying learning experience for you? (This does not necessarily have to be an academic experience.) What was it about that experience that made it satisfying?
+
+- What are your goals in taking this course? What are you hoping for by the end of the semester? Are there barriers or other things that you're worried about this semester?
+
+- Latham and his son settle on many aspects of their learning relationship collaboratively. Have you had experiences in other courses where you've wanted some aspect to be different? Were you able to talk to the instructor about it? What could have been changed from either your part or the instructor's to make it possible, easier, or more comfortable to discuss what you wanted?
+
+- How do you think we should use the values that I describe in [the grading section](../logistics/syllabus.qmd#course-grading-system) of the syllabus alongside our [assignments and assessments](../logistics/syllabus.qmd#assignments-and-assessments) to assign letter grades? (I discuss my values for the course in the paragraph starting with "As a starting point, I do think it's helpful for me to share my specific values with regards to this class.")

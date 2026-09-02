@@ -1,0 +1,57 @@
+project:
+  type: book
+  output-dir: docs
+  resources: 
+    - "images/*"
+
+number-depth: 2
+
+book:
+  title: "STAT 451: Causal Inference"
+  subtitle: "Fall 2026 Course Notes"
+  favicon: "images/451-favicon.png"
+  page-footer:
+    left: |
+      Copyright 2026 Leslie Myint, CC BY-NC-SA 4.0
+  sidebar:
+    collapse-level: 2
+    pinned: true
+    search: true
+    style: "docked"
+    border: true
+  page-navigation: true
+  chapters:
+    - index.qmd
+    - part: "Course Logistics"
+      chapters: 
+        - icon: calendar3
+          href: logistics/schedule.qmd
+        # - icon: list-check
+        #   href: logistics/learning-objectives.qmd
+        - icon: asterisk
+          href: logistics/syllabus.qmd
+    - part: "Foundational Ideas"
+      chapters:
+        - activities/01-foundations.qmd
+    - part: "Assignments"
+      chapters:
+        - hw/assignment1.qmd
+    - part: "Project"
+      chapters:
+        - project.qmd
+  appendices:
+    - appendices/stat155.qmd
+    - appendices/r_rstudio.qmd
+    - appendices/r_resources.qmd
+
+format:
+  html:
+    theme:
+      light: [yeti, smaller_lists.scss]
+      dark: [solar, smaller_lists.scss]
+    mainfont: ubuntu, sans-serif
+    css: styles.css
+    execute:
+      echo: true
+      code-fold: true
+      cache: true

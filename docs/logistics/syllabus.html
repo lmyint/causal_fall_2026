@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Syllabus – STAT 451: Causal Inference</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../activities/01-foundations.html" rel="next">
+<link href="../logistics/schedule.html" rel="prev">
+<link href="../images/451-favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e3dcb675e8820858611cfb103cf9c534.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-76344f54c94c10d7e2b19c13c8b19663.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e3dcb675e8820858611cfb103cf9c534.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../logistics/schedule.html">Course Logistics</a></li><li class="breadcrumb-item"><a href="../logistics/syllabus.html">Syllabus</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">STAT 451: Causal Inference</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course Logistics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../logistics/schedule.html" class="sidebar-item-text sidebar-link"><i class="bi bi-calendar3" role="img">
+</i> 
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../logistics/syllabus.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-asterisk" role="img">
+</i> 
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Foundational Ideas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/01-foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Foundational ideas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Assignments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/assignment1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment 1</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/stat155.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">STAT 155 Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/r_rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and RStudio Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/r_resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R Resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#course-overview" id="toc-course-overview" class="nav-link active" data-scroll-target="#course-overview">🗺️ Course overview</a>
+  <ul class="collapse">
+  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">🎯 Learning goals</a></li>
+  <li><a href="#topics" id="toc-topics" class="nav-link" data-scroll-target="#topics">📋 Topics</a></li>
+  </ul></li>
+  <li><a href="#course-communication" id="toc-course-communication" class="nav-link" data-scroll-target="#course-communication">✉️ Course communication</a>
+  <ul class="collapse">
+  <li><a href="#contacting-the-instructor" id="toc-contacting-the-instructor" class="nav-link" data-scroll-target="#contacting-the-instructor">Contacting the instructor</a></li>
+  <li><a href="#google-chat-discussion-board" id="toc-google-chat-discussion-board" class="nav-link" data-scroll-target="#google-chat-discussion-board">Google Chat discussion board</a></li>
+  </ul></li>
+  <li><a href="#guiding-values" id="toc-guiding-values" class="nav-link" data-scroll-target="#guiding-values">⭐️ Guiding values</a>
+  <ul class="collapse">
+  <li><a href="#community-is-key" id="toc-community-is-key" class="nav-link" data-scroll-target="#community-is-key">Community is key</a></li>
+  <li><a href="#active-listening-is-vital" id="toc-active-listening-is-vital" class="nav-link" data-scroll-target="#active-listening-is-vital">Active listening is vital</a></li>
+  <li><a href="#reflection-is-paramount" id="toc-reflection-is-paramount" class="nav-link" data-scroll-target="#reflection-is-paramount">Reflection is paramount</a></li>
+  <li><a href="#mistakes-are-essential" id="toc-mistakes-are-essential" class="nav-link" data-scroll-target="#mistakes-are-essential">Mistakes are essential</a></li>
+  <li><a href="#communication-is-a-superpower" id="toc-communication-is-a-superpower" class="nav-link" data-scroll-target="#communication-is-a-superpower">Communication is a superpower</a></li>
+  </ul></li>
+  <li><a href="#how-to-thrive-and-what-to-expect" id="toc-how-to-thrive-and-what-to-expect" class="nav-link" data-scroll-target="#how-to-thrive-and-what-to-expect">🌿 How to thrive and what to expect</a>
+  <ul class="collapse">
+  <li><a href="#before-class" id="toc-before-class" class="nav-link" data-scroll-target="#before-class">Before class</a></li>
+  <li><a href="#during-class" id="toc-during-class" class="nav-link" data-scroll-target="#during-class">During class</a></li>
+  <li><a href="#after-class" id="toc-after-class" class="nav-link" data-scroll-target="#after-class">After class</a></li>
+  </ul></li>
+  <li><a href="#grading-and-feedback" id="toc-grading-and-feedback" class="nav-link" data-scroll-target="#grading-and-feedback">✏️ Grading and feedback</a>
+  <ul class="collapse">
+  <li><a href="#my-philosophy" id="toc-my-philosophy" class="nav-link" data-scroll-target="#my-philosophy">My philosophy</a></li>
+  <li><a href="#assignments-and-assessments" id="toc-assignments-and-assessments" class="nav-link" data-scroll-target="#assignments-and-assessments">Assignments and assessments</a></li>
+  <li><a href="#course-grading-system" id="toc-course-grading-system" class="nav-link" data-scroll-target="#course-grading-system">Course grading system</a></li>
+  </ul></li>
+  <li><a href="#textbooks" id="toc-textbooks" class="nav-link" data-scroll-target="#textbooks">📚 Textbooks</a></li>
+  <li><a href="#other-policies" id="toc-other-policies" class="nav-link" data-scroll-target="#other-policies">🪧 Other policies</a>
+  <ul class="collapse">
+  <li><a href="#absences" id="toc-absences" class="nav-link" data-scroll-target="#absences">Absences</a></li>
+  <li><a href="#late-work" id="toc-late-work" class="nav-link" data-scroll-target="#late-work">Late work</a></li>
+  <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity">Academic integrity</a></li>
+  <li><a href="#artificial-intelligence" id="toc-artificial-intelligence" class="nav-link" data-scroll-target="#artificial-intelligence">Artificial intelligence</a></li>
+  </ul></li>
+  <li><a href="#the-environment-you-deserve" id="toc-the-environment-you-deserve" class="nav-link" data-scroll-target="#the-environment-you-deserve">☀️ The environment you deserve</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../logistics/schedule.html">Course Logistics</a></li><li class="breadcrumb-item"><a href="../logistics/syllabus.html">Syllabus</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Syllabus</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="course-overview" class="level2">
+<h2 class="anchored" data-anchor-id="course-overview">🗺️ Course overview</h2>
+<p>We as individuals and organizations are constantly making decisions to improve some aspect of our lives and operations. Causal inference is a field devoted to quantifying the impact of such decisions. Fundamentally, it is dedicated to answer questions of “What if?” and “Should we?”.</p>
+<section id="learning-goals" class="level3">
+<h3 class="anchored" data-anchor-id="learning-goals">🎯 Learning goals</h3>
+<p>I hope that by the end of the course, you are able to:</p>
+<ul>
+<li>Explain the goals of causal inference to general audiences</li>
+<li>Formulate strategies for identifying causal effects that draw on causal graph methodology, study designs, and data context</li>
+<li>Analyze data with appropriate methodology to estimate causal effect, and communicate the results and limitations of an analysis to general audiences</li>
+<li>Conduct simulation studies to explore the properties of statistical methods</li>
+<li>Communicate the intuition/ideas behind causal inference methods to general audiences</li>
+<li>Recognize the potential for applying causal inference ideas in daily life</li>
+<li>Articulate with greater clarity key insights about your process for learning challenging topics and about the way in which you collaborate with others</li>
+</ul>
+</section>
+<section id="topics" class="level3">
+<h3 class="anchored" data-anchor-id="topics">📋 Topics</h3>
+<p>Tentatively, we will explore the following topics throughout the semester:</p>
+<ul>
+<li>Potential outcomes framework</li>
+<li>Causal graphs / graphical causal models</li>
+<li>Study designs and analytical approaches: randomized experiments, target trial framework, matching, regression discontinuity, event studies/interrupted time series, synthetic control, difference-in-differences, instrumental variables, propensity score and weighting methods, doubly robust estimators</li>
+<li>Causal discovery</li>
+<li>Sensitivity / robustness analyses</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="A letter from your instructor">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>A letter from your instructor
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dear students,</p>
+<p>This is a course that is dear to my heart, and I’m excited to rediscover the fascinating tools of this field with you.</p>
+<p>As a graduate student, I actually worked in a completely different area for my dissertation. I focused on studying data from biological technologies (mass spectrometers and sequencing machines) and developing methods to analyze that data.</p>
+<p>It was a happy and fortuitous occasion that I decided to take the course Causal Inference in Public Health during my 3rd year. I was immediately drawn in by the goals, tools, and application areas of the field—causal inference researchers really seemed to be studying meaningful and impactful issues. While I had little time to explore more of causal inference for the remainder of my graduate studies, the fascination stuck with me.</p>
+<p>When I got to Macalester in 2018, the possibility of engaging more with causal inference opened up. I taught the first version of this course in Spring 2019 and have been steadily learning more over the years, improving this course along the way. I hope that you find ideas that intrigue you and applications that excite you.</p>
+<p>Let’s have a great semester!</p>
+</div>
+</div>
+<p><br><br><br><br></p>
+</section>
+</section>
+<section id="course-communication" class="level2">
+<h2 class="anchored" data-anchor-id="course-communication">✉️ Course communication</h2>
+<section id="contacting-the-instructor" class="level3">
+<h3 class="anchored" data-anchor-id="contacting-the-instructor">Contacting the instructor</h3>
+<div>
+<p><img src="https://www.lesliemyint.org/images/portrait.png" width="200" style="float: left; padding-right: 20px; padding-bottom: 20px;"></p>
+<p><strong>Instructor:</strong> Leslie Myint (lez-lee mee-int) (she/her)</p>
+<p><strong>About me:</strong> Outside of teaching statistics and data science at Mac, I work as the Policy and Research Director for the MN Environmental Justice Table. I am passionate about waste reduction, clean energy, transportation, and the justice issues that touch these areas. In my free time, I like going on walks with my family, volunteering, coloring, sketch journaling, playing board and video games, and staying active by weightlifting and dancing.</p>
+</div>
+<p><br></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Call me &quot;Leslie&quot;">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Call me “Leslie”
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Students sometimes wonder what to call their professors. I prefer to be called Leslie (lez-lee), but if you prefer to be more formal, I am also ok with Professor Myint (mee-int). My preferred gender pronouns are she/her/hers.</p>
+<p>Please help me make sure that I call you by your preferred name and pronouns too!</p>
+</div>
+</div>
+<section id="email" class="level4">
+<h4 class="anchored" data-anchor-id="email">Email</h4>
+<p>Please email me (<a href="mailto:lmyint@macalester.edu">lmyint@macalester.edu</a>) with any personal or academic concerns. I will do my best to respond within 24 hours on weekdays and 48 hours on weekends. For content questions, I encourage you to post in our <a href="https://chat.google.com/room/AAQA0MsQDTE?cls=7">Google Chat space</a> (see below).</p>
+</section>
+<section id="office-hours" class="level4">
+<h4 class="anchored" data-anchor-id="office-hours">Office hours</h4>
+<p><strong>Why</strong>: Office hours (drop-in hours / student hours) are a great time to talk about this class, career planning, or life in general. I love getting to know you outside class time, so please come chat! You should plan to attend my office hours at <em>least once</em> in the semester. If these office hour times don’t work with your schedule, I’m available by appointment—email to set up a time to meet!</p>
+<p><strong>Where</strong>: OLRI 232 (towards the end of the 2nd floor hallway close to the Leonard Center)</p>
+<p><strong>When</strong>: See my <a href="https://calendar.google.com/calendar/embed?src=macalester.edu_fglbnus5ogqs4rhrasel4jfj0c%40group.calendar.google.com&amp;ctz=America%2FChicago">Office Hours Google Calendar</a> for up-to-date office hour times.</p>
+</section>
+</section>
+<section id="google-chat-discussion-board" class="level3">
+<h3 class="anchored" data-anchor-id="google-chat-discussion-board">Google Chat discussion board</h3>
+<p>We will use <a href="https://chat.google.com/room/AAQA0MsQDTE?cls=7">this Google Chat space</a> for announcements and discussions that benefit the entire class. To streamline communication, I will <em>not</em> use the Moodle Announcements forum to post announcements.</p>
+<p>Please check the GChat space daily!</p>
+<p><br><br><br><br></p>
+</section>
+</section>
+<section id="guiding-values" class="level2">
+<h2 class="anchored" data-anchor-id="guiding-values">⭐️ Guiding values</h2>
+<section id="community-is-key" class="level3">
+<h3 class="anchored" data-anchor-id="community-is-key">Community is key</h3>
+<p>A sense of <a href="https://www.educause.edu/research-and-publications/books/learning-spaces/chapter-4-community-hidden-context-learning">community</a> and connectedness can provide a powerful environment for learning: Research shows that learning is maximized when students feel a sense of belonging in the educational environment (e.g., Booker, 2016). A negative climate may create barriers to learning, while a positive climate can energize students’ learning (e.g., Pascarella &amp; Terenzini, cited in How Learning Works, 2012).</p>
+<p>For these reasons, I design our in-class group activities to intentionally foster community and connectedness. You can help cultivate our classroom community by being thoughtful about the way you engage with others in class.</p>
+</section>
+<section id="active-listening-is-vital" class="level3">
+<h3 class="anchored" data-anchor-id="active-listening-is-vital">Active listening is vital</h3>
+<p>Research on learning theory and how the brain works has taught us that people learn best in community, when they feel safe, seen, <strong>heard</strong>, and cared about. Effective listening is a key part of this process.</p>
+<p>How often do you find yourself coming up with a response and waiting to interject rather than listening to what an other person is saying? On the flip side, what do you need to feel heard and understood?</p>
+<p>To feel connected in community, we need to practice <strong>turn-taking</strong> and <strong>active listening</strong> (<em>fully engaged and trying to understand what someone is saying, rather than just listening to respond</em>). I will ask you to discuss how you want to be listened to throughout the semester.</p>
+</section>
+<section id="reflection-is-paramount" class="level3">
+<h3 class="anchored" data-anchor-id="reflection-is-paramount">Reflection is paramount</h3>
+<p>The <em>content</em> you learn will be cool (unbiased opinion!), but it is a <strong>guarantee</strong> that as technology evolves, some part of it will become out-of-date during your careers. What you will need to rely on when you leave Macalester is what I want to ensure you cultivate now: learn how to learn. And the cornerstone of a good learning process is <strong>reflection</strong>.</p>
+<p>Reflection is not just fundamental to learning content–it’s fundamental to learning any sort of intellectual, emotional, or physical skill. For this reason, I am prioritizing reflection as a goal for our course in both content learning and collaborative activities.</p>
+</section>
+<section id="mistakes-are-essential" class="level3">
+<h3 class="anchored" data-anchor-id="mistakes-are-essential">Mistakes are essential</h3>
+<blockquote class="blockquote">
+<p>An expert is a person who has made all the mistakes which can be made in a narrow field.</p>
+<ul>
+<li><em>Niels Bohr, Nobel Prize-winning physicist</em></li>
+</ul>
+</blockquote>
+<p>I don’t feel comfortable working with a new R package until I’ve seen the same errors over and over again. Seeing new errors helps me understand the constraints of the code and the assumptions that I was making about my data.</p>
+<p>In a course like this, we will all be making mistakes daily! But in so doing, we will be growing and honing our expertise.</p>
+</section>
+<section id="communication-is-a-superpower" class="level3">
+<h3 class="anchored" data-anchor-id="communication-is-a-superpower">Communication is a superpower</h3>
+<blockquote class="blockquote">
+<p>The single biggest problem in communication is the illusion that it has taken place.</p>
+<ul>
+<li><em>George Bernard Shaw</em></li>
+</ul>
+</blockquote>
+<p>Every time I go to a conference talk on a technical topic, it is striking how quickly laptops or phones come out because of the inability to follow. Academics notoriously struggle to make ideas accessible to others.</p>
+<p>I want communication to be very different for you.</p>
+<p>Every time you communicate ideas–whether through writing, visuals, or oral presentation–I want you to be a total boss. The end product of strong communication is a better experience for all those who have given you their attention. What’s more, the <em>process</em> of crafting effective communication is invaluable for deepening your own understanding.</p>
+<center>
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+Read to collect the dots, write to connect them <a href="https://t.co/YbgnKKFUNn">pic.twitter.com/YbgnKKFUNn</a>
+</p>
+— David Perell (<span class="citation" data-cites="david_perell">@david_perell</span>) <a href="https://twitter.com/david_perell/status/1411871612702543872?ref_src=twsrc%5Etfw">July 5, 2021</a>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+<p><br><br><br><br></p>
+</section>
+</section>
+<section id="how-to-thrive-and-what-to-expect" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-thrive-and-what-to-expect">🌿 How to thrive and what to expect</h2>
+<p>When taking a new course, figuring out the right workflow/cadence of effort throughout the week can be a big adjustment. And most of you are doing this for 4 different courses! Below are some suggestions for what to expect in the course and how to focus your time and attention during and outside of class.</p>
+<section id="before-class" class="level3">
+<h3 class="anchored" data-anchor-id="before-class">Before class</h3>
+<p><strong>✏️&nbsp;&nbsp;&nbsp;Plan ahead</strong></p>
+<p>In a typical week, plan to spend <strong>8-10 hours</strong> on this course (or any 4-credit course), including class time.</p>
+<ul>
+<li>If you are working far more or far less than 8 hours per week, let me know.</li>
+<li>Carve out dedicated time on your calendar for intentionally studying/reviewing and working on assignments.</li>
+<li>Stay up-to-date on the course calendar. The <a href="../logistics/schedule.html">website version</a> contains detailed information about our day-to-day, including resources. The Google calendar at the top of our Moodle page just contains due dates—this one might be helpful to incorporate into your personal Google calendar.</li>
+</ul>
+</section>
+<section id="during-class" class="level3">
+<h3 class="anchored" data-anchor-id="during-class">During class</h3>
+<p><strong>✅&nbsp;&nbsp;&nbsp;Do the things</strong></p>
+<p>Class time will be a mix of interactive lecture and longer stretches of group work. During the lecture portion, I will pause explanation frequently to prompt a short exercise or ask questions that you’ll reflect on individually or together.</p>
+<ul>
+<li>Attend class and actively engage</li>
+<li>Work with your classmates; ask each other questions; share your ideas</li>
+<li>Complete the in-class activities (this might entail finishing outside of class)</li>
+<li>Jot down reflections about your learning process and how group work is going as they occur to you during class</li>
+<li>Review these reflections before class to frame how you want to engage in class. (Perhaps you’ve noticed a struggle and want to try a new strategy.)</li>
+</ul>
+</section>
+<section id="after-class" class="level3">
+<h3 class="anchored" data-anchor-id="after-class">After class</h3>
+<p><strong>🧠&nbsp;&nbsp;&nbsp;Reflect</strong></p>
+<p>Make sure to take the time to finish the activity, and review the solutions <em>after</em> you have attempted all the exercises. <!-- Most class days will have an associated Moodle checkpoint to draw attention to important concepts covered in the previous class. --> After/during these efforts, reflect and ask yourself:</p>
+<ul>
+<li>What was easy? Why?</li>
+<li>What did I struggle with or need to work a little harder to remember? Why?</li>
+</ul>
+<p><strong>📖&nbsp;&nbsp;&nbsp;Review</strong></p>
+<p>Most class periods will involve working with a new tool and computational concept. Alongside reflection, you can:</p>
+<ul>
+<li>Rewrite / organize your notes</li>
+<li>Summarize concepts in your own words</li>
+</ul>
+<p><strong>🔎&nbsp;&nbsp;&nbsp;Be curious</strong></p>
+<p>Don’t be afraid to ask questions. These are opportunities to learn and dig deeper. You get out what you put into a course.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Other suggestions">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Other suggestions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Open the checkpoint on Moodle as you review the material. Jot down questions or ideas that you have about topics in the material.</li>
+<li>Ask (and answer!) questions in our <a href="https://chat.google.com/room/AAQA0MsQDTE?cls=7">Google Chat space</a>.</li>
+<li>Record any reflections from in-class time about your learning process or interactions with peers while they are still fresh.</li>
+<li>After learning a new topic in class, it is helpful to immediately attempt the related exercises on the upcoming homework assignment.</li>
+<li>Come to instructor office (drop-in) hours to chat about the course or anything else! 😃</li>
+</ul>
+</div>
+</div>
+<p><br><br><br><br></p>
+</section>
+</section>
+<section id="grading-and-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="grading-and-feedback">✏️ Grading and feedback</h2>
+<section id="my-philosophy" class="level3">
+<h3 class="anchored" data-anchor-id="my-philosophy">My philosophy</h3>
+<p>Grading is a thorny issue for many educators because of its <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4041495/">known negative effects on learning and motivation</a>. Nonetheless, it is ever-present in the US education system and at Macalester. Because I am required to submit grades for this course, it’s worth me taking a minute to share my philosophy about grading with you.</p>
+<p>What excites me about being a teacher is <em>your learning</em>. Learning flourishes in an environment where you find <strong>meaning and value</strong> in what we’re exploring, feel <strong>safe engaging with challenging things</strong>, receive <strong>useful feedback</strong>, and <strong>regularly reflect</strong> on your learning.</p>
+<p>It is important to me to create a course structure and grading system that creates an environment for learning to flourish:</p>
+<ul>
+<li><p><strong>Finding meaning and value:</strong> I am striving to achieve this by creating space for authentic connection between you, your peers, and myself and by encouraging you to make connections between your interests and course ideas.</p></li>
+<li><p><strong>Safety in engaging with challenges:</strong> The assignments and activities that we will use to learn are <em>meant to be challenging</em>, and it would be unreasonable for me to expect that you perform perfectly on the first try. For this reason, there are opportunities to <strong>revise and reattempt without penalty</strong> across assignments and assessments. I hope that this significantly reduces stress. If ever you are feeling overwhelmed by this course, please reach out to me. We’ll find a way to make things more manageable.</p></li>
+<li><p><strong>Receiving useful feedback and reflecting regularly:</strong> In order to learn maximally by pursuing a revision, you need BOTH good feedback and to reflect thoughtfully about misconceptions in your learning. Our preceptors and I will strive to give useful comments and prompts to spur reflection when we see room for improvement.</p></li>
+</ul>
+</section>
+<section id="assignments-and-assessments" class="level3">
+<h3 class="anchored" data-anchor-id="assignments-and-assessments">Assignments and assessments</h3>
+<p><strong>Assignments:</strong> Roughly every 1-2 weeks, there will be an out-of-class assignment containing problems and exercises meant to reinforce key concepts from class.</p>
+<p><strong>Notes-free, in-person assessments:</strong> We will have 1 or 2 in-person (rather than asynchronous/take-home) assessments completed without the aid of notes. I would like to decide on what these are based on your input. Some possibilities include:</p>
+<ul>
+<li>In-class exam</li>
+<li>Oral content discussion with instructor (structured as a mock job interview, for example)</li>
+</ul>
+<p>I’m open to other ideas! Much like an athlete tests their skills by playing in a match or a musician through a recital, I would like this assessment to provide a genuine context for you to show your learning. It’s possible that everyone chooses different options, and this is ok with me. I will seek input from you about what you might want this to look like.</p>
+<p><strong>Project:</strong> As a 400-level MSCS capstone, this course has a substantial project component, which you must pass to pass the course.</p>
+<ul>
+<li>If you are an MSCS major, you are required to complete at least one 400-level course, thus at least one capstone project, in your major before spring of your senior year.</li>
+<li>You will choose one of these completed projects to later present on MSCS Capstone Days during your senior year (Fall for December graduates and Spring for May graduates).</li>
+<li>Full details about the project will be available on our course website’s <a href="../project.html">project page</a>.</li>
+</ul>
+<p><strong>Seminar attendance:</strong> Because this is a capstone course, you are required to attend and subsequently submit a short reflection for at least 2 MSCS seminars, or other related presentations upon instructor approval.</p>
+</section>
+<section id="course-grading-system" class="level3">
+<h3 class="anchored" data-anchor-id="course-grading-system">Course grading system</h3>
+<p><img src="../images/tbd.png" class="img-fluid" width="300"></p>
+<p>I have been experimenting with different grading systems for 6 years, and it’s always been difficult to design them without knowing who you are, how you learn, and what motivates you.</p>
+<p>To this end, I’d like to start by learning more about you so that collectively, we can design a fair and motivational system that we can all agree on.</p>
+<p><a href="../hw/assignment1.html">Assignment 1</a> will be a short piece of writing that will help me learn about you in this regard. I’ll use insights from your writing to structure our process for coming to a consensus over the course of the semester.</p>
+<p>As a starting point, I do think it’s helpful for me to share my specific values with regards to this class. I would have no reservations giving an “A” to students who:</p>
+<ul>
+<li>Consistently show up to class prepared and engage in class with good-faith efforts</li>
+<li>Consistently uplift and support classmates’ learning</li>
+<li>Never make classmates feel uncomfortable, unwelcome, or “less than” in any way</li>
+<li>Consistently reflect and act on feedback to improve</li>
+<li>Demonstrate complete understanding of core concepts</li>
+<li>Put in the work to create a quality final project</li>
+<li>Respect our course’s stance on AI (see <a href="#artificial-intelligence">section on AI</a> below)</li>
+</ul>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled" title="The big picture">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The big picture
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>At this point, it’s worth repeating that <strong>I care most about your long-term learning</strong>, particularly because I believe that our course ideas are useful and empowering. My hope with our course design and grading system is that I am providing you with the right experiences for practice and reflection that will make our ideas and skills stick for the long-term.</p>
+<p>View me as your coach. I’m here to support you and get you to where you want to be.</p>
+</div>
+</div>
+<p><br><br><br><br></p>
+</section>
+</section>
+<section id="textbooks" class="level2">
+<h2 class="anchored" data-anchor-id="textbooks">📚 Textbooks</h2>
+<p>We will primarily use the following references (freely available online):</p>
+<ul>
+<li>Required readings will generally come from <em>The Effect: An Introduction to Research Design and Causality</em> by Nick Huntington-Klein. This book is freely available online <a href="https://www.theeffectbook.net/index.html">here</a>.</li>
+<li>Optional readings will generally come from <em>Causal Inference: The Mixtape</em> by Scott Cunningham. This book is freely available online <a href="https://mixtape.scunning.com/">here</a>.</li>
+</ul>
+<p>The following textbooks are also good resources (also freely available online):</p>
+<ul>
+<li><strong>[PRIMER]</strong>: Causal Inference in Statistics: A Primer, by Judea Pearl, Madelyn Glymour, and Nicholas P. Jewell. PDF freely available <a href="http://bayes.cs.ucla.edu/PRIMER/">online</a>.</li>
+<li><strong>[WHATIF]</strong>: Causal Inference: What If, by Miguel A. Hernán and James M. Robins. PDF freely available <a href="https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/">online</a>.</li>
+</ul>
+<p>References for review</p>
+<ul>
+<li><a href="https://mac-stat.github.io/Stat155Notes/">STAT 155 Notes</a>: An online set of notes for STAT 155 written by the Macalester statistics faculty.</li>
+<li><a href="https://youtu.be/acofPsJDq5Y">Probability Essentials</a>: A YouTube video outlining some key ideas from probability. Not required material to know but useful if you want a reference on probability details.</li>
+<li><a href="https://medium.com/@EpiEllie/having-confidence-in-confidence-intervals-8f881712d837">This article</a> by Eleanor Murray has a great explanation of the most common misinterpretation of confidence intervals.</li>
+</ul>
+<p><br><br><br><br></p>
+</section>
+<section id="other-policies" class="level2">
+<h2 class="anchored" data-anchor-id="other-policies">🪧 Other policies</h2>
+<section id="absences" class="level3">
+<h3 class="anchored" data-anchor-id="absences">Absences</h3>
+<p>Being together in class to learn in community with others is a rare and valuable resource. For this reason, I highly encourage attending class, but I also understand that life circumstances may sometimes prevent attendance. I will be tracking attendance just to make sure that everyone is ok, and I will reach out if I’m concerned.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="If you miss class">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>If you miss class
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Check the daily schedule for what is happening in class that day.</li>
+<li>Complete the in-class activity on your own.</li>
+<li>Ask any follow-up questions on our course Google Chat space or in office hours.</li>
+<li>Send me a quick email. You do not need to share a detailed reason for your absence. It’s just a simple courtesy and keeps communication lines open.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="late-work" class="level3">
+<h3 class="anchored" data-anchor-id="late-work">Late work</h3>
+<p>Homework assignments will be due <strong>roughly every 1-2 weeks on Thursdays at 11:59pm on Moodle</strong>.</p>
+<p>The purpose of deadlines are so that I can give useful, meaningful feedback in a timely manner. Everyone automatically has three 3-day extensions to use throughout the semester. <strong>If you anticipate needing more time to complete an assignment and want to use one of those extensions, please email me ahead of time so that I can plan when I can give feedback.</strong></p>
+<p><em>If you have used all of your extensions and need more time, please email me to set up a meeting as soon as possible to discuss your situation and to come up with a plan for thriving in the course.</em></p>
+</section>
+<section id="academic-integrity" class="level3">
+<h3 class="anchored" data-anchor-id="academic-integrity">Academic integrity</h3>
+<p>Academic integrity is the cornerstone of our learning community. Students are expected to be familiar with the <a href="http://www.macalester.edu/academicprograms/academicpolicies/academicintegrity/">college’s standards</a> on academic integrity.</p>
+<p>I encourage you to work with your classmates to discuss material and ideas for assignments, but in order for you to receive individualized feedback on your own learning, you must submit your own work. This involves writing your own code and putting thoughts and explanations into your own words. Always cite any sources you use, including AI (see section below).</p>
+</section>
+<section id="artificial-intelligence" class="level3">
+<h3 class="anchored" data-anchor-id="artificial-intelligence">Artificial intelligence</h3>
+<p>As a society, we are paying a lot of attention to AI. Some fear its use from ethical, environmental, and existential standpoints. Some are focused on gaining AI skills that employers are increasingly advertising as being necessary for new hires.</p>
+<p>For our experience together, my main concern is how AI impacts your learning. My experience over the last few years has shown me that when the (perceived) quality of a <strong>product</strong> (a homework assignment, a report, code, etc.) is the main focus, AI tends to hinder learning because there is an overemphasis on just getting a good product (at least one the instructor will hopefully think is good) rather than becoming the kind of person who can create a good product. In contrast, when the <strong>process</strong> (effort) of learning is the focus, AI is more likely to aid learning.</p>
+<p>My hope for you by the end of the semester is <em>not</em> that you have done well on all your assignments and completed a fantastic project. My hope is that you have <em>become the kind of person</em> who has the skills to perform at that level again and who uses those skills to meaningfully benefit those who have entrusted you with work.</p>
+<p>That said, our academic system requires me to assess this goal. And I can only really do that by looking at products of your learning process. I’ll be honest that there are likely</p>
+<p>For this reason, I am asking you to <strong>never use generative AI as a complete replacement for your own thinking.</strong></p>
+<ul>
+<li>If you need to turn in work for feedback and are completely stuck, I ask that you do not use text from AI as a response.
+<ul>
+<li>Instead, please tell me what <em>specifically</em> you didn’t understand or were having trouble with.<br>
+&gt; <strong>Example:</strong> I couldn’t complete Exercise 2 because I don’t understand how to translate the process of interpreting an interaction coefficient with one categorical and one quantitative variable to one with two quantitative variables.</li>
+<li>Please also seek out help from me or your peers ahead of time, and we can work together to get you unstuck!</li>
+</ul></li>
+</ul>
+<p>AI can be helpful in explaining concepts in new ways and providing other examples. If you use AI in this way, <strong>please copy and paste both your prompt(s) and the AI output into your assignment.</strong></p>
+<ul>
+<li>This is helpful to me to understand how I can improve the course materials!</li>
+</ul>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Environmental impact of AI">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Environmental impact of AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Because of my work in environmental justice, it is important to me to name AI’s environmental impacts:</p>
+<ul>
+<li>The building and usage of AI tools consume enormous amounts of energy (see <a href="https://www.nature.com/articles/s42256-020-0219-9">here</a> and <a href="https://www.cfr.org/blog/artificial-intelligences-environmental-costs-and-promise">here</a>) and water (see <a href="https://www.eesi.org/articles/view/data-centers-and-water-consumption">here</a>).</li>
+<li>In Minnesota, data center builders have been acting unethically, trying to skirt environmental review and hide environmental impacts from the residents of impacted communities (see <a href="https://www.mncenter.org/data-centers">here</a>).</li>
+</ul>
+</div>
+</div>
+<p><br><br><br><br></p>
+</section>
+</section>
+<section id="the-environment-you-deserve" class="level2">
+<h2 class="anchored" data-anchor-id="the-environment-you-deserve">☀️ The environment you deserve</h2>
+<p>Macalester College values diversity and inclusion. We are committed to a climate of mutual respect, free of discrimination based on race, ethnicity, gender identity, religion, sexual orientation, disability, and other identities, in and out of the classroom. This class strives to be a learning environment that is usable, equitable, inclusive, and welcoming.</p>
+<p>To help support these goals, we expect you to follow the <a href="https://docs.google.com/document/d/e/2PACX-1vSlLLWmyOf8WKGDKJ_qypgA_kQI1dNFGEKH0mtFoqfAUARZN7ypVCgivnmPjccks9jJzW1rgEzt7QMI/pub">MSCS Community Guidelines</a>. These guidelines were created by the MSCS faculty and staff in our ongoing efforts to create a community that is more welcoming, supportive, and inclusive.</p>
+<p><strong>Respect:</strong> Everyone comes from a different path through life, and it is our moral duty as human beings to listen to each other without judgment and to respect one another. I have no tolerance for discrimination of any kind, in and out of the classroom. If you are seeking campus resources regarding ongoing microagressions, the <a href="https://www.macalester.edu/multiculturallife/">Department of Multicultural Life</a> and the <a href="https://www.macalester.edu/religiouslife/">Center for Religious and Spiritual Life</a> are wonderful resources.</p>
+<p><strong>Empathy:</strong> Everyone has a different life situation. This will impact our personal choices, and it can cause tension. Please start with empathy for each other. We all have ongoing struggles and worries, and we are all trying to do our best given the circumstances.</p>
+<p><strong>Curiosity:</strong> We are dealing with higher than normal levels of anxiety, and all of us have different ways of coping with that stress. As we navigate interpersonal relationships, start with curiosity. Rather than assuming, ask each other questions.</p>
+<p><strong>Sensitive Topics:</strong> Data science applications span issues in science, policy, and society. As such, we may sometimes address topics that are sensitive for you. I will try to announce in class if an assignment or activity involves a potentially sensitive topic. If you have reservations about a particular topic, please come talk to me to discuss possible options.</p>
+<p><strong>Accommodations:</strong> If you need accommodations for any reason, please contact <a href="https://www.macalester.edu/disability-resources/students/">Center for Disability Resources</a> to discuss your needs, and speak with me as soon as possible afterwards so that we can discuss your accommodation plan. If you already have official accommodations, please discuss these with me within the first week of class so that you get off to a great start. Contact me if you have other special circumstances.</p>
+<p><strong>Title IX:</strong> You deserve a community free from discrimination, sexual harassment, hostility, sexual assault, domestic violence, dating violence, and stalking. If you or anyone you know has experienced harassment or discrimination, know that you are not alone. Macalester provides staff and resources to help you find support. More information is available on the <a href="https://www.macalester.edu/titleix/">Title IX website</a>.</p>
+<p>Please be aware that all Macalester faculty (and preceptors when working) are mandatory reporters, which means that if we become aware of incidents or allegations of sexual misconduct, we are required to share the matter with the Title IX Coordinator. Although I have to make that notification, you control how your case is handled, including whether or not you wish to pursue a formal complaint. If you would like to speak to someone confidentially, contact the Hamre Center (651-696-6275), Chaplain staff (651-696-6298), or other local and national resources <a href="https://www.macalester.edu/title-ix/find-support/">listed here</a>.</p>
+<p><strong>Food Access:</strong> Macalester’s <a href="https://www.macalester.edu/community-engagement/food-access/">Food Access</a> page lists several resources for accessing free/affordable health food. One additional resource is the Extra Eats app which is available within Mac Nav (you need to be signed in to Mac Nav to see it). If you need extra resources, please don’t hesitate to ask me.</p>
+<p><strong>General Health and Well-being:</strong> I care that you prioritize your well-being in this semester and beyond. Investing time into taking care of yourself will have profound impacts on all aspects of your life. Remember that beyond being a student, you are a human being carrying your own experiences, thoughts, emotions, and identities. It is important to acknowledge any stressors you may be facing, which can be mental, emotional, physical, cultural, financial, etc., and how they can have an impact on you. I encourage you to remember that you have a body with needs. In the classroom, eat when you are hungry, drink water, use the restroom, and step out if you are upset and need some air. Please do what is necessary so long as it does not impede your or others’ ability to be mentally and emotionally present in the course. Outside of the classroom, sleeping well, moving your body, and connecting with others can be strategies can help nourish you. If you are having difficulties maintaining your well-being, please don’t hesitate to contact me and/or find support from campus physical and mental health resources:</p>
+<ul>
+<li><a href="https://docs.google.com/document/d/1lz-ii5yze_OSkQJqz_7pap7fRjG81LJh0_saBniP-zg/edit">Support Resources for Students with Disabilities</a></li>
+<li><a href="https://docs.google.com/document/d/1iC-ykD8QJ-w2BVO1Gb0AobD-00Zq_8mznWR5C2mNiF0/edit?usp=sharing">Health and Wellness Resources</a></li>
+<li><a href="https://www.macalester.edu/current-students/">Help for Current Students</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../logistics/schedule.html" class="pagination-link" aria-label="Schedule">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Schedule</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../activities/01-foundations.html" class="pagination-link" aria-label="Foundational ideas">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Foundational ideas</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2026 Leslie Myint, CC BY-NC-SA 4.0</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

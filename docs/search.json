@@ -1,0 +1,386 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STAT 451: Causal Inference",
+    "section": "",
+    "text": "Welcome!\n\n\n\n\n\nThis is the course website for Causal Inference (STAT 451) taught by Professor Leslie Myint at Macalester College for Fall 2026.\n\nNote that this page will be under active construction throughout the semester.\nIf you find any typos or other issues, please email lmyint@macalester.edu.\n \nThis work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.",
+    "crumbs": [
+      "Welcome!"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html",
+    "href": "logistics/schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Overview\nCheck here to see what you should be doing before, during, and after each class day.",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day1",
+    "href": "logistics/schedule.html#day1",
+    "title": "Schedule",
+    "section": "Day 1: Foundational Ideas (9/8)",
+    "text": "Day 1: Foundational Ideas (9/8)\nBefore class:\n\nGet acquainted with our course by reading the syllabus and touring our course website and Moodle page.\n\nDuring class: Introductions and foundations\nAfter class:\n\n\n\n\n\n\nNoteRequired\n\n\n\nThe following chapters from The Effect lay the foundation for asking good questions. They’re written in a fun, conversational style and have some nice humor interspersed throughout.\n\nThe Effect Chapter 1: Designing Research (~10 minutes)\n\nVideo alternative: Designing Research (~8 minutes)\n\nThe Effect Chapter 2: Research Questions (~30 minutes)\n\nVideo alternative: Research Questions (~11 minutes)\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\nIf you would like to have an additional reference throughout the course that leans more technical and economics-leaning, I recommend starting Causal Inference: The Mixtape by reading Chapter 1: Introduction (~35 minutes).\n\nNote: Scott uses the term endogenous in Section 1.3 without defining it. This is an economics term that essentially parallels the term confounding in statistics. That is, an endogenous variable is (often) one that is a confounder.",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day2",
+    "href": "logistics/schedule.html#day2",
+    "title": "Schedule",
+    "section": "Day 2: Introduction to Causal Graphs (9/10)",
+    "text": "Day 2: Introduction to Causal Graphs (9/10)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 5: Identification (~50 minutes)\n\nVideo alternatives:\n\nIdentification: Data Generating Processes (~8 minutes)\nIdentification: Alternative Explanations (~9 minutes)\nIdentification: Alcohol and Mortality (~9 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 6: Causal Diagrams (~40 min)\n\nVideo alternatives:\n\nCausal Diagrams: Causality (~9 minutes)\nCausal Diagrams (~12 minutes)\n\n\nThe Effect Chapter 7: Drawing Causal Diagrams (~30 min)\n\nVideo alternatives:\n\nDrawing Causal Diagrams (~13 minutes)\nSimplifying Causal Diagrams (~12 minutes)\n\n\n\nFormulate a research question that relates to an area that you’re interested in. In class, we will be using the principles in Chapters 6 and 7 to draw a causal diagram that addresses this research question.\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 3: Directed Acyclic Graphs but skip 3.1.3 Backdoor Criterion (~40 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day3",
+    "href": "logistics/schedule.html#day3",
+    "title": "Schedule",
+    "section": "Day 1: Simulating data using causal graphs (9/15)",
+    "text": "Day 1: Simulating data using causal graphs (9/15)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nVideo: Key structures in causal graphs (~12 min) (slides)\n\nNote 1: In this video, I refer to a concept called “exchangeability”. This is a concept that I included in the last offering of this course. Exchangeability is a causal identification assumption. When the exchangeability assumption is satisfied, we can identify causal effects. When it is not satisfied, I call this “a lack of exchangeability”. In the language we have used, this happens when there are alternate (noncausal) explanations for a relationship between two variables. So in the video, whenever you hear “creates a lack of exchangeability”, replace that with “leads to the presence of alternate (noncausal) explanations for the relationship between two variables”. When you hear “achieve conditional exchangeability”, replace that with “we are able to address this alternate explanation when analyzing the data”.\nNote 2: I use the formal probability ideas of marginal and conditional dependence and independence. You can get the essential ideas from this video by replacing terms in the list below. (If you want to learn or review these probability ideas (not required!), watch my Probability Essentials video.)\n\n“A and B are marginally [independent/dependent]” = “A and B are [unrelated/related] in a general population”\n“A and B are conditionally independent” = “A and B are [unrelated/related] in subgroups (in each group defined by one or more variables)”\n\n\n2 readings from Andrew Heiss’s Program Evaluation course:\n\nGenerating random numbers (~35 min)\nThe ultimate guide to generating synthetic data for causal inference (Stop when you get to the subsection “Visualizing one variable”) (~25 min)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day4",
+    "href": "logistics/schedule.html#day4",
+    "title": "Schedule",
+    "section": "Day 2: Identifying causal effects with causal graphs (9/17)",
+    "text": "Day 2: Identifying causal effects with causal graphs (9/17)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nVideo: Causal and Noncausal Paths (~5 min)\nVideo: D-Separation (~8 min)\nReading: The Effect Chapter 8: Causal Paths and Closing Back Doors (~35 minutes)\n\nVideo alternatives:\n\nCausal Pathways (~9 minutes)\nClosing Causal Pathways, and Collider Variables (~11 minutes)\nTesting Causal Diagrams, and Placebo Tests (~8 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Section 3.1.3: Backdoor criterion (~5 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day5",
+    "href": "logistics/schedule.html#day5",
+    "title": "Schedule",
+    "section": "Day 1: Testing causal graphs; synthesis (9/22)",
+    "text": "Day 1: Testing causal graphs; synthesis (9/22)\nBefore class:\n\nNo pre-class material",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day6",
+    "href": "logistics/schedule.html#day6",
+    "title": "Schedule",
+    "section": "Day 2: Matching (9/24)",
+    "text": "Day 2: Matching (9/24)\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 14: Matching (~160 minutes)\n\nVideo alternatives:\n\nMatching (~11 minutes)\nFive Questions About Matching (~13 minutes)\nDistance Matching (~9 minutes)\nPropensity Score Matching (~10 minutes)\nCoarsened Exact Matching and Entropy Balancing (~8 minutes)\nWhen Matching Goes Wrong (~14 minutes)\nTreatment Effect Estimation with Matching (~7 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 5: Matching and Subclassification (~140 minutes)\nJournal article: Matching Methods for Causal Inference: A Review and a Look Forward (~60 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/syllabus.html",
+    "href": "logistics/syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "🗺️ Course overview\nWe as individuals and organizations are constantly making decisions to improve some aspect of our lives and operations. Causal inference is a field devoted to quantifying the impact of such decisions. Fundamentally, it is dedicated to answer questions of “What if?” and “Should we?”.",
+    "crumbs": [
+      "Course Logistics",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "logistics/syllabus.html#course-overview",
+    "href": "logistics/syllabus.html#course-overview",
+    "title": "Syllabus",
+    "section": "",
+    "text": "🎯 Learning goals\nI hope that by the end of the course, you are able to:\n\nExplain the goals of causal inference to general audiences\nFormulate strategies for identifying causal effects that draw on causal graph methodology, study designs, and data context\nAnalyze data with appropriate methodology to estimate causal effect, and communicate the results and limitations of an analysis to general audiences\nConduct simulation studies to explore the properties of statistical methods\nCommunicate the intuition/ideas behind causal inference methods to general audiences\nRecognize the potential for applying causal inference ideas in daily life\nArticulate with greater clarity key insights about your process for learning challenging topics and about the way in which you collaborate with others\n\n\n\n📋 Topics\nTentatively, we will explore the following topics throughout the semester:\n\nPotential outcomes framework\nCausal graphs / graphical causal models\nStudy designs and analytical approaches: randomized experiments, target trial framework, matching, regression discontinuity, event studies/interrupted time series, synthetic control, difference-in-differences, instrumental variables, propensity score and weighting methods, doubly robust estimators\nCausal discovery\nSensitivity / robustness analyses\n\n\n\n\n\n\n\nNoteA letter from your instructor\n\n\n\nDear students,\nThis is a course that is dear to my heart, and I’m excited to rediscover the fascinating tools of this field with you.\nAs a graduate student, I actually worked in a completely different area for my dissertation. I focused on studying data from biological technologies (mass spectrometers and sequencing machines) and developing methods to analyze that data.\nIt was a happy and fortuitous occasion that I decided to take the course Causal Inference in Public Health during my 3rd year. I was immediately drawn in by the goals, tools, and application areas of the field—causal inference researchers really seemed to be studying meaningful and impactful issues. While I had little time to explore more of causal inference for the remainder of my graduate studies, the fascination stuck with me.\nWhen I got to Macalester in 2018, the possibility of engaging more with causal inference opened up. I taught the first version of this course in Spring 2019 and have been steadily learning more over the years, improving this course along the way. I hope that you find ideas that intrigue you and applications that excite you.\nLet’s have a great semester!",
+    "crumbs": [
+      "Course Logistics",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "logistics/syllabus.html#course-communication",
+    "href": "logistics/syllabus.html#course-communication",
+    "title": "Syllabus",
+    "section": "✉️ Course communication",
+    "text": "✉️ Course communication\n\nContacting the instructor\n\n\nInstructor: Leslie Myint (lez-lee mee-int) (she/her)\nAbout me: Outside of teaching statistics and data science at Mac, I work as the Policy and Research Director for the MN Environmental Justice Table. I am passionate about waste reduction, clean energy, transportation, and the justice issues that touch these areas. In my free time, I like going on walks with my family, volunteering, coloring, sketch journaling, playing board and video games, and staying active by weightlifting and dancing.\n\n\n\n\n\n\n\n\nNoteCall me “Leslie”\n\n\n\nStudents sometimes wonder what to call their professors. I prefer to be called Leslie (lez-lee), but if you prefer to be more formal, I am also ok with Professor Myint (mee-int). My preferred gender pronouns are she/her/hers.\nPlease help me make sure that I call you by your preferred name and pronouns too!\n\n\n\nEmail\nPlease email me (lmyint@macalester.edu) with any personal or academic concerns. I will do my best to respond within 24 hours on weekdays and 48 hours on weekends. For content questions, I encourage you to post in our Google Chat space (see below).\n\n\nOffice hours\nWhy: Office hours (drop-in hours / student hours) are a great time to talk about this class, career planning, or life in general. I love getting to know you outside class time, so please come chat! You should plan to attend my office hours at least once in the semester. If these office hour times don’t work with your schedule, I’m available by appointment—email to set up a time to meet!\nWhere: OLRI 232 (towards the end of the 2nd floor hallway close to the Leonard Center)\nWhen: See my Office Hours Google Calendar for up-to-date office hour times.\n\n\n\nGoogle Chat discussion board\nWe will use this Google Chat space for announcements and discussions that benefit the entire class. To streamline communication, I will not use the Moodle Announcements forum to post announcements.\nPlease check the GChat space daily!",
+    "crumbs": [
+      "Course Logistics",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "logistics/syllabus.html#guiding-values",
+    "href": "logistics/syllabus.html#guiding-values",
+    "title": "Syllabus",
+    "section": "⭐️ Guiding values",
+    "text": "⭐️ Guiding values\n\nCommunity is key\nA sense of community and connectedness can provide a powerful environment for learning: Research shows that learning is maximized when students feel a sense of belonging in the educational environment (e.g., Booker, 2016). A negative climate may create barriers to learning, while a positive climate can energize students’ learning (e.g., Pascarella & Terenzini, cited in How Learning Works, 2012).\nFor these reasons, I design our in-class group activities to intentionally foster community and connectedness. You can help cultivate our classroom community by being thoughtful about the way you engage with others in class.\n\n\nActive listening is vital\nResearch on learning theory and how the brain works has taught us that people learn best in community, when they feel safe, seen, heard, and cared about. Effective listening is a key part of this process.\nHow often do you find yourself coming up with a response and waiting to interject rather than listening to what an other person is saying? On the flip side, what do you need to feel heard and understood?\nTo feel connected in community, we need to practice turn-taking and active listening (fully engaged and trying to understand what someone is saying, rather than just listening to respond). I will ask you to discuss how you want to be listened to throughout the semester.\n\n\nReflection is paramount\nThe content you learn will be cool (unbiased opinion!), but it is a guarantee that as technology evolves, some part of it will become out-of-date during your careers. What you will need to rely on when you leave Macalester is what I want to ensure you cultivate now: learn how to learn. And the cornerstone of a good learning process is reflection.\nReflection is not just fundamental to learning content–it’s fundamental to learning any sort of intellectual, emotional, or physical skill. For this reason, I am prioritizing reflection as a goal for our course in both content learning and collaborative activities.\n\n\nMistakes are essential\n\nAn expert is a person who has made all the mistakes which can be made in a narrow field.\n\nNiels Bohr, Nobel Prize-winning physicist\n\n\nI don’t feel comfortable working with a new R package until I’ve seen the same errors over and over again. Seeing new errors helps me understand the constraints of the code and the assumptions that I was making about my data.\nIn a course like this, we will all be making mistakes daily! But in so doing, we will be growing and honing our expertise.\n\n\nCommunication is a superpower\n\nThe single biggest problem in communication is the illusion that it has taken place.\n\nGeorge Bernard Shaw\n\n\nEvery time I go to a conference talk on a technical topic, it is striking how quickly laptops or phones come out because of the inability to follow. Academics notoriously struggle to make ideas accessible to others.\nI want communication to be very different for you.\nEvery time you communicate ideas–whether through writing, visuals, or oral presentation–I want you to be a total boss. The end product of strong communication is a better experience for all those who have given you their attention. What’s more, the process of crafting effective communication is invaluable for deepening your own understanding.\n\n\n\nRead to collect the dots, write to connect them pic.twitter.com/YbgnKKFUNn\n\n— David Perell (@david_perell) July 5, 2021",
+    "crumbs": [
+      "Course Logistics",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "logistics/syllabus.html#how-to-thrive-and-what-to-expect",
+    "href": "logistics/syllabus.html#how-to-thrive-and-what-to-expect",
+    "title": "Syllabus",
+    "section": "🌿 How to thrive and what to expect",
+    "text": "🌿 How to thrive and what to expect\nWhen taking a new course, figuring out the right workflow/cadence of effort throughout the week can be a big adjustment. And most of you are doing this for 4 different courses! Below are some suggestions for what to expect in the course and how to focus your time and attention during and outside of class.\n\nBefore class\n✏️   Plan ahead\nIn a typical week, plan to spend 8-10 hours on this course (or any 4-credit course), including class time.\n\nIf you are working far more or far less than 8 hours per week, let me know.\nCarve out dedicated time on your calendar for intentionally studying/reviewing and working on assignments.\nStay up-to-date on the course calendar. The website version contains detailed information about our day-to-day, including resources. The Google calendar at the top of our Moodle page just contains due dates—this one might be helpful to incorporate into your personal Google calendar.\n\n\n\nDuring class\n✅   Do the things\nClass time will be a mix of interactive lecture and longer stretches of group work. During the lecture portion, I will pause explanation frequently to prompt a short exercise or ask questions that you’ll reflect on individually or together.\n\nAttend class and actively engage\nWork with your classmates; ask each other questions; share your ideas\nComplete the in-class activities (this might entail finishing outside of class)\nJot down reflections about your learning process and how group work is going as they occur to you during class\nReview these reflections before class to frame how you want to engage in class. (Perhaps you’ve noticed a struggle and want to try a new strategy.)\n\n\n\nAfter class\n🧠   Reflect\nMake sure to take the time to finish the activity, and review the solutions after you have attempted all the exercises.  After/during these efforts, reflect and ask yourself:\n\nWhat was easy? Why?\nWhat did I struggle with or need to work a little harder to remember? Why?\n\n📖   Review\nMost class periods will involve working with a new tool and computational concept. Alongside reflection, you can:\n\nRewrite / organize your notes\nSummarize concepts in your own words\n\n🔎   Be curious\nDon’t be afraid to ask questions. These are opportunities to learn and dig deeper. You get out what you put into a course.\n\n\n\n\n\n\nTipOther suggestions\n\n\n\n\nOpen the checkpoint on Moodle as you review the material. Jot down questions or ideas that you have about topics in the material.\nAsk (and answer!) questions in our Google Chat space.\nRecord any reflections from in-class time about your learning process or interactions with peers while they are still fresh.\nAfter learning a new topic in class, it is helpful to immediately attempt the related exercises on the upcoming homework assignment.\nCome to instructor office (drop-in) hours to chat about the course or anything else! 😃",
+    "crumbs": [
+      "Course Logistics",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "logistics/syllabus.html#grading-and-feedback",
+    "href": "logistics/syllabus.html#grading-and-feedback",
+    "title": "Syllabus",
+    "section": "✏️ Grading and feedback",
+    "text": "✏️ Grading and feedback\n\nMy philosophy\nGrading is a thorny issue for many educators because of its known negative effects on learning and motivation. Nonetheless, it is ever-present in the US education system and at Macalester. Because I am required to submit grades for this course, it’s worth me taking a minute to share my philosophy about grading with you.\nWhat excites me about being a teacher is your learning. Learning flourishes in an environment where you find meaning and value in what we’re exploring, feel safe engaging with challenging things, receive useful feedback, and regularly reflect on your learning.\nIt is important to me to create a course structure and grading system that creates an environment for learning to flourish:\n\nFinding meaning and value: I am striving to achieve this by creating space for authentic connection between you, your peers, and myself and by encouraging you to make connections between your interests and course ideas.\nSafety in engaging with challenges: The assignments and activities that we will use to learn are meant to be challenging, and it would be unreasonable for me to expect that you perform perfectly on the first try. For this reason, there are opportunities to revise and reattempt without penalty across assignments and assessments. I hope that this significantly reduces stress. If ever you are feeling overwhelmed by this course, please reach out to me. We’ll find a way to make things more manageable.\nReceiving useful feedback and reflecting regularly: In order to learn maximally by pursuing a revision, you need BOTH good feedback and to reflect thoughtfully about misconceptions in your learning. Our preceptors and I will strive to give useful comments and prompts to spur reflection when we see room for improvement.\n\n\n\nAssignments and assessments\nAssignments: Roughly every 1-2 weeks, there will be an out-of-class assignment containing problems and exercises meant to reinforce key concepts from class.\nNotes-free, in-person assessments: We will have 1 or 2 in-person (rather than asynchronous/take-home) assessments completed without the aid of notes. I would like to decide on what these are based on your input. Some possibilities include:\n\nIn-class exam\nOral content discussion with instructor (structured as a mock job interview, for example)\n\nI’m open to other ideas! Much like an athlete tests their skills by playing in a match or a musician through a recital, I would like this assessment to provide a genuine context for you to show your learning. It’s possible that everyone chooses different options, and this is ok with me. I will seek input from you about what you might want this to look like.\nProject: As a 400-level MSCS capstone, this course has a substantial project component, which you must pass to pass the course.\n\nIf you are an MSCS major, you are required to complete at least one 400-level course, thus at least one capstone project, in your major before spring of your senior year.\nYou will choose one of these completed projects to later present on MSCS Capstone Days during your senior year (Fall for December graduates and Spring for May graduates).\nFull details about the project will be available on our course website’s project page.\n\nSeminar attendance: Because this is a capstone course, you are required to attend and subsequently submit a short reflection for at least 2 MSCS seminars, or other related presentations upon instructor approval.\n\n\nCourse grading system\n\nI have been experimenting with different grading systems for 6 years, and it’s always been difficult to design them without knowing who you are, how you learn, and what motivates you.\nTo this end, I’d like to start by learning more about you so that collectively, we can design a fair and motivational system that we can all agree on.\nAssignment 1 will be a short piece of writing that will help me learn about you in this regard. I’ll use insights from your writing to structure our process for coming to a consensus over the course of the semester.\nAs a starting point, I do think it’s helpful for me to share my specific values with regards to this class. I would have no reservations giving an “A” to students who:\n\nConsistently show up to class prepared and engage in class with good-faith efforts\nConsistently uplift and support classmates’ learning\nNever make classmates feel uncomfortable, unwelcome, or “less than” in any way\nConsistently reflect and act on feedback to improve\nDemonstrate complete understanding of core concepts\nPut in the work to create a quality final project\nRespect our course’s stance on AI (see section on AI below)\n\n\n\n\n\n\n\nTipThe big picture\n\n\n\nAt this point, it’s worth repeating that I care most about your long-term learning, particularly because I believe that our course ideas are useful and empowering. My hope with our course design and grading system is that I am providing you with the right experiences for practice and reflection that will make our ideas and skills stick for the long-term.\nView me as your coach. I’m here to support you and get you to where you want to be.",
+    "crumbs": [
+      "Course Logistics",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "logistics/syllabus.html#textbooks",
+    "href": "logistics/syllabus.html#textbooks",
+    "title": "Syllabus",
+    "section": "📚 Textbooks",
+    "text": "📚 Textbooks\nWe will primarily use the following references (freely available online):\n\nRequired readings will generally come from The Effect: An Introduction to Research Design and Causality by Nick Huntington-Klein. This book is freely available online here.\nOptional readings will generally come from Causal Inference: The Mixtape by Scott Cunningham. This book is freely available online here.\n\nThe following textbooks are also good resources (also freely available online):\n\n[PRIMER]: Causal Inference in Statistics: A Primer, by Judea Pearl, Madelyn Glymour, and Nicholas P. Jewell. PDF freely available online.\n[WHATIF]: Causal Inference: What If, by Miguel A. Hernán and James M. Robins. PDF freely available online.\n\nReferences for review\n\nSTAT 155 Notes: An online set of notes for STAT 155 written by the Macalester statistics faculty.\nProbability Essentials: A YouTube video outlining some key ideas from probability. Not required material to know but useful if you want a reference on probability details.\nThis article by Eleanor Murray has a great explanation of the most common misinterpretation of confidence intervals.",
+    "crumbs": [
+      "Course Logistics",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "logistics/syllabus.html#other-policies",
+    "href": "logistics/syllabus.html#other-policies",
+    "title": "Syllabus",
+    "section": "🪧 Other policies",
+    "text": "🪧 Other policies\n\nAbsences\nBeing together in class to learn in community with others is a rare and valuable resource. For this reason, I highly encourage attending class, but I also understand that life circumstances may sometimes prevent attendance. I will be tracking attendance just to make sure that everyone is ok, and I will reach out if I’m concerned.\n\n\n\n\n\n\nNoteIf you miss class\n\n\n\n\nCheck the daily schedule for what is happening in class that day.\nComplete the in-class activity on your own.\nAsk any follow-up questions on our course Google Chat space or in office hours.\nSend me a quick email. You do not need to share a detailed reason for your absence. It’s just a simple courtesy and keeps communication lines open.\n\n\n\n\n\nLate work\nHomework assignments will be due roughly every 1-2 weeks on Thursdays at 11:59pm on Moodle.\nThe purpose of deadlines are so that I can give useful, meaningful feedback in a timely manner. Everyone automatically has three 3-day extensions to use throughout the semester. If you anticipate needing more time to complete an assignment and want to use one of those extensions, please email me ahead of time so that I can plan when I can give feedback.\nIf you have used all of your extensions and need more time, please email me to set up a meeting as soon as possible to discuss your situation and to come up with a plan for thriving in the course.\n\n\nAcademic integrity\nAcademic integrity is the cornerstone of our learning community. Students are expected to be familiar with the college’s standards on academic integrity.\nI encourage you to work with your classmates to discuss material and ideas for assignments, but in order for you to receive individualized feedback on your own learning, you must submit your own work. This involves writing your own code and putting thoughts and explanations into your own words. Always cite any sources you use, including AI (see section below).\n\n\nArtificial intelligence\nAs a society, we are paying a lot of attention to AI. Some fear its use from ethical, environmental, and existential standpoints. Some are focused on gaining AI skills that employers are increasingly advertising as being necessary for new hires.\nFor our experience together, my main concern is how AI impacts your learning. My experience over the last few years has shown me that when the (perceived) quality of a product (a homework assignment, a report, code, etc.) is the main focus, AI tends to hinder learning because there is an overemphasis on just getting a good product (at least one the instructor will hopefully think is good) rather than becoming the kind of person who can create a good product. In contrast, when the process (effort) of learning is the focus, AI is more likely to aid learning.\nMy hope for you by the end of the semester is not that you have done well on all your assignments and completed a fantastic project. My hope is that you have become the kind of person who has the skills to perform at that level again and who uses those skills to meaningfully benefit those who have entrusted you with work.\nThat said, our academic system requires me to assess this goal. And I can only really do that by looking at products of your learning process. I’ll be honest that there are likely\nFor this reason, I am asking you to never use generative AI as a complete replacement for your own thinking.\n\nIf you need to turn in work for feedback and are completely stuck, I ask that you do not use text from AI as a response.\n\nInstead, please tell me what specifically you didn’t understand or were having trouble with.\n&gt; Example: I couldn’t complete Exercise 2 because I don’t understand how to translate the process of interpreting an interaction coefficient with one categorical and one quantitative variable to one with two quantitative variables.\nPlease also seek out help from me or your peers ahead of time, and we can work together to get you unstuck!\n\n\nAI can be helpful in explaining concepts in new ways and providing other examples. If you use AI in this way, please copy and paste both your prompt(s) and the AI output into your assignment.\n\nThis is helpful to me to understand how I can improve the course materials!\n\n\n\n\n\n\n\nTipEnvironmental impact of AI\n\n\n\nBecause of my work in environmental justice, it is important to me to name AI’s environmental impacts:\n\nThe building and usage of AI tools consume enormous amounts of energy (see here and here) and water (see here).\nIn Minnesota, data center builders have been acting unethically, trying to skirt environmental review and hide environmental impacts from the residents of impacted communities (see here).",
+    "crumbs": [
+      "Course Logistics",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "logistics/syllabus.html#the-environment-you-deserve",
+    "href": "logistics/syllabus.html#the-environment-you-deserve",
+    "title": "Syllabus",
+    "section": "☀️ The environment you deserve",
+    "text": "☀️ The environment you deserve\nMacalester College values diversity and inclusion. We are committed to a climate of mutual respect, free of discrimination based on race, ethnicity, gender identity, religion, sexual orientation, disability, and other identities, in and out of the classroom. This class strives to be a learning environment that is usable, equitable, inclusive, and welcoming.\nTo help support these goals, we expect you to follow the MSCS Community Guidelines. These guidelines were created by the MSCS faculty and staff in our ongoing efforts to create a community that is more welcoming, supportive, and inclusive.\nRespect: Everyone comes from a different path through life, and it is our moral duty as human beings to listen to each other without judgment and to respect one another. I have no tolerance for discrimination of any kind, in and out of the classroom. If you are seeking campus resources regarding ongoing microagressions, the Department of Multicultural Life and the Center for Religious and Spiritual Life are wonderful resources.\nEmpathy: Everyone has a different life situation. This will impact our personal choices, and it can cause tension. Please start with empathy for each other. We all have ongoing struggles and worries, and we are all trying to do our best given the circumstances.\nCuriosity: We are dealing with higher than normal levels of anxiety, and all of us have different ways of coping with that stress. As we navigate interpersonal relationships, start with curiosity. Rather than assuming, ask each other questions.\nSensitive Topics: Data science applications span issues in science, policy, and society. As such, we may sometimes address topics that are sensitive for you. I will try to announce in class if an assignment or activity involves a potentially sensitive topic. If you have reservations about a particular topic, please come talk to me to discuss possible options.\nAccommodations: If you need accommodations for any reason, please contact Center for Disability Resources to discuss your needs, and speak with me as soon as possible afterwards so that we can discuss your accommodation plan. If you already have official accommodations, please discuss these with me within the first week of class so that you get off to a great start. Contact me if you have other special circumstances.\nTitle IX: You deserve a community free from discrimination, sexual harassment, hostility, sexual assault, domestic violence, dating violence, and stalking. If you or anyone you know has experienced harassment or discrimination, know that you are not alone. Macalester provides staff and resources to help you find support. More information is available on the Title IX website.\nPlease be aware that all Macalester faculty (and preceptors when working) are mandatory reporters, which means that if we become aware of incidents or allegations of sexual misconduct, we are required to share the matter with the Title IX Coordinator. Although I have to make that notification, you control how your case is handled, including whether or not you wish to pursue a formal complaint. If you would like to speak to someone confidentially, contact the Hamre Center (651-696-6275), Chaplain staff (651-696-6298), or other local and national resources listed here.\nFood Access: Macalester’s Food Access page lists several resources for accessing free/affordable health food. One additional resource is the Extra Eats app which is available within Mac Nav (you need to be signed in to Mac Nav to see it). If you need extra resources, please don’t hesitate to ask me.\nGeneral Health and Well-being: I care that you prioritize your well-being in this semester and beyond. Investing time into taking care of yourself will have profound impacts on all aspects of your life. Remember that beyond being a student, you are a human being carrying your own experiences, thoughts, emotions, and identities. It is important to acknowledge any stressors you may be facing, which can be mental, emotional, physical, cultural, financial, etc., and how they can have an impact on you. I encourage you to remember that you have a body with needs. In the classroom, eat when you are hungry, drink water, use the restroom, and step out if you are upset and need some air. Please do what is necessary so long as it does not impede your or others’ ability to be mentally and emotionally present in the course. Outside of the classroom, sleeping well, moving your body, and connecting with others can be strategies can help nourish you. If you are having difficulties maintaining your well-being, please don’t hesitate to contact me and/or find support from campus physical and mental health resources:\n\nSupport Resources for Students with Disabilities\nHealth and Wellness Resources\nHelp for Current Students",
+    "crumbs": [
+      "Course Logistics",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "activities/01-foundations.html",
+    "href": "activities/01-foundations.html",
+    "title": "1  Foundational ideas",
+    "section": "",
+    "text": "Goals\n\nMeet and get to know your peers\nGain an understanding of what this course is about\nDevelop intuition for how we can study causation\nGet acquainted with a framework for thinking about causal effects\n\n\nSlides for today are available here.",
+    "crumbs": [
+      "Foundational Ideas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Foundational ideas</span>"
+    ]
+  },
+  {
+    "objectID": "hw/assignment1.html",
+    "href": "hw/assignment1.html",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Due: Friday, 9/11 at midnight on Moodle\nContext: This first assignment is a short writing piece for me to get to know you. There are no length requirements—just use as many words as needed to convey your ideas.\nFormat: Please submit a link to a Google Doc, and make sure that I am added as an Editor or Commenter.\nPrompt:\nFirst read the essay An Education of His Own by Latham Turner.\nI’m curious to hear what thoughts and ideas it inspires with regards to your education at Mac and the experience you’re hoping for in this course. As you write your response, consider the following:\n\nLatham’s goal is to create high quality and satisfying learning experiences for his son. What has been a particularly satisfying learning experience for you? (This does not necessarily have to be an academic experience.) What was it about that experience that made it satisfying?\nWhat are your goals in taking this course? What are you hoping for by the end of the semester? Are there barriers or other things that you’re worried about this semester?\nLatham and his son settle on many aspects of their learning relationship collaboratively. Have you had experiences in other courses where you’ve wanted some aspect to be different? Were you able to talk to the instructor about it? What could have been changed from either your part or the instructor’s to make it possible, easier, or more comfortable to discuss what you wanted?\nHow do you think we should use the values that I describe in the grading section of the syllabus alongside our assignments and assessments to assign letter grades? (I discuss my values for the course in the paragraph starting with “As a starting point, I do think it’s helpful for me to share my specific values with regards to this class.”)",
+    "crumbs": [
+      "Assignments",
+      "Assignment 1"
+    ]
+  },
+  {
+    "objectID": "project.html",
+    "href": "project.html",
+    "title": "Project",
+    "section": "",
+    "text": "Project Options",
+    "crumbs": [
+      "Project",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "project.html#option-1-data-analysis",
+    "href": "project.html#option-1-data-analysis",
+    "title": "Project",
+    "section": "Option 1: Data analysis",
+    "text": "Option 1: Data analysis\nOverview: Perform a causal analysis on a dataset of your choice.\nCollaboration: Groups of up to 3. Individual work is fine.\nResources for finding data:\nIt’s fine with me if you use a dataset associated with an existing project (like an honors project) or a project for another class (as long as it’s ok with the other instructor).\n\nGoogle Dataset Search\nOpen Science Framework\nHarvard Dataverse\nInter-university Consortium for Political and Social Research (ICPSR)\nIPUMS\nMacalester’s librarians can also be a great resource for finding data. Schedule an appointment with them here.",
+    "crumbs": [
+      "Project",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "project.html#option-2-learn-an-advanced-topic",
+    "href": "project.html#option-2-learn-an-advanced-topic",
+    "title": "Project",
+    "section": "Option 2: Learn an advanced topic",
+    "text": "Option 2: Learn an advanced topic\nOverview: Dig deeper into existing course topics or learn a new topic. Examples could include:\n\nMethods for transportability (generalizability) of effects\nInterference\nSpecialized considerations for particular study designs\nMachine learning in causal inference\nIndividual causal effect estimation\n\nCollaboration: Groups of up to 3. Individual work is fine.",
+    "crumbs": [
+      "Project",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "project.html#option-3-other",
+    "href": "project.html#option-3-other",
+    "title": "Project",
+    "section": "Option 3: Other",
+    "text": "Option 3: Other\nIf none of these options piques your interest, I’m happy to discuss alternatives with you. Some ideas:\n\nDesign a Shiny app to illustrate causal concepts to students\nWrite (part of) an R package for making it easier to work with causal graphs\nCritique of applied research\n\nThis is a good option for those who would like to do a data analysis but cannot find adequate data to pursue their question.\nFind and read papers that study a question of interest to you. Critique these papers from a causal inference lens. This will involve constructing your own causal graph to guide a critique of the authors’ data collection and analysis methods.\nDiscuss what remains uncertain in this line of research, and propose an analysis plan for a new causal study to rectify the limitations of prior research.",
+    "crumbs": [
+      "Project",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "appendices/stat155.html",
+    "href": "appendices/stat155.html",
+    "title": "STAT 155 Review",
+    "section": "",
+    "text": "Important Topics\nIn this course, we will build on the linear and logistic regression modeling techniques covered in STAT 155. As such, familiarity with key concepts from STAT 155 is expected. This includes, but is not necessarily limited to, the following topics:",
+    "crumbs": [
+      "Appendices",
+      "STAT 155 Review"
+    ]
+  },
+  {
+    "objectID": "appendices/stat155.html#important-topics",
+    "href": "appendices/stat155.html#important-topics",
+    "title": "STAT 155 Review",
+    "section": "",
+    "text": "data context: 5W’s + H (who, what, where, when, why, how)\ndata visualization in R\nlinear regression: least squares, model interpretation, prediction, model evaluation (eg residuals, \\(R^2\\))\nlogistic regression: odds, model interpretation, prediction, model evaluation (eg accuracy, sensitivity)\nbootstrapping\n\n\n\n\n\n\n\nTip\n\n\n\nIf you are rusty on any of these concepts, please review the resources linked below!",
+    "crumbs": [
+      "Appendices",
+      "STAT 155 Review"
+    ]
+  },
+  {
+    "objectID": "appendices/stat155.html#review-resources",
+    "href": "appendices/stat155.html#review-resources",
+    "title": "STAT 155 Review",
+    "section": "Review Resources",
+    "text": "Review Resources\n\nQuick Review\nLet \\(y\\) be a response variable with a set of \\(k\\) explanatory variables \\(x = (x_{1}, x_{2}, ..., x_{k})\\). Then the population linear regression model is\n\\[\\begin{split}\ny & = f(x) + \\varepsilon  = \\beta_0 + \\beta_1 x_{1} + \\beta_2 x_{2} + \\cdots + \\beta_k x_{k} + \\varepsilon \\\\\n\\end{split}\\]\nNOTES:\n\n\\(\\beta\\) is the Greek letter “beta”. \\(\\varepsilon\\) is the Greek letter “epsilon”.\n\n“Linear” regression is so named because it assumes that \\(y\\) is a linear combination of the \\(x\\)’s. It does not mean that the relationship itself is linear!! For example, one of the predictors might be a quadratic term: \\(x_2 = x_1^2\\).\n\\(f(x) = \\beta_0 + \\beta_1 x_{1} + \\beta_2 x_{2} + \\cdots + \\beta_k x_{k}\\) captures the trend of the relationship\n\n\\(\\beta_0\\) = intercept coefficient\nthe model value when \\(x_1=x_2=\\cdots=x_k=0\\)\n\\(\\beta_i\\) = \\(x_i\\) coefficient\nhow \\(x_i\\) is related to \\(y\\) when holding constant all other \\(x_i\\)\n\n\\(\\epsilon\\) reflects deviation from the trend (the residual)\n\n\n\n\nFitting the Model\nOnce we have a population model in mind, we can “fit the model” (i.e. estimate the \\(\\beta\\) population coefficients) using sample data:\n\\[\\begin{split}\ny & =  \\hat{f}(x) + \\varepsilon \\\\\n& = \\hat{\\beta}_0 + \\hat{\\beta}_1 x_{1} + \\hat{\\beta}_2 x_{2} + \\cdots + \\hat{\\beta}_k x_{k} + \\varepsilon \\\\\n\\end{split}\\]\n\n\nTo this end, collect a sample of data on \\(n\\) subjects. Use subscripts to denote the data for subject \\(i\\): \\(y_i\\) and \\(x_{ij}\\). Then the predicted response and residual (prediction error) for subject \\(i\\) are\n\nprediction \\[\\hat{y}_i = \\hat{f}(x_i) = \\hat{\\beta}_0 + \\hat{\\beta}_1 x_{i1} + \\hat{\\beta}_2 x_{i2} + \\cdots + \\hat{\\beta}_k x_{ik}\\]\nresidual / prediction error \\[y_i - \\hat{y}_i\\]\n\n\n\n\nLeast Squares Criterion\nEstimate (\\(\\beta_0, \\beta_1,..., \\beta_k\\)) by (\\(\\hat{\\beta}_0, \\hat{\\beta}_1,..., \\hat{\\beta}_k)\\) that minimize the sum of squared residuals: \\[\\sum_{i=1}^n(y_i - \\hat{y}_i)^2 = (y_1-\\hat{y}_1)^2 + (y_2-\\hat{y}_2)^2 + \\cdots + (y_n-\\hat{y}_n)^2\\]\n\n\n\n\n\nComprehensive Review\nA comprehensive STAT 155 review is provided by the STAT 155 Notes created by Macalester statistics professors (here) and Prof. Johnson’s Spring 2022 STAT 155 manual (here).",
+    "crumbs": [
+      "Appendices",
+      "STAT 155 Review"
+    ]
+  },
+  {
+    "objectID": "appendices/r_rstudio.html",
+    "href": "appendices/r_rstudio.html",
+    "title": "R and RStudio Setup",
+    "section": "",
+    "text": "File Organization\nFollow these instructions to set up the software that we’ll be using throughout the semester.\nRequired: Create a folder for this course on your local hard drive (e.g. Desktop or Documents), not necessarily on a Cloud Drive as you may encounter large datasets in this class.\nHighly Recommended: Change the default file download location for your internet browser.",
+    "crumbs": [
+      "Appendices",
+      "R and RStudio Setup"
+    ]
+  },
+  {
+    "objectID": "appendices/r_rstudio.html#file-organization",
+    "href": "appendices/r_rstudio.html#file-organization",
+    "title": "R and RStudio Setup",
+    "section": "",
+    "text": "Generally by default, internet browsers automatically save all files to the Downloads folder on your computer. This does not encourage good file organization practices. You need to change this option so that your browser asks you where to save each file before downloading it.\nThis page has information on how to do this for the most common browsers.",
+    "crumbs": [
+      "Appendices",
+      "R and RStudio Setup"
+    ]
+  },
+  {
+    "objectID": "appendices/r_rstudio.html#r-rstudio",
+    "href": "appendices/r_rstudio.html#r-rstudio",
+    "title": "R and RStudio Setup",
+    "section": "R & RStudio",
+    "text": "R & RStudio\nRequired: Install (or update) R and RStudio\n\nAs of August 2026, the latest versions of R and RStudio are:\n\nR: 4.6.1\nRStudio: 2026.08.2-200 \n\nIf you do not have the latest versions of both R and RStudio installed on your computer, see below. (Not sure if you do? See the THIRD step, below.)\n\nFIRST: Download R here.\n\nYou will see three links “Download R for …”\nChoose the link that corresponds to your computer operating system (and pay attention to processor chip type for Mac - M1/M2 or Intel; on your computer, click Apple &gt; About this Mac to find info about the chip).\n\nSECOND: Download RStudio here.\n\nClick the button under step 2 to install the version of RStudio recommended for your computer.\n\nTHIRD: Check your work\n\nOpen an RStudio session.\nRun the following in the Console, and repeat the FIRST or SECOND step if the version numbers that print out are not equal to (or more recent than) those listed above.\n\n\n\n# check R version\nR.Version()\n\n# check RStudio version\nrstudioapi::versionInfo()\n\n\nRequired: Install the most up-to-date versions of the required R packages for this course.\n\nAn R package is an extra bit of functionality that will help us in our data analysis efforts in a variety of ways.\nOpen RStudio and click inside the Console pane (by default, the bottom left pane). Copy and paste the following command into the Console. You should see the text below appear to the right of the &gt;, which is called the R prompt. After you paste, hit Enter.\n\n\ninstall.packages(c(\"tidyverse\", \"scales\", \"broom\", \"dagitty\", \"ggdag\", \"MatchIt\", \"WeightIt\", \"cobalt\", \"marginaleffects\"), dependencies = TRUE)\n\n\nIf you get a message that says “There are binary versions available the source versions are later” type no and press Enter.\nYou will see a lot of text from status messages appearing in the Console as the packages are being installed. Wait until you see the &gt; again.\nEnter the command library(ggplot2) and hit enter.\nIf you see the message Error in library(ggplot2) : there is no package called ggplot2, then there was a problem installing this package. Jump down to the Troubleshooting section below. (Any other messages that appear are fine, and a lack of any messages is also fine.)\nRepeat the above step for the commands:\n\nlibrary(tidyverse)\nlibrary(scales)\nlibrary(broom)\nlibrary(dagitty)\nlibrary(ggdag)\nlibrary(MatchIt)\nlibrary(WeightIt)\nlibrary(cobalt)\nlibrary(marginaleffects)\n\nQuit RStudio. You’re done setting up!\n\n\nHighly Recommended: Set essential RStudio options.\nGo to:\n\nWindows: Edit &gt; Preferences &gt; General\nMac: Tools &gt; Global Options… &gt; General\n\nNavigate to the “Workspace” section.\n\nRestore .RData into workspace at startup: Leave this unchecked\nSave workspace to .RData on exit: Select “Never”\nPress “Apply” and then “OK”\n\nIf you don’t change these options, RStudio will save all of the objects you ever create in your Global Environment. In practice, this leads to all of the objects, datasets, etc that you have ever worked with at Macalester being loaded in when you start RStudio.\n\nThis can make startup slow.\nIt clutters the Global Environment. (e.g., You’re working on something and referring to diamonds not knowing that a diamonds that was used in class last year is already in the Global Environment.)\n\n\nHighly Recommended: Watch this video made by Dr. Lisa Lendway that describes useful configuration options for RStudio.\n\nOptional: For a refresher on RStudio features, watch this video. It also shows you how to customize the layout and color scheme of RStudio.\n\n\n\n\nTroubleshooting\n\nProblem: You are on a Mac and getting the following error (or something similar):\n\n\n    Error: package or namespace load failed for ‘ggplot2’ in loadNamespace(i, c(lib.loc, .libPaths()), versionCheck = vI[[i]]):\n     there is no package called ‘rlang’\nHere’s how to fix it:\n\nFirst install the suite of Command Line Tools for Mac using the instructions here.\nNext enter install.packages(\"rlang\") in the Console.\nFinally check that entering library(ggplot2) gives no errors.",
+    "crumbs": [
+      "Appendices",
+      "R and RStudio Setup"
+    ]
+  },
+  {
+    "objectID": "appendices/r_resources.html",
+    "href": "appendices/r_resources.html",
+    "title": "R Resources",
+    "section": "",
+    "text": "Tidyverse resources",
+    "crumbs": [
+      "Appendices",
+      "R Resources"
+    ]
+  },
+  {
+    "objectID": "appendices/r_resources.html#tidyverse-resources",
+    "href": "appendices/r_resources.html#tidyverse-resources",
+    "title": "R Resources",
+    "section": "",
+    "text": "COMP/STAT 112 website (with code examples and videos)\nR for Data Science\nExploratory Data Analysis with R\nJohn’s Hopkins Tidyverse course text",
+    "crumbs": [
+      "Appendices",
+      "R Resources"
+    ]
+  },
+  {
+    "objectID": "appendices/r_resources.html#visualization-resources",
+    "href": "appendices/r_resources.html#visualization-resources",
+    "title": "R Resources",
+    "section": "Visualization resources",
+    "text": "Visualization resources\n\nggplot2 reference\nColors in R",
+    "crumbs": [
+      "Appendices",
+      "R Resources"
+    ]
+  },
+  {
+    "objectID": "appendices/r_resources.html#quarto-resources",
+    "href": "appendices/r_resources.html#quarto-resources",
+    "title": "R Resources",
+    "section": "Quarto resources",
+    "text": "Quarto resources\n\nCOMP/STAT 112 website (including an example quarto document)\nQuarto cheatsheet\nQuarto tutorial\nComprehensive Quarto Guide",
+    "crumbs": [
+      "Appendices",
+      "R Resources"
+    ]
+  },
+  {
+    "objectID": "appendices/r_resources.html#general-r-resources",
+    "href": "appendices/r_resources.html#general-r-resources",
+    "title": "R Resources",
+    "section": "General R resources",
+    "text": "General R resources\n\nRStudio cheatsheets\nAdvanced R\nR Programming Wikibook\nDebugging in R\n\nArticle\nVideo",
+    "crumbs": [
+      "Appendices",
+      "R Resources"
+    ]
+  },
+  {
+    "objectID": "appendices/r_resources.html#some-example-code",
+    "href": "appendices/r_resources.html#some-example-code",
+    "title": "R Resources",
+    "section": "Some example code",
+    "text": "Some example code\nCreating new variables\ncase_when() from the dplyr package is a very versatile function for creating new variables based on existing variables. This can be useful for creating categorical or quantitative variables and for creating indices from multiple variables.\n\n# Turn quant_var into a Low/Med/High version\ndata &lt;- data %&gt;%\n    mutate(cat_var = case_when(\n            quant_var &lt; 10 ~ \"Low\",\n            quant_var &gt;= 10 & quant_var &lt;= 20 ~ \"Med\",\n            quant_var &gt; 20 ~ \"High\"\n        )\n    )\n\n# Turn cat_var (A, B, C categories) into another categorical variable\n# (collapse A and B into one category)\ndata &lt;- data %&gt;%\n    mutate(new_cat_var = case_when(\n            cat_var %in% c(\"A\", \"B\") ~ \"A or B\"\n            cat_var==\"C\" ~ \"C\"\n        )\n    )\n\n# Turn a categorical variable (x1) encoded as a numerical 0/1/2 variable into a different quantitative variable\n# Doing this for multiple variables allows you to create an index\ndata &lt;- data %&gt;%\n    mutate(x1_score = case_when(\n            x1==0 ~ 10,\n            x1==1 ~ 20,\n            x1==2 ~ 50\n        )\n    )\n\n# Add together multiple variables with mutate\ndata &lt;- data %&gt;%\n    mutate(index = x1_score + x2_score + x3_score)",
+    "crumbs": [
+      "Appendices",
+      "R Resources"
+    ]
+  }
+]

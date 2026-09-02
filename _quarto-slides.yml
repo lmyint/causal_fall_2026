@@ -1,0 +1,15 @@
+project:
+  output-dir: slides
+  render: 
+    - "activities/L*.qmd"
+
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: false
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+    scrollable: true
+    footer: <https://mac-stat.github.io/STAT253>
+    smaller: true
