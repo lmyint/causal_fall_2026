@@ -10,11 +10,12 @@ I hope that by the end of the course, you are able to:
 
 - Explain the goals of causal inference to general audiences
 - Formulate strategies for identifying causal effects that draw on causal graph methodology, study designs, and data context
-- Analyze data with appropriate methodology to estimate causal effect, and communicate the results and limitations of an analysis to general audiences
+- Analyze data with appropriate methodology to estimate causal effects
+- Communicate the results and limitations of an analysis to general audiences
 - Conduct simulation studies to explore the properties of statistical methods
 - Communicate the intuition/ideas behind causal inference methods to general audiences
 - Recognize the potential for applying causal inference ideas in daily life
-- Articulate with greater clarity key insights about your process for learning challenging topics and about the way in which you collaborate with others
+- Gain deeper insights about your learning process and about the ways in which you collaborate with others
 
 ### 📋 Topics
 
