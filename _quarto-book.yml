@@ -30,15 +30,14 @@ book:
         #   href: logistics/learning-objectives.qmd
         - icon: asterisk
           href: logistics/syllabus.qmd
+        - icon: brush-fill
+          href: logistics/project.qmd
     - part: "Foundational Ideas"
       chapters:
         - activities/01-foundations.qmd
     - part: "Assignments"
       chapters:
         - hw/assignment1.qmd
-    - part: "Project"
-      chapters:
-        - project.qmd
   appendices:
     - appendices/stat155.qmd
     - appendices/r_rstudio.qmd

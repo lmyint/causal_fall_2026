@@ -199,16 +199,14 @@ Check here to see what you should be doing before, during, and after each class 
 
 **After class:**
 
-::: {.callout-note title="Required" icon=false}
+::: {.callout-note title="Optional" appearance="simple" collapse="true"}
 The following chapters from *The Effect* lay the foundation for asking good questions. They're written in a fun, conversational style and have some nice humor interspersed throughout.
 
 - *The Effect* [Chapter 1: Designing Research](https://www.theeffectbook.net/ch-TheDesignofResearch.html) (~10 minutes)
     - Video alternative: [Designing Research](https://youtu.be/yQXqdmenc6M) (~8 minutes)
 - *The Effect* [Chapter 2: Research Questions](https://www.theeffectbook.net/ch-ResearchQuestions.html) (~30 minutes)
     - Video alternative: [Research Questions](https://youtu.be/ZPuEFjJ2us8) (~11 minutes)
-:::
 
-::: {.callout-note title="Optional" appearance="simple" collapse="true"}
 If you would like to have an additional reference throughout the course that leans more technical and economics-leaning, I recommend starting *Causal Inference: The Mixtape* by reading [Chapter 1: Introduction](https://mixtape.scunning.com/01-introduction) (~35 minutes).
 
 - *Note:* Scott uses the term **endogenous** in Section 1.3 without defining it. This is an economics term that essentially parallels the term **confounding** in statistics. That is, an endogenous variable is (often) one that is a confounder.
@@ -220,24 +218,10 @@ If you would like to have an additional reference throughout the course that lea
 **Before class:**
 
 ::: {.callout-note title="Required" icon=false}
-- *The Effect* [Chapter 5: Identification](https://www.theeffectbook.net/ch-Identification.html) (~50 minutes)
-    - Video alternatives:
-        - [Identification: Data Generating Processes](https://youtu.be/JWNN46aiIAE) (~8 minutes)
-        - [Identification: Alternative Explanations](https://youtu.be/pR_m0HjEcjU) (~9 minutes)
-        - [Identification: Alcohol and Mortality](https://youtu.be/xP_mVOh2R3w) (~9 minutes)
-:::
-
-::: {.callout-note title="Required" icon=false}
 - *The Effect* [Chapter 6: Causal Diagrams](https://www.theeffectbook.net/ch-CausalDiagrams.html) (~40 min)
     - Video alternatives:
         - [Causal Diagrams: Causality](https://youtu.be/J6P4RwWdGBw) (~9 minutes)
         - [Causal Diagrams](https://youtu.be/aMNGfodzKO8) (~12 minutes)
-- *The Effect* [Chapter 7: Drawing Causal Diagrams](https://www.theeffectbook.net/ch-DrawingCausalDiagrams.html) (~30 min)
-    - Video alternatives:
-        - [Drawing Causal Diagrams](https://youtu.be/NOslfkYr_II) (~13 minutes)
-        - [Simplifying Causal Diagrams](https://youtu.be/h5C2iMoHFag) (~12 minutes)
-
-Formulate a research question that relates to an area that you're interested in. In class, we will be using the principles in Chapters 6 and 7 to draw a causal diagram that addresses this research question.
 :::
 
 ::: {.callout-note title="Optional" appearance="simple" collapse="true"}

@@ -192,7 +192,6 @@ Most class periods will involve working with a new tool and computational concep
 Don't be afraid to ask questions. These are opportunities to learn and dig deeper. You get out what you put into a course. 
 
 ::: {.callout-tip title="Other suggestions"}
-- Open the checkpoint on Moodle as you review the material. Jot down questions or ideas that you have about topics in the material.
 - Ask (and answer!) questions in our [Google Chat space](https://chat.google.com/room/AAQA0MsQDTE?cls=7).
 - Record any reflections from in-class time about your learning process or interactions with peers while they are still fresh.
 - After learning a new topic in class, it is helpful to immediately attempt the related exercises on the upcoming homework assignment.
@@ -233,7 +232,7 @@ I'm open to other ideas! Much like an athlete tests their skills by playing in a
 
 - If you are an MSCS major, you are required to complete at least one 400-level course, thus at least one capstone project, in your major before spring of your senior year.
 - You will choose one of these completed projects to later present on MSCS Capstone Days during your senior year (Fall for December graduates and Spring for May graduates).
-- Full details about the project will be available on our course website's [project page](../project.qmd).
+- Full details about the project will be available on our course website's [project page](../logistics/project.qmd).
 
 **Seminar attendance:** Because this is a capstone course, you are required to attend and subsequently submit a short reflection for at least 2 MSCS seminars, or other related presentations upon instructor approval.
 
@@ -328,18 +327,15 @@ For our experience together, my main concern is how AI impacts your learning. My
 
 My hope for you by the end of the semester is *not* that you have done well on all your assignments and completed a fantastic project. My hope is that you have *become the kind of person* who has the skills to perform at that level again and who uses those skills to meaningfully benefit those who have entrusted you with work.
 
-That said, our academic system requires me to assess this goal. And I can only really do that by looking at products of your learning process. I'll be honest that there are likely 
-
 For this reason, I am asking you to **never use generative AI as a complete replacement for your own thinking.**
 
-- If you need to turn in work for feedback and are completely stuck, I ask that you do not use text from AI as a response.
-    - Instead, please tell me what *specifically* you didn't understand or were having trouble with.    
-    > **Example:** I couldn't complete Exercise 2 because I don't understand how to translate the process of interpreting an interaction coefficient with one categorical and one quantitative variable to one with two quantitative variables.
-    - Please also seek out help from me or your peers ahead of time, and we can work together to get you unstuck!
+If you need to turn in work for feedback and are completely stuck, I ask that you do not use text from AI as a response. Instead, please tell me what *specifically* you didn't understand or were having trouble with.    
 
-AI can be helpful in explaining concepts in new ways and providing other examples. If you use AI in this way, **please copy and paste both your prompt(s) and the AI output into your assignment.**
+> **Example:** I couldn't complete Exercise 2 because I don't understand how to translate the process of interpreting an interaction coefficient with one categorical and one quantitative variable to one with two quantitative variables.
 
-- This is helpful to me to understand how I can improve the course materials!
+Please also seek out help from me or your peers ahead of time, and we can work together to get you unstuck!
+
+AI can be helpful in explaining concepts in new ways and providing other examples. If you use AI in this way, **please copy and paste both your prompt(s) and the AI output into your assignment.** This is helpful to me to understand how I can improve the course materials!
 
 ::: {.callout-tip title="Environmental impact of AI" icon=false}
 Because of my work in environmental justice, it is important to me to name AI's environmental impacts:

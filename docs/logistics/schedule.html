@@ -307,6 +307,13 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../logistics/project.html" class="sidebar-item-text sidebar-link"><i class="bi bi-brush-fill" role="img">
+</i> 
+ <span class="menu-text">Project</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -346,29 +353,12 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Project</span></a>
+ <span class="menu-text">Appendices</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/stat155.html" class="sidebar-item-text sidebar-link">
@@ -492,15 +482,17 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>During class:</strong> <a href="../activities/01-foundations.html">Introductions and foundations</a></p>
 <p><strong>After class:</strong></p>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Required">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-note callout-titled" title="Optional">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Required
+<span class="screen-reader-only">Note</span>Optional
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The following chapters from <em>The Effect</em> lay the foundation for asking good questions. They’re written in a fun, conversational style and have some nice humor interspersed throughout.</p>
 <ul>
@@ -513,20 +505,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Video alternative: <a href="https://youtu.be/ZPuEFjJ2us8">Research Questions</a> (~11 minutes)</li>
 </ul></li>
 </ul>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note callout-titled" title="Optional">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Optional
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
 <p>If you would like to have an additional reference throughout the course that leans more technical and economics-leaning, I recommend starting <em>Causal Inference: The Mixtape</em> by reading <a href="https://mixtape.scunning.com/01-introduction">Chapter 1: Introduction</a> (~35 minutes).</p>
 <ul>
 <li><em>Note:</em> Scott uses the term <strong>endogenous</strong> in Section 1.3 without defining it. This is an economics term that essentially parallels the term <strong>confounding</strong> in statistics. That is, an endogenous variable is (often) one that is a confounder.</li>
@@ -549,29 +527,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><em>The Effect</em> <a href="https://www.theeffectbook.net/ch-Identification.html">Chapter 5: Identification</a> (~50 minutes)
-<ul>
-<li>Video alternatives:
-<ul>
-<li><a href="https://youtu.be/JWNN46aiIAE">Identification: Data Generating Processes</a> (~8 minutes)</li>
-<li><a href="https://youtu.be/pR_m0HjEcjU">Identification: Alternative Explanations</a> (~9 minutes)</li>
-<li><a href="https://youtu.be/xP_mVOh2R3w">Identification: Alcohol and Mortality</a> (~9 minutes)</li>
-</ul></li>
-</ul></li>
-</ul>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Required">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Required
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
 <li><em>The Effect</em> <a href="https://www.theeffectbook.net/ch-CausalDiagrams.html">Chapter 6: Causal Diagrams</a> (~40 min)
 <ul>
 <li>Video alternatives:
@@ -580,20 +535,11 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://youtu.be/aMNGfodzKO8">Causal Diagrams</a> (~12 minutes)</li>
 </ul></li>
 </ul></li>
-<li><em>The Effect</em> <a href="https://www.theeffectbook.net/ch-DrawingCausalDiagrams.html">Chapter 7: Drawing Causal Diagrams</a> (~30 min)
-<ul>
-<li>Video alternatives:
-<ul>
-<li><a href="https://youtu.be/NOslfkYr_II">Drawing Causal Diagrams</a> (~13 minutes)</li>
-<li><a href="https://youtu.be/h5C2iMoHFag">Simplifying Causal Diagrams</a> (~12 minutes)</li>
-</ul></li>
-</ul></li>
 </ul>
-<p>Formulate a research question that relates to an area that you’re interested in. In class, we will be using the principles in Chapters 6 and 7 to draw a causal diagram that addresses this research question.</p>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note callout-titled" title="Optional">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -602,7 +548,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><em>Mixtape</em> <a href="https://mixtape.scunning.com/03-directed_acyclical_graphs">Chapter 3: Directed Acyclic Graphs</a> but skip 3.1.3 Backdoor Criterion (~40 minutes)</li>
@@ -678,7 +624,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout callout-style-simple callout-note callout-titled" title="Optional">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -687,7 +633,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><em>Mixtape</em> <a href="https://mixtape.scunning.com/03-directed_acyclical_graphs#backdoor-criterion">Section 3.1.3: Backdoor criterion</a> (~5 minutes)</li>
@@ -739,7 +685,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout callout-style-simple callout-note callout-titled" title="Optional">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -748,7 +694,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><em>Mixtape</em> <a href="https://mixtape.scunning.com/05-matching_and_subclassification">Chapter 5: Matching and Subclassification</a> (~140 minutes)</li>

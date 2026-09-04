@@ -25,7 +25,7 @@
     "href": "logistics/schedule.html#day1",
     "title": "Schedule",
     "section": "Day 1: Foundational Ideas (9/8)",
-    "text": "Day 1: Foundational Ideas (9/8)\nBefore class:\n\nGet acquainted with our course by reading the syllabus and touring our course website and Moodle page.\n\nDuring class: Introductions and foundations\nAfter class:\n\n\n\n\n\n\nNoteRequired\n\n\n\nThe following chapters from The Effect lay the foundation for asking good questions. They’re written in a fun, conversational style and have some nice humor interspersed throughout.\n\nThe Effect Chapter 1: Designing Research (~10 minutes)\n\nVideo alternative: Designing Research (~8 minutes)\n\nThe Effect Chapter 2: Research Questions (~30 minutes)\n\nVideo alternative: Research Questions (~11 minutes)\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\nIf you would like to have an additional reference throughout the course that leans more technical and economics-leaning, I recommend starting Causal Inference: The Mixtape by reading Chapter 1: Introduction (~35 minutes).\n\nNote: Scott uses the term endogenous in Section 1.3 without defining it. This is an economics term that essentially parallels the term confounding in statistics. That is, an endogenous variable is (often) one that is a confounder.",
+    "text": "Day 1: Foundational Ideas (9/8)\nBefore class:\n\nGet acquainted with our course by reading the syllabus and touring our course website and Moodle page.\n\nDuring class: Introductions and foundations\nAfter class:\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\nThe following chapters from The Effect lay the foundation for asking good questions. They’re written in a fun, conversational style and have some nice humor interspersed throughout.\n\nThe Effect Chapter 1: Designing Research (~10 minutes)\n\nVideo alternative: Designing Research (~8 minutes)\n\nThe Effect Chapter 2: Research Questions (~30 minutes)\n\nVideo alternative: Research Questions (~11 minutes)\n\n\nIf you would like to have an additional reference throughout the course that leans more technical and economics-leaning, I recommend starting Causal Inference: The Mixtape by reading Chapter 1: Introduction (~35 minutes).\n\nNote: Scott uses the term endogenous in Section 1.3 without defining it. This is an economics term that essentially parallels the term confounding in statistics. That is, an endogenous variable is (often) one that is a confounder.",
     "crumbs": [
       "Course Logistics",
       "Schedule"
@@ -36,7 +36,7 @@
     "href": "logistics/schedule.html#day2",
     "title": "Schedule",
     "section": "Day 2: Introduction to Causal Graphs (9/10)",
-    "text": "Day 2: Introduction to Causal Graphs (9/10)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 5: Identification (~50 minutes)\n\nVideo alternatives:\n\nIdentification: Data Generating Processes (~8 minutes)\nIdentification: Alternative Explanations (~9 minutes)\nIdentification: Alcohol and Mortality (~9 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 6: Causal Diagrams (~40 min)\n\nVideo alternatives:\n\nCausal Diagrams: Causality (~9 minutes)\nCausal Diagrams (~12 minutes)\n\n\nThe Effect Chapter 7: Drawing Causal Diagrams (~30 min)\n\nVideo alternatives:\n\nDrawing Causal Diagrams (~13 minutes)\nSimplifying Causal Diagrams (~12 minutes)\n\n\n\nFormulate a research question that relates to an area that you’re interested in. In class, we will be using the principles in Chapters 6 and 7 to draw a causal diagram that addresses this research question.\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 3: Directed Acyclic Graphs but skip 3.1.3 Backdoor Criterion (~40 minutes)",
+    "text": "Day 2: Introduction to Causal Graphs (9/10)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 6: Causal Diagrams (~40 min)\n\nVideo alternatives:\n\nCausal Diagrams: Causality (~9 minutes)\nCausal Diagrams (~12 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 3: Directed Acyclic Graphs but skip 3.1.3 Backdoor Criterion (~40 minutes)",
     "crumbs": [
       "Course Logistics",
       "Schedule"
@@ -135,7 +135,7 @@
     "href": "logistics/syllabus.html#how-to-thrive-and-what-to-expect",
     "title": "Syllabus",
     "section": "🌿 How to thrive and what to expect",
-    "text": "🌿 How to thrive and what to expect\nWhen taking a new course, figuring out the right workflow/cadence of effort throughout the week can be a big adjustment. And most of you are doing this for 4 different courses! Below are some suggestions for what to expect in the course and how to focus your time and attention during and outside of class.\n\nBefore class\n✏️   Plan ahead\nIn a typical week, plan to spend 8-10 hours on this course (or any 4-credit course), including class time.\n\nIf you are working far more or far less than 8 hours per week, let me know.\nCarve out dedicated time on your calendar for intentionally studying/reviewing and working on assignments.\nStay up-to-date on the course calendar. The website version contains detailed information about our day-to-day, including resources. The Google calendar at the top of our Moodle page just contains due dates—this one might be helpful to incorporate into your personal Google calendar.\n\n\n\nDuring class\n✅   Do the things\nClass time will be a mix of interactive lecture and longer stretches of group work. During the lecture portion, I will pause explanation frequently to prompt a short exercise or ask questions that you’ll reflect on individually or together.\n\nAttend class and actively engage\nWork with your classmates; ask each other questions; share your ideas\nComplete the in-class activities (this might entail finishing outside of class)\nJot down reflections about your learning process and how group work is going as they occur to you during class\nReview these reflections before class to frame how you want to engage in class. (Perhaps you’ve noticed a struggle and want to try a new strategy.)\n\n\n\nAfter class\n🧠   Reflect\nMake sure to take the time to finish the activity, and review the solutions after you have attempted all the exercises.  After/during these efforts, reflect and ask yourself:\n\nWhat was easy? Why?\nWhat did I struggle with or need to work a little harder to remember? Why?\n\n📖   Review\nMost class periods will involve working with a new tool and computational concept. Alongside reflection, you can:\n\nRewrite / organize your notes\nSummarize concepts in your own words\n\n🔎   Be curious\nDon’t be afraid to ask questions. These are opportunities to learn and dig deeper. You get out what you put into a course.\n\n\n\n\n\n\nTipOther suggestions\n\n\n\n\nOpen the checkpoint on Moodle as you review the material. Jot down questions or ideas that you have about topics in the material.\nAsk (and answer!) questions in our Google Chat space.\nRecord any reflections from in-class time about your learning process or interactions with peers while they are still fresh.\nAfter learning a new topic in class, it is helpful to immediately attempt the related exercises on the upcoming homework assignment.\nCome to instructor office (drop-in) hours to chat about the course or anything else! 😃",
+    "text": "🌿 How to thrive and what to expect\nWhen taking a new course, figuring out the right workflow/cadence of effort throughout the week can be a big adjustment. And most of you are doing this for 4 different courses! Below are some suggestions for what to expect in the course and how to focus your time and attention during and outside of class.\n\nBefore class\n✏️   Plan ahead\nIn a typical week, plan to spend 8-10 hours on this course (or any 4-credit course), including class time.\n\nIf you are working far more or far less than 8 hours per week, let me know.\nCarve out dedicated time on your calendar for intentionally studying/reviewing and working on assignments.\nStay up-to-date on the course calendar. The website version contains detailed information about our day-to-day, including resources. The Google calendar at the top of our Moodle page just contains due dates—this one might be helpful to incorporate into your personal Google calendar.\n\n\n\nDuring class\n✅   Do the things\nClass time will be a mix of interactive lecture and longer stretches of group work. During the lecture portion, I will pause explanation frequently to prompt a short exercise or ask questions that you’ll reflect on individually or together.\n\nAttend class and actively engage\nWork with your classmates; ask each other questions; share your ideas\nComplete the in-class activities (this might entail finishing outside of class)\nJot down reflections about your learning process and how group work is going as they occur to you during class\nReview these reflections before class to frame how you want to engage in class. (Perhaps you’ve noticed a struggle and want to try a new strategy.)\n\n\n\nAfter class\n🧠   Reflect\nMake sure to take the time to finish the activity, and review the solutions after you have attempted all the exercises.  After/during these efforts, reflect and ask yourself:\n\nWhat was easy? Why?\nWhat did I struggle with or need to work a little harder to remember? Why?\n\n📖   Review\nMost class periods will involve working with a new tool and computational concept. Alongside reflection, you can:\n\nRewrite / organize your notes\nSummarize concepts in your own words\n\n🔎   Be curious\nDon’t be afraid to ask questions. These are opportunities to learn and dig deeper. You get out what you put into a course.\n\n\n\n\n\n\nTipOther suggestions\n\n\n\n\nAsk (and answer!) questions in our Google Chat space.\nRecord any reflections from in-class time about your learning process or interactions with peers while they are still fresh.\nAfter learning a new topic in class, it is helpful to immediately attempt the related exercises on the upcoming homework assignment.\nCome to instructor office (drop-in) hours to chat about the course or anything else! 😃",
     "crumbs": [
       "Course Logistics",
       "Syllabus"
@@ -168,7 +168,7 @@
     "href": "logistics/syllabus.html#other-policies",
     "title": "Syllabus",
     "section": "🪧 Other policies",
-    "text": "🪧 Other policies\n\nAbsences\nBeing together in class to learn in community with others is a rare and valuable resource. For this reason, I highly encourage attending class, but I also understand that life circumstances may sometimes prevent attendance. I will be tracking attendance just to make sure that everyone is ok, and I will reach out if I’m concerned.\n\n\n\n\n\n\nNoteIf you miss class\n\n\n\n\nCheck the daily schedule for what is happening in class that day.\nComplete the in-class activity on your own.\nAsk any follow-up questions on our course Google Chat space or in office hours.\nSend me a quick email. You do not need to share a detailed reason for your absence. It’s just a simple courtesy and keeps communication lines open.\n\n\n\n\n\nLate work\nHomework assignments will be due roughly every 1-2 weeks on Thursdays at 11:59pm on Moodle.\nThe purpose of deadlines are so that I can give useful, meaningful feedback in a timely manner. Everyone automatically has three 3-day extensions to use throughout the semester. If you anticipate needing more time to complete an assignment and want to use one of those extensions, please email me ahead of time so that I can plan when I can give feedback.\nIf you have used all of your extensions and need more time, please email me to set up a meeting as soon as possible to discuss your situation and to come up with a plan for thriving in the course.\n\n\nAcademic integrity\nAcademic integrity is the cornerstone of our learning community. Students are expected to be familiar with the college’s standards on academic integrity.\nI encourage you to work with your classmates to discuss material and ideas for assignments, but in order for you to receive individualized feedback on your own learning, you must submit your own work. This involves writing your own code and putting thoughts and explanations into your own words. Always cite any sources you use, including AI (see section below).\n\n\nArtificial intelligence\nAs a society, we are paying a lot of attention to AI. Some fear its use from ethical, environmental, and existential standpoints. Some are focused on gaining AI skills that employers are increasingly advertising as being necessary for new hires.\nFor our experience together, my main concern is how AI impacts your learning. My experience over the last few years has shown me that when the (perceived) quality of a product (a homework assignment, a report, code, etc.) is the main focus, AI tends to hinder learning because there is an overemphasis on just getting a good product (at least one the instructor will hopefully think is good) rather than becoming the kind of person who can create a good product. In contrast, when the process (effort) of learning is the focus, AI is more likely to aid learning.\nMy hope for you by the end of the semester is not that you have done well on all your assignments and completed a fantastic project. My hope is that you have become the kind of person who has the skills to perform at that level again and who uses those skills to meaningfully benefit those who have entrusted you with work.\nThat said, our academic system requires me to assess this goal. And I can only really do that by looking at products of your learning process. I’ll be honest that there are likely\nFor this reason, I am asking you to never use generative AI as a complete replacement for your own thinking.\n\nIf you need to turn in work for feedback and are completely stuck, I ask that you do not use text from AI as a response.\n\nInstead, please tell me what specifically you didn’t understand or were having trouble with.\n&gt; Example: I couldn’t complete Exercise 2 because I don’t understand how to translate the process of interpreting an interaction coefficient with one categorical and one quantitative variable to one with two quantitative variables.\nPlease also seek out help from me or your peers ahead of time, and we can work together to get you unstuck!\n\n\nAI can be helpful in explaining concepts in new ways and providing other examples. If you use AI in this way, please copy and paste both your prompt(s) and the AI output into your assignment.\n\nThis is helpful to me to understand how I can improve the course materials!\n\n\n\n\n\n\n\nTipEnvironmental impact of AI\n\n\n\nBecause of my work in environmental justice, it is important to me to name AI’s environmental impacts:\n\nThe building and usage of AI tools consume enormous amounts of energy (see here and here) and water (see here).\nIn Minnesota, data center builders have been acting unethically, trying to skirt environmental review and hide environmental impacts from the residents of impacted communities (see here).",
+    "text": "🪧 Other policies\n\nAbsences\nBeing together in class to learn in community with others is a rare and valuable resource. For this reason, I highly encourage attending class, but I also understand that life circumstances may sometimes prevent attendance. I will be tracking attendance just to make sure that everyone is ok, and I will reach out if I’m concerned.\n\n\n\n\n\n\nNoteIf you miss class\n\n\n\n\nCheck the daily schedule for what is happening in class that day.\nComplete the in-class activity on your own.\nAsk any follow-up questions on our course Google Chat space or in office hours.\nSend me a quick email. You do not need to share a detailed reason for your absence. It’s just a simple courtesy and keeps communication lines open.\n\n\n\n\n\nLate work\nHomework assignments will be due roughly every 1-2 weeks on Thursdays at 11:59pm on Moodle.\nThe purpose of deadlines are so that I can give useful, meaningful feedback in a timely manner. Everyone automatically has three 3-day extensions to use throughout the semester. If you anticipate needing more time to complete an assignment and want to use one of those extensions, please email me ahead of time so that I can plan when I can give feedback.\nIf you have used all of your extensions and need more time, please email me to set up a meeting as soon as possible to discuss your situation and to come up with a plan for thriving in the course.\n\n\nAcademic integrity\nAcademic integrity is the cornerstone of our learning community. Students are expected to be familiar with the college’s standards on academic integrity.\nI encourage you to work with your classmates to discuss material and ideas for assignments, but in order for you to receive individualized feedback on your own learning, you must submit your own work. This involves writing your own code and putting thoughts and explanations into your own words. Always cite any sources you use, including AI (see section below).\n\n\nArtificial intelligence\nAs a society, we are paying a lot of attention to AI. Some fear its use from ethical, environmental, and existential standpoints. Some are focused on gaining AI skills that employers are increasingly advertising as being necessary for new hires.\nFor our experience together, my main concern is how AI impacts your learning. My experience over the last few years has shown me that when the (perceived) quality of a product (a homework assignment, a report, code, etc.) is the main focus, AI tends to hinder learning because there is an overemphasis on just getting a good product (at least one the instructor will hopefully think is good) rather than becoming the kind of person who can create a good product. In contrast, when the process (effort) of learning is the focus, AI is more likely to aid learning.\nMy hope for you by the end of the semester is not that you have done well on all your assignments and completed a fantastic project. My hope is that you have become the kind of person who has the skills to perform at that level again and who uses those skills to meaningfully benefit those who have entrusted you with work.\nFor this reason, I am asking you to never use generative AI as a complete replacement for your own thinking.\nIf you need to turn in work for feedback and are completely stuck, I ask that you do not use text from AI as a response. Instead, please tell me what specifically you didn’t understand or were having trouble with.\n\nExample: I couldn’t complete Exercise 2 because I don’t understand how to translate the process of interpreting an interaction coefficient with one categorical and one quantitative variable to one with two quantitative variables.\n\nPlease also seek out help from me or your peers ahead of time, and we can work together to get you unstuck!\nAI can be helpful in explaining concepts in new ways and providing other examples. If you use AI in this way, please copy and paste both your prompt(s) and the AI output into your assignment. This is helpful to me to understand how I can improve the course materials!\n\n\n\n\n\n\nTipEnvironmental impact of AI\n\n\n\nBecause of my work in environmental justice, it is important to me to name AI’s environmental impacts:\n\nThe building and usage of AI tools consume enormous amounts of energy (see here and here) and water (see here).\nIn Minnesota, data center builders have been acting unethically, trying to skirt environmental review and hide environmental impacts from the residents of impacted communities (see here).",
     "crumbs": [
       "Course Logistics",
       "Syllabus"
@@ -183,6 +183,50 @@
     "crumbs": [
       "Course Logistics",
       "Syllabus"
+    ]
+  },
+  {
+    "objectID": "logistics/project.html",
+    "href": "logistics/project.html",
+    "title": "Project",
+    "section": "",
+    "text": "Project Options",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "logistics/project.html#option-1-data-analysis",
+    "href": "logistics/project.html#option-1-data-analysis",
+    "title": "Project",
+    "section": "Option 1: Data analysis",
+    "text": "Option 1: Data analysis\nOverview: Perform a causal analysis on a dataset of your choice.\nCollaboration: Groups of up to 3. Individual work is fine.\nResources for finding data:\nIt’s fine with me if you use a dataset associated with an existing project (like an honors project) or a project for another class (as long as it’s ok with the other instructor).\n\nGoogle Dataset Search\nOpen Science Framework\nHarvard Dataverse\nInter-university Consortium for Political and Social Research (ICPSR)\nIPUMS\nMacalester’s librarians can also be a great resource for finding data. Schedule an appointment with them here.",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "logistics/project.html#option-2-learn-an-advanced-topic",
+    "href": "logistics/project.html#option-2-learn-an-advanced-topic",
+    "title": "Project",
+    "section": "Option 2: Learn an advanced topic",
+    "text": "Option 2: Learn an advanced topic\nOverview: Dig deeper into existing course topics or learn a new topic. Examples could include:\n\nMethods for transportability (generalizability) of effects\nInterference\nSpecialized considerations for particular study designs\nMachine learning in causal inference\nIndividual causal effect estimation\n\nCollaboration: Groups of up to 3. Individual work is fine.",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "logistics/project.html#option-3-other",
+    "href": "logistics/project.html#option-3-other",
+    "title": "Project",
+    "section": "Option 3: Other",
+    "text": "Option 3: Other\nIf none of these options piques your interest, I’m happy to discuss alternatives with you. Some ideas:\n\nDesign a Shiny app to illustrate causal concepts to students\nWrite (part of) an R package for making it easier to work with causal graphs\nCritique of applied research\n\nThis is a good option for those who would like to do a data analysis but cannot find adequate data to pursue their question.\nFind and read papers that study a question of interest to you. Critique these papers from a causal inference lens. This will involve constructing your own causal graph to guide a critique of the authors’ data collection and analysis methods.\nDiscuss what remains uncertain in this line of research, and propose an analysis plan for a new causal study to rectify the limitations of prior research.",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
     ]
   },
   {
@@ -205,50 +249,6 @@
     "crumbs": [
       "Assignments",
       "Assignment 1"
-    ]
-  },
-  {
-    "objectID": "project.html",
-    "href": "project.html",
-    "title": "Project",
-    "section": "",
-    "text": "Project Options",
-    "crumbs": [
-      "Project",
-      "Project"
-    ]
-  },
-  {
-    "objectID": "project.html#option-1-data-analysis",
-    "href": "project.html#option-1-data-analysis",
-    "title": "Project",
-    "section": "Option 1: Data analysis",
-    "text": "Option 1: Data analysis\nOverview: Perform a causal analysis on a dataset of your choice.\nCollaboration: Groups of up to 3. Individual work is fine.\nResources for finding data:\nIt’s fine with me if you use a dataset associated with an existing project (like an honors project) or a project for another class (as long as it’s ok with the other instructor).\n\nGoogle Dataset Search\nOpen Science Framework\nHarvard Dataverse\nInter-university Consortium for Political and Social Research (ICPSR)\nIPUMS\nMacalester’s librarians can also be a great resource for finding data. Schedule an appointment with them here.",
-    "crumbs": [
-      "Project",
-      "Project"
-    ]
-  },
-  {
-    "objectID": "project.html#option-2-learn-an-advanced-topic",
-    "href": "project.html#option-2-learn-an-advanced-topic",
-    "title": "Project",
-    "section": "Option 2: Learn an advanced topic",
-    "text": "Option 2: Learn an advanced topic\nOverview: Dig deeper into existing course topics or learn a new topic. Examples could include:\n\nMethods for transportability (generalizability) of effects\nInterference\nSpecialized considerations for particular study designs\nMachine learning in causal inference\nIndividual causal effect estimation\n\nCollaboration: Groups of up to 3. Individual work is fine.",
-    "crumbs": [
-      "Project",
-      "Project"
-    ]
-  },
-  {
-    "objectID": "project.html#option-3-other",
-    "href": "project.html#option-3-other",
-    "title": "Project",
-    "section": "Option 3: Other",
-    "text": "Option 3: Other\nIf none of these options piques your interest, I’m happy to discuss alternatives with you. Some ideas:\n\nDesign a Shiny app to illustrate causal concepts to students\nWrite (part of) an R package for making it easier to work with causal graphs\nCritique of applied research\n\nThis is a good option for those who would like to do a data analysis but cannot find adequate data to pursue their question.\nFind and read papers that study a question of interest to you. Critique these papers from a causal inference lens. This will involve constructing your own causal graph to guide a critique of the authors’ data collection and analysis methods.\nDiscuss what remains uncertain in this line of research, and propose an analysis plan for a new causal study to rectify the limitations of prior research.",
-    "crumbs": [
-      "Project",
-      "Project"
     ]
   },
   {
