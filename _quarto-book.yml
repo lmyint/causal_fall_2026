@@ -9,7 +9,7 @@ number-depth: 2
 book:
   title: "STAT 451: Causal Inference"
   subtitle: "Fall 2026 Course Notes"
-  favicon: "images/451-favicon.png"
+  favicon: "images/451_favicon.png"
   page-footer:
     left: |
       Copyright 2026 Leslie Myint, CC BY-NC-SA 4.0

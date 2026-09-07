@@ -29,7 +29,7 @@ Check here to see what you should be doing before, during, and after each class 
     <td class="topleft">3 (9/21 - 9/25)</td>
     <td class="topleft"><a href="#day5">Synthesis: causal graphs</a></td>
     <td class="topleft"><a href="#day6">Matching</a></td>
-    <td class="topleft"><a href="../hw/assignment3.html">Assignment 2</a> due Thurs 9/24 at midnight</td>
+    <td class="topleft"><a href="../hw/assignment3.html">Assignment 3</a> due Thurs 9/24 at midnight</td>
   </tr>
   
   
