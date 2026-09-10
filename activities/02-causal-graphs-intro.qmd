@@ -1,0 +1,142 @@
+---
+title: "Introduction to Causal Graphs"
+code-fold: true
+code-summary: "Code"
+---
+
+```{r 02_setup, include=FALSE}
+library(tidyverse)
+```
+
+# Goals {.unnumbered}
+
+- Motivate why causal graphs are useful in causal inference investigations
+- Practice graphically showing our beliefs about data-generating processes using causal graphs
+
+<br>
+
+Slides for today are available [here](https://docs.google.com/presentation/d/1o4_QWQNud8Cw4pdmscyZd6NFXdLQJIJyow_RbDL9aeo/edit?usp=sharing).
+
+
+<br><br><br><br>
+
+
+# Small Group Discussion {.unnumbered}
+
+<!-- ## Prompt X -->
+
+<!-- Last time we reviewed the idea of confounding and framed confounding as providing alternate explanations for observed relationships. What connections do you see with ideas about drawing causal graphs from the pre-class material? -->
+
+## Prompt 1 {.unnumbered}
+
+We are interested in estimating the causal effect of owning a dog on longevity.
+
+Do you think it's important to use the following variables in our analysis?
+
+- Income
+- General physical activity
+- Change in physical activity after getting a dog
+
+First, think through this without using a causal diagram. Next, draw a causal diagram with "dog ownership", "longevity", and the above variables. How did the two approaches (using vs. not using a causal diagram) compare (in terms of ease or other factors)?
+
+
+## Prompt 2 {.unnumbered}
+
+Fill in the ?'s in the table below to create a numerical example where:
+
+- the true causal effect of dog ownership on years lived is an increase of 1 year for all individuals but...
+- it appears that the effect is an average increase of 10 years (when working with just the observed data)
+
+(A = 1 represents dog ownership, A = 0 represents no dog ownership, the $Y^a$ columns represent the potential outcomes for the longevity outcome in years)
+
+ ID   A   $Y^{a=1}$   $Y^{a=0}$
+---- --- ----------- -----------
+ 1    1       ?           ?
+ 2    1       ?           ?
+ 3    0       ?           ?
+ 4    0       ?           ?
+
+Write a few sentences explaining why the discrepancy between the true effect and the observed effect might have occurred.
+
+
+## Prompt 3 {.unnumbered}
+
+The figure below shows the distributions of treated ($Y^{a=1}$) and control ($Y^{a=0}$) potential outcomes (PO's) for a treatment in 3 different scenarios. In which scenarios would you say that the treatment *causes* the outcome? Why?
+
+```{r 02_causes_po_dists, fig.width=12}
+dat <- bind_rows(
+    tibble(
+        x = seq(-4, 4, by = 0.1),
+        y = dnorm(x, 0, 1),
+        type = "Control PO",
+        context = "Scenario 1"
+    ),
+    tibble(
+        x = seq(-4, 4, by = 0.1),
+        y = dnorm(x, 1, 1),
+        type = "Treated PO",
+        context = "Scenario 1"
+    ),
+    tibble(
+        x = seq(-4, 4, by = 0.1),
+        y = dnorm(x, 0, 1),
+        type = "Control PO",
+        context = "Scenario 2"
+    ),
+    tibble(
+        x = seq(-4, 4, by = 0.1),
+        y = dnorm(x, 0, 2),
+        type = "Treated PO",
+        context = "Scenario 2"
+    ),
+    tibble(
+        x = seq(-4, 4, by = 0.1),
+        y = dnorm(x, 0, 1.5),
+        type = "Control PO",
+        context = "Scenario 3"
+    ),
+    tibble(
+        x = seq(-4, 4, by = 0.1),
+        y = dnorm(x, 0, 1.5),
+        type = "Treated PO",
+        context = "Scenario 3"
+    )
+)
+
+ggplot(dat, aes(x = x, y = y, color = type)) +
+    geom_line() +
+    facet_grid(~ context) +
+    theme_classic() +
+    scale_color_manual(values = c("steelblue", "darkorange"))
+```
+
+## Prompt 4 {.unnumbered}
+
+Do you think it's a stronger assumption to include an arrow or exclude an arrow on a causal diagram? Why?
+
+
+<br><br><br><br>
+
+
+# Practice {.unnumbered}
+
+**Research question:** Should organizations implement a paid parental leave policy to improve employee satisfaction?
+
+Most likely, only cross-sectional data would be available via company websites (for treatment information and company characteristics) and websites like Glassdoor (for outcome data).
+
+1. Individually, open [DAGitty](https://dagitty.net/dags.html), and spend about 5 minutes drawing a causal graph for this data context.
+    - Add the treatment and outcome variables and label them as such.
+    - Add other relevant variables to the diagram.
+    - Add edges depicting direct causal relationships between variables.
+    - Indicate which variables would likely be unobservable.
+
+2. As a group, compare your diagrams.
+    - Where do your diagrams agree?
+    - Where do they disagree? Are these differences resolvable?
+
+3. Reflect on this process as a group.
+    - How did the process feel?
+    - What was challenging or confusing?
+    - Is there anything you're wondering about?
+
+

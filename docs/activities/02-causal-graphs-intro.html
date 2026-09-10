@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 155 Review – STAT 451: Causal Inference</title>
+<title>2&nbsp; Introduction to Causal Graphs – STAT 451: Causal Inference</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -29,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../appendices/r_rstudio.html" rel="next">
-<link href="../hw/assignment1.html" rel="prev">
+<link href="../hw/assignment1.html" rel="next">
+<link href="../activities/01-foundations.html" rel="prev">
 <link href="../images/451_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -279,7 +314,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/stat155.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/stat155.html">STAT 155 Review</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/02-causal-graphs-intro.html">Causal Graphs</a></li><li class="breadcrumb-item"><a href="../activities/02-causal-graphs-intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Causal Graphs</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -374,7 +409,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/02-causal-graphs-intro.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bezier2" role="img">
+  <a href="../activities/02-causal-graphs-intro.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-bezier2" role="img">
 </i> 
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Causal Graphs</span></span></a>
   </div>
@@ -409,7 +444,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/stat155.html" class="sidebar-item-text sidebar-link active">
+  <a href="../appendices/stat155.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">STAT 155 Review</span></a>
   </div>
 </li>
@@ -437,12 +472,15 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#important-topics" id="toc-important-topics" class="nav-link active" data-scroll-target="#important-topics">Important Topics</a></li>
-  <li><a href="#review-resources" id="toc-review-resources" class="nav-link" data-scroll-target="#review-resources">Review Resources</a>
+  <li><a href="#goals" id="toc-goals" class="nav-link active" data-scroll-target="#goals">Goals</a></li>
+  <li><a href="#small-group-discussion" id="toc-small-group-discussion" class="nav-link" data-scroll-target="#small-group-discussion">Small Group Discussion</a>
   <ul class="collapse">
-  <li><a href="#quick-review" id="toc-quick-review" class="nav-link" data-scroll-target="#quick-review">Quick Review</a></li>
-  <li><a href="#comprehensive-review" id="toc-comprehensive-review" class="nav-link" data-scroll-target="#comprehensive-review">Comprehensive Review</a></li>
+  <li><a href="#prompt-1" id="toc-prompt-1" class="nav-link" data-scroll-target="#prompt-1">Prompt 1</a></li>
+  <li><a href="#prompt-2" id="toc-prompt-2" class="nav-link" data-scroll-target="#prompt-2">Prompt 2</a></li>
+  <li><a href="#prompt-3" id="toc-prompt-3" class="nav-link" data-scroll-target="#prompt-3">Prompt 3</a></li>
+  <li><a href="#prompt-4" id="toc-prompt-4" class="nav-link" data-scroll-target="#prompt-4">Prompt 4</a></li>
   </ul></li>
+  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">Practice</a></li>
   </ul>
 </nav>
     </div>
@@ -450,9 +488,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/stat155.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/stat155.html">STAT 155 Review</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/02-causal-graphs-intro.html">Causal Graphs</a></li><li class="breadcrumb-item"><a href="../activities/02-causal-graphs-intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Causal Graphs</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">STAT 155 Review</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Causal Graphs</span></h1>
 </div>
 
 
@@ -469,86 +507,169 @@ window.Quarto = {
 </header>
 
 
-<section id="important-topics" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="important-topics">Important Topics</h2>
-<p>In this course, we will build on the linear and logistic regression modeling techniques covered in STAT 155. As such, <span class="text-primary"><strong>familiarity with key concepts from STAT 155 is expected</strong></span>. This includes, but is not necessarily limited to, the following topics:</p>
+<section id="goals" class="level1 unnumbered">
+<h1 class="unnumbered">Goals</h1>
 <ul>
-<li>data context: 5W’s + H (who, what, where, when, why, how)</li>
-<li>data visualization in R</li>
-<li>linear regression: least squares, model interpretation, prediction, model evaluation (eg residuals, <span class="math inline">\(R^2\)</span>)</li>
-<li>logistic regression: odds, model interpretation, prediction, model evaluation (eg accuracy, sensitivity)</li>
-<li>bootstrapping</li>
+<li>Motivate why causal graphs are useful in causal inference investigations</li>
+<li>Practice graphically showing our beliefs about data-generating processes using causal graphs</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you are rusty on any of these concepts, please review the resources linked below!</p>
-</div>
-</div>
-<p><br>
-<br>
-</p>
+<p><br></p>
+<p>Slides for today are available <a href="https://docs.google.com/presentation/d/1o4_QWQNud8Cw4pdmscyZd6NFXdLQJIJyow_RbDL9aeo/edit?usp=sharing">here</a>.</p>
+<p><br><br><br><br></p>
 </section>
-<section id="review-resources" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="review-resources">Review Resources</h2>
-<section id="quick-review" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="quick-review">Quick Review</h3>
-<p>Let <span class="math inline">\(y\)</span> be a response variable with a set of <span class="math inline">\(k\)</span> explanatory variables <span class="math inline">\(x = (x_{1}, x_{2}, ..., x_{k})\)</span>. Then the <strong>population</strong> linear regression model is</p>
-<p><span class="math display">\[\begin{split}
-y &amp; = f(x) + \varepsilon  = \beta_0 + \beta_1 x_{1} + \beta_2 x_{2} + \cdots + \beta_k x_{k} + \varepsilon \\
-\end{split}\]</span></p>
-<p>NOTES:</p>
+<section id="small-group-discussion" class="level1 unnumbered">
+<h1 class="unnumbered">Small Group Discussion</h1>
+<!-- ## Prompt X -->
+<!-- Last time we reviewed the idea of confounding and framed confounding as providing alternate explanations for observed relationships. What connections do you see with ideas about drawing causal graphs from the pre-class material? -->
+<section id="prompt-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="prompt-1">Prompt 1</h2>
+<p>We are interested in estimating the causal effect of owning a dog on longevity.</p>
+<p>Do you think it’s important to use the following variables in our analysis?</p>
 <ul>
-<li><p><span class="math inline">\(\beta\)</span> is the Greek letter “beta”. <span class="math inline">\(\varepsilon\)</span> is the Greek letter “epsilon”.<br>
-</p></li>
-<li><p>“Linear” regression is so named because it assumes that <span class="math inline">\(y\)</span> is a <em>linear combination</em> of the <span class="math inline">\(x\)</span>’s. It does <em>not</em> mean that the relationship itself is linear!! For example, one of the predictors might be a quadratic term: <span class="math inline">\(x_2 = x_1^2\)</span>.</p></li>
-<li><p><span class="math inline">\(f(x) = \beta_0 + \beta_1 x_{1} + \beta_2 x_{2} + \cdots + \beta_k x_{k}\)</span> captures the <strong>trend</strong> of the relationship</p>
+<li>Income</li>
+<li>General physical activity</li>
+<li>Change in physical activity after getting a dog</li>
+</ul>
+<p>First, think through this without using a causal diagram. Next, draw a causal diagram with “dog ownership”, “longevity”, and the above variables. How did the two approaches (using vs.&nbsp;not using a causal diagram) compare (in terms of ease or other factors)?</p>
+</section>
+<section id="prompt-2" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="prompt-2">Prompt 2</h2>
+<p>Fill in the ?’s in the table below to create a numerical example where:</p>
 <ul>
-<li><p><span class="math inline">\(\beta_0\)</span> = <strong>intercept coefficient</strong><br>
-the model value when <span class="math inline">\(x_1=x_2=\cdots=x_k=0\)</span></p></li>
-<li><p><span class="math inline">\(\beta_i\)</span> = <strong><span class="math inline">\(x_i\)</span> coefficient</strong><br>
-how <span class="math inline">\(x_i\)</span> is related to <span class="math inline">\(y\)</span> <em>when holding constant all other <span class="math inline">\(x_i\)</span></em></p></li>
+<li>the true causal effect of dog ownership on years lived is an increase of 1 year for all individuals but…</li>
+<li>it appears that the effect is an average increase of 10 years (when working with just the observed data)</li>
+</ul>
+<p>(A = 1 represents dog ownership, A = 0 represents no dog ownership, the <span class="math inline">\(Y^a\)</span> columns represent the potential outcomes for the longevity outcome in years)</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">ID</th>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;"><span class="math inline">\(Y^{a=1}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Y^{a=0}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">?</td>
+</tr>
+</tbody>
+</table>
+<p>Write a few sentences explaining why the discrepancy between the true effect and the observed effect might have occurred.</p>
+</section>
+<section id="prompt-3" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="prompt-3">Prompt 3</h2>
+<p>The figure below shows the distributions of treated (<span class="math inline">\(Y^{a=1}\)</span>) and control (<span class="math inline">\(Y^{a=0}\)</span>) potential outcomes (PO’s) for a treatment in 3 different scenarios. In which scenarios would you say that the treatment <em>causes</em> the outcome? Why?</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tibble</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">by =</span> <span class="fl">0.1</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">dnorm</span>(x, <span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">"Control PO"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">context =</span> <span class="st">"Scenario 1"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tibble</span>(</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">by =</span> <span class="fl">0.1</span>),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">dnorm</span>(x, <span class="dv">1</span>, <span class="dv">1</span>),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">"Treated PO"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">context =</span> <span class="st">"Scenario 1"</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tibble</span>(</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">by =</span> <span class="fl">0.1</span>),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">dnorm</span>(x, <span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">"Control PO"</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="at">context =</span> <span class="st">"Scenario 2"</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tibble</span>(</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">by =</span> <span class="fl">0.1</span>),</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">dnorm</span>(x, <span class="dv">0</span>, <span class="dv">2</span>),</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">"Treated PO"</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">context =</span> <span class="st">"Scenario 2"</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tibble</span>(</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">by =</span> <span class="fl">0.1</span>),</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">dnorm</span>(x, <span class="dv">0</span>, <span class="fl">1.5</span>),</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">"Control PO"</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        <span class="at">context =</span> <span class="st">"Scenario 3"</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tibble</span>(</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">by =</span> <span class="fl">0.1</span>),</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">dnorm</span>(x, <span class="dv">0</span>, <span class="fl">1.5</span>),</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">"Treated PO"</span>,</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        <span class="at">context =</span> <span class="st">"Scenario 3"</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> type)) <span class="sc">+</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_grid</span>(<span class="sc">~</span> context) <span class="sc">+</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"steelblue"</span>, <span class="st">"darkorange"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="02-causal-graphs-intro_files/figure-html/02_causes_po_dists-1.png" class="img-fluid figure-img" width="1152"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="prompt-4" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="prompt-4">Prompt 4</h2>
+<p>Do you think it’s a stronger assumption to include an arrow or exclude an arrow on a causal diagram? Why?</p>
+<p><br><br><br><br></p>
+</section>
+</section>
+<section id="practice" class="level1 unnumbered">
+<h1 class="unnumbered">Practice</h1>
+<p><strong>Research question:</strong> Should organizations implement a paid parental leave policy to improve employee satisfaction?</p>
+<p>Most likely, only cross-sectional data would be available via company websites (for treatment information and company characteristics) and websites like Glassdoor (for outcome data).</p>
+<ol type="1">
+<li>Individually, open <a href="https://dagitty.net/dags.html">DAGitty</a>, and spend about 5 minutes drawing a causal graph for this data context.
+<ul>
+<li>Add the treatment and outcome variables and label them as such.</li>
+<li>Add other relevant variables to the diagram.</li>
+<li>Add edges depicting direct causal relationships between variables.</li>
+<li>Indicate which variables would likely be unobservable.</li>
 </ul></li>
-<li><p><span class="math inline">\(\epsilon\)</span> reflects deviation from the trend (the residual)</p></li>
-</ul>
-<p><br>
-<br>
-</p>
-<p><strong>Fitting the Model</strong></p>
-<p>Once we have a population model in mind, we can “fit the model” (i.e.&nbsp;<em>estimate</em> the <span class="math inline">\(\beta\)</span> population coefficients) using sample data:</p>
-<p><span class="math display">\[\begin{split}
-y &amp; =  \hat{f}(x) + \varepsilon \\
-&amp; = \hat{\beta}_0 + \hat{\beta}_1 x_{1} + \hat{\beta}_2 x_{2} + \cdots + \hat{\beta}_k x_{k} + \varepsilon \\
-\end{split}\]</span></p>
-<p><br>
-</p>
-<p>To this end, collect a sample of data on <span class="math inline">\(n\)</span> subjects. Use subscripts to denote the data for subject <span class="math inline">\(i\)</span>: <span class="math inline">\(y_i\)</span> and <span class="math inline">\(x_{ij}\)</span>. Then the predicted response and residual (prediction error) for subject <span class="math inline">\(i\)</span> are</p>
+<li>As a group, compare your diagrams.
 <ul>
-<li><p><strong>prediction</strong> <span class="math display">\[\hat{y}_i = \hat{f}(x_i) = \hat{\beta}_0 + \hat{\beta}_1 x_{i1} + \hat{\beta}_2 x_{i2} + \cdots + \hat{\beta}_k x_{ik}\]</span></p></li>
-<li><p><strong>residual / prediction error</strong> <span class="math display">\[y_i - \hat{y}_i\]</span></p></li>
-</ul>
-<p><br>
-<br>
-</p>
-<p><strong>Least Squares Criterion</strong></p>
-<p>Estimate (<span class="math inline">\(\beta_0, \beta_1,..., \beta_k\)</span>) by (<span class="math inline">\(\hat{\beta}_0, \hat{\beta}_1,..., \hat{\beta}_k)\)</span> that <em>minimize</em> the sum of squared residuals: <span class="math display">\[\sum_{i=1}^n(y_i - \hat{y}_i)^2 = (y_1-\hat{y}_1)^2 + (y_2-\hat{y}_2)^2 + \cdots + (y_n-\hat{y}_n)^2\]</span></p>
-<p><br>
-<br>
-</p>
-</section>
-<section id="comprehensive-review" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="comprehensive-review">Comprehensive Review</h3>
-<p>A comprehensive STAT 155 review is provided by the STAT 155 Notes created by Macalester statistics professors <a href="https://mac-stat.github.io/Stat155Notes/">(here)</a> and Prof.&nbsp;Johnson’s Spring 2022 STAT 155 manual <a href="https://ajohns24.github.io/155_Spring_2022/">(here)</a>.</p>
+<li>Where do your diagrams agree?</li>
+<li>Where do they disagree? Are these differences resolvable?</li>
+</ul></li>
+<li>Reflect on this process as a group.
+<ul>
+<li>How did the process feel?</li>
+<li>What was challenging or confusing?</li>
+<li>Is there anything you’re wondering about?</li>
+</ul></li>
+</ol>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -967,13 +1088,13 @@ y &amp; =  \hat{f}(x) + \varepsilon \\
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../hw/assignment1.html" class="pagination-link" aria-label="Assignment 1">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Assignment 1</span>
+      <a href="../activities/01-foundations.html" class="pagination-link" aria-label="Foundational ideas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Foundational ideas</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../appendices/r_rstudio.html" class="pagination-link" aria-label="R and RStudio Setup">
-        <span class="nav-page-text">R and RStudio Setup</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../hw/assignment1.html" class="pagination-link" aria-label="Assignment 1">
+        <span class="nav-page-text">Assignment 1</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

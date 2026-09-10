@@ -34,10 +34,16 @@ book:
           href: logistics/project.qmd
     - part: "Foundational Ideas"
       chapters:
-        - activities/01-foundations.qmd
+        - icon: database-fill-gear
+          href: activities/01-foundations.qmd
+    - part: "Causal Graphs"
+      chapters:
+        - icon: bezier2
+          href: activities/02-causal-graphs-intro.qmd
     - part: "Assignments"
       chapters:
         - hw/assignment1.qmd
+        # - hw/assignment2.qmd
   appendices:
     - appendices/stat155.qmd
     - appendices/r_rstudio.qmd

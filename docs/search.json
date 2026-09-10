@@ -36,7 +36,7 @@
     "href": "logistics/schedule.html#day2",
     "title": "Schedule",
     "section": "Day 2: Introduction to Causal Graphs (9/10)",
-    "text": "Day 2: Introduction to Causal Graphs (9/10)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 6: Causal Diagrams (~40 min)\n\nVideo alternatives:\n\nCausal Diagrams: Causality (~9 minutes)\nCausal Diagrams (~12 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 3: Directed Acyclic Graphs but skip 3.1.3 Backdoor Criterion (~40 minutes)",
+    "text": "Day 2: Introduction to Causal Graphs (9/10)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 6: Causal Diagrams (~40 min)\n\nVideo alternatives:\n\nCausal Diagrams: Causality (~9 minutes)\nCausal Diagrams (~12 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 3: Directed Acyclic Graphs but skip 3.1.3 Backdoor Criterion (~40 minutes)\n\n\n\n\nDuring class: Causal identification",
     "crumbs": [
       "Course Logistics",
       "Schedule"
@@ -238,6 +238,61 @@
     "crumbs": [
       "Foundational Ideas",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Foundational ideas</span>"
+    ]
+  },
+  {
+    "objectID": "activities/02-causal-graphs-intro.html",
+    "href": "activities/02-causal-graphs-intro.html",
+    "title": "2  Introduction to Causal Graphs",
+    "section": "",
+    "text": "Goals\nSlides for today are available here.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/02-causal-graphs-intro.html#prompt-1",
+    "href": "activities/02-causal-graphs-intro.html#prompt-1",
+    "title": "2  Introduction to Causal Graphs",
+    "section": "Prompt 1",
+    "text": "Prompt 1\nWe are interested in estimating the causal effect of owning a dog on longevity.\nDo you think it’s important to use the following variables in our analysis?\n\nIncome\nGeneral physical activity\nChange in physical activity after getting a dog\n\nFirst, think through this without using a causal diagram. Next, draw a causal diagram with “dog ownership”, “longevity”, and the above variables. How did the two approaches (using vs. not using a causal diagram) compare (in terms of ease or other factors)?",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/02-causal-graphs-intro.html#prompt-2",
+    "href": "activities/02-causal-graphs-intro.html#prompt-2",
+    "title": "2  Introduction to Causal Graphs",
+    "section": "Prompt 2",
+    "text": "Prompt 2\nFill in the ?’s in the table below to create a numerical example where:\n\nthe true causal effect of dog ownership on years lived is an increase of 1 year for all individuals but…\nit appears that the effect is an average increase of 10 years (when working with just the observed data)\n\n(A = 1 represents dog ownership, A = 0 represents no dog ownership, the \\(Y^a\\) columns represent the potential outcomes for the longevity outcome in years)\n\n\n\nID\nA\n\\(Y^{a=1}\\)\n\\(Y^{a=0}\\)\n\n\n\n\n1\n1\n?\n?\n\n\n2\n1\n?\n?\n\n\n3\n0\n?\n?\n\n\n4\n0\n?\n?\n\n\n\nWrite a few sentences explaining why the discrepancy between the true effect and the observed effect might have occurred.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/02-causal-graphs-intro.html#prompt-3",
+    "href": "activities/02-causal-graphs-intro.html#prompt-3",
+    "title": "2  Introduction to Causal Graphs",
+    "section": "Prompt 3",
+    "text": "Prompt 3\nThe figure below shows the distributions of treated (\\(Y^{a=1}\\)) and control (\\(Y^{a=0}\\)) potential outcomes (PO’s) for a treatment in 3 different scenarios. In which scenarios would you say that the treatment causes the outcome? Why?\n\n\nCode\ndat &lt;- bind_rows(\n    tibble(\n        x = seq(-4, 4, by = 0.1),\n        y = dnorm(x, 0, 1),\n        type = \"Control PO\",\n        context = \"Scenario 1\"\n    ),\n    tibble(\n        x = seq(-4, 4, by = 0.1),\n        y = dnorm(x, 1, 1),\n        type = \"Treated PO\",\n        context = \"Scenario 1\"\n    ),\n    tibble(\n        x = seq(-4, 4, by = 0.1),\n        y = dnorm(x, 0, 1),\n        type = \"Control PO\",\n        context = \"Scenario 2\"\n    ),\n    tibble(\n        x = seq(-4, 4, by = 0.1),\n        y = dnorm(x, 0, 2),\n        type = \"Treated PO\",\n        context = \"Scenario 2\"\n    ),\n    tibble(\n        x = seq(-4, 4, by = 0.1),\n        y = dnorm(x, 0, 1.5),\n        type = \"Control PO\",\n        context = \"Scenario 3\"\n    ),\n    tibble(\n        x = seq(-4, 4, by = 0.1),\n        y = dnorm(x, 0, 1.5),\n        type = \"Treated PO\",\n        context = \"Scenario 3\"\n    )\n)\n\nggplot(dat, aes(x = x, y = y, color = type)) +\n    geom_line() +\n    facet_grid(~ context) +\n    theme_classic() +\n    scale_color_manual(values = c(\"steelblue\", \"darkorange\"))",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/02-causal-graphs-intro.html#prompt-4",
+    "href": "activities/02-causal-graphs-intro.html#prompt-4",
+    "title": "2  Introduction to Causal Graphs",
+    "section": "Prompt 4",
+    "text": "Prompt 4\nDo you think it’s a stronger assumption to include an arrow or exclude an arrow on a causal diagram? Why?",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to Causal Graphs</span>"
     ]
   },
   {
