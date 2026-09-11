@@ -307,6 +307,28 @@
     ]
   },
   {
+    "objectID": "hw/assignment2.html",
+    "href": "hw/assignment2.html",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "Exercises\nDue: Thursday, 9/17 at midnight on Moodle\nFormat: Please submit a PDF document containing your responses.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "hw/assignment2.html#exercises",
+    "href": "hw/assignment2.html#exercises",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "Exercise 1\nWe are interested in evaluating the causal effect of taking Macalester’s Pilates class on core strength. We measure core strength by timing the longest plank hold (in seconds) at the end of the semester for students who took the class (A=1) and students who didn’t (A=0). We also record whether or not each student engages in core strengthening exercises on their own (C = yes, no). Pretend that we’re omniscient and have information on all potential outcomes for 10 students, shown in the table below.\n\n\n\nA\nC\n\\(Y^{a=1}\\)\n\\(Y^{a=0}\\)\n\n\n\n\n1\nyes\n110\n100\n\n\n1\nyes\n110\n100\n\n\n1\nno\n100\n70\n\n\n1\nno\n100\n70\n\n\n1\nno\n100\n70\n\n\n0\nyes\n110\n100\n\n\n0\nyes\n110\n100\n\n\n0\nyes\n110\n100\n\n\n0\nno\n100\n70\n\n\n0\nno\n100\n70\n\n\n\n\nDo you think that the above data reflect the causal diagram below? Explain why by showing how each arrow is/isn’t supported by the data.\n\n\n\n\n\n\n\n\n\n\n\nCompute the true causal effect and the “naive” causal effect we would estimate if we compared average outcomes in the treatment groups. Why is the estimated causal effect specifically underestimated (rather than overestimated)?\nCompute the true causal effect and “naive” causal effect estimate separately within the C = yes and the C = no groups. How do the truth and estimates compare now? What is a likely reason for this?\nNote that this study used cross-sectional data. Suppose that we had instead collected longitudinal data: the longest plank hold at the beginning of the semester and again at the end of the semester. Using the original data table as a basis, create a data table showing what the data would likely look like. Explain the rationale for the numbers you chose.\nDo you think that cross-sectional data or longitudinal data would be better for answering this research question? Why?\n\n\n\nExercise 2\nConsider the following causal diagram (inspired by this study) which could be used to study the causal effect of nighttime road traffic noise on sleep disturbances.\n\n\n\n\n\n\n\n\n\nLoad this causal graph in DAGitty by pasting the following code into the “Model code” panel on the right. Then click “Update DAG”.\ndag {\nbb=\"0,0,1,1\"\n\"Household income\" [pos=\"0.295,0.238\"]\n\"Noise annoyance\" [pos=\"0.413,0.521\"]\n\"Noise sensitivity\" [pos=\"0.372,0.394\"]\n\"Physical activity\" [pos=\"0.556,0.364\"]\n\"Road traffic noise\" [exposure,pos=\"0.179,0.595\"]\n\"Sleep disturbances\" [outcome,pos=\"0.760,0.589\"]\n\"Household income\" -&gt; \"Physical activity\"\n\"Household income\" -&gt; \"Road traffic noise\"\n\"Noise annoyance\" -&gt; \"Sleep disturbances\"\n\"Noise sensitivity\" -&gt; \"Noise annoyance\"\n\"Noise sensitivity\" -&gt; \"Sleep disturbances\"\n\"Physical activity\" -&gt; \"Sleep disturbances\"\n\"Road traffic noise\" -&gt; \"Noise annoyance\"\n\"Road traffic noise\" -&gt; \"Sleep disturbances\"\n}\n\nAdd one variable that is likely to be a confounding variable—one that would likely give rise to a substantive alternate explanation for a causal relationship between nighttime road noise and sleep disturbances. Include edges connecting this variable to others in the diagram, as appropriate. Explain your rationale.\nAdd one variable that is unlikely to be a confounding variable—one that could be a cause of the outcome, but only for a handful of people. Explain your rationale.\nInclude a picture of your updated causal diagram.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
     "objectID": "appendices/stat155.html",
     "href": "appendices/stat155.html",
     "title": "STAT 155 Review",
