@@ -272,11 +272,10 @@ If you would like to have an additional reference throughout the course that lea
 ::: {.callout-note title="Required" icon=false}
 - Video: [Causal and Noncausal Paths](https://youtu.be/ShZP9SR2fbs) (~5 min)
 - Video: [D-Separation](https://youtu.be/eYtSHAlbWYw) (~8 min)
-- Reading: *The Effect* [Chapter 8: Causal Paths and Closing Back Doors](https://www.theeffectbook.net/ch-CausalPaths.html) (~35 minutes)
+- Reading: *The Effect* [Chapter 8: Causal Paths and Closing Back Doors](https://www.theeffectbook.net/ch-CausalPaths.html) (up through Section 8.5: Colliders) (~30 minutes)
     - Video alternatives:
         - [Causal Pathways](https://youtu.be/ZTSgNR_PiXo) (~9 minutes)
         - [Closing Causal Pathways, and Collider Variables](https://youtu.be/PJMVtpogJnQ) (~11 minutes)
-        - [Testing Causal Diagrams, and Placebo Tests](https://youtu.be/Zdbuf71i_Mg) (~8 minutes)
 :::
 
 ::: {.callout-note title="Optional" appearance="simple" collapse="true"}
@@ -297,7 +296,11 @@ If you would like to have an additional reference throughout the course that lea
 
 **Before class:**
 
-- No pre-class material
+::: {.callout-note title="Required" icon=false}
+- Reading: *The Effect* [Chapter 8: Causal Paths and Closing Back Doors](https://www.theeffectbook.net/ch-CausalPaths.html) (Section 8.6: Using Paths to Test Your Diagram) (~5 minutes)
+    - Video alternatives:
+        - [Testing Causal Diagrams, and Placebo Tests](https://youtu.be/Zdbuf71i_Mg) (~8 minutes)
+:::
 
 <!-- **During class:** [Testing causal graphs](../activities/05-causal-graphs-testing.qmd) -->
 

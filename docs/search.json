@@ -58,7 +58,7 @@
     "href": "logistics/schedule.html#day4",
     "title": "Schedule",
     "section": "Day 2: Identifying causal effects with causal graphs (9/17)",
-    "text": "Day 2: Identifying causal effects with causal graphs (9/17)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nVideo: Causal and Noncausal Paths (~5 min)\nVideo: D-Separation (~8 min)\nReading: The Effect Chapter 8: Causal Paths and Closing Back Doors (~35 minutes)\n\nVideo alternatives:\n\nCausal Pathways (~9 minutes)\nClosing Causal Pathways, and Collider Variables (~11 minutes)\nTesting Causal Diagrams, and Placebo Tests (~8 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Section 3.1.3: Backdoor criterion (~5 minutes)",
+    "text": "Day 2: Identifying causal effects with causal graphs (9/17)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nVideo: Causal and Noncausal Paths (~5 min)\nVideo: D-Separation (~8 min)\nReading: The Effect Chapter 8: Causal Paths and Closing Back Doors (up through Section 8.5: Colliders) (~30 minutes)\n\nVideo alternatives:\n\nCausal Pathways (~9 minutes)\nClosing Causal Pathways, and Collider Variables (~11 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Section 3.1.3: Backdoor criterion (~5 minutes)",
     "crumbs": [
       "Course Logistics",
       "Schedule"
@@ -69,7 +69,7 @@
     "href": "logistics/schedule.html#day5",
     "title": "Schedule",
     "section": "Day 1: Testing causal graphs; synthesis (9/22)",
-    "text": "Day 1: Testing causal graphs; synthesis (9/22)\nBefore class:\n\nNo pre-class material",
+    "text": "Day 1: Testing causal graphs; synthesis (9/22)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nReading: The Effect Chapter 8: Causal Paths and Closing Back Doors (Section 8.6: Using Paths to Test Your Diagram) (~5 minutes)\n\nVideo alternatives:\n\nTesting Causal Diagrams, and Placebo Tests (~8 minutes)",
     "crumbs": [
       "Course Logistics",
       "Schedule"
