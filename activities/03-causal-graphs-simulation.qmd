@@ -21,6 +21,10 @@ library(dagitty)
 
 Slides for today are available [here](https://docs.google.com/presentation/d/1dmulGgy3gV0NwJEjcOS9QpliEmfiJfgFvYwPShlq_DE/edit?usp=sharing).
 
+
+<br><br><br><br>
+
+
 # Small Group Discussion {.unnumbered}
 
 ## Prompt 1 {.unnumbered}
