@@ -40,6 +40,8 @@ book:
       chapters:
         - icon: bezier2
           href: activities/02-causal-graphs-intro.qmd
+        - icon: gear-fill
+          href: activities/03-causal-graphs-simulation.qmd
     - part: "Assignments"
       chapters:
         - hw/assignment1.qmd
@@ -59,4 +61,4 @@ format:
     execute:
       echo: true
       code-fold: true
-      cache: true
+      cache: false

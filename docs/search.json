@@ -47,7 +47,7 @@
     "href": "logistics/schedule.html#day3",
     "title": "Schedule",
     "section": "Day 1: Simulating data using causal graphs (9/15)",
-    "text": "Day 1: Simulating data using causal graphs (9/15)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nVideo: Key structures in causal graphs (~12 min) (slides)\n\nNote 1: In this video, I refer to a concept called “exchangeability”. This is a concept that I included in the last offering of this course. Exchangeability is a causal identification assumption. When the exchangeability assumption is satisfied, we can identify causal effects. When it is not satisfied, I call this “a lack of exchangeability”. In the language we have used, this happens when there are alternate (noncausal) explanations for a relationship between two variables. So in the video, whenever you hear “creates a lack of exchangeability”, replace that with “leads to the presence of alternate (noncausal) explanations for the relationship between two variables”. When you hear “achieve conditional exchangeability”, replace that with “we are able to address this alternate explanation when analyzing the data”.\nNote 2: I use the formal probability ideas of marginal and conditional dependence and independence. You can get the essential ideas from this video by replacing terms in the list below. (If you want to learn or review these probability ideas (not required!), watch my Probability Essentials video.)\n\n“A and B are marginally [independent/dependent]” = “A and B are [unrelated/related] in a general population”\n“A and B are conditionally independent” = “A and B are [unrelated/related] in subgroups (in each group defined by one or more variables)”\n\n\n2 readings from Andrew Heiss’s Program Evaluation course:\n\nGenerating random numbers (~35 min)\nThe ultimate guide to generating synthetic data for causal inference (Stop when you get to the subsection “Visualizing one variable”) (~25 min)",
+    "text": "Day 1: Simulating data using causal graphs (9/15)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nVideo: Key structures in causal graphs (~12 min) (slides)\n\nNote 1: In this video, I refer to a concept called “exchangeability”. This is a concept that I included in the last offering of this course. Exchangeability is a causal identification assumption. When the exchangeability assumption is satisfied, we can identify causal effects. When it is not satisfied, I call this “a lack of exchangeability”. In the language we have used, this happens when there are alternate (noncausal) explanations for a relationship between two variables. So in the video, whenever you hear “creates a lack of exchangeability”, replace that with “leads to the presence of alternate (noncausal) explanations for the relationship between two variables”. When you hear “achieve conditional exchangeability”, replace that with “we are able to address this alternate explanation when analyzing the data”.\nNote 2: I use the formal probability ideas of marginal and conditional dependence and independence. You can get the essential ideas from this video by replacing terms in the list below. (If you want to learn or review these probability ideas (not required!), watch my Probability Essentials video.)\n\n“A and B are marginally [independent/dependent]” = “A and B are [unrelated/related] in a general population”\n“A and B are conditionally independent” = “A and B are [unrelated/related] in subgroups (in each group defined by one or more variables)”\n\n\n2 readings from Andrew Heiss’s Program Evaluation course:\n\nGenerating random numbers (~35 min)\nThe ultimate guide to generating synthetic data for causal inference (Stop when you get to the subsection “Visualizing one variable”) (~25 min)\n\n\n\n\nDuring class: Simulating data using causal graphs",
     "crumbs": [
       "Course Logistics",
       "Schedule"
@@ -293,6 +293,193 @@
     "crumbs": [
       "Causal Graphs",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html",
+    "href": "activities/03-causal-graphs-simulation.html",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "",
+    "text": "Goals\nYou can download a template file for this activity here.\nSlides for today are available here.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#prompt-1",
+    "href": "activities/03-causal-graphs-simulation.html#prompt-1",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Prompt 1",
+    "text": "Prompt 1\n\nDoes the following causal diagram reflect a causal relationship between treatment A and outcome Y? Will A and Y likely appear related (through modeling results or exploratory plots)?\n\n\n\n\n\n\n\n\n\n\n\nRepeat part a for the causal diagram below. Do you think the observed relationship between A and Y will be different from what you might have observed if the previous causal diagram were the true data generating process?",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#prompt-2",
+    "href": "activities/03-causal-graphs-simulation.html#prompt-2",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Prompt 2",
+    "text": "Prompt 2\nThe following causal diagram has a fork (A &lt;- C -&gt; Y), chain (A -&gt; M -&gt; Y), and collider (A -&gt; S &lt;- Y).\nS is a binary variable that equals 1 if the data for a unit of observation are made available to us and equals 0 otherwise. Thus, S = 1 for the data we have access to.\nConsidering the fork, chain, and collider separately:\n\nWill treatment A and outcome Y appear related?\nIf they will appear related, is there a way to make them unrelated?\n\nIf we could isolate what is happening in just one of the parts, would you choose the fork, chain, or collider?",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#prompt-3",
+    "href": "activities/03-causal-graphs-simulation.html#prompt-3",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Prompt 3",
+    "text": "Prompt 3\nFor the causal diagram below, suppose that you wanted to generate (simulate) data according to this data generating process. In what order would you create the variables?",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#prompt-4",
+    "href": "activities/03-causal-graphs-simulation.html#prompt-4",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Prompt 4",
+    "text": "Prompt 4\nSuppose that a quantitative variable C and a categorical variable Z were both causes of a binary outcome Y. How could you use a logistic regression model formula to generate Y?",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#structure-of-causal-graphs",
+    "href": "activities/03-causal-graphs-simulation.html#structure-of-causal-graphs",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Structure of causal graphs",
+    "text": "Structure of causal graphs\nThe fact that causal graphs depict a data-generating process means that it conveys statistical information about the relationships between variables.\n3 structures form the basis of every pattern in a causal graph:\n\nChains: A -&gt; B -&gt; C\nForks: A &lt;- B -&gt; C (B is a common cause)\nColliders: A -&gt; B &lt;- C (B is a common effect)",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#examples",
+    "href": "activities/03-causal-graphs-simulation.html#examples",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Examples",
+    "text": "Examples\nNote: I asked ChatGPT to help me generate examples of these structures in different contexts with the following prompt:\n\nGive me an example of a [chain,fork,collider] causal graph structure in the following contexts: mental health, sociology, biology, medicine, public health, economics, politics.\n\nChains:\n\nMental Health: Childhood Trauma -&gt; Depression -&gt; Substance Abuse\nSociology: Education Level -&gt; Employment Status -&gt; Income Level\nBiology: Gene Mutation -&gt; Protein Dysfunction -&gt; Disease Onset\nMedicine: Infection -&gt; Immune Response -&gt; Fever\nPublic Health: Air Pollution -&gt; Respiratory Problems -&gt; Hospital Admissions\nEconomics: Interest Rate Changes -&gt; Investment Levels -&gt; Economic Growth\nPolitics: Political Campaign -&gt; Public Opinion -&gt; Election Outcome\n\nForks:\n\nMental Health: Depression &lt;- Genetic Predisposition -&gt; Anxiety\nSociology: Children’s Socioeconomic Status &lt;- Parental Education Level -&gt; Children’s Educational Attainment\nBiology: Weight Gain &lt;- Hormonal Imbalance -&gt; Fatigue\nMedicine: Cardiovascular Disease &lt;- Poor Diet -&gt; Obesity\nPublic Health: Health Outcomes &lt;- Socioeconomic Status -&gt; Access to Healthcare\nEconomics: Consumer Spending &lt;- Economic Recession -&gt; Unemployment Rates\nPolitics: Voting Behavior &lt;- Political Polarization -&gt; Media Consumption\n\nColliders:\n\nMental Health: Genetic Predisposition -&gt; Depression &lt;- Life Stressors\nSociology: Educational Attainment -&gt; Income Level &lt;- Social Network\nBiology: Gene Mutation -&gt; Disease Onset &lt;- Environmental Factors\nMedicine: Lack of Physical Activity -&gt; Obesity &lt;- Poor Diet\nPublic Health: Air Pollution -&gt; Respiratory Problems &lt;- Smoking\nEconomics: Economic Policies -&gt; Inflation Rate &lt;- Global Market Conditions\nPolitics: Campaign Funding -&gt; Election Outcome &lt;- Public Opinion",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#marginal-and-conditional-independence-in-causal-graphs",
+    "href": "activities/03-causal-graphs-simulation.html#marginal-and-conditional-independence-in-causal-graphs",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Marginal and conditional (in)dependence in causal graphs",
+    "text": "Marginal and conditional (in)dependence in causal graphs\n\nChains, forks, and colliders have different patterns of marginal and conditional independence and dependence.\nThese patterns are the core of what makes something an alternate explanation and how we can address that alternate explanation through analysis (coming next time).\nThe marginal/conditional (in)dependence properties are not intuitive, but we can see them play out via simulation.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#simulation",
+    "href": "activities/03-causal-graphs-simulation.html#simulation",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Simulation",
+    "text": "Simulation\n\nWhen conducting simulations, we are in control of the data-generating process.\nWe control the distribution of all variables and how they are related to each other.\nWe can simulate data from a causal graph by:\n\nSimulate variables that don’t have causes (called exogenous variables)\n\nExample: In the chain X -&gt; Y -&gt; Z, we would simulate X first.\n\nSimulate the variables caused by the exogenous variables. Then simulate the variables caused by these variables, etc.\n\nExample: In the chain X -&gt; Y -&gt; Z, after simulating X, simulate Y then Z.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#simulating-quantitative-and-categorical-variables",
+    "href": "activities/03-causal-graphs-simulation.html#simulating-quantitative-and-categorical-variables",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Simulating quantitative and categorical variables",
+    "text": "Simulating quantitative and categorical variables\nThis table at the end of our reading provides a nice summary of simulation functions.\nFor quantitative variables we can use:\n\nrnorm()\nrunif()\nrescale() (This function is part of the scales package.)\n\nFor categorical variables we can use:\n\nrbinom(): For binary variables\nsample(): For 3+ categories\n\nWe can look up the documentation for functions by entering ?function_name in the Console. Use the documentation for these functions to complete the following exercises:\n\n# Set seed for random number generator for reproducible results\nset.seed(451)\n\n# Simulate 1000 normally distributed numbers with mean 10 and standard deviation 2. Store as variable X\nX &lt;- \n\n# Check distribution of X with a plot (code is complete)\nggplot(data.frame(X), aes(x = X)) +\n    geom_histogram()\n\n# Simulate 1000 uniformly distributed numbers between 10 and 20. Store as variable Y\nY &lt;- \n\n# Check distribution of Y with a plot (code is complete)\nggplot(data.frame(Y), aes(x = Y)) +\n    geom_histogram()\n\n\n# Rescale X to be between 0 and 1. Store as variable Z\nZ &lt;- \n\n# Check distribution of Y with a plot (code is complete)\nggplot(data.frame(Z), aes(x = Z)) +\n    geom_histogram()",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#simulating-dependence",
+    "href": "activities/03-causal-graphs-simulation.html#simulating-dependence",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Simulating dependence",
+    "text": "Simulating dependence\nWe can use regression model formulas to have the mean of a variable depend on its causes.\nFor the mean of quantitative variables:\n\\[\nE[\\text{score} \\mid \\text{hoursPractice}, \\text{reviewSession}] = 40 + 3\\times\\text{hoursPractice} + 10\\times \\text{reviewSessionYes}\n\\] The mean of a binary (0/1) variable is the probability that it equals 1. We can use a similar regression model formula to determine this probability and use rescale() to force this number to be between 0 and 1.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#example",
+    "href": "activities/03-causal-graphs-simulation.html#example",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Example",
+    "text": "Example\nWe’ll simulate data from this causal graph:\n\ndag &lt;- dagitty(\"dag {\nbb=\\\"0,0,1,1\\\"\n3MonthStress [outcome,pos=\\\"0.800,0.500\\\"]\nMindfulBreathing [exposure,pos=\\\"0.200,0.500\\\"]\nPriorStress [pos=\\\"0.400,0.250\\\"]\nYoga [pos=\\\"0.600,0.250\\\"]\nMindfulBreathing -&gt; 3MonthStress\nPriorStress -&gt; 3MonthStress\nPriorStress -&gt; MindfulBreathing\nYoga -&gt; 3MonthStress\nYoga -&gt; MindfulBreathing\n}\")\nplot(dag)\n\n\n\n\n\n\n\n\nSimulation code:\n\nset.seed(451)\nn &lt;- 1000\nsim_data &lt;- tibble(\n    prior_stress = runif(n, min = 0, max = 10),\n    yoga = rbinom(n, size = 1, prob = 0.15),\n    p_mindful_breathing = rescale(1 + 3*prior_stress + 25*yoga, to = c(0,1)),\n    mindful_breathing = rbinom(n, size = 1, prob = p_mindful_breathing),\n    mean_stress_3_month = prior_stress - 3*yoga - 5*mindful_breathing,\n    noise_stress_3_month = rnorm(n, mean = 0, sd = 2),\n    stress_3_month = mean_stress_3_month + noise_stress_3_month\n)\n\nIt’s important to use plots and models to check the relationships in the data we generated:\n\nggplot(sim_data, aes(y = factor(mindful_breathing), x = prior_stress)) +\n    geom_boxplot()\n\n\n\n\n\n\n\nggplot(sim_data, aes(fill = factor(mindful_breathing), x = factor(yoga))) +\n    geom_bar(position = \"fill\")\n\n\n\n\n\n\n\nmod &lt;- lm(stress_3_month ~ yoga + prior_stress + mindful_breathing, data = sim_data)\nsummary(mod)\n\n\nCall:\nlm(formula = stress_3_month ~ yoga + prior_stress + mindful_breathing, \n    data = sim_data)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-6.1686 -1.2857 -0.0591  1.2766  7.5840 \n\nCoefficients:\n                  Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)         0.1353     0.1285   1.053    0.293    \nyoga               -2.7436     0.1903 -14.416   &lt;2e-16 ***\nprior_stress        0.9931     0.0235  42.259   &lt;2e-16 ***\nmindful_breathing  -5.1820     0.1475 -35.131   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.943 on 996 degrees of freedom\nMultiple R-squared:  0.7494,    Adjusted R-squared:  0.7487 \nF-statistic:   993 on 3 and 996 DF,  p-value: &lt; 2.2e-16",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#long-run-properties-via-simulation",
+    "href": "activities/03-causal-graphs-simulation.html#long-run-properties-via-simulation",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Long-run properties via simulation",
+    "text": "Long-run properties via simulation\nSuppose that X and Y are independent quantitative variables. Suppose that we fit the model below:\n\\[E[Y \\mid X] = \\beta_0 + \\beta_1 X\\]\n\nLet our significance level (type I error rate) be 0.05. What would you expect about the p-value for the coefficient on X?\nNow suppose that you have 1000 different samples of X and Y and fit the above model on each sample. What would you expect about the 1000 p-values?\n\n\n\n\n\n\n\nNoteResponse\n\n\n\n\n\nIf X and Y are independent, the null hypothesis \\(H_0: \\beta_1 = 0\\) is true. A significance level (type I error rate) of 0.05 means that we’re choosing our test statistic threshold to be high enough that, if the null hypothesis were true, we would (incorrectly) reject the null 5% of the time.\nWe reject the null when p-value &lt; 0.05. Since the null is true in this case, this will happen (p-value &lt; 0.05) in 5% of samples. So we’re expecting 50 of the 1000 samples to give p-values less than 0.05.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#exercise-1-chains",
+    "href": "activities/03-causal-graphs-simulation.html#exercise-1-chains",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Exercise 1: chains",
+    "text": "Exercise 1: chains\n\nPart a: Simulate\nIn the code chunk below, write code to simulate a single dataset from the following chain:\nAge -&gt; Total hours reading practice -&gt; Reading ability\n\n# Simulate data from the chain\n# Store data in a dataset called sim_data_chain\n# Call your variables age, practice_hrs, read_ability\n\n\n# Use plots to verify that univariate distributions look ok and that the direct causal relationships look right\n\nCopy and paste the code that creates the sim_data_chain dataset into the space indicated in the function below. Then complete the next block of code to fit an appropriate model for checking how age and reading ability are related conditional on hours of practice. The remainder of the code looks at the p-values from 1000 simulations.\n\nsimulate_chain &lt;- function() {\n    n &lt;- 10000\n    # Paste your code for creating your simulated chain data here\n    sim_data_chain &lt;- ___\n    \n    # Fit a linear regression model that allows you to see \n    # the relationship between read_ability and age \n    # conditional on practice_hrs\n    mod &lt;- ___\n    \n    # Pull out the p-value for the age coefficient\n    tidy(mod) %&gt;% \n        filter(term==\"age\") %&gt;% \n        pull(p.value)\n}\n\n# Repeat the simulation 1000 times (generate 1000 datasets)\nset.seed(451)\nsystem.time({\nchain_pvals &lt;- replicate(1000, {\n    simulate_chain()\n})\n})\n\n# How many times were the p-values less than 0.05?\n# Is this what you expected?\ntable(chain_pvals &lt; 0.05)\n\n\n\nPart b: Explain\nYour target audience is a STAT 155 student. Provide a non-technical explanation for the relationship seen between age and reading ability after adjusting for/conditioning on hours of reading practice.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#exercise-2-forks",
+    "href": "activities/03-causal-graphs-simulation.html#exercise-2-forks",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Exercise 2: forks",
+    "text": "Exercise 2: forks\n\nPart a: Simulate\nIn the code chunk below, write code to simulate a single dataset from the following fork:\n% of population wearing shorts &lt;- Temperature -&gt; Ice cream sales\n\n# Simulate data from the fork\n# Store data in a dataset called sim_data_fork\n# Call your variables perc_shorts, temperature, ice_cream_sales\n\n\n# Use plots to verify that univariate distributions look ok and that the direct causal relationships look right\n\nCopy and paste the code that creates the sim_data_fork dataset into the space indicated in the function below. Then complete the next block of code to fit an appropriate model for checking how age and reading ability are related conditional on hours of practice. The remainder of the code looks at the p-values from 1000 simulations.\n\nsimulate_fork &lt;- function() {\n    n &lt;- 10000\n    # Paste your code for creating your simulated fork data here\n    sim_data_fork &lt;- ___\n    \n    # Fit a linear regression model that allows you to see \n    # the relationship between % shorts and ice cream sales\n    # conditional on temperature\n    mod &lt;- ___\n    \n    # Pull out the p-value for the perc_shorts coefficient\n    tidy(mod) %&gt;% \n        filter(term==\"perc_shorts\") %&gt;% \n        pull(p.value)\n}\n\n# Repeat the simulation 1000 times (generate 1000 datasets)\nset.seed(451)\nsystem.time({\nfork_pvals &lt;- replicate(1000, {\n    simulate_fork()\n})\n})\n\n# How many times were the p-values less than 0.05?\n# Is this what you expected?\ntable(fork_pvals &lt; 0.05)\n\n\n\nPart b: Explain\nYour target audience is a STAT 155 student. Provide a non-technical explanation for the relationship seen between shorts prevalence and ice cream sales after adjusting for/conditioning on temperature.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#exercise-3-colliders",
+    "href": "activities/03-causal-graphs-simulation.html#exercise-3-colliders",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Exercise 3: colliders",
+    "text": "Exercise 3: colliders\n\nPart a: Simulate\nIn the code chunk below, write code to simulate a single dataset from the following collider:\nSmoking -&gt; Hospitalization &lt;- COVID-19 Infection\n\n# Simulate data from the collider\n# Store data in a dataset called sim_data_collider\n# Call your variables covid, hosp, smoking\n\n\n# Use plots to verify that univariate distributions look ok and that the direct causal relationships look right\n# Also use a plot and/or model to verify the marginal relationship between covid and smoking\n\nCopy and paste the code that creates the sim_data_collider dataset into the space indicated in the function below. Then complete the next block of code to fit an appropriate model for checking how age and reading ability are related conditional on hours of practice. The remainder of the code looks at the p-values from 1000 simulations.\n\nNote: You may have to increase the magnitude of the smoking -&gt; hosp effect and the magnitude of the covid -&gt; hosp effect to see the expected behavior.\nIf you end up updating the numbers in your model formulas in light of the above note, try adding arguments to your function like this:\n\nsimulate_collider &lt;- function(smoking_effect, covid_effect)\nThis allows smoking_effect and covid_effect to be inputs to your function. Replace the appropriate numbers in your sim_data_collider code to use smoking_effect and covid_effect.\nYou’ll then need to update the 1000 simulations part to something like:\n\n\nset.seed(451)\nsystem.time({\ncollider_pvals &lt;- replicate(1000, {\n    simulate_collider(smoking_effect = 10, covid_effect = 10)\n})\n})\n\nsimulate_collider &lt;- function() {\n    n &lt;- 10000\n    # Paste your code for creating your simulated collider data here\n    sim_data_collider &lt;- ___\n    \n    # Fit a linear regression model that allows you to see \n    # the relationship between smoking and covid\n    # conditional on hospitalization\n    mod &lt;- ___\n    \n    # Pull out the p-value for the smoking coefficient\n    tidy(mod) %&gt;% \n        filter(term==\"smoking\") %&gt;% \n        pull(p.value)\n}\n\n# Repeat the simulation 1000 times (generate 1000 datasets)\nset.seed(451)\nsystem.time({\ncollider_pvals &lt;- replicate(1000, {\n    simulate_collider()\n})\n})\n\n# How many times were the p-values less than 0.05?\n# Is this what you expected?\ntable(collider_pvals &lt; 0.05)\n\n\n\nPart b: Explain\nYour target audience is a STAT 155 student. Provide a non-technical explanation for the relationship seen between smoking and COVID infection after adjusting for/conditioning on hospitalization.\n(BTW: The motivation for this exercise came from considerable discussion in the causal inference community about risk factors studies early in the COVID pandemic. See Tweet 1, Tweet 2, and Tweet 3 to learn more.)",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/03-causal-graphs-simulation.html#exercise-4-beyond-building-blocks",
+    "href": "activities/03-causal-graphs-simulation.html#exercise-4-beyond-building-blocks",
+    "title": "3  Simulating Data with Causal Graphs",
+    "section": "Exercise 4: beyond building blocks",
+    "text": "Exercise 4: beyond building blocks\nCan we extend building block thinking to longer, more complex structures? Let’s investigate here (conceptually, no simulation).\n\nConsider the longer structure A &lt;- B &lt;- C -&gt; D. What do you expect about marginal/conditional (in)dependence of A and D? Explain.\nConsider the longer structure A -&gt; B &lt;- C &lt;- D -&gt; E. What do you expect about marginal/conditional (in)dependence of A and E? Explain.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
     ]
   },
   {

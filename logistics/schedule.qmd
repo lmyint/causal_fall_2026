@@ -31,6 +31,14 @@ Check here to see what you should be doing before, during, and after each class 
     <td class="topleft"><a href="#day6">Matching</a></td>
     <td class="topleft"><a href="../hw/assignment3.html">Assignment 3</a> due Thurs 9/24 at midnight</td>
   </tr>
+  <tr>
+    <td class="topleft">Finals Week</td>
+    <td class="topleft" colspan=2>
+        Final exam time slot: Wed 12/16 10:30-12:30<br>
+        We will use this time for a post-project reflection. Attendance is required, but it can be remote.
+    </td>
+    <td class="topleft"></td>
+  </tr>
   
   
   
@@ -254,7 +262,7 @@ If you would like to have an additional reference throughout the course that lea
     - [The ultimate guide to generating synthetic data for causal inference](https://evalsp24.classes.andrewheiss.com/example/synthetic-data.html) (Stop when you get to the subsection "Visualizing one variable") (~25 min)
 :::
 
-<!-- **During class:** [Simulating data using causal graphs](../activities/03-causal-graphs-simulation.qmd) -->
+**During class:** [Simulating data using causal graphs](../activities/03-causal-graphs-simulation.qmd)
 
 
 ## Day 2: Identifying causal effects with causal graphs (9/17) {#day4}
