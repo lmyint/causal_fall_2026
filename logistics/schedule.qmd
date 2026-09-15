@@ -22,14 +22,20 @@ Check here to see what you should be doing before, during, and after each class 
   <tr>
     <td class="topleft">2 (9/14 - 9/18)</td>
     <td class="topleft"><a href="#day3">Simulating data using causal graphs</a></td>
-    <td class="topleft"><a href="#day4">Identifying causal effects with causal graphs</a>
+    <td class="topleft"><a href="#day4">Simulating data using causal graphs</a> (continued)</td>
     <td class="topleft"><a href="../hw/assignment2.html">Assignment 2</a> due Thurs 9/17 at midnight</td>
   </tr>
   <tr>
     <td class="topleft">3 (9/21 - 9/25)</td>
-    <td class="topleft"><a href="#day5">Synthesis: causal graphs</a></td>
-    <td class="topleft"><a href="#day6">Matching</a></td>
+    <td class="topleft"><a href="#day5">Identifying causal effects with causal graphs</a>
+    <td class="topleft"><a href="#day6">Synthesis: causal graphs</a></td>
     <td class="topleft"><a href="../hw/assignment3.html">Assignment 3</a> due Thurs 9/24 at midnight</td>
+  </tr>
+  <tr>
+    <td class="topleft">4 (9/28 - 10/2)</td>
+    <td class="topleft"><a href="#day7">Matching</a></td>
+    <td class="topleft"><a href="#day8">Weighting</a></td>
+    <td class="topleft"></td>
   </tr>
   <tr>
     <td class="topleft">Finals Week</td>
@@ -252,7 +258,7 @@ If you would like to have an additional reference throughout the course that lea
 
 ::: {.callout-note title="Required" icon=false}
 - Video: [Key structures in causal graphs](https://youtu.be/UA0vyBnzi9U) (~12 min) ([slides](https://drive.google.com/file/d/1aMWXmbqouuf_IdU9CeY2BfncihyY1AwS/view?usp=sharing))
-    - Note 1: In this video, I refer to a concept called "exchangeability". This is a concept that I included in the last offering of this course. Exchangeability is a causal identification assumption. When the exchangeability assumption is satisfied, we can identify causal effects. When it is not satisfied, I call this "a lack of exchangeability". In the language we have used, this happens when there are alternate (noncausal) explanations for a relationship between two variables. So in the video, whenever you hear "creates a lack of exchangeability", replace that with "leads to the presence of alternate (noncausal) explanations for the relationship between two variables". When you hear "achieve conditional exchangeability", replace that with "we are able to address this alternate explanation when analyzing the data".
+    - Note 1: In this video, I refer to a concept called "exchangeability". This is a concept that I included in a previous offering of this course. Exchangeability is a causal identification assumption. When the exchangeability assumption is satisfied, we can identify causal effects. When it is not satisfied, I call this "a lack of exchangeability". In the language we have used, this happens when there are alternate (noncausal) explanations for a relationship between two variables. So in the video, whenever you hear "creates a lack of exchangeability", replace that with "leads to the presence of alternate (noncausal) explanations for the relationship between two variables". When you hear "achieve conditional exchangeability", replace that with "we are able to address this alternate explanation when analyzing the data".
     - Note 2: I use the formal probability ideas of marginal and conditional dependence and independence. You can get the essential ideas from this video by replacing terms in the list below. (If you want to learn or review these probability ideas (not required!), watch my [Probability Essentials](https://youtu.be/acofPsJDq5Y) video.)
         - "A and B are marginally [independent/dependent]" = "A and B are [unrelated/related] in a general population"
         - "A and B are conditionally independent" = "A and B are [unrelated/related] in subgroups (in each group defined by one or more variables)"
@@ -265,7 +271,17 @@ If you would like to have an additional reference throughout the course that lea
 **During class:** [Simulating data using causal graphs](../activities/03-causal-graphs-simulation.qmd)
 
 
-## Day 2: Identifying causal effects with causal graphs (9/17) {#day4}
+## Day 2: Simulating data using causal graphs (9/15) {#day4}
+
+(Continuation of last class)
+
+<!-- ============================================================= -->
+
+
+
+# Week 3: Causal graph wrap-up
+
+## Day 1: Identifying causal effects with causal graphs (9/22) {#day5}
 
 **Before class:**
 
@@ -284,15 +300,7 @@ If you would like to have an additional reference throughout the course that lea
 
 <!-- **During class:** [Identifying causal effects using causal graphs](../activities/04-causal-graphs-identification.qmd) -->
 
-
-
-<!-- ============================================================= -->
-
-
-
-# Week 3: Causal graph wrap-up, matching
-
-## Day 1: Testing causal graphs; synthesis (9/22) {#day5}
+## Day 2: Testing causal graphs; synthesis (9/24) {#day6}
 
 **Before class:**
 
@@ -304,7 +312,17 @@ If you would like to have an additional reference throughout the course that lea
 
 <!-- **During class:** [Testing causal graphs](../activities/05-causal-graphs-testing.qmd) -->
 
-## Day 2: Matching (9/24) {#day6}
+
+
+
+
+<!-- ============================================================= -->
+
+
+::: {.content-hidden}
+# Week 4: Randomized experiments, target trials, matching
+
+## Day 2: Matching (9/24) {#day7}
 
 ::: {.callout-note title="Required" icon=false}
 - *The Effect* [Chapter 14: Matching](https://www.theeffectbook.net/ch-Matching.html) (~160 minutes)
@@ -324,14 +342,6 @@ If you would like to have an additional reference throughout the course that lea
 :::
 
 <!-- **During class:** [Matching](../activities/06-matching.qmd) -->
-
-
-
-<!-- ============================================================= -->
-
-
-::: {.content-hidden}
-# Week 4: Randomized experiments, target trials, matching
 
 ## Day 1: Randomized experiments (9/23) {#day9}
 

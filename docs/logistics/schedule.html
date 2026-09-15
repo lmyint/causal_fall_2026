@@ -430,12 +430,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#week-2-causal-graphs" id="toc-week-2-causal-graphs" class="nav-link" data-scroll-target="#week-2-causal-graphs">Week 2: Causal graphs</a>
   <ul class="collapse">
   <li><a href="#day3" id="toc-day3" class="nav-link" data-scroll-target="#day3">Day 1: Simulating data using causal graphs (9/15)</a></li>
-  <li><a href="#day4" id="toc-day4" class="nav-link" data-scroll-target="#day4">Day 2: Identifying causal effects with causal graphs (9/17)</a></li>
+  <li><a href="#day4" id="toc-day4" class="nav-link" data-scroll-target="#day4">Day 2: Simulating data using causal graphs (9/15)</a></li>
   </ul></li>
-  <li><a href="#week-3-causal-graph-wrap-up-matching" id="toc-week-3-causal-graph-wrap-up-matching" class="nav-link" data-scroll-target="#week-3-causal-graph-wrap-up-matching">Week 3: Causal graph wrap-up, matching</a>
+  <li><a href="#week-3-causal-graph-wrap-up" id="toc-week-3-causal-graph-wrap-up" class="nav-link" data-scroll-target="#week-3-causal-graph-wrap-up">Week 3: Causal graph wrap-up</a>
   <ul class="collapse">
-  <li><a href="#day5" id="toc-day5" class="nav-link" data-scroll-target="#day5">Day 1: Testing causal graphs; synthesis (9/22)</a></li>
-  <li><a href="#day6" id="toc-day6" class="nav-link" data-scroll-target="#day6">Day 2: Matching (9/24)</a></li>
+  <li><a href="#day5" id="toc-day5" class="nav-link" data-scroll-target="#day5">Day 1: Identifying causal effects with causal graphs (9/22)</a></li>
+  <li><a href="#day6" id="toc-day6" class="nav-link" data-scroll-target="#day6">Day 2: Testing causal graphs; synthesis (9/24)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -492,16 +492,22 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td class="topleft">2 (9/14 - 9/18)</td>
 <td class="topleft"><a href="#day3">Simulating data using causal graphs</a></td>
-<td class="topleft"><a href="#day4">Identifying causal effects with causal graphs</a></td>
+<td class="topleft"><a href="#day4">Simulating data using causal graphs</a> (continued)</td>
 <td class="topleft"><a href="../hw/assignment2.html">Assignment 2</a> due Thurs 9/17 at midnight</td>
 </tr>
 <tr class="odd">
 <td class="topleft">3 (9/21 - 9/25)</td>
-<td class="topleft"><a href="#day5">Synthesis: causal graphs</a></td>
-<td class="topleft"><a href="#day6">Matching</a></td>
+<td class="topleft"><a href="#day5">Identifying causal effects with causal graphs</a></td>
+<td class="topleft"><a href="#day6">Synthesis: causal graphs</a></td>
 <td class="topleft"><a href="../hw/assignment3.html">Assignment 3</a> due Thurs 9/24 at midnight</td>
 </tr>
 <tr class="even">
+<td class="topleft">4 (9/28 - 10/2)</td>
+<td class="topleft"><a href="#day7">Matching</a></td>
+<td class="topleft"><a href="#day8">Weighting</a></td>
+<td class="topleft"></td>
+</tr>
+<tr class="odd">
 <td class="topleft">Finals Week</td>
 <td colspan="2" class="topleft">Final exam time slot: Wed 12/16 10:30-12:30<br>
 We will use this time for a post-project reflection. Attendance is required, but it can be remote.</td>
@@ -616,7 +622,7 @@ We will use this time for a post-project reflection. Attendance is required, but
 <ul>
 <li>Video: <a href="https://youtu.be/UA0vyBnzi9U">Key structures in causal graphs</a> (~12 min) (<a href="https://drive.google.com/file/d/1aMWXmbqouuf_IdU9CeY2BfncihyY1AwS/view?usp=sharing">slides</a>)
 <ul>
-<li>Note 1: In this video, I refer to a concept called “exchangeability”. This is a concept that I included in the last offering of this course. Exchangeability is a causal identification assumption. When the exchangeability assumption is satisfied, we can identify causal effects. When it is not satisfied, I call this “a lack of exchangeability”. In the language we have used, this happens when there are alternate (noncausal) explanations for a relationship between two variables. So in the video, whenever you hear “creates a lack of exchangeability”, replace that with “leads to the presence of alternate (noncausal) explanations for the relationship between two variables”. When you hear “achieve conditional exchangeability”, replace that with “we are able to address this alternate explanation when analyzing the data”.</li>
+<li>Note 1: In this video, I refer to a concept called “exchangeability”. This is a concept that I included in a previous offering of this course. Exchangeability is a causal identification assumption. When the exchangeability assumption is satisfied, we can identify causal effects. When it is not satisfied, I call this “a lack of exchangeability”. In the language we have used, this happens when there are alternate (noncausal) explanations for a relationship between two variables. So in the video, whenever you hear “creates a lack of exchangeability”, replace that with “leads to the presence of alternate (noncausal) explanations for the relationship between two variables”. When you hear “achieve conditional exchangeability”, replace that with “we are able to address this alternate explanation when analyzing the data”.</li>
 <li>Note 2: I use the formal probability ideas of marginal and conditional dependence and independence. You can get the essential ideas from this video by replacing terms in the list below. (If you want to learn or review these probability ideas (not required!), watch my <a href="https://youtu.be/acofPsJDq5Y">Probability Essentials</a> video.)
 <ul>
 <li>“A and B are marginally [independent/dependent]” = “A and B are [unrelated/related] in a general population”</li>
@@ -634,7 +640,15 @@ We will use this time for a post-project reflection. Attendance is required, but
 <p><strong>During class:</strong> <a href="../activities/03-causal-graphs-simulation.html">Simulating data using causal graphs</a></p>
 </section>
 <section id="day4" class="level2">
-<h2 class="anchored" data-anchor-id="day4">Day 2: Identifying causal effects with causal graphs (9/17)</h2>
+<h2 class="anchored" data-anchor-id="day4">Day 2: Simulating data using causal graphs (9/15)</h2>
+<p>(Continuation of last class)</p>
+<!-- ============================================================= -->
+</section>
+</section>
+<section id="week-3-causal-graph-wrap-up" class="level1">
+<h1>Week 3: Causal graph wrap-up</h1>
+<section id="day5" class="level2">
+<h2 class="anchored" data-anchor-id="day5">Day 1: Identifying causal effects with causal graphs (9/22)</h2>
 <p><strong>Before class:</strong></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Required">
 <div class="callout-header d-flex align-content-center">
@@ -679,13 +693,9 @@ We will use this time for a post-project reflection. Attendance is required, but
 </div>
 </div>
 <!-- **During class:** [Identifying causal effects using causal graphs](../activities/04-causal-graphs-identification.qmd) -->
-<!-- ============================================================= -->
 </section>
-</section>
-<section id="week-3-causal-graph-wrap-up-matching" class="level1">
-<h1>Week 3: Causal graph wrap-up, matching</h1>
-<section id="day5" class="level2">
-<h2 class="anchored" data-anchor-id="day5">Day 1: Testing causal graphs; synthesis (9/22)</h2>
+<section id="day6" class="level2">
+<h2 class="anchored" data-anchor-id="day6">Day 2: Testing causal graphs; synthesis (9/24)</h2>
 <p><strong>Before class:</strong></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Required">
 <div class="callout-header d-flex align-content-center">
@@ -709,56 +719,6 @@ We will use this time for a post-project reflection. Attendance is required, but
 </div>
 </div>
 <!-- **During class:** [Testing causal graphs](../activities/05-causal-graphs-testing.qmd) -->
-</section>
-<section id="day6" class="level2">
-<h2 class="anchored" data-anchor-id="day6">Day 2: Matching (9/24)</h2>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Required">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Required
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><em>The Effect</em> <a href="https://www.theeffectbook.net/ch-Matching.html">Chapter 14: Matching</a> (~160 minutes)
-<ul>
-<li>Video alternatives:
-<ul>
-<li><a href="https://youtu.be/nRfRswoZlqo">Matching</a> (~11 minutes)</li>
-<li><a href="https://youtu.be/bafdI39LcoE">Five Questions About Matching</a> (~13 minutes)</li>
-<li><a href="https://youtu.be/wMQTuRX3XmM">Distance Matching</a> (~9 minutes)</li>
-<li><a href="https://youtu.be/1T3JYjhrNwE">Propensity Score Matching</a> (~10 minutes)</li>
-<li><a href="https://youtu.be/Pp-qs-mNEjI">Coarsened Exact Matching and Entropy Balancing</a> (~8 minutes)</li>
-<li><a href="https://youtu.be/M6AsS4zaWQk">When Matching Goes Wrong</a> (~14 minutes)</li>
-<li><a href="https://youtu.be/OE_KzNJl75k">Treatment Effect Estimation with Matching</a> (~7 minutes)</li>
-</ul></li>
-</ul></li>
-</ul>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note callout-titled" title="Optional">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Optional
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><em>Mixtape</em> <a href="https://mixtape.scunning.com/05-matching_and_subclassification">Chapter 5: Matching and Subclassification</a> (~140 minutes)</li>
-<li>Journal article: <a href="http://dx.doi.org/10.1214/09-STS313">Matching Methods for Causal Inference: A Review and a Look Forward</a> (~60 minutes)</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- **During class:** [Matching](../activities/06-matching.qmd) -->
 <!-- ============================================================= -->
 
 
