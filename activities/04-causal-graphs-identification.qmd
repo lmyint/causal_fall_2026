@@ -152,7 +152,7 @@ The following study plan was proposed: restrict the study only to those with sid
 The following causal graphs correspond to the two hypotheses:
 
 <center>
-![](images/estrogens_endometrial_generalized.png)
+![](../images/estrogens_endometrial_generalized.png)
 </center>
 
 (The graphs don't show confounders of the drug-true disease relationship for compactness. We can assume that these have already been adjusted for.)
