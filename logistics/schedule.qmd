@@ -298,7 +298,7 @@ If you would like to have an additional reference throughout the course that lea
 - *Mixtape* [Section 3.1.3: Backdoor criterion](https://mixtape.scunning.com/03-directed_acyclical_graphs#backdoor-criterion) (~5 minutes)
 :::
 
-<!-- **During class:** [Identifying causal effects using causal graphs](../activities/04-causal-graphs-identification.qmd) -->
+**During class:** [Identifying causal effects using causal graphs](../activities/04-causal-graphs-identification.qmd)
 
 ## Day 2: Testing causal graphs; synthesis (9/24) {#day6}
 

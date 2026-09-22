@@ -69,7 +69,7 @@
     "href": "logistics/schedule.html#day5",
     "title": "Schedule",
     "section": "Day 1: Identifying causal effects with causal graphs (9/22)",
-    "text": "Day 1: Identifying causal effects with causal graphs (9/22)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nVideo: Causal and Noncausal Paths (~5 min)\nVideo: D-Separation (~8 min)\nReading: The Effect Chapter 8: Causal Paths and Closing Back Doors (up through Section 8.5: Colliders) (~30 minutes)\n\nVideo alternatives:\n\nCausal Pathways (~9 minutes)\nClosing Causal Pathways, and Collider Variables (~11 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Section 3.1.3: Backdoor criterion (~5 minutes)",
+    "text": "Day 1: Identifying causal effects with causal graphs (9/22)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nVideo: Causal and Noncausal Paths (~5 min)\nVideo: D-Separation (~8 min)\nReading: The Effect Chapter 8: Causal Paths and Closing Back Doors (up through Section 8.5: Colliders) (~30 minutes)\n\nVideo alternatives:\n\nCausal Pathways (~9 minutes)\nClosing Causal Pathways, and Collider Variables (~11 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Section 3.1.3: Backdoor criterion (~5 minutes)\n\n\n\n\nDuring class: Identifying causal effects using causal graphs",
     "crumbs": [
       "Course Logistics",
       "Schedule"
@@ -480,6 +480,61 @@
     "crumbs": [
       "Causal Graphs",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Simulating Data with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/04-causal-graphs-identification.html",
+    "href": "activities/04-causal-graphs-identification.html",
+    "title": "4  Identifying Causal Effects with Causal Graphs",
+    "section": "",
+    "text": "Goals\nSlides for today are available here.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Identifying Causal Effects with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/04-causal-graphs-identification.html#exercise-1",
+    "href": "activities/04-causal-graphs-identification.html#exercise-1",
+    "title": "4  Identifying Causal Effects with Causal Graphs",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nFor each of the causal graphs below, identify the set of variables needed to block noncausal paths (if possible) between treatment \\(A\\) and outcome \\(Y\\). Any \\(U\\) variables displayed in the graphs are unobserved/unmeasured.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Identifying Causal Effects with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/04-causal-graphs-identification.html#exercise-2",
+    "href": "activities/04-causal-graphs-identification.html#exercise-2",
+    "title": "4  Identifying Causal Effects with Causal Graphs",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nHistorically, people have tried to create definitions for confounders by listing criteria that purely rely on associations. For example:\n\nA confounder must:\n1. Be associated with treatment and outcome\n2. Not be caused by treatment\n\nUsing the causal graph below, explain why this is not a good definition for a confounder.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Identifying Causal Effects with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/04-causal-graphs-identification.html#exercise-3",
+    "href": "activities/04-causal-graphs-identification.html#exercise-3",
+    "title": "4  Identifying Causal Effects with Causal Graphs",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nFirst, think through the relationships depicted in the causal graphs below and whether they make sense. These are intended to reflect a range of scenarios for why people drop out of studies.\nThen for each of the graphs, identify the set of variables that would block noncausal paths between the treatment \\(A\\) and outcome \\(Y\\). (\\(U\\) and \\(W\\) are unmeasured.)\nCheck your answers to one of the graphs using DAGitty. To do this:\n\nInput the graph on the canvas.\nClick on the node (S) that has been selected/conditioned on, and label it as “adjusted” in the top left menu.\n\nIn the top right box, check the variable sets under “Minimal sufficient adjustment sets containing S for estimating the total effect of A on Y”. These sets of variables are needed to block noncausal paths.\n\nAlternatively, click on the node (S) that has been selected/conditioned on, and label it as “selected” in the top left menu.\n\nThe top right box will say “Biasing paths are open”, but you can look at the “Testable implications” box on the right and look for the entries that start with “A ⊥ Y”. The ⊥ symbol stands for “independent”. So “A ⊥ Y | Z” means “A and Y are conditionally independent given Z”.\nNote that this approach only works if there is no arrow between treatment and outcome because any arrow would make A and Y related no matter what, and A and Y wouldn’t show up in this conditional independence list.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Identifying Causal Effects with Causal Graphs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/04-causal-graphs-identification.html#exercise-4",
+    "href": "activities/04-causal-graphs-identification.html#exercise-4",
+    "title": "4  Identifying Causal Effects with Causal Graphs",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nIn this exercise, we’ll consider how causal graphs can inform study design. (Inspired by a 1970s study on the relationship between estrogen use and endometrial cancer.)\nResearchers have noticed a consistent association between use of a certain drug and disease. Research groups debated two hypotheses:\n\nThe drug does cause disease.\nThe drug doesn’t actually cause disease but leads to a side effect, leading to more frequent doctor visits, leading to increased diagnosis of existing disease.\n\nThe following study plan was proposed: restrict the study only to those with side effects and compare disease rates in drug-users and non-users. In this way, all participants have the same chance of being diagnosed.\nThe following causal graphs correspond to the two hypotheses:\n\n\n\n(The graphs don’t show confounders of the drug-true disease relationship for compactness. We can assume that these have already been adjusted for.)\n\nStudy design 1\nConsider the study proposal above: restrict analysis to those with side effects.\n\nBefore looking at the causal graphs: does the rationale for this study design make sense? Why did researchers want to only look at patients with side effects?\nUnder this study design, the researchers were expecting that if Hypothesis 1 were correct (the drug does cause disease), they would find an association between drug use and diagnosed disease. They expected that if Hypothesis 2 were correct (the drug does NOT cause disease), they would find NO association between drug use and diagnosed disease.\n\nAre these expectations correct? Explain in light of the causal graphs.\n\nBased on your answer above, is this an effective study design for the research questions of interest? That is, can this study proposal distinguish between the two hypotheses?\n\n\n\nStudy design 2\nConsider another study proposal: ensure that everyone is screened for disease frequently, and we don’t restrict our analysis to only those with side effects.\n\nWhat arrow can be removed as a result of this study design? (It might help to draw an updated version of DAGs 1 and 2 with this arrow removed.)\nUnder this study design, the researchers had the same expectations: if Hypothesis 1 were correct, they would find an association between drug use and diagnosed disease. If Hypothesis 2 were correct, they would find NO association between drug use and diagnosed disease.\n\nAre these expectations correct? Explain in light of the causal graphs.\n\nBased on your answer above, is this an effective study design for the research questions of interest? That is, can this study proposal distinguish between the two hypotheses?",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Identifying Causal Effects with Causal Graphs</span>"
     ]
   },
   {

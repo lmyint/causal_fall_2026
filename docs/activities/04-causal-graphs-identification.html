@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 1 – STAT 451: Causal Inference</title>
+<title>4&nbsp; Identifying Causal Effects with Causal Graphs – STAT 451: Causal Inference</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../hw/assignment2.html" rel="next">
-<link href="../activities/04-causal-graphs-identification.html" rel="prev">
+<link href="../hw/assignment1.html" rel="next">
+<link href="../activities/03-causal-graphs-simulation.html" rel="prev">
 <link href="../images/451_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -75,6 +75,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -250,7 +279,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/assignment1.html">Assignments</a></li><li class="breadcrumb-item"><a href="../hw/assignment1.html">Assignment 1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/02-causal-graphs-intro.html">Causal Graphs</a></li><li class="breadcrumb-item"><a href="../activities/04-causal-graphs-identification.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Identifying Causal Effects with Causal Graphs</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -359,7 +388,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/04-causal-graphs-identification.html" class="sidebar-item-text sidebar-link"><i class="bi bi-search" role="img">
+  <a href="../activities/04-causal-graphs-identification.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-search" role="img">
 </i> 
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Identifying Causal Effects with Causal Graphs</span></span></a>
   </div>
@@ -377,7 +406,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../hw/assignment1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../hw/assignment1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignment 1</span></a>
   </div>
 </li>
@@ -429,16 +458,33 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#goals" id="toc-goals" class="nav-link active" data-scroll-target="#goals">Goals</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
+  <ul class="collapse">
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
+  <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a>
+  <ul class="collapse">
+  <li><a href="#study-design-1" id="toc-study-design-1" class="nav-link" data-scroll-target="#study-design-1">Study design 1</a></li>
+  <li><a href="#study-design-2" id="toc-study-design-2" class="nav-link" data-scroll-target="#study-design-2">Study design 2</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/assignment1.html">Assignments</a></li><li class="breadcrumb-item"><a href="../hw/assignment1.html">Assignment 1</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/02-causal-graphs-intro.html">Causal Graphs</a></li><li class="breadcrumb-item"><a href="../activities/04-causal-graphs-identification.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Identifying Causal Effects with Causal Graphs</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Assignment 1</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Identifying Causal Effects with Causal Graphs</span></h1>
 </div>
 
 
@@ -455,20 +501,124 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Due:</strong> Friday, 9/11 at midnight on Moodle</p>
-<p><strong>Context:</strong> This first assignment is a short writing piece for me to get to know you. There are no length requirements—just use as many words as needed to convey your ideas.</p>
-<p><strong>Format:</strong> Please submit a link to a Google Doc, and make sure that I am added as an Editor or Commenter.</p>
-<p><strong>Prompt:</strong></p>
-<p>First read the essay <a href="https://lathamt.substack.com/p/an-education-of-his-own">An Education of His Own</a> by Latham Turner.</p>
-<p>I’m curious to hear what thoughts and ideas it inspires with regards to your education at Mac and the experience you’re hoping for in this course. As you write your response, consider the following:</p>
+<section id="goals" class="level1 unnumbered">
+<h1 class="unnumbered">Goals</h1>
 <ul>
-<li><p>Latham’s goal is to create high quality and satisfying learning experiences for his son. What has been a particularly satisfying learning experience for you? (This does not necessarily have to be an academic experience.) What was it about that experience that made it satisfying?</p></li>
-<li><p>What are your goals in taking this course? What are you hoping for by the end of the semester? Are there barriers or other things that you’re worried about this semester?</p></li>
-<li><p>Latham and his son settle on many aspects of their learning relationship collaboratively. Have you had experiences in other courses where you’ve wanted some aspect to be different? Were you able to talk to the instructor about it? What could have been changed from either your part or the instructor’s to make it possible, easier, or more comfortable to discuss what you wanted?</p></li>
-<li><p>How do you think we should use the values that I describe in <a href="../logistics/syllabus.html#course-grading-system">the grading section</a> of the syllabus alongside our <a href="../logistics/syllabus.html#assignments-and-assessments">assignments and assessments</a> to assign letter grades? (I discuss my values for the course in the paragraph starting with “As a starting point, I do think it’s helpful for me to share my specific values with regards to this class.”)</p></li>
+<li>Explain how d-separation and causal/noncausal paths relate to identification of causal effects.</li>
+<li>Apply d-separation to block noncausal paths in causal DAGs with and without unobserved variables.</li>
+<li>Apply strategies to deal with identification problems caused by unobserved variables.</li>
+<li>Differentiate confounding and selection bias in terms of graph structure and how they arise in applied studies.</li>
+</ul>
+<p><br></p>
+<p>Slides for today are available <a href="https://docs.google.com/presentation/d/1jvQNG1nUVomW8p2Ft__wvHU-SdYvIkHlr0asWpttMIs/edit?usp=sharing">here</a>.</p>
+<p><br><br><br><br></p>
+</section>
+<section id="exercises" class="level1 unnumbered">
+<h1 class="unnumbered">Exercises</h1>
+<section id="exercise-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercise-1">Exercise 1</h2>
+<p>For each of the causal graphs below, identify the set of variables needed to block noncausal paths (if possible) between treatment <span class="math inline">\(A\)</span> and outcome <span class="math inline">\(Y\)</span>. Any <span class="math inline">\(U\)</span> variables displayed in the graphs are unobserved/unmeasured.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="04-causal-graphs-identification_files/figure-html/05_ex1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1056"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="04-causal-graphs-identification_files/figure-html/05_ex1-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1056"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+</section>
+<section id="exercise-2" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercise-2">Exercise 2</h2>
+<p>Historically, people have tried to create definitions for confounders by listing criteria that purely rely on associations. For example:</p>
+<blockquote class="blockquote">
+<p>A confounder must:<br>
+1. Be associated with treatment and outcome<br>
+2. Not be caused by treatment</p>
+</blockquote>
+<p>Using the causal graph below, explain why this is not a good definition for a confounder.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="04-causal-graphs-identification_files/figure-html/06_ex2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-3" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercise-3">Exercise 3</h2>
+<p>First, think through the relationships depicted in the causal graphs below and whether they make sense. These are intended to reflect a range of scenarios for why people drop out of studies.</p>
+<p>Then for each of the graphs, identify the set of variables that would block noncausal paths between the treatment <span class="math inline">\(A\)</span> and outcome <span class="math inline">\(Y\)</span>. (<span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span> are unmeasured.)</p>
+<p>Check your answers to one of the graphs using <a href="http://www.dagitty.net/dags.html">DAGitty</a>. To do this:</p>
+<ul>
+<li>Input the graph on the canvas.</li>
+<li>Click on the node (S) that has been selected/conditioned on, and label it as “adjusted” in the top left menu.
+<ul>
+<li>In the top right box, check the variable sets under “Minimal sufficient adjustment sets containing S for estimating the total effect of A on Y”. These sets of variables are needed to block noncausal paths.</li>
+</ul></li>
+<li>Alternatively, click on the node (S) that has been selected/conditioned on, and label it as “selected” in the top left menu.
+<ul>
+<li>The top right box will say “Biasing paths are open”, but you can look at the “Testable implications” box on the right and look for the entries that start with “A ⊥ Y”. The ⊥ symbol stands for “independent”. So “A ⊥ Y | Z” means “A and Y are conditionally independent given Z”.</li>
+<li>Note that this approach only works if there is no arrow between treatment and outcome because any arrow would make A and Y related no matter what, and A and Y wouldn’t show up in this conditional independence list.</li>
+</ul></li>
+</ul>
+<center>
+<img src="../images/selection_bias1.png" class="img-fluid"> <img src="../images/selection_bias2.png" class="img-fluid"> <img src="../images/selection_bias3.png" class="img-fluid">
+</center>
+<p><br><br></p>
+</section>
+<section id="exercise-4" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercise-4">Exercise 4</h2>
+<p>In this exercise, we’ll consider how causal graphs can inform study design. (Inspired by a 1970s study on the relationship between estrogen use and endometrial cancer.)</p>
+<p>Researchers have noticed a consistent association between use of a certain drug and disease. Research groups debated two hypotheses:</p>
+<ol type="1">
+<li>The drug does cause disease.</li>
+<li>The drug doesn’t actually cause disease but leads to a side effect, leading to more frequent doctor visits, leading to increased diagnosis of existing disease.</li>
+</ol>
+<p>The following study plan was proposed: restrict the study only to those with side effects and compare disease rates in drug-users and non-users. In this way, all participants have the same chance of being diagnosed.</p>
+<p>The following causal graphs correspond to the two hypotheses:</p>
+<center>
+<img src="images/estrogens_endometrial_generalized.png" class="img-fluid">
+</center>
+<p>(The graphs don’t show confounders of the drug-true disease relationship for compactness. We can assume that these have already been adjusted for.)</p>
+<section id="study-design-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="study-design-1">Study design 1</h3>
+<p>Consider the study proposal above: restrict analysis to those with side effects.</p>
+<ul>
+<li><p>Before looking at the causal graphs: does the rationale for this study design make sense? Why did researchers want to only look at patients with side effects?</p></li>
+<li><p>Under this study design, the researchers were expecting that if Hypothesis 1 were correct (the drug does cause disease), they would find an association between drug use and diagnosed disease. They expected that if Hypothesis 2 were correct (the drug does NOT cause disease), they would find NO association between drug use and diagnosed disease.</p>
+<ul>
+<li>Are these expectations correct? Explain in light of the causal graphs.</li>
+</ul></li>
+<li><p>Based on your answer above, is this an effective study design for the research questions of interest? That is, can this study proposal distinguish between the two hypotheses?</p></li>
+</ul>
+</section>
+<section id="study-design-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="study-design-2">Study design 2</h3>
+<p>Consider another study proposal: ensure that <em>everyone</em> is screened for disease frequently, and we don’t restrict our analysis to only those with side effects.</p>
+<ul>
+<li><p>What arrow can be removed as a result of this study design? (It might help to draw an updated version of DAGs 1 and 2 with this arrow removed.)</p></li>
+<li><p>Under this study design, the researchers had the same expectations: if Hypothesis 1 were correct, they would find an association between drug use and diagnosed disease. If Hypothesis 2 were correct, they would find NO association between drug use and diagnosed disease.</p>
+<ul>
+<li>Are these expectations correct? Explain in light of the causal graphs.</li>
+</ul></li>
+<li><p>Based on your answer above, is this an effective study design for the research questions of interest? That is, can this study proposal distinguish between the two hypotheses?</p></li>
 </ul>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -886,13 +1036,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../activities/04-causal-graphs-identification.html" class="pagination-link" aria-label="Identifying Causal Effects with Causal Graphs">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Identifying Causal Effects with Causal Graphs</span></span>
+      <a href="../activities/03-causal-graphs-simulation.html" class="pagination-link" aria-label="Simulating Data with Causal Graphs">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simulating Data with Causal Graphs</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../hw/assignment2.html" class="pagination-link" aria-label="Assignment 2">
-        <span class="nav-page-text">Assignment 2</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../hw/assignment1.html" class="pagination-link" aria-label="Assignment 1">
+        <span class="nav-page-text">Assignment 1</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -42,8 +42,8 @@ book:
           href: activities/02-causal-graphs-intro.qmd
         - icon: gear-fill
           href: activities/03-causal-graphs-simulation.qmd
-        # - icon: search
-        #   href: activities/04-causal-graphs-identification.qmd
+        - icon: search
+          href: activities/04-causal-graphs-identification.qmd
     - part: "Assignments"
       chapters:
         - hw/assignment1.qmd
