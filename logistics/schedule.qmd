@@ -320,7 +320,7 @@ If you would like to have an additional reference throughout the course that lea
 
 
 
-# Week 4: Randomized experiments, target trials, matching
+# Week 4: Matching and Weighting
 
 ## Day 1: Matching (9/24) {#day7}
 
