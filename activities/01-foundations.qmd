@@ -1,5 +1,5 @@
 ---
-title: "Foundational ideas"
+title: "Foundational Ideas"
 ---
 
 # Goals {.unnumbered}

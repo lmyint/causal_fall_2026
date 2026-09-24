@@ -319,10 +319,10 @@ If you would like to have an additional reference throughout the course that lea
 <!-- ============================================================= -->
 
 
-::: {.content-hidden}
+
 # Week 4: Randomized experiments, target trials, matching
 
-## Day 2: Matching (9/24) {#day7}
+## Day 1: Matching (9/24) {#day7}
 
 ::: {.callout-note title="Required" icon=false}
 - *The Effect* [Chapter 14: Matching](https://www.theeffectbook.net/ch-Matching.html) (~160 minutes)
@@ -333,37 +333,16 @@ If you would like to have an additional reference throughout the course that lea
         - [Propensity Score Matching](https://youtu.be/1T3JYjhrNwE) (~10 minutes)
         - [Coarsened Exact Matching and Entropy Balancing](https://youtu.be/Pp-qs-mNEjI) (~8 minutes)
         - [When Matching Goes Wrong](https://youtu.be/M6AsS4zaWQk) (~14 minutes)
-        - [Treatment Effect Estimation with Matching](https://youtu.be/OE_KzNJl75k) (~7 minutes)
 :::
 
 ::: {.callout-note title="Optional" appearance="simple" collapse="true"}
 - *Mixtape* [Chapter 5: Matching and Subclassification](https://mixtape.scunning.com/05-matching_and_subclassification) (~140 minutes)
 - Journal article: [Matching Methods for Causal Inference: A Review and a Look Forward](http://dx.doi.org/10.1214/09-STS313) (~60 minutes)
+- *The Effect*:
+    - [Treatment Effect Estimation with Matching](https://youtu.be/OE_KzNJl75k) (~7 minutes)
 :::
 
 <!-- **During class:** [Matching](../activities/06-matching.qmd) -->
-
-## Day 1: Randomized experiments (9/23) {#day9}
-
-**Before class:** No required reading or videos for today.
-
-::: {.callout-note title="Optional" appearance="simple" collapse="true"}
-- Reading: [Treatment Allocation and Randomization](https://online.stat.psu.edu/stat509/lesson/8) (~20 minutes) from Penn State's online notes for the course Design and Analysis of Clinical Trials
-:::
-
-**During class:** [Randomized experiments](07-rct.qmd)
-
-## Day 2: Target trial framework (9/25) {#day10}
-
-::: {.callout-note title="Required" icon=false}
-- Reading: Hernán, M. A., Sauer, B. C., Hernández-Díaz, S., Platt, R., Shrier, I. (2016). [Specifying a target trial prevents immortal time bias and other self-inflicted injuries in observational analyses](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5124536/pdf/nihms-790601.pdf). *Journal of Clinical Epidemiology*, *79*, 70–75. (~35 minutes)
-:::
-
-**During class:** [Target trial framework](08-target-trial.qmd)
-
-## Day 3: Matching (9/27) {#day11}
-
-**Before class:**
 
 
 
@@ -374,7 +353,7 @@ If you would like to have an additional reference throughout the course that lea
 <!-- ============================================================= -->
 
 
-
+::: {.content-hidden}
 # Week 5: Matching and weighting
 
 ## Day 1: Matching (9/30) {#day12}

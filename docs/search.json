@@ -232,12 +232,12 @@
   {
     "objectID": "activities/01-foundations.html",
     "href": "activities/01-foundations.html",
-    "title": "1  Foundational ideas",
+    "title": "1  Foundational Ideas",
     "section": "",
     "text": "Goals\n\nMeet and get to know your peers\nGain an understanding of what this course is about\nDevelop intuition for how we can study causation\nGet acquainted with a framework for thinking about causal effects\n\n\nSlides for today are available here.",
     "crumbs": [
       "Foundational Ideas",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Foundational ideas</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Foundational Ideas</span>"
     ]
   },
   {
@@ -538,6 +538,39 @@
     ]
   },
   {
+    "objectID": "activities/05-causal-graphs-testing.html",
+    "href": "activities/05-causal-graphs-testing.html",
+    "title": "5  Testing Causal Graphs / Synthesis",
+    "section": "",
+    "text": "Goals\nYou can download a template file for this activity here.",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Testing Causal Graphs / Synthesis</span>"
+    ]
+  },
+  {
+    "objectID": "activities/05-causal-graphs-testing.html#exercise-1",
+    "href": "activities/05-causal-graphs-testing.html#exercise-1",
+    "title": "5  Testing Causal Graphs / Synthesis",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nHere we’ll look at biological data from a protein interaction network. Take a peek at the data below:\n\nprotein_data &lt;- read_csv(\"https://raw.githubusercontent.com/ankurankan/2020-dagitty-manual/master/protocol3/protein_signal.csv\")\n\n# Randomly subset protein_data to 1000 cases \n# to speed up subsequent computations\nset.seed(451)\nprotein_data_subs &lt;- slice_sample(protein_data, n = 1000)\n\nhead(protein_data_subs)\n\nThe hypothesized causal graph is below.\n\nNote: If the graph looks cut off in RStudio, you can also paste the dag { ... } portion into DAGitty web interface in the “Model code” pane on the right.\n\n\nprotein_dag &lt;- dagitty('dag {\nbb=\"-0.5,-0.5,0.5,0.5\"\nAkt [pos=\"-0.115,0.052\"]\nErk [pos=\"-0.061,-0.001\"]\nJnk [pos=\"-0.208,-0.149\"]\nMek [pos=\"-0.063,-0.096\"]\nP38 [pos=\"-0.155,-0.141\"]\nPIP2 [pos=\"-0.337,0.063\"]\nPIP3 [pos=\"-0.278,-0.068\"]\nPKA [pos=\"-0.127,-0.200\"]\nPKC [pos=\"-0.111,-0.287\"]\nPlcg [pos=\"-0.337,-0.177\"]\nRaf [pos=\"-0.066,-0.204\"]\nMek -&gt; Erk\nPIP2 -&gt; PKC [pos=\"-0.489,-0.417\"]\nPIP3 -&gt; Akt\nPIP3 -&gt; PIP2\nPIP3 -&gt; Plcg\nPKA -&gt; Akt\nPKA -&gt; Erk\nPKA -&gt; Jnk\nPKA -&gt; Mek\nPKA -&gt; P38\nPKA -&gt; Raf\nPKC -&gt; Jnk [pos=\"-0.188,-0.258\"]\nPKC -&gt; Mek [pos=\"-0.021,-0.245\"]\nPKC -&gt; P38 [pos=\"-0.166,-0.227\"]\nPKC -&gt; Raf\nPlcg -&gt; PIP2\nPlcg -&gt; PKC [pos=\"-0.248,-0.271\"]\nRaf -&gt; Mek\n}')\nplot(protein_dag)\n\nThe code below creates a scatterplot matrix that shows the relationship between each pair of variables using a scatterplot. For example, the plot in row 1, column 2 plots the Raf protein abundance vs. Mek protein abundance. The numbers in the lower triangle give the correlation coefficient between the two variables.\nBased on this plot, what should the type argument be when you run conditional independence tests with localTests()?\n\npanel.cor &lt;- function(x, y) {\n    par(usr = c(0, 1, 0, 1))\n    r &lt;- cor(x, y)\n    txt &lt;- format(r, digits = 2)\n    txt &lt;- str_c(\"Cor: \", txt)\n    text(0.5, 0.5, txt)\n}\n\npairs(protein_data_subs, upper.panel = panel.smooth, lower.panel = panel.cor)\n\nBelow we use impliedConditionalIndependencies() to get a list of testable implications. This time we use type = \"missing.edge\" instead of type = \"all.pairs\".\n\nBecause this graph is so much more complex, checking for conditional independence between all pairs of variables results in a ton of conditional independence statements. (In fact, there are 7182 of them.)\nWhen using “missing.edge” we focus on conditional independencies that arise from a missing edge between two variables. This results in a much more manageable set of conditional independence statements to test.\n\n\nprotein_dag_cis &lt;- impliedConditionalIndependencies(protein_dag, type = \"missing.edge\")\n\nIn the code chunk below, use the appropriate type argument in localTests() to perform the CI tests.\n\nNote: The R = 100 argument is needed for this type to set the number of bootstrapping iterations for obtaining the confidence interval.\n\n\n# Obtain and display a data frame of CI test results\n# We use a subset of the protein data for computational time reasons\n# The system.time() function measures how long a command takes to run\nsystem.time({\nprotein_dag_ci_test_res &lt;- localTests(protein_dag, data = protein_data_subs, tests = protein_dag_cis, type = ___, R = 100)\n})\n\nprotein_dag_ci_test_res\n\nWe can plot the results of these tests with the plotLocalTestResults() function from dagitty. Based on these results, what modifications to the graph should we investigate first?\n\n# Sort the data frame by the magnitude of the estimate\n# and plot the test statistics (points) and\n# 95% confidence intervals (horizontal bars)\n# Just below this code chunk on the right, click the\n# leftmost white button to open a zoomed window of the plot\nprotein_dag_ci_test_res %&gt;%\n    arrange(abs(estimate)) %&gt;% \n    plotLocalTestResults()",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Testing Causal Graphs / Synthesis</span>"
+    ]
+  },
+  {
+    "objectID": "activities/05-causal-graphs-testing.html#exercise-2",
+    "href": "activities/05-causal-graphs-testing.html#exercise-2",
+    "title": "5  Testing Causal Graphs / Synthesis",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nHere you’ll draw a causal graph for a particular context and test/update your graph based on conditional independence testing.\nFirst navigate to this page, and choose one of the following datasets by exploring the associated codebook:\n\nElection Data - County\nFEV (Lung Function) and Smoking\nHome Sales in NY\n\nRead in the chosen dataset, and take a look at the data by entering View(dataset_name) in the Console.\n\nelection &lt;- read_csv(\"https://mac-stat.github.io/data/election_2020_county.csv\")\n\n# Read in and process FEV data\nlungs &lt;- read_csv(\"https://mac-stat.github.io/data/fev.csv\")\nlungs &lt;- lungs %&gt;% \n    # Recode sex and smoke as 0/1 variables\n    mutate(\n        sexFemale = ifelse(sex==\"female\", 1, 0),\n        smoke = ifelse(smoke==\"smoker\", 1, 0)\n    ) %&gt;% \n    select(-sex)\n\n# Read in and process the homes data\nhomes &lt;- read_csv(\"https://mac-stat.github.io/data/homes.csv\")\nhomes &lt;- homes %&gt;% \n    select(-c(Fuel.Type, Heat.Type, Sewer.Type))\n\nDraw a causal graph using DAGitty. If you include variables in your graphs that are not in the data, mark them as unmeasured by clicking the variable and then hitting “u” or checking the “unobserved” checkbox in the top left.\nPaste all the code from the “Model code” pane below.\n\ndag &lt;- dagitty('\nPaste your dag { ... } here\n')\nplot(dag)\n\nUse impliedConditionalIndependencies() to generate a list of testable implications:\n\nIf you have unmeasured variables in your graph, use type = \"missing.edge\" to ensure that no conditional independencies involving those unmeasured variables are returned. (While these CIs are real implications about your graph, they’re not testable.)\nOtherwise use type = \"all.pairs\".\n\n\ndag_cis &lt;- impliedConditionalIndependencies(dag, type = ___)\ndag_cis\n\nUse localTests() to test your graph. Inspect the resulting table of test results and, if desired, the plot form with plotLocalTestResults(). Is your graph consistent with the data? What updates might you make?\n\nsystem.time({\ndag_ci_test_res &lt;- localTests(___)\n})\ndag_ci_test_res",
+    "crumbs": [
+      "Causal Graphs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Testing Causal Graphs / Synthesis</span>"
+    ]
+  },
+  {
     "objectID": "hw/assignment1.html",
     "href": "hw/assignment1.html",
     "title": "Assignment 1",
@@ -722,6 +755,17 @@
     "crumbs": [
       "Appendices",
       "R Resources"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day7",
+    "href": "logistics/schedule.html#day7",
+    "title": "Schedule",
+    "section": "Day 1: Matching (9/24)",
+    "text": "Day 1: Matching (9/24)\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 14: Matching (~160 minutes)\n\nVideo alternatives:\n\nMatching (~11 minutes)\nFive Questions About Matching (~13 minutes)\nDistance Matching (~9 minutes)\nPropensity Score Matching (~10 minutes)\nCoarsened Exact Matching and Entropy Balancing (~8 minutes)\nWhen Matching Goes Wrong (~14 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 5: Matching and Subclassification (~140 minutes)\nJournal article: Matching Methods for Causal Inference: A Review and a Look Forward (~60 minutes)\nThe Effect:\n\nTreatment Effect Estimation with Matching (~7 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
     ]
   }
 ]
