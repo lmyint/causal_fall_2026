@@ -34,7 +34,7 @@ Check here to see what you should be doing before, during, and after each class 
   <tr>
     <td class="topleft">4 (9/28 - 10/2)</td>
     <td class="topleft"><a href="#day7">Matching</a></td>
-    <td class="topleft"><a href="#day8">Weighting</a></td>
+    <td class="topleft"><a href="#day8">Matching</a></td>
     <td class="topleft"></td>
   </tr>
   <tr>
@@ -320,26 +320,38 @@ If you would like to have an additional reference throughout the course that lea
 
 
 
-# Week 4: Matching and Weighting
+# Week 4: Matching
 
-## Day 1: Matching (9/24) {#day7}
+## Day 1: Matching (9/29) {#day7}
 
 ::: {.callout-note title="Required" icon=false}
-- *The Effect* [Chapter 14: Matching](https://www.theeffectbook.net/ch-Matching.html) (~160 minutes)
+- *The Effect* [Chapter 14: Matching](https://www.theeffectbook.net/ch-Matching.html) Sections 14.1-14.4 (~60 minutes)
     - Video alternatives:
         - [Matching](https://youtu.be/nRfRswoZlqo) (~11 minutes)
         - [Five Questions About Matching](https://youtu.be/bafdI39LcoE) (~13 minutes)
         - [Distance Matching](https://youtu.be/wMQTuRX3XmM) (~9 minutes)
-        - [Propensity Score Matching](https://youtu.be/1T3JYjhrNwE) (~10 minutes)
         - [Coarsened Exact Matching and Entropy Balancing](https://youtu.be/Pp-qs-mNEjI) (~8 minutes)
-        - [When Matching Goes Wrong](https://youtu.be/M6AsS4zaWQk) (~14 minutes)
 :::
 
 ::: {.callout-note title="Optional" appearance="simple" collapse="true"}
 - *Mixtape* [Chapter 5: Matching and Subclassification](https://mixtape.scunning.com/05-matching_and_subclassification) (~140 minutes)
 - Journal article: [Matching Methods for Causal Inference: A Review and a Look Forward](http://dx.doi.org/10.1214/09-STS313) (~60 minutes)
-- *The Effect*:
-    - [Treatment Effect Estimation with Matching](https://youtu.be/OE_KzNJl75k) (~7 minutes)
+:::
+
+<!-- **During class:** [Matching](../activities/06-matching.qmd) -->
+
+## Day 2: Matching (10/1) {#day8}
+
+::: {.callout-note title="Required" icon=false}
+- *The Effect* [Chapter 14: Matching](https://www.theeffectbook.net/ch-Matching.html) Sections 14.5-end (~60 minutes)
+    - Video alternatives:
+        - [When Matching Goes Wrong](https://youtu.be/M6AsS4zaWQk) (~14 minutes)
+        - [Treatment Effect Estimation with Matching](https://youtu.be/OE_KzNJl75k) (~7 minutes)
+:::
+
+::: {.callout-note title="Optional" appearance="simple" collapse="true"}
+- *Mixtape* [Chapter 5: Matching and Subclassification](https://mixtape.scunning.com/05-matching_and_subclassification) (~140 minutes)
+- Journal article: [Matching Methods for Causal Inference: A Review and a Look Forward](http://dx.doi.org/10.1214/09-STS313) (~60 minutes)
 :::
 
 <!-- **During class:** [Matching](../activities/06-matching.qmd) -->

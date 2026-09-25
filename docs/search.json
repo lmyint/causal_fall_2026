@@ -761,8 +761,19 @@
     "objectID": "logistics/schedule.html#day7",
     "href": "logistics/schedule.html#day7",
     "title": "Schedule",
-    "section": "Day 1: Matching (9/24)",
-    "text": "Day 1: Matching (9/24)\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 14: Matching (~160 minutes)\n\nVideo alternatives:\n\nMatching (~11 minutes)\nFive Questions About Matching (~13 minutes)\nDistance Matching (~9 minutes)\nPropensity Score Matching (~10 minutes)\nCoarsened Exact Matching and Entropy Balancing (~8 minutes)\nWhen Matching Goes Wrong (~14 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 5: Matching and Subclassification (~140 minutes)\nJournal article: Matching Methods for Causal Inference: A Review and a Look Forward (~60 minutes)\nThe Effect:\n\nTreatment Effect Estimation with Matching (~7 minutes)",
+    "section": "Day 1: Matching (9/29)",
+    "text": "Day 1: Matching (9/29)\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 14: Matching Sections 14.1-14.4 (~60 minutes)\n\nVideo alternatives:\n\nMatching (~11 minutes)\nFive Questions About Matching (~13 minutes)\nDistance Matching (~9 minutes)\nCoarsened Exact Matching and Entropy Balancing (~8 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 5: Matching and Subclassification (~140 minutes)\nJournal article: Matching Methods for Causal Inference: A Review and a Look Forward (~60 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day8",
+    "href": "logistics/schedule.html#day8",
+    "title": "Schedule",
+    "section": "Day 2: Matching (10/1)",
+    "text": "Day 2: Matching (10/1)\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 14: Matching Sections 14.5-end (~60 minutes)\n\nVideo alternatives:\n\nWhen Matching Goes Wrong (~14 minutes)\nTreatment Effect Estimation with Matching (~7 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 5: Matching and Subclassification (~140 minutes)\nJournal article: Matching Methods for Causal Inference: A Review and a Look Forward (~60 minutes)",
     "crumbs": [
       "Course Logistics",
       "Schedule"
