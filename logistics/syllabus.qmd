@@ -221,12 +221,16 @@ It is important to me to create a course structure and grading system that creat
 
 **Assignments:** Roughly every 1-2 weeks, there will be an out-of-class assignment containing problems and exercises meant to reinforce key concepts from class.
 
-**Notes-free, in-person assessments:** We will have 1 or 2 in-person (rather than asynchronous/take-home) assessments completed without the aid of notes. I would like to decide on what these are based on your input. Some possibilities include:
+**Notes-free, in-person assessments:** Based on your feedback, we will have 1 oral content discussion towards the end of our content coverage period (early November). See the [Course grading system](#course-grading-system) section below for more details. More details will be shared on the course website closer to the discussion.
+
+<!--
+We will have 1 or 2 in-person (rather than asynchronous/take-home) assessments completed without the aid of notes. I would like to decide on what these are based on your input. Some possibilities include:
 
 - In-class exam
 - Oral content discussion with instructor (structured as a mock job interview, for example)
 
 I'm open to other ideas! Much like an athlete tests their skills by playing in a match or a musician through a recital, I would like this assessment to provide a genuine context for you to show your learning. It's possible that everyone chooses different options, and this is ok with me. I will seek input from you about what you might want this to look like.
+-->
 
 **Project:** As a 400-level MSCS capstone, this course has a substantial project component, which you must pass to pass the course.
 
@@ -239,6 +243,35 @@ I'm open to other ideas! Much like an athlete tests their skills by playing in a
 
 ### Course grading system
 
+We will use a **contract system** for our course grading system.
+
+To earn an **A**, you should:
+
+1. Consistently show up to class prepared and engage in class with good-faith efforts
+2. Consistently uplift and support classmates' learning and never make classmates feel uncomfortable, unwelcome, or "less than" in any way
+3. Consistently reflect and act on feedback to improve
+4. Demonstrate complete understanding of core concepts
+5. Put in the work to create a quality final project
+6. Respect our course's stance on AI (see [section on AI](#artificial-intelligence) below)
+
+I will assess the above items in the following ways:
+
+- **Items 1, 2, and 6:** If you don't hear anything from me, you're doing fine. I will reach out to you if I'm concerned about any of these.
+- **Item 3:** I expect you to self-monitor this throughout the semester, but there will also be 2 formal accountability mechanisms:
+    - I will incorporate the feedback that I give on homework assignments into the oral content discussion that we will have towards the end of our content coverage period.
+    - I will ask you to synthesize project feedback in the project feedback synthesis session that we have during the final exam period.
+- **Item 4:**
+    - Homework assignments will be assessed with a mark of S (satisfactory) or NI (needs improvement). A mark of S indicates solid effort and good overall understanding. **To be on contract for an A, all assignments must receive a mark of S.** Any assignment with an NI can be revised.
+    - Our oral content discussion will also be marked with an S or NI. These marks carry the same meaning as for homework assignments. If you earn an NI on the oral content discussion, you can reschedule the discussion as many times as you would like with one week in between each retaking.
+- **Item 5:**
+    - We will check in regularly about your project progress during the project phase of our course (roughly the last 4 weeks of the semester.) I expect you to address feedback in between check ins.
+    - I will let you know explicitly if I am concerned about you being off contract for the project and what you need to do to get back on contract.
+
+If, by the end of the semester, you are off contract for some items, I will determine your grade based on a holistic assessment of your work and engagement over the semester. I will consult with you about this.
+
+**My sincere hope is for everyone to be on contract to earn an A.**
+
+::: {.callout-note title="Start-of-semester statement" appearance="simple" collapse="true"}
 ![](../images/tbd.png){width=300}
 
 I have been experimenting with different grading systems for 6 years, and it's always been difficult to design them without knowing who you are, how you learn, and what motivates you.
@@ -256,6 +289,7 @@ As a starting point, I do think it's helpful for me to share my specific values 
 - Demonstrate complete understanding of core concepts
 - Put in the work to create a quality final project
 - Respect our course's stance on AI (see [section on AI](#artificial-intelligence) below)
+:::
 
 ::: {.callout-tip appearance='simple' icon=false title="The big picture"}
 At this point, it's worth repeating that **I care most about your long-term learning**, particularly because I believe that our course ideas are useful and empowering. My hope with our course design and grading system is that I am providing you with the right experiences for practice and reflection that will make our ideas and skills stick for the long-term.
