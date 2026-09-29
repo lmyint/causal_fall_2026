@@ -87,6 +87,28 @@
     ]
   },
   {
+    "objectID": "logistics/schedule.html#day7",
+    "href": "logistics/schedule.html#day7",
+    "title": "Schedule",
+    "section": "Day 1: Matching (9/29)",
+    "text": "Day 1: Matching (9/29)\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 14: Matching Sections 14.1-14.4 (~60 minutes)\n\nVideo alternatives:\n\nMatching (~11 minutes)\nFive Questions About Matching (~13 minutes)\nDistance Matching (~9 minutes)\nCoarsened Exact Matching and Entropy Balancing (~8 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 5: Matching and Subclassification (~140 minutes)\nJournal article: Matching Methods for Causal Inference: A Review and a Look Forward (~60 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day8",
+    "href": "logistics/schedule.html#day8",
+    "title": "Schedule",
+    "section": "Day 2: Matching (10/1)",
+    "text": "Day 2: Matching (10/1)\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 14: Matching Sections 14.5-end (~60 minutes)\n\nVideo alternatives:\n\nWhen Matching Goes Wrong (~14 minutes)\nTreatment Effect Estimation with Matching (~7 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 5: Matching and Subclassification (~140 minutes)\nJournal article: Matching Methods for Causal Inference: A Review and a Look Forward (~60 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
     "objectID": "logistics/syllabus.html",
     "href": "logistics/syllabus.html",
     "title": "Syllabus",
@@ -571,6 +593,105 @@
     ]
   },
   {
+    "objectID": "activities/06-matching.html",
+    "href": "activities/06-matching.html",
+    "title": "6  Matching",
+    "section": "",
+    "text": "Data context: job training program\nSlides for today are available here.\nYou can download a template file for this activity here.\nDid a job training program increase incomes?\nThese data were analyzed in LaLonde, 1986 and in Dehejia and Wahba, 1999. We’ll be using the Dehejia and Wahba data to estimate the causal effect of the job training program on income immediately following the program.\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(cobalt)\nlibrary(MatchIt)\nlibrary(marginaleffects)\nlibrary(dagitty)\n\n# The dataset is called \"lalonde\" (for one of the original authors)\ndata(lalonde)\nVariables of interest:\nCovariates: all are variables that happen prior to treatment (also called pre-treatment covariates)",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Matching</span>"
+    ]
+  },
+  {
+    "objectID": "activities/06-matching.html#causal-graph",
+    "href": "activities/06-matching.html#causal-graph",
+    "title": "6  Matching",
+    "section": "Causal graph",
+    "text": "Causal graph\nConsider the following proposed causal graph for this context:\n\ndag &lt;- dagitty('\ndag {\nbb=\"0,0,1,1\"\nage [pos=\"0.129,0.176\"]\neduc [pos=\"0.247,0.140\"]\nmarried [pos=\"0.487,0.064\"]\nnodegree [pos=\"0.637,0.126\"]\nrace [pos=\"0.363,0.062\"]\nre74 [pos=\"0.621,0.217\"]\nre75 [pos=\"0.706,0.238\"]\nre78 [outcome,pos=\"0.850,0.500\"]\ntreat [exposure,pos=\"0.150,0.500\"]\nage -&gt; re78\nage -&gt; treat\neduc -&gt; nodegree\neduc -&gt; re78\neduc -&gt; treat\nmarried -&gt; re78\nmarried -&gt; treat\nnodegree -&gt; re78\nnodegree -&gt; treat\nrace -&gt; educ\nrace -&gt; re74\nrace -&gt; re75\nrace -&gt; re78\nrace -&gt; treat\nre74 -&gt; re75\nre74 -&gt; re78\nre74 -&gt; treat\nre75 -&gt; re78\nre75 -&gt; treat\ntreat -&gt; re78\n}\n')\nplot(dag)\n\n\n\n\n\n\n\n\nExercise: Run the code below to test the above causal graph for consistency with the observed data.\n\nYou’ll need to install 2 packages–enter the following in the Console: install.packages(c(\"fastDummies\", \"CCP\"))\nThe longer variable names are shortened to 4-letter abbreviations. (mrrd is the married variable.)\nBased on the results, what updates should we consider to the graph?\n\n\n# Obtain implied conditional independence statements\n# type = \"missing.edge\" returns a smaller set of statements\n# but still tests each missing arrow in the graph\ndag_cis &lt;- impliedConditionalIndependencies(dag, type = \"missing.edge\")\n\n# type = \"cis.pillai\" is for mixed quantitative and categorical data\ndag_test_res &lt;- localTests(dag, data = job_training, type = \"cis.pillai\", tests = dag_cis)\n\n# Sort the results by p-value\ndag_test_res |&gt; \n    arrange(p.value)",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Matching</span>"
+    ]
+  },
+  {
+    "objectID": "activities/06-matching.html#initial-effect-estimates",
+    "href": "activities/06-matching.html#initial-effect-estimates",
+    "title": "6  Matching",
+    "section": "Initial effect estimates",
+    "text": "Initial effect estimates\nLet’s first look at a naive comparison: an unadjusted difference in outcome across the treatment groups:\n\n# Because treat is encoded numerically as a 0/1 variable, factor(treat) is \n# necessary within ggplot() to represent it as a categorical variable\nggplot(lalonde, aes(x = factor(treat), y = re78)) +\n    geom_boxplot()\n\nlalonde %&gt;% \n    group_by(treat) %&gt;% \n    summarize(avg_income = mean(re78))\n\nmod_naive &lt;- lm(re78 ~ treat, data = lalonde)\ntidy(mod_naive, conf.int = TRUE)\n\nAt the other end of the spectrum, let’s examine a multiple linear regression model that adjusts for all of the variables needed to identify the causal effect:\n\nmod_adjusted &lt;- lm(re78 ~ treat + age + educ + race + married + nodegree + re74 + re75, data = lalonde)\ntidy(mod_adjusted, conf.int = TRUE)\n\nExercise: In a sentence summarize what you learn from these models. Do you think that matching will produce an estimate closer to the coefficient estimate from mod_naive or from mod_adjusted?",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Matching</span>"
+    ]
+  },
+  {
+    "objectID": "activities/06-matching.html#checking-covariate-balance-before-matching",
+    "href": "activities/06-matching.html#checking-covariate-balance-before-matching",
+    "title": "6  Matching",
+    "section": "Checking covariate balance before matching",
+    "text": "Checking covariate balance before matching\nIt’s useful to get a sense of covariate balance before matching to understand how much matching improves that balance. Look at the visualizations below to see what variables are most balanced and imbalanced and by how much. (Code is complete for expediency of this activity.)\n\nggplot(lalonde, aes(x = factor(treat), y = age)) +\n    geom_boxplot()\nggplot(lalonde, aes(x = factor(treat), y = educ)) +\n    geom_boxplot()\nggplot(lalonde, aes(x = factor(treat), y = re74)) +\n    geom_boxplot()\nggplot(lalonde, aes(x = factor(treat), y = re75)) +\n    geom_boxplot()\n\nggplot(lalonde, aes(x = factor(treat), fill = race)) +\n    geom_bar(position = \"fill\")\nggplot(lalonde, aes(x = factor(treat), fill = factor(married))) +\n    geom_bar(position = \"fill\")\nggplot(lalonde, aes(x = factor(treat), fill = factor(nodegree))) +\n    geom_bar(position = \"fill\")\n\nWe can also use numerical balance measures using the bal.tab() function from the cobalt package.\nInputs:\n\nThe first argument is a formula of the form: TREAMENT_VARIABLE ~ COVARIATE1 + COVARIATE2 + ...\nstats = c(\"mean.diffs\", \"variance.ratios\"): indicates that differences in means and ratios of variances between the treatment groups should be computed.\nint = TRUE indicates that interaction terms are computed and checked for balance in addition to the variables themselves.\n\nOutput:\n\nThe Diff.Un column reports:\n\nContinuous variables: the standardized difference in means (the difference in means divided by a pooled standard deviation across the groups).\nBinary variables: the difference in proportions across the treatment groups\nThe order in the difference is Treatment=1 - Treatment=0.\n\nThe V.Ratio.Un column reports the ratio of variances in the treatment groups (just for continuous variables). The order in the ratio is Treatment=1 / Treatment=0.\nThe first rows of output are for\n\n\nbal.tab(\n    treat ~ age + educ + race + married + nodegree + re74 + re75,\n    data = lalonde,\n    stats = c(\"mean.diffs\", \"variance.ratios\"),\n    int = TRUE\n)\n\nWe can also look at a visual representation of the above balance statistics with the love.plot() function from the cobalt package.\nInputs:\n\nGenerally the same arguements as for bal.tab()\nstars = \"raw\": Puts an asterisk * next to the binary variables (and binary interaction terms) for which the raw difference in means (proportions) is shown (rather than the standardized difference indicated by the x-axis title)\nthresholds: Draws vertical lines indicating thresholds under which balance is good. For the differences, 0.1 is a common threshold. For the ratios, 2 (and 0.5) is a common threshold.\n\n\nlove.plot(\n    treat ~ age + educ + race + married + nodegree + re74 + re75,\n    data = lalonde,\n    stats = c(\"mean.diffs\", \"variance.ratios\"),\n    int = TRUE,\n    stars = \"raw\",\n    thresholds = c(\"mean.diffs\" = 0.1, \"variance.ratios\" = 2)\n)\n\nExercise: Interpret the balance statistics for 3 rows in the bal.tab() output: age, married, and race_black * married_0. (The interaction term is towards the middle of the table). What is your overall assessment of balance across the treatment groups?",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Matching</span>"
+    ]
+  },
+  {
+    "objectID": "activities/06-matching.html#exact-matching",
+    "href": "activities/06-matching.html#exact-matching",
+    "title": "6  Matching",
+    "section": "Exact matching",
+    "text": "Exact matching\nLet’s explore exact matching. With exact matching, units \\(i\\) and \\(j\\) have a distance of 0 if all covariates match exactly. Otherwise the distance is infinity.\nExercise: Update the code below to perform exact matching on the lalonde dataset to estimate the average treatment effect on the treated (ATT).\n\nmatch_out_exact &lt;- matchit(\n    ??? ~ age + educ + race + married + nodegree + re74 + re75,\n    data = ???,\n    method = ???,\n    estimand = ???\n)\n\nThen we can use bal.tab() and love.plot() to compute and plot balance statistics as well as show sample sizes after matching:\n\nbal.tab(\n    match_out_exact,\n    stats = c(\"mean.diffs\", \"variance.ratios\"),\n    int = TRUE\n)\n\n\nlove.plot(\n    match_out_exact,\n    stats = c(\"mean.diffs\", \"variance.ratios\"),\n    int = TRUE,\n    stars = \"raw\",\n    thresholds = c(\"mean.diffs\" = 0.1, \"variance.ratios\" = 2)\n)\n\nWhen evaluating the quality of a matching procedure, we consider two factors:\n\nBalance statistics: standardized mean differences of less than 0.1 are considered good for quantitative variables. For binary variables, differences in proportions less than 0.05 are considered good.\n\nQuestion: Why are these thresholds irrelevant for exact matching?\n\nSample size: Beneath the balance statistics is a sample size table. (Reproduced directly below to avoid scrolling.) The rows are as follows:\n\n“All”: original sample sizes\n“Matched”: number of units in each group that could be matched\n“Unmatched”: number of units in each group that could not be matched\n“Matched (ESS)”: The standard errors resulting from an unweighted sample of this size will roughly be the same as the weighted sample resulting from matching.\n“Discarded”: The number of cases discarded due to common support restriction. (We’ll explore this in the next lesson.)\n\n\nQuestions:\n\nWhat do you notice about the matched sample size relative to the original sample size?\nWhat do you think would happen to the matched sample sizes when matching on just age + educ + race + married + nodegree? Run the matching again to check. What are the pros/cons of exact matching on more vs. fewer variables?\n\n\nLet’s follow up our sample size explorations to understand who was matched. We can extract the matched data using the match.data() function on the result from matchit().\n\n# Extract both the matched data and unmatched data\n# drop.unmatched = FALSE gets the unmatched data\nmatch_data_exact &lt;- match.data(match_out_exact, drop.unmatched = FALSE) |&gt; \n    mutate(matched = !is.na(subclass)) # Indicator of whether a case was matched or not\n\nExercise: Inspect the matched data by entering View(match_data_exact) in the Console and by making plots of how a couple of covariates differ between the matched and unmatched units. Summarize what you learn about the characteristics of the units who could be matched and how this impacts the results.\n\nWhile the matched data from exact matching left far too many units unmatched, let’s see how we would use the matched data to estimate a treatment effect.\nIn general we would want to fit a model of the outcome Y as a function of treatment, covariates, and treatment-covariate interactions. This is demonstrated by the model below with 5 covariates X1-X5. The * creates the interaction terms, and the fact that X1 + X2 + X3 + X4 + X5 is in parentheses creates interactions between A and each of X1-X5.\n# Linear model with covariates and treatment-covariate interactions\nmod &lt;- lm(Y ~ A * (X1 + X2 + X3 + X4 + X5), data = our_matched_data, weights = weights)\nHowever in this case, the matched data is too small and has cut out too many categories to fit this model. We will fit an unadjusted model to show the process.\n\nThe weights = weights part is supplying weights to the model fit (weighted least squares instead of ordinary least squares).\nThere is a weights column in match_data_exact containing weights resulting from matching.\n\n\nmod &lt;- lm(re78 ~ treat, data = match_data_exact, weights = weights)\n\nThen we use avg_comparisons() from the marginaleffects package to use information from this model to estimate the ATT. While we can pull up the documentation page with ?avg_comparisons, it is dense to navigate. Here is the essential information for the arguments we use (more information in this MatchIt vignette):\n\nmodel: The model we fit above\nvariables: We want to make comparisons of the outcome across these variables. Here, the treatment variable\nvcov: Specify an R model formula to estimate cluster-robust standard errors. This is a way of estimating standard errors that takes into account clustering/grouping in the data. In match_data_exact there is a subclass column that indicates the matched group each unit belongs to. ~subclass means “estimate cluster-robust standard errors using the subclass variable for the clusters”.\nnewdata: The function uses the data here to predict the values of the outcome for the supplied units under treatment and control. Comparing the average values of these predictions estimates the treatment effect. Here, we filter to just the treated individuals so that the comparison estimates the ATT specifically.\n\nIf we performed our matching to estimate the ATE, we would not filter our data.\nIf we performed our matching to estimate the ATC (ATU), we would filter to control (untreated) units.\n\nwts: The name of the column containing the weights resulting from matching.\n\n\navg_comparisons(\n    model = mod,\n    variables = \"treat\",\n    vcov = ~subclass,\n    newdata = filter(match_data_exact, treat == 1),\n    wts = \"weights\"\n)\n\nThe single row of output contains the Estimate of the ATT and uncertainty estimates. The columns of output are the same as summary(lm(...)) with the addition of 95% confidence interval endpoints and the S column, which gives the Shannon information transformation of the p-value. It is the answer to the question: How many consecutive “heads” tosses would provide the same amount of evidence (or “surprise”) against the null hypothesis that the coin is fair?\nExercise: Interpret the ATT estimate, and explain what you learn from the 95% confidence interval.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Matching</span>"
+    ]
+  },
+  {
+    "objectID": "activities/06-matching.html#coarsened-exact-matching",
+    "href": "activities/06-matching.html#coarsened-exact-matching",
+    "title": "6  Matching",
+    "section": "Coarsened exact matching",
+    "text": "Coarsened exact matching\nA downside of exact matching is the difficulty in finding exact matches when there are too many covariates and too few cases. Further, matching exactly on quantitative covariates (like income) is likely quite challenging.\nThe coarsened exact matching (CEM) method coarsens covariates by making broader categories (e.g., pooling categories, cutting a quantiative variable into categories) and performing exact matching on the coarsened versions of the covariates.\nExercise:\n\nUse matchit() to perform CEM to estimate the ATT.\nEvaluate the quality of the matching using balance statistics and matched sample sizes.\nExplore the matched data to see who was matched.\nTry to refine to see if the quality of the matching can be improved.\n\nIn the matchit() function documentation, scroll down to the method argument, and click the link to the CEM page.\nLook at the Examples section at the very bottom to see how you might adjust how CEM coarsens the variables.\n\nWhen you feel satisfied with an updated matching, estimate the ATT on your matched data and interpret the results.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Matching</span>"
+    ]
+  },
+  {
+    "objectID": "activities/06-matching.html#nearest-neighbor-matching",
+    "href": "activities/06-matching.html#nearest-neighbor-matching",
+    "title": "6  Matching",
+    "section": "Nearest neighbor matching",
+    "text": "Nearest neighbor matching\nExercise: Implement 2-nearest neighbor matching to estimate the ATT. Use Mahalanobis distance.\nYou’ll need to look at the matchit() function documentation. On this page look at the documentation for the distance argument and then click the link to the distance function documentation.\n\nmatch_out_2nn &lt;- matchit(\n    treat ~ age + educ + race + married + nodegree + re74 + re75,\n    data = lalonde,\n    ___,\n    estimand = \"ATT\"\n)\n\nExercise: Evaluate the quality of the matching by inspecting the balance statistics and matched sample sizes.\n\nbal.tab(\n    match_out_2nn,\n    stats = c(\"mean.diffs\", \"variance.ratios\"),\n    int = TRUE\n)\n\n\nlove.plot(\n    match_out_2nn,\n    stats = c(\"mean.diffs\", \"variance.ratios\"),\n    int = TRUE,\n    stars = \"raw\",\n    thresholds = c(\"mean.diffs\" = 0.1, \"variance.ratios\" = 2)\n)",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Matching</span>"
+    ]
+  },
+  {
+    "objectID": "activities/06-matching.html#subclassification",
+    "href": "activities/06-matching.html#subclassification",
+    "title": "6  Matching",
+    "section": "Subclassification",
+    "text": "Subclassification\nExercise: The following code implements subclassification on the propensity score with 10 subclasses to estimate the ATT. The propensity score is estimated with a generalized linear model (logistic regression). Check the documentation to verify how the choices for the arguments below were chosen.\n\n# Subclassification on the propensity score for the ATT\nmatch_out_subclass &lt;- matchit(\n    treat ~ age + educ + race + married + nodegree + re74 + re75,\n    data = lalonde,\n    method = \"subclass\",\n    subclass = 10,\n    distance = \"glm\",\n    estimand = \"ATT\"\n)\n\nExercise: Evaluate the quality of the matching by inspecting the balance statistics. (Looking at matched sample sizes isn’t relevant here because subclassification doesn’t discard units at the matching step.)\n\n# Compute balance statistics overall across all subclasses\nbal.tab(\n    match_out_subclass,\n    stats = c(\"mean.diffs\", \"variance.ratios\"),\n    int = TRUE\n)\n\n\nlove.plot(\n    match_out_subclass,\n    stats = c(\"mean.diffs\", \"variance.ratios\"),\n    int = TRUE,\n    stars = \"raw\",\n    thresholds = c(\"mean.diffs\" = 0.1, \"variance.ratios\" = 2)\n)\n\nExercise: Assess common support by comparing the distribution of propensity scores across treatment groups. Does it look like we need to filter out some cases? If so, create a new filtered dataset only keeping cases in the common support region.\n\n# Appends a column called \"ps\" containing the propensity scores to the original data\nlalonde_with_ps &lt;- lalonde %&gt;% \n    mutate(ps = match_out_subclass$distance)\n\n# Plot\n\n\nTime to estimate the treatment effect!\nIn general, we start by fitting a model of the outcome Y as a function of treatment, covariates, and treatment-covariate interactions. This is demonstrated by the model below with 5 covariates X1-X5. The * creates the interaction terms, and the fact that X1 + X2 + X3 + X4 + X5 is in parentheses creates interactions between A and each of X1-X5.\n# Linear model with covariates and treatment-covariate interactions\nmod &lt;- lm(Y ~ A * (X1 + X2 + X3 + X4 + X5), data = our_matched_data, weights = weights)\nThe code below applies the general setting above to our context:\n\nThe weights = weights part is supplying weights to the model fit (weighted least squares instead of ordinary least squares).\nThere is a weights column in our matched data containing weights resulting from matching.\n\n\n# Extract matched data\nmatch_data_subclass &lt;- match.data(match_out_subclass)\n\nmod &lt;- lm(re78 ~ treat * (age + educ + race + married + nodegree + re74 + re75), data = match_data_subclass, weights = weights)\n\nThen we use avg_comparisons() from the marginaleffects package to use information from this model to estimate the ATT. While we can pull up the documentation page with ?avg_comparisons, it is dense to navigate. Here is the essential information for the arguments we use (more information in this MatchIt vignette):\n\nmodel: The model we fit above\nvariables: We want to make comparisons of the outcome across these variables. Here, the treatment variable\nvcov: “HC3” indicates that we are using heteroskedasticity-robust standard errors which are a valid way to estimate standard errors with weighted least squares\n\nNote that before we used cluster-robust standard errors when using exact matching. Cluster-robust SEs are preferred when there are a lot of clusters (i.e., a lot of subclasses), but with subclassification, there are few (10 for us).\n\nnewdata: The function uses the data here to predict the values of the outcome for the supplied units under treatment and control. Comparing the average values of these predictions estimates the treatment effect. Here, we filter to just the treated individuals so that the comparison estimates the ATT specifically.\n\nIf we performed our matching to estimate the ATE, we would not filter our data.\nIf we performed our matching to estimate the ATC (ATU), we would filter to control (untreated) units.\n\nwts: The name of the column containing the weights resulting from matching.\n\n\navg_comparisons(\n    mod,\n    variables = \"treat\",\n    vcov = \"HC3\",\n    newdata = filter(match_data_subclass, treat == 1),\n    wts = \"weights\"\n)\n\nExercise: Summarize what you learn about the ATT from this output.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Matching</span>"
+    ]
+  },
+  {
+    "objectID": "activities/06-matching.html#full-matching",
+    "href": "activities/06-matching.html#full-matching",
+    "title": "6  Matching",
+    "section": "Full matching",
+    "text": "Full matching\nExercise: Implement full matching to estimate the ATT using logistic regression to estimate the propensity score. (Review how full matching differs from subclassification.)\n\nmatch_out_full &lt;- matchit(\n    ___\n)\n\nExercise: Evaluate the quality of the matching by inspecting the balance statistics.\n\n# Compute balance statistics overall across all subclasses\nbal.tab(\n    match_out_full,\n    stats = c(\"mean.diffs\", \"variance.ratios\"),\n    int = TRUE\n)\n\n\nlove.plot(\n    match_out_full,\n    stats = c(\"mean.diffs\", \"variance.ratios\"),\n    int = TRUE,\n    stars = \"raw\",\n    thresholds = c(\"mean.diffs\" = 0.1, \"variance.ratios\" = 2)\n)\n\nAssessing common support: The same common support plot from the subclassification section will apply here. There looks to be good overlap, so no filtering is needed.\nExercise: Estimate the ATT from full matching, and interpret your results.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Matching</span>"
+    ]
+  },
+  {
     "objectID": "hw/assignment1.html",
     "href": "hw/assignment1.html",
     "title": "Assignment 1",
@@ -755,28 +876,6 @@
     "crumbs": [
       "Appendices",
       "R Resources"
-    ]
-  },
-  {
-    "objectID": "logistics/schedule.html#day7",
-    "href": "logistics/schedule.html#day7",
-    "title": "Schedule",
-    "section": "Day 1: Matching (9/29)",
-    "text": "Day 1: Matching (9/29)\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 14: Matching Sections 14.1-14.4 (~60 minutes)\n\nVideo alternatives:\n\nMatching (~11 minutes)\nFive Questions About Matching (~13 minutes)\nDistance Matching (~9 minutes)\nCoarsened Exact Matching and Entropy Balancing (~8 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 5: Matching and Subclassification (~140 minutes)\nJournal article: Matching Methods for Causal Inference: A Review and a Look Forward (~60 minutes)",
-    "crumbs": [
-      "Course Logistics",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "logistics/schedule.html#day8",
-    "href": "logistics/schedule.html#day8",
-    "title": "Schedule",
-    "section": "Day 2: Matching (10/1)",
-    "text": "Day 2: Matching (10/1)\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 14: Matching Sections 14.5-end (~60 minutes)\n\nVideo alternatives:\n\nWhen Matching Goes Wrong (~14 minutes)\nTreatment Effect Estimation with Matching (~7 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 5: Matching and Subclassification (~140 minutes)\nJournal article: Matching Methods for Causal Inference: A Review and a Look Forward (~60 minutes)",
-    "crumbs": [
-      "Course Logistics",
-      "Schedule"
     ]
   }
 ]

@@ -46,6 +46,10 @@ book:
           href: activities/04-causal-graphs-identification.qmd
         - icon: tools
           href: activities/05-causal-graphs-testing.qmd
+    - part: "Methods"
+      chapters:
+        - icon: copy
+          href: activities/06-matching.qmd
     - part: "Assignments"
       chapters:
         - hw/assignment1.qmd
