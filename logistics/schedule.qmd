@@ -38,6 +38,12 @@ Check here to see what you should be doing before, during, and after each class 
     <td class="topleft"></td>
   </tr>
   <tr>
+    <td class="topleft">5 (10/5 - 10/9)</td>
+    <td class="topleft"><a href="#day9">Weighting</a></td>
+    <td class="topleft"></td>
+    <td class="topleft"></td>
+  </tr>
+  <tr>
     <td class="topleft">Finals Week</td>
     <td class="topleft" colspan=2>
         Final exam time slot: Wed 12/16 10:30-12:30<br>
@@ -338,7 +344,7 @@ If you would like to have an additional reference throughout the course that lea
 - Journal article: [Matching Methods for Causal Inference: A Review and a Look Forward](http://dx.doi.org/10.1214/09-STS313) (~60 minutes)
 :::
 
-<!-- **During class:** [Matching](../activities/06-matching.qmd) -->
+**During class:** [Matching](../activities/06-matching.qmd)
 
 ## Day 2: Matching (10/1) {#day8}
 
@@ -354,7 +360,7 @@ If you would like to have an additional reference throughout the course that lea
 - Journal article: [Matching Methods for Causal Inference: A Review and a Look Forward](http://dx.doi.org/10.1214/09-STS313) (~60 minutes)
 :::
 
-<!-- **During class:** [Matching](../activities/06-matching.qmd) -->
+**During class:** [Matching](../activities/06-matching.qmd)
 
 
 
@@ -365,16 +371,10 @@ If you would like to have an additional reference throughout the course that lea
 <!-- ============================================================= -->
 
 
-::: {.content-hidden}
-# Week 5: Matching and weighting
 
-## Day 1: Matching (9/30) {#day12}
+# Week 5: Weighting
 
-- Continuation of previous class
-
-**During class:** [Matching (Part 2)](09-matching-part2.qmd)
-
-## Day 2: Weighting (10/2) {#day13}
+## Day 1: Weighting (10/6) {#day9}
 
 **Before class:**
 
@@ -382,20 +382,14 @@ If you would like to have an additional reference throughout the course that lea
 - Video: [Inverse Probability Weighting](https://youtu.be/PfLYPt9ur4g) (Time: 10:24) ([Slides](https://drive.google.com/file/d/1c99hoAOspc0S-SmB3DJjD2UO_-1YRtRX/view?usp=sharing))
 :::
 
-**During class:** [Weighting](10-weighting.qmd)
-
-## Day 3: Weighting (10/4) {#day14}
-
-- Continuation of previous class
-
-**During class:** [Weighting](10-weighting.qmd)
+<!-- **During class:** [Weighting](07-weighting.qmd) -->
 
 
 
 <!-- ============================================================= -->
 
 
-
+::: {.content-hidden}
 # Week 6: Regression discontinuity and longitudinal/panel data
 
 ## Day 1: Regression discontinuity (10/7) {#day15}

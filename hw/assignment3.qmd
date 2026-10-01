@@ -9,9 +9,7 @@ library(dagitty)
 **Format:** Please submit a rendered HTML document containing your responses. You can work from [this template](assignment3_YOURNAME.qmd).
 
 
-## Exercises
-
-### Exercise 1
+## Exercise 1
 
 We are studying the causal impact of a medical treatment on a health outcome. The causal graph below represents the situation.
 

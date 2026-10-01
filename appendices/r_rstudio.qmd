@@ -68,7 +68,7 @@ rstudioapi::versionInfo()
 
 ```{r}
 #| eval: false
-install.packages(c("tidyverse", "scales", "broom", "dagitty", "ggdag", "MatchIt", "WeightIt", "cobalt", "marginaleffects"), dependencies = TRUE)
+install.packages(c("tidyverse", "scales", "broom", "dagitty", "ggdag", "MatchIt", "WeightIt", "cobalt", "marginaleffects", "fastDummies", "CCP", "sandwich"), dependencies = TRUE)
 ```
 
 - If you get a message that says "There are binary versions available the source versions are later" type `no` and press Enter.
@@ -85,6 +85,9 @@ install.packages(c("tidyverse", "scales", "broom", "dagitty", "ggdag", "MatchIt"
     - `library(WeightIt)`
     - `library(cobalt)`
     - `library(marginaleffects)`
+    - `library(fastDummies)`
+    - `library(CCP)`
+    - `library(sandwich)`
 - Quit RStudio. You're done setting up!
 
 <br>

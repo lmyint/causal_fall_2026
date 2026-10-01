@@ -8,9 +8,7 @@ library(dagitty)
 
 **Format:** Please submit a PDF document containing your responses.
 
-## Exercises
-
-### Exercise 1
+## Exercise 1
 
 We are interested in evaluating the causal effect of taking Macalester's Pilates class on core strength. We measure core strength by timing the longest plank hold (in seconds) at the end of the semester for students who took the class (`A=1`) and students who didn't (`A=0`). We also record whether or not each student engages in core strengthening exercises on their own (`C = yes, no`). Pretend that we're omniscient and have information on all potential outcomes for 10 students, shown in the table below.
 
@@ -55,7 +53,7 @@ d. Note that this study used cross-sectional data. Suppose that we had instead c
 e. Do you think that cross-sectional data or longitudinal data would be better for answering this research question? Why?
 
 
-### Exercise 2
+## Exercise 2
 
 Consider the following causal diagram (inspired by [this study](http://academic.oup.com/sleep/article/40/2/zsw055/2662183)) which could be used to study the causal effect of nighttime road traffic noise on sleep disturbances.
 

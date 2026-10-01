@@ -15,6 +15,8 @@ Did a job training program increase incomes?
 
 These data were analyzed in [LaLonde, 1986](https://www.jstor.org/stable/1806062) and in [Dehejia and Wahba, 1999](https://www.jstor.org/stable/2669919). We'll be using the Dehejia and Wahba data to estimate the causal effect of the job training program on income immediately following the program.
 
+Note that although participants were randomly assigned to treatment groups, the data that we'll be using incorporates data on additional controls from a separate study. The addition of this nonexperimental data creates clear systematic differences between the treatment groups.
+
 ```{r 06_setup, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(broom)
@@ -99,7 +101,7 @@ plot(dag)
 dag_cis <- impliedConditionalIndependencies(dag, type = "missing.edge")
 
 # type = "cis.pillai" is for mixed quantitative and categorical data
-dag_test_res <- localTests(dag, data = job_training, type = "cis.pillai", tests = dag_cis)
+dag_test_res <- localTests(dag, data = lalonde, type = "cis.pillai", tests = dag_cis)
 
 # Sort the results by p-value
 dag_test_res |> 
@@ -429,6 +431,7 @@ lalonde_with_ps <- lalonde %>%
     mutate(ps = match_out_subclass$distance)
 
 # Plot
+# Use factor(treat) in your plot to encode treatment as a categorical variable
 
 ```
 
@@ -520,4 +523,94 @@ love.plot(
 
 **Exercise:** Estimate the ATT from full matching, and interpret your results.
 
+
+
+## Moderation analysis
+
+Could the effect of the job training program differ across key subgroups in our data? For example, could the effect be different among those who do and don't have a degree?
+
+One way to investigate this with matching is to conduct a matching analysis as normal but require exact matching on the `nodegree` variable. This results in a collection of matched sets where `nodegree = 1` (individuals without a degree) and another collection of matched sets where `nodegree = 0` (individuals with a degree). The remainder of the analysis is the same, but now we have the option to compare results across subgroups of the `nodegree` variable.
+
+**Exercise:** Complete the code below to run full matching as we did above but require an exact match on the `nodegree` variable. (Look at the `matchit()` documentation to figure out the missing piece.) Note that we updated the formula in the first argument to include an interaction between `nodegree` and the other variables because this effectively allows us to estimate different propensity score models across the `nodegree` subgroups as if we were partitioning our data and running separate matching analyses.
+
+```{r}
+match_out_full_by_nodegree <- matchit(
+    treat ~ nodegree*(age + educ + race + married + re74 + re75),
+    data = lalonde,
+    ___ = ___,
+    method = "full",
+    distance = "glm",
+    estimand = "ATT"
+)
+```
+
+**Exercise:** Assess common support by comparing the distribution of propensity scores across treatment groups separately in the `nodegree` subgroups. If there are any common support violations, note them, but don't filter the data for this investigation.
+
+```{r}
+lalonde_with_ps <- lalonde %>% 
+    mutate(ps = match_out_full_by_nodegree$distance)
+
+# Plot
+# Remember to use factor(treat) in your plot to encode treatment as a categorical variable
+ggplot(lalonde_with_ps, aes(x = ps, color = factor(treat))) +
+    geom_density() +
+    facet_wrap(~nodegree) +
+    theme_classic()
+```
+
+**Exercise:** Inspect plots of the balance statistics separately across the `nodegree` subgroups, and evaluate the quality of the matching.
+
+```{r}
+bal_tab_full_by_nodegree <- bal.tab(
+    match_out_full_by_nodegree,
+    stats = c("mean.diffs", "variance.ratios"),
+    int = TRUE,
+    data = lalonde,
+    cluster = "nodegree" # Key new part for moderation analysis
+)
+
+# We have to create separate plots for the mean differences and the variance ratios because love.plot() can't handle 2 sets of panels
+love.plot(
+    bal_tab_full_by_nodegree,
+    stats = "mean.diffs",
+    int = TRUE,
+    stars = "raw",
+    thresholds = c("mean.diffs" = 0.1)
+)
+love.plot(
+    bal_tab_full_by_nodegree,
+    stats = "variance.ratios",
+    int = TRUE,
+    stars = "raw",
+    thresholds = c("variance.ratios" = 2)
+)
+```
+
+**Exercise:** Estimate the ATT across `nodegree` subgroups, and interpret your findings.
+
+```{r}
+match_data_full_by_nodegree <- match_data(match_out_full_by_nodegree)
+
+mod <- lm(re78 ~ treat * (age + educ + race + married + nodegree + re74 + re75), data = match_data_full_by_nodegree, weights = weights) # Same as before
+
+avg_comparisons(
+    mod,
+    variables = "treat",
+    vcov = ~subclass, # Use ~subclass instead of "HC3" because there are a lot of subclasses
+    newdata = filter(match_data_full_by_nodegree, treat == 1),
+    wts = "weights",
+    by = "nodegree" # Key new part for moderation analysis
+)
+```
+
+
+
+# Synthesis
+
+Check your understanding of core ideas by answering the following:
+
+- What exactly is matching and how does it work?
+- Describe the steps of a causal analysis that uses matching.
+- What are the differences between the ATE, ATT, and ATC/ATU estimands? When would we use one versus the others?
+- When does matching work well, and when does it not?
 

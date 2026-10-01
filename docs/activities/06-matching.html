@@ -534,7 +534,9 @@ window.Quarto = {
   <li><a href="#nearest-neighbor-matching" id="toc-nearest-neighbor-matching" class="nav-link" data-scroll-target="#nearest-neighbor-matching">Nearest neighbor matching</a></li>
   <li><a href="#subclassification" id="toc-subclassification" class="nav-link" data-scroll-target="#subclassification">Subclassification</a></li>
   <li><a href="#full-matching" id="toc-full-matching" class="nav-link" data-scroll-target="#full-matching">Full matching</a></li>
+  <li><a href="#moderation-analysis" id="toc-moderation-analysis" class="nav-link" data-scroll-target="#moderation-analysis">Moderation analysis</a></li>
   </ul></li>
+  <li><a href="#synthesis" id="toc-synthesis" class="nav-link" data-scroll-target="#synthesis">Synthesis</a></li>
   </ul>
 </nav>
     </div>
@@ -571,6 +573,7 @@ window.Quarto = {
 <p>The National Supported Work Demonstration project [was] a transitional, subsidized work experience program for four target groups of people with longstanding employment problems: ex-offenders, former drug addicts, women who were long-term recipients of welfare benefits, and school dropouts, many with criminal records. The program provided up to 12-18 months of employment to about 10,000 individuals at 15 locations across the country for four years. In ten of these sites – Atlanta, Chicago, Hartford, Jersey City, Newark, New York, Philadelphia, Oakland, San Francisco, and Wisconsin, 6,600 eligible applicants were randomly assigned either to experimental groups (offered a job in supported work) or to control groups, and an evaluation was conducted on the effects of the Supported Work Program. (See <a href="https://www.icpsr.umich.edu/web/ICPSR/studies/7865">here</a> for more details.)</p>
 </blockquote>
 <p>These data were analyzed in <a href="https://www.jstor.org/stable/1806062">LaLonde, 1986</a> and in <a href="https://www.jstor.org/stable/2669919">Dehejia and Wahba, 1999</a>. We’ll be using the Dehejia and Wahba data to estimate the causal effect of the job training program on income immediately following the program.</p>
+<p>Note that although participants were randomly assigned to treatment groups, the data that we’ll be using incorporates data on additional controls from a separate study. The addition of this nonexperimental data creates clear systematic differences between the treatment groups.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
@@ -660,7 +663,7 @@ window.Quarto = {
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>dag_cis <span class="ot">&lt;-</span> <span class="fu">impliedConditionalIndependencies</span>(dag, <span class="at">type =</span> <span class="st">"missing.edge"</span>)</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># type = "cis.pillai" is for mixed quantitative and categorical data</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>dag_test_res <span class="ot">&lt;-</span> <span class="fu">localTests</span>(dag, <span class="at">data =</span> job_training, <span class="at">type =</span> <span class="st">"cis.pillai"</span>, <span class="at">tests =</span> dag_cis)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>dag_test_res <span class="ot">&lt;-</span> <span class="fu">localTests</span>(dag, <span class="at">data =</span> lalonde, <span class="at">type =</span> <span class="st">"cis.pillai"</span>, <span class="at">tests =</span> dag_cis)</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort the results by p-value</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>dag_test_res <span class="sc">|&gt;</span> </span>
@@ -935,7 +938,8 @@ window.Quarto = {
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>lalonde_with_ps <span class="ot">&lt;-</span> lalonde <span class="sc">%&gt;%</span> </span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">ps =</span> match_out_subclass<span class="sc">$</span>distance)</span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Use factor(treat) in your plot to encode treatment as a categorical variable</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <hr>
 <p>Time to estimate the treatment effect!</p>
@@ -1007,9 +1011,88 @@ window.Quarto = {
 </div>
 <p><strong>Assessing common support:</strong> The same common support plot from the subclassification section will apply here. There looks to be good overlap, so no filtering is needed.</p>
 <p><strong>Exercise:</strong> Estimate the ATT from full matching, and interpret your results.</p>
-
-
 </section>
+<section id="moderation-analysis" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="moderation-analysis">Moderation analysis</h2>
+<p>Could the effect of the job training program differ across key subgroups in our data? For example, could the effect be different among those who do and don’t have a degree?</p>
+<p>One way to investigate this with matching is to conduct a matching analysis as normal but require exact matching on the <code>nodegree</code> variable. This results in a collection of matched sets where <code>nodegree = 1</code> (individuals without a degree) and another collection of matched sets where <code>nodegree = 0</code> (individuals with a degree). The remainder of the analysis is the same, but now we have the option to compare results across subgroups of the <code>nodegree</code> variable.</p>
+<p><strong>Exercise:</strong> Complete the code below to run full matching as we did above but require an exact match on the <code>nodegree</code> variable. (Look at the <code>matchit()</code> documentation to figure out the missing piece.) Note that we updated the formula in the first argument to include an interaction between <code>nodegree</code> and the other variables because this effectively allows us to estimate different propensity score models across the <code>nodegree</code> subgroups as if we were partitioning our data and running separate matching analyses.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>match_out_full_by_nodegree <span class="ot">&lt;-</span> <span class="fu">matchit</span>(</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    treat <span class="sc">~</span> nodegree<span class="sc">*</span>(age <span class="sc">+</span> educ <span class="sc">+</span> race <span class="sc">+</span> married <span class="sc">+</span> re74 <span class="sc">+</span> re75),</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> lalonde,</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">___ =</span> ___,</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">method =</span> <span class="st">"full"</span>,</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">distance =</span> <span class="st">"glm"</span>,</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">estimand =</span> <span class="st">"ATT"</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Exercise:</strong> Assess common support by comparing the distribution of propensity scores across treatment groups separately in the <code>nodegree</code> subgroups. If there are any common support violations, note them, but don’t filter the data for this investigation.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>lalonde_with_ps <span class="ot">&lt;-</span> lalonde <span class="sc">%&gt;%</span> </span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">ps =</span> match_out_full_by_nodegree<span class="sc">$</span>distance)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Remember to use factor(treat) in your plot to encode treatment as a categorical variable</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(lalonde_with_ps, <span class="fu">aes</span>(<span class="at">x =</span> ps, <span class="at">color =</span> <span class="fu">factor</span>(treat))) <span class="sc">+</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_density</span>() <span class="sc">+</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>nodegree) <span class="sc">+</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Exercise:</strong> Inspect plots of the balance statistics separately across the <code>nodegree</code> subgroups, and evaluate the quality of the matching.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>bal_tab_full_by_nodegree <span class="ot">&lt;-</span> <span class="fu">bal.tab</span>(</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    match_out_full_by_nodegree,</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">stats =</span> <span class="fu">c</span>(<span class="st">"mean.diffs"</span>, <span class="st">"variance.ratios"</span>),</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">int =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> lalonde,</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">cluster =</span> <span class="st">"nodegree"</span> <span class="co"># Key new part for moderation analysis</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="co"># We have to create separate plots for the mean differences and the variance ratios because love.plot() can't handle 2 sets of panels</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="fu">love.plot</span>(</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    bal_tab_full_by_nodegree,</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">stats =</span> <span class="st">"mean.diffs"</span>,</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">int =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">stars =</span> <span class="st">"raw"</span>,</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">thresholds =</span> <span class="fu">c</span>(<span class="st">"mean.diffs"</span> <span class="ot">=</span> <span class="fl">0.1</span>)</span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="fu">love.plot</span>(</span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>    bal_tab_full_by_nodegree,</span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">stats =</span> <span class="st">"variance.ratios"</span>,</span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">int =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">stars =</span> <span class="st">"raw"</span>,</span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">thresholds =</span> <span class="fu">c</span>(<span class="st">"variance.ratios"</span> <span class="ot">=</span> <span class="dv">2</span>)</span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Exercise:</strong> Estimate the ATT across <code>nodegree</code> subgroups, and interpret your findings.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>match_data_full_by_nodegree <span class="ot">&lt;-</span> <span class="fu">match_data</span>(match_out_full_by_nodegree)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(re78 <span class="sc">~</span> treat <span class="sc">*</span> (age <span class="sc">+</span> educ <span class="sc">+</span> race <span class="sc">+</span> married <span class="sc">+</span> nodegree <span class="sc">+</span> re74 <span class="sc">+</span> re75), <span class="at">data =</span> match_data_full_by_nodegree, <span class="at">weights =</span> weights) <span class="co"># Same as before</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="fu">avg_comparisons</span>(</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    mod,</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">variables =</span> <span class="st">"treat"</span>,</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">vcov =</span> <span class="sc">~</span>subclass, <span class="co"># Use ~subclass instead of "HC3" because there are a lot of subclasses</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">newdata =</span> <span class="fu">filter</span>(match_data_full_by_nodegree, treat <span class="sc">==</span> <span class="dv">1</span>),</span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">wts =</span> <span class="st">"weights"</span>,</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="st">"nodegree"</span> <span class="co"># Key new part for moderation analysis</span></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="synthesis" class="level1 unnumbered">
+<h1 class="unnumbered">Synthesis</h1>
+<p>Check your understanding of core ideas by answering the following:</p>
+<ul>
+<li>What exactly is matching and how does it work?</li>
+<li>Describe the steps of a causal analysis that uses matching.</li>
+<li>What are the differences between the ATE, ATT, and ATC/ATU estimands? When would we use one versus the others?</li>
+<li>When does matching work well, and when does it not?</li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
