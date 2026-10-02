@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 1 – STAT 451: Causal Inference</title>
+<title>Assignment 4 – STAT 451: Causal Inference</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -29,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../hw/assignment2.html" rel="next">
-<link href="../activities/06-matching.html" rel="prev">
+<link href="../appendices/stat155.html" rel="next">
+<link href="../hw/assignment3.html" rel="prev">
 <link href="../images/451_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -75,6 +110,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -250,7 +314,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/assignment1.html">Assignments</a></li><li class="breadcrumb-item"><a href="../hw/assignment1.html">Assignment 1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/assignment1.html">Assignments</a></li><li class="breadcrumb-item"><a href="../hw/assignment4.html">Assignment 4</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -402,7 +466,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../hw/assignment1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../hw/assignment1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignment 1</span></a>
   </div>
 </li>
@@ -420,7 +484,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../hw/assignment4.html" class="sidebar-item-text sidebar-link">
+  <a href="../hw/assignment4.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Assignment 4</span></a>
   </div>
 </li>
@@ -460,16 +524,36 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link active" data-scroll-target="#exercise-1">Exercise 1</a>
+  <ul class="collapse">
+  <li><a href="#part-a" id="toc-part-a" class="nav-link" data-scroll-target="#part-a">Part a</a></li>
+  <li><a href="#part-b" id="toc-part-b" class="nav-link" data-scroll-target="#part-b">Part b</a></li>
+  <li><a href="#part-c" id="toc-part-c" class="nav-link" data-scroll-target="#part-c">Part c</a></li>
+  <li><a href="#part-d" id="toc-part-d" class="nav-link" data-scroll-target="#part-d">Part d</a></li>
+  <li><a href="#part-e" id="toc-part-e" class="nav-link" data-scroll-target="#part-e">Part e</a></li>
+  </ul></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a>
+  <ul class="collapse">
+  <li><a href="#part-a-1" id="toc-part-a-1" class="nav-link" data-scroll-target="#part-a-1">Part a</a></li>
+  <li><a href="#part-b-1" id="toc-part-b-1" class="nav-link" data-scroll-target="#part-b-1">Part b</a></li>
+  <li><a href="#part-c-1" id="toc-part-c-1" class="nav-link" data-scroll-target="#part-c-1">Part c</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/assignment1.html">Assignments</a></li><li class="breadcrumb-item"><a href="../hw/assignment1.html">Assignment 1</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/assignment1.html">Assignments</a></li><li class="breadcrumb-item"><a href="../hw/assignment4.html">Assignment 4</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Assignment 1</h1>
+<h1 class="title">Assignment 4</h1>
 </div>
 
 
@@ -486,20 +570,286 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Due:</strong> Friday, 9/11 at midnight on Moodle</p>
-<p><strong>Context:</strong> This first assignment is a short writing piece for me to get to know you. There are no length requirements—just use as many words as needed to convey your ideas.</p>
-<p><strong>Format:</strong> Please submit a link to a Google Doc, and make sure that I am added as an Editor or Commenter.</p>
-<p><strong>Prompt:</strong></p>
-<p>First read the essay <a href="https://lathamt.substack.com/p/an-education-of-his-own">An Education of His Own</a> by Latham Turner.</p>
-<p>I’m curious to hear what thoughts and ideas it inspires with regards to your education at Mac and the experience you’re hoping for in this course. As you write your response, consider the following:</p>
+<p><strong>Due:</strong> Sunday, 10/11 at midnight on Moodle</p>
+<p><strong>Format:</strong> Please submit a rendered HTML document containing your responses. You can work from <a href="assignment4_YOURNAME.qmd">this template</a>.</p>
+<section id="exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
+<p><strong>Research question:</strong> What is the causal effect of adolescent substance use (specifically marijuana smoking) on adulthood substance use (specifically cigarette smoking)?</p>
+<p>We will investigate this question using data from the National Longitudinal Study of Adolescent to Adult Health (Add Health). From the study’s <a href="https://addhealth.cpc.unc.edu/">website</a>:</p>
+<blockquote class="blockquote">
+<p>[Add Health] is a longitudinal study of a nationally representative sample of over 20,000 adolescents who were in grades 7-12 during the 1994-95 school year and have been followed for six waves of data collection to date, most recently in 2022-25. Wave VII began in fall 2026.</p>
+</blockquote>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>addhealth <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://mac-stat.github.io/data/addhealth.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Encode all variables as categorical variables</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># (Age only has 3 values so is essentially categorical)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>addhealth <span class="ot">&lt;-</span> addhealth <span class="sc">|&gt;</span> </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), as.factor))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>addhealth <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(addhealth)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="part-a" class="level3">
+<h3 class="anchored" data-anchor-id="part-a">Part a</h3>
+<p>Below is a proposed causal graph for this scenario. Test this graph for consistency with the observed data.</p>
 <ul>
-<li><p>Latham’s goal is to create high quality and satisfying learning experiences for his son. What has been a particularly satisfying learning experience for you? (This does not necessarily have to be an academic experience.) What was it about that experience that made it satisfying?</p></li>
-<li><p>What are your goals in taking this course? What are you hoping for by the end of the semester? Are there barriers or other things that you’re worried about this semester?</p></li>
-<li><p>Latham and his son settle on many aspects of their learning relationship collaboratively. Have you had experiences in other courses where you’ve wanted some aspect to be different? Were you able to talk to the instructor about it? What could have been changed from either your part or the instructor’s to make it possible, easier, or more comfortable to discuss what you wanted?</p></li>
-<li><p>How do you think we should use the values that I describe in <a href="../logistics/syllabus.html#course-grading-system">the grading section</a> of the syllabus alongside our <a href="../logistics/syllabus.html#assignments-and-assessments">assignments and assessments</a> to assign letter grades? (I discuss my values for the course in the paragraph starting with “As a starting point, I do think it’s helpful for me to share my specific values with regards to this class.”)</p></li>
+<li>Use <code>type = "missing.edge"</code> in <code>impliedConditionalIndependencies()</code> (for computational time reasons).</li>
+<li>In <code>localTests()</code>, use an appropriate test <code>type</code> given that all variables are categorical.</li>
+<li>In the output, focus on the <code>p.value</code> column. What updates to the graph are suggested by the output? (We won’t implement these updates. We will just note them here.)</li>
 </ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dag <span class="ot">&lt;-</span> <span class="fu">dagitty</span>(<span class="st">'</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="st">dag {</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="st">bb="-0.1,-0.1,1,1"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="st">age [pos="0.065,0.268"]</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="st">exposure [exposure,pos="0.156,0.414"]</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="st">familyEnvironment [latent,pos="0.506,0.125"]</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="st">genetics [latent,pos="0.334,0.118"]</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="st">housesmoke [pos="0.903,0.161"]</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="st">lifeStressors [latent,pos="0.802,0.194"]</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">male [pos="0.199,0.085"]</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="st">mathG [pos="0.366,0.354"]</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="st">occupation [latent,pos="0.679,0.217"]</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="st">parentED [pos="0.310,0.206"]</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="st">readG [pos="0.526,0.354"]</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="st">schoolPerformance [latent,pos="0.449,0.238"]</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="st">smoke [outcome,pos="0.752,0.401"]</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="st">socialEnvironment [latent,pos="0.448,0.012"]</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="st">susp [pos="0.650,0.056"]</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="st">white [pos="0.569,0.005"]</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="st">age -&gt; exposure</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="st">exposure -&gt; smoke</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="st">familyEnvironment -&gt; exposure</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="st">familyEnvironment -&gt; housesmoke</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="st">familyEnvironment -&gt; lifeStressors</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="st">familyEnvironment -&gt; schoolPerformance</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="st">familyEnvironment -&gt; smoke</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="st">familyEnvironment -&gt; susp</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="st">genetics -&gt; exposure</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="st">genetics -&gt; male</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="st">genetics -&gt; smoke</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="st">housesmoke -&gt; smoke</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="st">lifeStressors -&gt; smoke</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="st">occupation -&gt; lifeStressors</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="st">occupation -&gt; smoke</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="st">parentED -&gt; familyEnvironment</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="st">parentED -&gt; schoolPerformance</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="st">schoolPerformance -&gt; exposure</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="st">schoolPerformance -&gt; mathG</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="st">schoolPerformance -&gt; occupation</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="st">schoolPerformance -&gt; readG</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="st">socialEnvironment -&gt; exposure [pos="0.256,0.042"]</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="st">socialEnvironment -&gt; familyEnvironment</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="st">socialEnvironment -&gt; schoolPerformance</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="st">socialEnvironment -&gt; smoke [pos="0.740,0.130"]</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="st">socialEnvironment -&gt; white</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="st">'</span>)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dag)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="assignment4_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="part-b" class="level3">
+<h3 class="anchored" data-anchor-id="part-b">Part b</h3>
+<p>Copy the causal graph code below into the “Model code” window on <a href="https://dagitty.net/dags.html">DAGitty</a>. This is a version of the causal graph above where all the variables previously marked as unobserved are now marked as observed. We do this for the purposes of investigating what variables can <em>approximately</em> block noncausal paths (because actually blocking noncausal paths involves unmeasured variables).</p>
+<ul>
+<li>Look at the “Minimal sufficient adjustment sets” in the “Causal effect identification” window.</li>
+<li>For the variables in those adjustment sets, identify <em>proxy variables</em> for any that are unmeasured. (A proxy variable is a related measurement that may not fully capture the original variable. For example, <code>mathG</code> is one proxy for <code>schoolPerformance</code>.)</li>
+<li>Based on this report the set of variables that approximately block noncausal paths and will thus be used for subsequent matching.</li>
+</ul>
+<pre><code>dag {
+bb="-0.1,-0.1,1,1"
+age [pos="0.065,0.268"]
+exposure [exposure,pos="0.156,0.414"]
+familyEnvironment [pos="0.506,0.125"]
+genetics [pos="0.334,0.118"]
+housesmoke [pos="0.903,0.161"]
+lifeStressors [pos="0.802,0.194"]
+male [pos="0.199,0.085"]
+mathG [pos="0.366,0.354"]
+occupation [pos="0.679,0.217"]
+parentED [pos="0.310,0.206"]
+readG [pos="0.526,0.354"]
+schoolPerformance [pos="0.449,0.238"]
+smoke [outcome,pos="0.752,0.401"]
+socialEnvironment [pos="0.448,0.012"]
+susp [pos="0.650,0.056"]
+white [pos="0.569,0.005"]
+age -&gt; exposure
+exposure -&gt; smoke
+familyEnvironment -&gt; exposure
+familyEnvironment -&gt; housesmoke
+familyEnvironment -&gt; lifeStressors
+familyEnvironment -&gt; schoolPerformance
+familyEnvironment -&gt; smoke
+familyEnvironment -&gt; susp
+genetics -&gt; exposure
+genetics -&gt; male
+genetics -&gt; smoke
+housesmoke -&gt; smoke
+lifeStressors -&gt; smoke
+occupation -&gt; lifeStressors
+occupation -&gt; smoke
+parentED -&gt; familyEnvironment
+parentED -&gt; schoolPerformance
+schoolPerformance -&gt; exposure
+schoolPerformance -&gt; mathG
+schoolPerformance -&gt; occupation
+schoolPerformance -&gt; readG
+socialEnvironment -&gt; exposure [pos="0.256,0.042"]
+socialEnvironment -&gt; familyEnvironment
+socialEnvironment -&gt; schoolPerformance
+socialEnvironment -&gt; smoke [pos="0.740,0.130"]
+socialEnvironment -&gt; white
+}</code></pre>
+</section>
+<section id="part-c" class="level3">
+<h3 class="anchored" data-anchor-id="part-c">Part c</h3>
+<p>Implement exact matching and full matching (with the propensity score estimated with logistic regression) to estimate the ATT. (This part just focuses on the <code>matchit()</code> part.)</p>
+<ul>
+<li>Evaluate the quality of the matching by inspecting the balance statistics and matched sample sizes. Summarize your findings on matching quality.</li>
+<li>Assess common support by comparing the distribution of propensity scores across treatment groups. If it looks like there are common support violations, rerun your <code>matchit()</code> command with the additional arguments <code>discard = "both"</code> and <code>reestimate = TRUE</code>.
+<ul>
+<li>For further details, look at the ?matchit documentation, or read <a href="https://kosukeimai.github.io/MatchIt/articles/matching-methods.html#implementing-common-support-restrictions-discard">this section</a> of the MatchIt documentation.</li>
+</ul></li>
+</ul>
+</section>
+<section id="part-d" class="level3">
+<h3 class="anchored" data-anchor-id="part-d">Part d</h3>
+<p>Now estimate the ATT from your exact and full matching implementations.</p>
+<ul>
+<li>Read <a href="https://kosukeimai.github.io/MatchIt/articles/estimating-effects.html#binary-outcomes">this section</a> of the MatchIt documentation to learn how to estimate the causal effect when the outcome is binary. Implement <code>avg_comparisons()</code> to estimate a <strong>risk difference</strong> (RD). A risk difference is a <strong>difference in probabilities</strong> of the outcome across treatment groups.</li>
+<li>Describe (but do not implement) how the code would be different if you instead wanted to estimate a <strong>risk ratio</strong> (RR) (a ratio of probabilities) or an <strong>odds ratio</strong> (OR).</li>
+<li>After running <code>avg_comparisons()</code> summarize your findings from both exact and full matching using both the estimate and 95% confidence interval.
+<ul>
+<li>Interpret the ATT by using units (as appropriate) and avoiding generic language like “treatment” and “outcome”. Describe what the treatment and outcome are in this context.</li>
+<li>Use the 95% CI to make a statement about whether there is evidence for a true causal effect.</li>
+<li>Synthesize both sets of results to form an overall conclusion.</li>
+</ul></li>
+</ul>
+</section>
+<section id="part-e" class="level3">
+<h3 class="anchored" data-anchor-id="part-e">Part e</h3>
+<p>We estimated the ATT, but let’s also consider the ATC (ATU) and the ATE.</p>
+<ul>
+<li>Describe what specific parts of the code would change in <code>matchit()</code> and <code>avg_comparisons()</code> for the ATC and for the ATE.</li>
+<li>Suppose we estimated a risk difference of 0.1 for both the ATC and ATE. Provide an interpretation of the ATC and ATE in this case.</li>
+<li>Why might the ATT be of primary interest in this setting?</li>
+</ul>
+</section>
+</section>
+<section id="exercise-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
+<p>The picture below shows a generalized inverse probability weighting situation with 3 levels of treatment (low, medium, high).</p>
+<p>We’ll just work with data in the Z=1 branch. We are weighting the data for a generalized version of the ATE where we are having all the units receive high, medium, and low treatment.</p>
+<ul>
+<li>For each of A=high, A=medium, and A=low, indicate the number of cases in each of the 6 branches after reweighting, and indicate the weights given to these units.</li>
+<li>How do the weights relate to the probability of receiving a particular treatment level given Z?</li>
+</ul>
+<p><img src="../images/assignment4_ipw.png" class="img-fluid"></p>
+</section>
+<section id="exercise-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
+<p>In this exercise, we will explore the impact of correct model specification on the performance of inverse probability weighting.</p>
+<section id="part-a-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-1">Part a</h3>
+<p>Simulate 1000 cases from the causal graph below where Z, W, and A are binary, and Y is quantitative. Use the information below to generate A and Y, and store your simulated data as <code>sim_data</code>.</p>
+<ul>
+<li><span class="math inline">\(\log(\mathrm{odds}(A = 1)) = -1 + 0.4 Z + 0.4 W + 0.9 Z*W\)</span></li>
+<li>Y follows a normal distribution with mean <span class="math inline">\(10 + 5A + 6Z + 7W\)</span> and standard deviation 2.</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dag <span class="ot">&lt;-</span> <span class="fu">dagitty</span>(<span class="st">'</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="st">dag {</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="st">bb="0,0,1,1"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="st">A [exposure,pos="0.200,0.500"]</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="st">Z [pos="0.400,0.100"]</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="st">W [pos="0.600,0.100"]</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="st">Y [outcome,pos="0.800,0.500"]</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="st">A -&gt; Y</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="st">Z -&gt; A</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="st">Z -&gt; Y</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="st">W -&gt; A</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="st">W -&gt; Y</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="st">'</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dag)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="assignment4_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="part-b-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-1">Part b</h3>
+<p>Complete the code below to perform a simulation study that examines the performance of two different propensity score models for estimating the ATE.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">451</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>({ <span class="co"># This times the following code (takes about 15 seconds)</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>sim_results <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, {</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Put your code from Part a for generating sim_data here</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The code below ensures that Z, W, and A are encoded as categorical</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    sim_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">Z =</span> <span class="fu">factor</span>(Z), <span class="at">W =</span> <span class="fu">factor</span>(W), <span class="at">A =</span> <span class="fu">factor</span>(A), <span class="at">Y =</span> Y)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Based on the way we generated A in sim_data, what is the correct logistic regression model that should be fit? Fit this model as ps_mod_complex.</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    ps_mod_complex <span class="ot">&lt;-</span> ???</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fit a wrong model called ps_mod_simple that uses the formula A ~ Z + W</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    ps_mod_simple <span class="ot">&lt;-</span> ???</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Update the code below to obtain the propensity scores and</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># the IP weights for the ATE for the simple and complex models</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    sim_data <span class="ot">&lt;-</span> sim_data <span class="sc">%&gt;%</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>            <span class="at">ps_simple =</span> <span class="fu">predict</span>(???),</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>            <span class="at">ipw_simple =</span> <span class="fu">case_when</span>(</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>                ???</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        ) <span class="sc">%&gt;%</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            <span class="at">ps_complex =</span> <span class="fu">predict</span>(???),</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>            <span class="at">ipw_complex =</span> <span class="fu">case_when</span>(</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>                ???</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Obtain treatment effect estimates</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Note: we're using lm() here instead of functions from the WeightIt package</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># because we just want the estimates for this simulation (and not </span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># metrics for inference like standard errors)</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    mod_simple <span class="ot">&lt;-</span> <span class="fu">lm</span>(Y <span class="sc">~</span> A, <span class="at">data =</span> sim_data, <span class="at">weights =</span> ipw_simple)</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    mod_complex <span class="ot">&lt;-</span> <span class="fu">lm</span>(Y <span class="sc">~</span> A, <span class="at">data =</span> sim_data, <span class="at">weights =</span> ipw_complex)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Pull out the treatment effect estimates</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    estimate_simple <span class="ot">&lt;-</span> <span class="fu">tidy</span>(mod_simple) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(term<span class="sc">==</span><span class="st">"A1"</span>) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(estimate)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    estimate_complex <span class="ot">&lt;-</span> <span class="fu">tidy</span>(mod_complex) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(term<span class="sc">==</span><span class="st">"A1"</span>) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(estimate)</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Store results</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tibble</span>(</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>        <span class="at">method =</span> <span class="fu">c</span>(<span class="st">"simple"</span>, <span class="st">"complex"</span>),</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>        <span class="at">estimate =</span> <span class="fu">c</span>(estimate_simple, estimate_complex)</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>}, <span class="at">simplify =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>sim_results <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(sim_results)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="part-c-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-1">Part c</h3>
+<p>Use <code>sim_results</code> to make a plot to compare the accuracy of the simple and complex models for the propensity score in estimating the true ATE. Summarize the findings of this simulation study.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -917,13 +1267,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../activities/06-matching.html" class="pagination-link" aria-label="Matching">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Matching</span></span>
+      <a href="../hw/assignment3.html" class="pagination-link" aria-label="Assignment 3">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Assignment 3</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../hw/assignment2.html" class="pagination-link" aria-label="Assignment 2">
-        <span class="nav-page-text">Assignment 2</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../appendices/stat155.html" class="pagination-link" aria-label="STAT 155 Review">
+        <span class="nav-page-text">STAT 155 Review</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

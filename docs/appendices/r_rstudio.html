@@ -453,6 +453,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Assignment 3</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/assignment4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment 4</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -595,7 +601,7 @@ Note
 <li>Open RStudio and click inside the Console pane (by default, the bottom left pane). Copy and paste the following command into the Console. You should see the text below appear to the right of the <code>&gt;</code>, which is called the <strong>R prompt</strong>. After you paste, hit Enter.</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"scales"</span>, <span class="st">"broom"</span>, <span class="st">"dagitty"</span>, <span class="st">"ggdag"</span>, <span class="st">"MatchIt"</span>, <span class="st">"WeightIt"</span>, <span class="st">"cobalt"</span>, <span class="st">"marginaleffects"</span>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"scales"</span>, <span class="st">"broom"</span>, <span class="st">"dagitty"</span>, <span class="st">"ggdag"</span>, <span class="st">"MatchIt"</span>, <span class="st">"WeightIt"</span>, <span class="st">"cobalt"</span>, <span class="st">"marginaleffects"</span>, <span class="st">"fastDummies"</span>, <span class="st">"CCP"</span>, <span class="st">"sandwich"</span>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>If you get a message that says “There are binary versions available the source versions are later” type <code>no</code> and press Enter.</li>
@@ -613,6 +619,9 @@ If you see the message <code>Error in library(ggplot2) : there is no package cal
 <li><code>library(WeightIt)</code></li>
 <li><code>library(cobalt)</code></li>
 <li><code>library(marginaleffects)</code></li>
+<li><code>library(fastDummies)</code></li>
+<li><code>library(CCP)</code></li>
+<li><code>library(sandwich)</code></li>
 </ul></li>
 <li>Quit RStudio. You’re done setting up!</li>
 </ul>

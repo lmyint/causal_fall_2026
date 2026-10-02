@@ -55,6 +55,7 @@ book:
         - hw/assignment1.qmd
         - hw/assignment2.qmd
         - hw/assignment3.qmd
+        - hw/assignment4.qmd
   appendices:
     - appendices/stat155.qmd
     - appendices/r_rstudio.qmd
