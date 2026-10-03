@@ -16,6 +16,8 @@ We will investigate this question using data from the National Longitudinal Stud
 
 > [Add Health] is a longitudinal study of a nationally representative sample of over 20,000 adolescents who were in grades 7-12 during the 1994-95 school year and have been followed for six waves of data collection to date, most recently in 2022-25. Wave VII began in fall 2026.
 
+A codebook for the dataset is available [here](https://mac-stat.github.io/data/addhealth_codebook.html).
+
 ```{r eval=FALSE}
 addhealth <- read_csv("https://mac-stat.github.io/data/addhealth.csv")
 
