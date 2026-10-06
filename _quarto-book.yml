@@ -50,6 +50,8 @@ book:
       chapters:
         - icon: copy
           href: activities/06-matching.qmd
+        - icon: percent
+          href: activities/07-weighting.qmd
     - part: "Assignments"
       chapters:
         - hw/assignment1.qmd
