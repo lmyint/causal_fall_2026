@@ -570,6 +570,7 @@ window.Quarto = {
 </header>
 
 
+<!-- Remember to print paper versions of slide 3 + a version of slide 3 with 2 sets of Ya=0 and Ya=1 columns -->
 <p>Slides for today are available <a href="https://docs.google.com/presentation/d/122CrN0X3BCHoVVOYj_pwl9Q4jmP5LQzcZXzYGsMF99k/edit?usp=sharing">here</a>.</p>
 <p><br></p>
 <p><strong>You can download a template file for this activity <a href="templates/07-weighting.qmd">here</a>.</strong></p>
@@ -579,10 +580,11 @@ window.Quarto = {
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(WeightIt)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cobalt)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(marginaleffects)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(lalonde)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MatchIt)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cobalt)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(marginaleffects)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(lalonde)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Variables of interest</strong>:</p>
 <ul>
@@ -646,9 +648,9 @@ window.Quarto = {
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># differences in floating point precision)</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># We use unname to get rid of the unit IDs that show up as names for the</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># vector elements in our manual calculation</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">all.equal</span>(weight_out_ate<span class="sc">$</span>weights, <span class="fu">unname</span>(lalonde_with_wts<span class="sc">$</span>w_ate))</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">all.equal</span>(weight_out_att<span class="sc">$</span>weights, <span class="fu">unname</span>(lalonde_with_wts<span class="sc">$</span>w_att))</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">all.equal</span>(weight_out_atc<span class="sc">$</span>weights, <span class="fu">unname</span>(lalonde_with_wts<span class="sc">$</span>w_atc))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">all.equal</span>(<span class="fu">unname</span>(weight_out_ate<span class="sc">$</span>weights), <span class="fu">unname</span>(lalonde_with_wts<span class="sc">$</span>w_ate))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">all.equal</span>(<span class="fu">unname</span>(weight_out_att<span class="sc">$</span>weights), <span class="fu">unname</span>(lalonde_with_wts<span class="sc">$</span>w_att))</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">all.equal</span>(<span class="fu">unname</span>(weight_out_atc<span class="sc">$</span>weights), <span class="fu">unname</span>(lalonde_with_wts<span class="sc">$</span>w_atc))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Generally speaking, the variability of the weights is a way to quantify their quality. Highly variable weights will lead to highly variable treatment effect estimates. We can check the variability of the estimated weights with the <code>summary()</code> function. As you inspect the output below, focus on connecting what you see with different ways to measure variability:</p>
 <ul>

@@ -6,6 +6,8 @@ project:
 
 number-depth: 2
 
+# Remember to include a .nojekyll file to avoid issues of GH pages removing QMD headers from templates
+
 book:
   title: "STAT 451: Causal Inference"
   subtitle: "Fall 2026 Course Notes"

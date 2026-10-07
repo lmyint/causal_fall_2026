@@ -14,6 +14,7 @@ We will continue looking at the data from the National Supported Work Demonstrat
 ```{r setup, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(WeightIt)
+library(MatchIt)
 library(cobalt)
 library(marginaleffects)
 
@@ -101,9 +102,9 @@ Check that the weights that you computed by hand are identical to the ones from 
 # differences in floating point precision)
 # We use unname to get rid of the unit IDs that show up as names for the
 # vector elements in our manual calculation
-all.equal(weight_out_ate$weights, unname(lalonde_with_wts$w_ate))
-all.equal(weight_out_att$weights, unname(lalonde_with_wts$w_att))
-all.equal(weight_out_atc$weights, unname(lalonde_with_wts$w_atc))
+all.equal(unname(weight_out_ate$weights), unname(lalonde_with_wts$w_ate))
+all.equal(unname(weight_out_att$weights), unname(lalonde_with_wts$w_att))
+all.equal(unname(weight_out_atc$weights), unname(lalonde_with_wts$w_atc))
 ```
 
 Generally speaking, the variability of the weights is a way to quantify their quality. Highly variable weights will lead to highly variable treatment effect estimates. We can check the variability of the estimated weights with the `summary()` function. As you inspect the output below, focus on connecting what you see with different ways to measure variability:
