@@ -382,11 +382,12 @@ If you would like to have an additional reference throughout the course that lea
 - Video: [Inverse Probability Weighting](https://youtu.be/PfLYPt9ur4g) (Time: 10:24) ([Slides](https://drive.google.com/file/d/1c99hoAOspc0S-SmB3DJjD2UO_-1YRtRX/view?usp=sharing))
 :::
 
-**During class:** [Weighting](07-weighting.qmd)
+**During class:** [Weighting](../activities/07-weighting.qmd)
 
 
 ## Day 2: Synthesis (10/8) {#day10}
 
+**During class:** Wrap up [Weighting](../activities/07-weighting.qmd) and work on [synthesis/practice for oral discussion](oral_discussion.qmd)
 
 <!-- ============================================================= -->
 
