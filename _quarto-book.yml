@@ -34,6 +34,8 @@ book:
           href: logistics/syllabus.qmd
         - icon: brush-fill
           href: logistics/project.qmd
+        - icon: chat
+          href: logistics/oral_discussion.qmd
     - part: "Foundational Ideas"
       chapters:
         - icon: database-fill-gear

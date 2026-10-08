@@ -1,0 +1,79 @@
+# Oral Discussion {.unnumbered}
+
+# Purpose
+
+Much like an athlete tests their skills by playing in a match or a musician through a recital, an oral discussion can provide a genuine context for you to show your learning.
+
+
+\
+\
+\
+
+
+# Logistics
+
+**When:** We will have these discussions the week of 11/16-11/20. We will not have class this week.
+
+**How to sign up for a discussion:** I will be posting a sign-up link so that you can choose an appointment slot for a 20 minute discussion slot. Some slots will be during our normal class time, but some will have to be outside of that time. (I will ask auditors to wait to sign up until everyone else does.)
+
+**Retakes:** Retakes of the discussion can happen once each during the following periods:
+
+- 11/23-11/24
+- 11/30-12/4
+- 12/7-12/11
+- 12/14-12/16
+
+
+\
+\
+\
+
+
+# Format
+
+By default, I will take the role of a student seeking help on a health-related research project who has only taken STAT 155.
+
+You will take the role of a peer consultant who is helping me design my statistical analysis plan and can help me understand the core details behind the methods you're recommending.
+
+Note that because I will be roleplaying a help-seeker, any gestures or facial expressions that I make reflect the role that I'm playing (not me as your instructor).
+
+**Options:** You can tailor this discussion to a context that would be most useful for you. Please share any requests for tailoring 1 week in advance of your discussion.
+
+- You can pick a different data context.
+- You can ask me to take the role of someone with a different level of expertise. (e.g., an interviewer at a company you'd like to work at, a professor in a department related to the data context, etc.)
+
+
+\
+\
+\
+
+
+# Preparing for the discussion
+
+Being able to answer the following questions will prepare you to answer clarifying questions posed to you during the discussion.
+
+- What exactly is causal inference? What is this area about?
+- What is a causal effect?
+    - *Important concepts:* potential outcomes, different causal estimands
+- What role does a causal graph play in a causal analysis?
+    - How do we use them appropriately?
+    - How do they fit into an overall analysis?
+    - What are the benefits of this approach?
+    - What are things to be wary of/watch out for with this approach?
+    - *Important concepts:* causal and noncausal paths, building block structures, d-separation, blocking paths, confounding bias, selection bias
+- What is matching? What is weighting?
+    - How does it work?
+    - What are the benefits of this approach?
+    - What are things to be wary of/watch out for with this approach?
+    - *Important concepts for matching:* different causal estimands, different matching methods and their parameters, balance, sample size, common support
+    - *Important concepts for weighting:* different causal estimands, pseudopopulation, balance, weight variability
+
+(This question list will be updated throughout the semester.)
+
+**Tip:** Practice role playing the discussion with a peer.
+
+- Decide on who will be the consultant and who will be the student (or other person) asking for help.
+- The help seeker should come up with a research question that has a treatment and outcome, but it's possible that the help seeker does not use the terminology of "treatment" and "outcome" when role playing.
+    - Example: Was participation in a healthy eating support group helpful for mood and energy levels?
+
+

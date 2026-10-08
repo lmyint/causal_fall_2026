@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 2 – STAT 451: Causal Inference</title>
+<title>Oral Discussion – STAT 451: Causal Inference</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../hw/assignment3.html" rel="next">
-<link href="../hw/assignment1.html" rel="prev">
+<link href="../activities/01-foundations.html" rel="next">
+<link href="../logistics/project.html" rel="prev">
 <link href="../images/451_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -75,35 +75,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -279,7 +250,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/assignment1.html">Assignments</a></li><li class="breadcrumb-item"><a href="../hw/assignment2.html">Assignment 2</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../logistics/schedule.html">Course Logistics</a></li><li class="breadcrumb-item"><a href="../logistics/oral_discussion.html">Oral Discussion</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -345,7 +316,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../logistics/oral_discussion.html" class="sidebar-item-text sidebar-link"><i class="bi bi-chat" role="img">
+  <a href="../logistics/oral_discussion.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-chat" role="img">
 </i> 
  <span class="menu-text">Oral Discussion</span></a>
   </div>
@@ -451,7 +422,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../hw/assignment2.html" class="sidebar-item-text sidebar-link active">
+  <a href="../hw/assignment2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignment 2</span></a>
   </div>
 </li>
@@ -508,8 +479,10 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link active" data-scroll-target="#exercise-1">Exercise 1</a></li>
-  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a></li>
+  <li><a href="#logistics" id="toc-logistics" class="nav-link" data-scroll-target="#logistics">Logistics</a></li>
+  <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format">Format</a></li>
+  <li><a href="#preparing-for-the-discussion" id="toc-preparing-for-the-discussion" class="nav-link" data-scroll-target="#preparing-for-the-discussion">Preparing for the discussion</a></li>
   </ul>
 </nav>
     </div>
@@ -517,9 +490,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/assignment1.html">Assignments</a></li><li class="breadcrumb-item"><a href="../hw/assignment2.html">Assignment 2</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../logistics/schedule.html">Course Logistics</a></li><li class="breadcrumb-item"><a href="../logistics/oral_discussion.html">Oral Discussion</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Assignment 2</h1>
+<h1 class="title">Oral Discussion</h1>
 </div>
 
 
@@ -536,137 +509,80 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Due:</strong> Thursday, 9/17 at midnight on Moodle</p>
-<p><strong>Format:</strong> Please submit a PDF document containing your responses.</p>
-<section id="exercise-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
-<p>We are interested in evaluating the causal effect of taking Macalester’s Pilates class on core strength. We measure core strength by timing the longest plank hold (in seconds) at the end of the semester for students who took the class (<code>A=1</code>) and students who didn’t (<code>A=0</code>). We also record whether or not each student engages in core strengthening exercises on their own (<code>C = yes, no</code>). Pretend that we’re omniscient and have information on all potential outcomes for 10 students, shown in the table below.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">A</th>
-<th style="text-align: center;">C</th>
-<th style="text-align: center;"><span class="math inline">\(Y^{a=1}\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(Y^{a=0}\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">yes</td>
-<td style="text-align: center;">110</td>
-<td style="text-align: center;">100</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">yes</td>
-<td style="text-align: center;">110</td>
-<td style="text-align: center;">100</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">no</td>
-<td style="text-align: center;">100</td>
-<td style="text-align: center;">70</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">no</td>
-<td style="text-align: center;">100</td>
-<td style="text-align: center;">70</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">no</td>
-<td style="text-align: center;">100</td>
-<td style="text-align: center;">70</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">yes</td>
-<td style="text-align: center;">110</td>
-<td style="text-align: center;">100</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">yes</td>
-<td style="text-align: center;">110</td>
-<td style="text-align: center;">100</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">yes</td>
-<td style="text-align: center;">110</td>
-<td style="text-align: center;">100</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">no</td>
-<td style="text-align: center;">100</td>
-<td style="text-align: center;">70</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">no</td>
-<td style="text-align: center;">100</td>
-<td style="text-align: center;">70</td>
-</tr>
-</tbody>
-</table>
-<ol type="a">
-<li>Do you think that the above data reflect the causal diagram below? Explain why by showing how each arrow is/isn’t supported by the data.</li>
-</ol>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assignment2_files/figure-html/a2_ex1_dag-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480"></p>
-</figure>
-</div>
-</div>
-</div>
-<ol start="2" type="a">
-<li><p>Compute the true causal effect and the “naive” causal effect we would estimate if we compared average outcomes in the treatment groups. Why is the estimated causal effect specifically <em>underestimated</em> (rather than overestimated)?</p></li>
-<li><p>Compute the true causal effect and “naive” causal effect estimate separately within the C = yes and the C = no groups. How do the truth and estimates compare now? What is a likely reason for this?</p></li>
-<li><p>Note that this study used cross-sectional data. Suppose that we had instead collected longitudinal data: the longest plank hold at the beginning of the semester and again at the end of the semester. Using the original data table as a basis, create a data table showing what the data would likely look like. Explain the rationale for the numbers you chose.</p></li>
-<li><p>Do you think that cross-sectional data or longitudinal data would be better for answering this research question? Why?</p></li>
-</ol>
+<section id="purpose" class="level1">
+<h1>Purpose</h1>
+<p>Much like an athlete tests their skills by playing in a match or a musician through a recital, an oral discussion can provide a genuine context for you to show your learning.</p>
+<p><br>
+<br>
+<br>
+</p>
 </section>
-<section id="exercise-2" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
-<p>Consider the following causal diagram (inspired by <a href="http://academic.oup.com/sleep/article/40/2/zsw055/2662183">this study</a>) which could be used to study the causal effect of nighttime road traffic noise on sleep disturbances.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assignment2_files/figure-html/a2_ex2_dag-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Load this causal graph in <a href="https://dagitty.net/dags.html">DAGitty</a> by pasting the following code into the “Model code” panel on the right. Then click “Update DAG”.</p>
-<pre><code>dag {
-bb="0,0,1,1"
-"Household income" [pos="0.295,0.238"]
-"Noise annoyance" [pos="0.413,0.521"]
-"Noise sensitivity" [pos="0.372,0.394"]
-"Physical activity" [pos="0.556,0.364"]
-"Road traffic noise" [exposure,pos="0.179,0.595"]
-"Sleep disturbances" [outcome,pos="0.760,0.589"]
-"Household income" -&gt; "Physical activity"
-"Household income" -&gt; "Road traffic noise"
-"Noise annoyance" -&gt; "Sleep disturbances"
-"Noise sensitivity" -&gt; "Noise annoyance"
-"Noise sensitivity" -&gt; "Sleep disturbances"
-"Physical activity" -&gt; "Sleep disturbances"
-"Road traffic noise" -&gt; "Noise annoyance"
-"Road traffic noise" -&gt; "Sleep disturbances"
-}</code></pre>
-<ol type="a">
-<li><p>Add one variable that is likely to be a confounding variable—one that would likely give rise to a substantive alternate explanation for a causal relationship between nighttime road noise and sleep disturbances. Include edges connecting this variable to others in the diagram, as appropriate. Explain your rationale.</p></li>
-<li><p>Add one variable that is <em>unlikely</em> to be a confounding variable—one that could be a cause of the outcome, but only for a handful of people. Explain your rationale.</p></li>
-<li><p>Include a picture of your updated causal diagram.</p></li>
-</ol>
+<section id="logistics" class="level1">
+<h1>Logistics</h1>
+<p><strong>When:</strong> We will have these discussions the week of 11/16-11/20. We will not have class this week.</p>
+<p><strong>How to sign up for a discussion:</strong> I will be posting a sign-up link so that you can choose an appointment slot for a 20 minute discussion slot. Some slots will be during our normal class time, but some will have to be outside of that time. (I will ask auditors to wait to sign up until everyone else does.)</p>
+<p><strong>Retakes:</strong> Retakes of the discussion can happen once each during the following periods:</p>
+<ul>
+<li>11/23-11/24</li>
+<li>11/30-12/4</li>
+<li>12/7-12/11</li>
+<li>12/14-12/16</li>
+</ul>
+<p><br>
+<br>
+<br>
+</p>
+</section>
+<section id="format" class="level1">
+<h1>Format</h1>
+<p>By default, I will take the role of a student seeking help on a health-related research project who has only taken STAT 155.</p>
+<p>You will take the role of a peer consultant who is helping me design my statistical analysis plan and can help me understand the core details behind the methods you’re recommending.</p>
+<p>Note that because I will be roleplaying a help-seeker, any gestures or facial expressions that I make reflect the role that I’m playing (not me as your instructor).</p>
+<p><strong>Options:</strong> You can tailor this discussion to a context that would be most useful for you. Please share any requests for tailoring 1 week in advance of your discussion.</p>
+<ul>
+<li>You can pick a different data context.</li>
+<li>You can ask me to take the role of someone with a different level of expertise. (e.g., an interviewer at a company you’d like to work at, a professor in a department related to the data context, etc.)</li>
+</ul>
+<p><br>
+<br>
+<br>
+</p>
+</section>
+<section id="preparing-for-the-discussion" class="level1">
+<h1>Preparing for the discussion</h1>
+<p>Being able to answer the following questions will prepare you to answer clarifying questions posed to you during the discussion.</p>
+<ul>
+<li>What exactly is causal inference? What is this area about?</li>
+<li>What is a causal effect?
+<ul>
+<li><em>Important concepts:</em> potential outcomes, different causal estimands</li>
+</ul></li>
+<li>What role does a causal graph play in a causal analysis?
+<ul>
+<li>How do we use them appropriately?</li>
+<li>How do they fit into an overall analysis?</li>
+<li>What are the benefits of this approach?</li>
+<li>What are things to be wary of/watch out for with this approach?</li>
+<li><em>Important concepts:</em> causal and noncausal paths, building block structures, d-separation, blocking paths, confounding bias, selection bias</li>
+</ul></li>
+<li>What is matching? What is weighting?
+<ul>
+<li>How does it work?</li>
+<li>What are the benefits of this approach?</li>
+<li>What are things to be wary of/watch out for with this approach?</li>
+<li><em>Important concepts for matching:</em> different causal estimands, different matching methods and their parameters, balance, sample size, common support</li>
+<li><em>Important concepts for weighting:</em> different causal estimands, pseudopopulation, balance, weight variability</li>
+</ul></li>
+</ul>
+<p>(This question list will be updated throughout the semester.)</p>
+<p><strong>Tip:</strong> Practice role playing the discussion with a peer.</p>
+<ul>
+<li>Decide on who will be the consultant and who will be the student (or other person) asking for help.</li>
+<li>The help seeker should come up with a research question that has a treatment and outcome, but it’s possible that the help seeker does not use the terminology of “treatment” and “outcome” when role playing.
+<ul>
+<li>Example: Was participation in a healthy eating support group helpful for mood and energy levels?</li>
+</ul></li>
+</ul>
 
 
 </section>
@@ -1087,13 +1003,13 @@ bb="0,0,1,1"
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../hw/assignment1.html" class="pagination-link" aria-label="Assignment 1">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Assignment 1</span>
+      <a href="../logistics/project.html" class="pagination-link" aria-label="Project">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Project</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../hw/assignment3.html" class="pagination-link" aria-label="Assignment 3">
-        <span class="nav-page-text">Assignment 3</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../activities/01-foundations.html" class="pagination-link" aria-label="Foundational Ideas">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Foundational Ideas</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
