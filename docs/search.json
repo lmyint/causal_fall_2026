@@ -80,7 +80,7 @@
     "href": "logistics/schedule.html#day6",
     "title": "Schedule",
     "section": "Day 2: Testing causal graphs; synthesis (9/24)",
-    "text": "Day 2: Testing causal graphs; synthesis (9/24)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nReading: The Effect Chapter 8: Causal Paths and Closing Back Doors (Section 8.6: Using Paths to Test Your Diagram) (~5 minutes)\n\nVideo alternatives:\n\nTesting Causal Diagrams, and Placebo Tests (~8 minutes)",
+    "text": "Day 2: Testing causal graphs; synthesis (9/24)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nReading: The Effect Chapter 8: Causal Paths and Closing Back Doors (Section 8.6: Using Paths to Test Your Diagram) (~5 minutes)\n\nVideo alternatives:\n\nTesting Causal Diagrams, and Placebo Tests (~8 minutes)\n\n\n\n\n\nDuring class: Testing causal graphs",
     "crumbs": [
       "Course Logistics",
       "Schedule"
@@ -1041,6 +1041,94 @@
     "crumbs": [
       "Appendices",
       "R Resources"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day11",
+    "href": "logistics/schedule.html#day11",
+    "title": "Schedule",
+    "section": "Day 1: Model misspecification/doubly robust estimation (10/13)",
+    "text": "Day 1: Model misspecification/doubly robust estimation (10/13)\nBefore class: No required reading or videos for today.\nDuring class:\n🍁 Fall Break: Thursday, October 15 - Sunday, October 18 🍁\n🍁 No class on Thursday, October 15 🍁",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day12",
+    "href": "logistics/schedule.html#day12",
+    "title": "Schedule",
+    "section": "Day 1: Sensitivity analyses for unmeasured confounding (10/20)",
+    "text": "Day 1: Sensitivity analyses for unmeasured confounding (10/20)\nBefore class: No required reading or videos for today.\nDuring class:",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day13",
+    "href": "logistics/schedule.html#day13",
+    "title": "Schedule",
+    "section": "Day 2: Regression discontinuity (10/22)",
+    "text": "Day 2: Regression discontinuity (10/22)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 20: Regression Discontinuity (~130 minutes)\n\nVideo alternatives:\n\nRegression Discontinuity (~10 minutes)\nEstimating Regression Discontinuity (~11 minutes)\nAdjustments to Regression Discontinuity (~8 minutes)\nChecking Regression Discontinuity Assumptions (~11 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 6: Regression Discontinuity (~170 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day14",
+    "href": "logistics/schedule.html#day14",
+    "title": "Schedule",
+    "section": "Day 1: Interrupted time series (10/27)",
+    "text": "Day 1: Interrupted time series (10/27)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 17: Event Studies (~70 minutes)\n\nVideo alternatives:\n\nEvent Studies (~12 minutes)\nInterrupted Time Series (~8 minutes)\nEvent Studies in Finance (~11 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day15",
+    "href": "logistics/schedule.html#day15",
+    "title": "Schedule",
+    "section": "Day 2: Synthetic control (10/29)",
+    "text": "Day 2: Synthetic control (10/29)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Section 21.2.1: Synthetic Control (~10 minutes)\n\nVideo alternatives:\n\nOther Standard Research Designs (~5 minutes) (Just the part on the synthetic control method)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 10: Synthetic Control (~70 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day16",
+    "href": "logistics/schedule.html#day16",
+    "title": "Schedule",
+    "section": "Day 1: Fixed effects models (11/3)",
+    "text": "Day 1: Fixed effects models (11/3)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 16: Fixed Effects (~70 minutes)\n\nVideo alternatives:\n\nFixed Effects (~12 minutes)\nEstimating Fixed Effects (~8 minutes)\nRandom Effects (~6 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day17",
+    "href": "logistics/schedule.html#day17",
+    "title": "Schedule",
+    "section": "Day 2: Difference-in-differences designs (11/5)",
+    "text": "Day 2: Difference-in-differences designs (11/5)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 18: Difference-in-Differences (~80 minutes)\n\nVideo alternatives:\n\nDifference in Differences (~11 minutes)\nParallel Trends (~9 minutes)\nEstimating Difference in Differences (~10 minutes)\nSupporting Parallel Trends (~9 minutes)\nDynamic Difference-in-Differences (~10 minutes)\nStaggered Treatment in Difference-in-Differences (~9 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 9: Difference-in-Differences (~230 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day18",
+    "href": "logistics/schedule.html#day18",
+    "title": "Schedule",
+    "section": "Day 1: Instrumental variables (11/10)",
+    "text": "Day 1: Instrumental variables (11/10)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 19: Instrumental Variables (~85 minutes)\n\nVideo alternatives:\n\nInstrumental Variables (~10 minutes)\nInstrumental Variable Validity (~10 minutes)\nEstimating Instrumental Variables (~12 minutes)\nTesting Instrumental Variables Assumptions (~11 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 7: Instrumental Variables (~150 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
     ]
   }
 ]
