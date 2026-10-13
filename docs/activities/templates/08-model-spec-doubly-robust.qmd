@@ -1,0 +1,305 @@
+---
+title: "Model Specification / Doubly Robust Estimation"
+author: "YOUR NAME"
+format: 
+  html:
+    embed-resources: true
+    toc: true
+---
+
+# Exercises
+
+Run the following command in the console to install needed packages:
+
+```r
+install.packages(c("AIPW", "ranger", "xgboost"))
+```
+
+```{r}
+library(tidyverse)
+library(scales)
+library(broom)
+library(AIPW)
+library(SuperLearner)
+```
+
+## Exercise 1: Data simulation
+
+The following code simulates a dataset with 4 variables: Z, W, A (treatment), and Y (outcome).
+
+```{r}
+log_odds_to_prob <- function(lo) {
+    odds <- exp(lo)
+    odds/(1+odds)
+}
+
+set.seed(451)
+n <- 1000
+sim_data <- tibble(
+    Z = rbinom(n, size = 1, prob = 0.5),
+    W = rbinom(n, size = 1, prob = 0.5),
+    p_A = log_odds_to_prob(-1 + 0.4*Z + 0.4*W + 0.9*Z*W),
+    A = rbinom(n, size = 1, prob = p_A),
+    mean_Y = 10 + 5*A + 6*Z + 7*W + 5*Z*W,
+    noise_Y = rnorm(n, 0, 2),
+    Y = mean_Y + noise_Y
+)
+```
+
+a. What is the underlying causal graph?
+b. Explain why the following models do not accurately capture the data generating process:
+    - Propensity score: `glm(A ~ Z + W, data = sim_data, family = "binomial")`
+    - Outcome: `lm(Y ~ A + Z + W, data = sim_data)`
+c. What is the true ATE?
+d. Why are the ATE, ATT, and ATC all the same in this setting? For the ATT and ATC to differ from the ATE, what would need to be different about the data generation process?
+
+
+
+
+
+## Exercise 2: Inspect a doubly robust estimator
+
+One example of a doubly robust estimator is the **augmented inverse probability weighting (AIPW)** estimator:
+
+$$
+\widehat{\mathrm{ATE}}_{\mathrm{AIPW}}
+=
+\frac{1}{n}\sum_{i=1}^{n}
+\left[
+\widehat{Y}_i^{a=1}
+-
+\widehat{Y_i}^{a=0}
+\right]
+$$
+
+Define the following:
+
+- $X_i$: values of covariates needed to block noncausal paths for unit $i$
+- $\widehat{m}_1(X_i)$: predicted outcome for individual $i$ under treatment (predicted by plugging in A=1 in the model for $Y$)
+- $\widehat{m}_0(X_i)$: predicted outcome for individual $i$ under control (predicted by plugging in A=0 in the model for $Y$)
+- $\widehat{e}(X_i)$: estimated propensity score, $P(A_i=1\mid X_i)$.
+- $A_i$: observed treatment indicator (1 or 0) for unit $i$
+- $Y_i$: observed outcome for unit $i$
+- $n$: sample size
+
+The predicted potential outcomes $\widehat{Y}^{a=1}$ and $\widehat{Y}^{a=0}$ are:
+
+$$
+\widehat{Y}_i^{a=1}
+=
+\widehat{m}_1(X_i)
++
+\frac{A_i\left(Y_i-\widehat{m}_1(X_i)\right)}
+{\widehat{e}(X_i)}
+$$
+
+$$
+\widehat{Y}_i^{a=0}
+=
+\widehat{m}_0(X_i)
++
+\frac{(1-A_i)\left(Y_i-\widehat{m}_0(X_i)\right)}
+{1-\widehat{e}(X_i)}
+$$
+
+When approaching new notation, it is helpful to scan for parts that resemble concepts you are already aware of.
+
+- First, scan for parts that are related to using a model for $Y$ to predict potential outcomes. What seems familiar?
+- Next, scan for parts of $\widehat{Y}_i^{a=1}$ and $\widehat{Y}_i^{a=0}$ that seem related to inverse probability weighting. What seems familiar?
+
+Now let's dig deeper into the formulas. For the questions below, focus on the $\widehat{Y}_i^{a=1}$ formula. (The thinking is parallel for the other formula.)
+
+- If we have an accurate model for $Y$, what do you expect about the $Y_i-\widehat{m}_1(X_i)$ term? How does the formula simplify, and what is the implication of this?
+- If we have an accurate propensity score model, it turns out that $A_i/\widehat{e}(X_i)$ approaches 1 with large sample sizes. In this case, how does the formula simplify, and what is the implication of this?
+- How do the above two insights combine to form the doubly robust property?
+
+
+
+
+
+## Exercise 3: Implement the AIPW estimator
+
+The following functions implement the AIPW estimator as well as the IPW estimator and an estimator based on an outcome model. The code is complete, but step through the code slowly to ensure that the steps make sense.
+
+```{r}
+get_aipw_estimate <- function(data, formula_Y, formula_A) {
+    # Fit outcome model
+    outcome_model <- lm(formula_Y, data = data)
+    
+    # Fit propensity score model
+    ps_model <- glm(formula_A, data = data, family = "binomial")
+    
+    # Predict each unit's outcome under A = 1 and A = 0
+    data_all_treated <- data |> mutate(A = 1)
+    data_all_ctrl <- data |> mutate(A = 0)
+    
+    m1_hat <- predict(outcome_model, newdata = data_all_treated)
+    m0_hat <- predict(outcome_model, newdata = data_all_ctrl)
+    
+    # Compute estimated propensity scores
+    e_hat <- predict(ps_model, newdata = data, type = "response")
+    
+    # Compute AIPW estimates of ATE for each unit
+    aipw_Ya1 <- m1_hat + data$A * (data$Y - m1_hat) / e_hat
+    aipw_Ya0 <- m0_hat + (1 - data$A) * (data$Y - m0_hat) / (1 - e_hat)
+    
+    # Average the unit-level AIPW estimates to get overall estimate
+    mean(aipw_Ya1 - aipw_Ya0)
+}
+
+get_ipw_estimate <- function(data, formula_A) {
+    # Fit propensity score model
+    ps_model <- glm(formula_A, data = data, family = "binomial")
+    
+    # Compute ATE weights
+    data <- data |> 
+        mutate(
+            ps = predict(ps_model, newdata = data, type = "response"),
+            w_ate = case_when(
+                A==1 ~ 1/ps,
+                A==0 ~ 1/(1-ps)
+            )
+        )
+    
+    # Compute a weighted mean as the treatment effect estimate
+    mod <- lm(Y ~ A, data = data, weights = w_ate)
+    tidy(mod) %>% filter(term=="A") %>% pull(estimate)
+}
+
+get_regression_estimate <- function(data, formula_Y) {
+    # Fit model
+    mod <- lm(formula_Y, data = data)
+    
+    # Create a dataset where everyone is treated:
+    data_A1 <- data |> mutate(A = 1)
+    # Create a dataset where everyone is untreated:
+    data_A0 <- data |> mutate(A = 0)
+    
+    # Compute outcome predictions for both datasets
+    # The average difference is the ACE
+    mean(predict(mod, newdata = data_A1) - predict(mod, newdata = data_A0))
+}
+```
+
+The code below runs 100 iterations of a simulation study for each of 4 different sample sizes. In each iteration, we estimate the ATE using different methods.
+
+- Complete the code by filling in the `???` part of `formula_Y_correct` and `formula_A_correct` which give the **correctly specified** model formulas for the outcome and propensity score models respectively.
+- Why do we have to run many (here, 100) simulations in order to compare the performance of different estimation methods?
+
+
+```{r}
+set.seed(451)
+run_simulation_for_sample_size <- function(n) {
+    sim_results <- purrr::map(1:100, function(i) {
+        # Generate data
+        sim_data <- tibble(
+            Z = rbinom(n, size = 1, prob = 0.5),
+            W = rbinom(n, size = 1, prob = 0.5),
+            p_A = log_odds_to_prob(-1 + 0.4*Z + 0.4*W + 0.9*Z*W),
+            A = rbinom(n, size = 1, prob = p_A),
+            mean_Y = 10 + 5*A + 6*Z + 7*W + 5*Z*W,
+            noise_Y = rnorm(n, 0, 2),
+            Y = mean_Y + noise_Y
+        )
+        
+        # Correctly specified model formulas
+        formula_Y_correct <- Y ~ ???
+        formula_A_correct <- A ~ ???
+        
+        # Misspecified model formulas
+        formula_Y_wrong <- Y ~ A + Z + W
+        formula_A_wrong <- A ~ Z + W
+        
+        # Scenario 1: Both correct
+        ate_1 <- get_aipw_estimate(sim_data, formula_Y_correct, formula_A_correct)
+        
+        # Scenario 2: Both wrong
+        ate_2 <- get_aipw_estimate(sim_data, formula_Y_wrong, formula_A_wrong)
+        
+        # Scenario 3: Y correct, A wrong
+        ate_3 <- get_aipw_estimate(sim_data, formula_Y_correct, formula_A_wrong)
+        
+        # Scenario 4: Y wrong, A correct
+        ate_4 <- get_aipw_estimate(sim_data, formula_Y_wrong, formula_A_correct)
+        
+        # Inverse probability weighting estimate
+        ate_ipw <- get_ipw_estimate(sim_data, formula_A_correct)
+        
+        # Regression estimate
+        ate_reg <- get_regression_estimate(sim_data, formula_Y_correct)
+        
+        # Collect the estimates
+        tibble(
+            scenario = c("Both correct", "Both wrong", "Y correct, A wrong", "Y wrong, A correct", "IPW (correct spec.)", "Regression (correct spec.)"),
+            estimate = c(ate_1, ate_2, ate_3, ate_4, ate_ipw, ate_reg)
+        )
+    }) |> bind_rows()
+    sim_results |> mutate(n = n)
+}
+
+sim_results <- purrr::map(c(100,500,1000,5000), run_simulation_for_sample_size) |> bind_rows()
+```
+
+Create a plot that allows you to compare estimates across the different estimation methods and across sample sizes. Summarize your findings.
+
+```{r}
+# Your plot
+```
+
+
+
+
+
+## Exercise 4: Using the `AIPW` package
+
+The `AIPW` package provides functionality for using the AIPW estimator where the outcome and propensity score models can be estimated by a variety of machine learning models. Machine learning models have the power to be more flexible than regression models and can automatically account for interactions and nonlinearities in the data.
+
+The code below creates a single simulated dataset and computes the AIPW estimator using regression, random forest, and boosting models for the outcome and propensity score models. (To learn about these methods, take STAT 253 Statistical Machine Learning!)
+
+Take a look at [this documentation page](https://cran.r-project.org/web/packages/AIPW/refman/AIPW.html#AIPW) and [this example](https://cran.r-project.org/web/packages/AIPW/vignettes/AIPW.html#details) to see how the code was written.
+
+```{r}
+set.seed(451)
+n <- 1000
+sim_data <- tibble(
+    Z = rbinom(n, size = 1, prob = 0.5),
+    W = rbinom(n, size = 1, prob = 0.5),
+    p_A = log_odds_to_prob(-1 + 0.4*Z + 0.4*W + 0.9*Z*W),
+    A = rbinom(n, size = 1, prob = p_A),
+    mean_Y = 10 + 5*A + 6*Z + 7*W + 5*Z*W,
+    noise_Y = rnorm(n, 0, 2),
+    Y = mean_Y + noise_Y
+)
+
+aipw <- AIPW$new(
+    Y = sim_data$Y,
+    A = sim_data$A,
+    W = sim_data |> select(Z, W),
+    # The lines below estimate the outcome and PS models
+    # using an *ensemble* of regression (glm), random forest (ranger),
+    # and boosting (xgboost) models
+    Q.SL.library = c("SL.glm", "SL.ranger", "SL.xgboost"),
+    g.SL.library = c("SL.glm", "SL.ranger", "SL.xgboost")
+)
+
+aipw$fit()
+```
+
+Inspect the results below:
+
+- The ATE estimate is in the "Mean Difference" row. How close is the estimate to the truth?
+- Does the common support plot show good overlap between the groups? (Just as with matching, units that have a lack of overlap will not have a good match in the other group.)
+- Inspect the distribution of the weights to get a sense for if there are extreme weights that would make the estimate unstable/variable.
+
+```{r}
+# Display estimates
+aipw$summary()
+
+# Make common support plots to compare the PS distribution in the treatment groups
+aipw$plot.p_score()
+
+# Look at the distribution of the weights
+aipw$plot.ip_weights()
+```
+
+

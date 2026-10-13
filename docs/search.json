@@ -131,6 +131,94 @@
     ]
   },
   {
+    "objectID": "logistics/schedule.html#day11",
+    "href": "logistics/schedule.html#day11",
+    "title": "Schedule",
+    "section": "Day 1: Model misspecification/doubly robust estimation (10/13)",
+    "text": "Day 1: Model misspecification/doubly robust estimation (10/13)\nBefore class: No required reading or videos for today.\nDuring class:\n🍁 Fall Break: Thursday, October 15 - Sunday, October 18 🍁\n🍁 No class on Thursday, October 15 🍁",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day12",
+    "href": "logistics/schedule.html#day12",
+    "title": "Schedule",
+    "section": "Day 1: Sensitivity analyses for unmeasured confounding (10/20)",
+    "text": "Day 1: Sensitivity analyses for unmeasured confounding (10/20)\nBefore class: No required reading or videos for today.\nDuring class:",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day13",
+    "href": "logistics/schedule.html#day13",
+    "title": "Schedule",
+    "section": "Day 2: Regression discontinuity (10/22)",
+    "text": "Day 2: Regression discontinuity (10/22)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 20: Regression Discontinuity (~130 minutes)\n\nVideo alternatives:\n\nRegression Discontinuity (~10 minutes)\nEstimating Regression Discontinuity (~11 minutes)\nAdjustments to Regression Discontinuity (~8 minutes)\nChecking Regression Discontinuity Assumptions (~11 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 6: Regression Discontinuity (~170 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day14",
+    "href": "logistics/schedule.html#day14",
+    "title": "Schedule",
+    "section": "Day 1: Interrupted time series (10/27)",
+    "text": "Day 1: Interrupted time series (10/27)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 17: Event Studies (~70 minutes)\n\nVideo alternatives:\n\nEvent Studies (~12 minutes)\nInterrupted Time Series (~8 minutes)\nEvent Studies in Finance (~11 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day15",
+    "href": "logistics/schedule.html#day15",
+    "title": "Schedule",
+    "section": "Day 2: Synthetic control (10/29)",
+    "text": "Day 2: Synthetic control (10/29)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Section 21.2.1: Synthetic Control (~10 minutes)\n\nVideo alternatives:\n\nOther Standard Research Designs (~5 minutes) (Just the part on the synthetic control method)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 10: Synthetic Control (~70 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day16",
+    "href": "logistics/schedule.html#day16",
+    "title": "Schedule",
+    "section": "Day 1: Fixed effects models (11/3)",
+    "text": "Day 1: Fixed effects models (11/3)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 16: Fixed Effects (~70 minutes)\n\nVideo alternatives:\n\nFixed Effects (~12 minutes)\nEstimating Fixed Effects (~8 minutes)\nRandom Effects (~6 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day17",
+    "href": "logistics/schedule.html#day17",
+    "title": "Schedule",
+    "section": "Day 2: Difference-in-differences designs (11/5)",
+    "text": "Day 2: Difference-in-differences designs (11/5)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 18: Difference-in-Differences (~80 minutes)\n\nVideo alternatives:\n\nDifference in Differences (~11 minutes)\nParallel Trends (~9 minutes)\nEstimating Difference in Differences (~10 minutes)\nSupporting Parallel Trends (~9 minutes)\nDynamic Difference-in-Differences (~10 minutes)\nStaggered Treatment in Difference-in-Differences (~9 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 9: Difference-in-Differences (~230 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "logistics/schedule.html#day18",
+    "href": "logistics/schedule.html#day18",
+    "title": "Schedule",
+    "section": "Day 1: Instrumental variables (11/10)",
+    "text": "Day 1: Instrumental variables (11/10)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 19: Instrumental Variables (~85 minutes)\n\nVideo alternatives:\n\nInstrumental Variables (~10 minutes)\nInstrumental Variable Validity (~10 minutes)\nEstimating Instrumental Variables (~12 minutes)\nTesting Instrumental Variables Assumptions (~11 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 7: Instrumental Variables (~150 minutes)",
+    "crumbs": [
+      "Course Logistics",
+      "Schedule"
+    ]
+  },
+  {
     "objectID": "logistics/syllabus.html",
     "href": "logistics/syllabus.html",
     "title": "Syllabus",
@@ -802,6 +890,61 @@
     ]
   },
   {
+    "objectID": "activities/08-model-spec-doubly-robust.html",
+    "href": "activities/08-model-spec-doubly-robust.html",
+    "title": "8  Model Specification / Doubly Robust Estimation",
+    "section": "",
+    "text": "Exercises\nSlides for today are available here.\nYou can download a template file for this activity here.\nRun the following command in the console to install needed packages:\nlibrary(tidyverse)\nlibrary(scales)\nlibrary(broom)\nlibrary(AIPW)\nlibrary(SuperLearner)",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Model Specification / Doubly Robust Estimation</span>"
+    ]
+  },
+  {
+    "objectID": "activities/08-model-spec-doubly-robust.html#exercise-1-data-simulation",
+    "href": "activities/08-model-spec-doubly-robust.html#exercise-1-data-simulation",
+    "title": "8  Model Specification / Doubly Robust Estimation",
+    "section": "Exercise 1: Data simulation",
+    "text": "Exercise 1: Data simulation\nThe following code simulates a dataset with 4 variables: Z, W, A (treatment), and Y (outcome).\n\nlog_odds_to_prob &lt;- function(lo) {\n    odds &lt;- exp(lo)\n    odds/(1+odds)\n}\n\nset.seed(451)\nn &lt;- 1000\nsim_data &lt;- tibble(\n    Z = rbinom(n, size = 1, prob = 0.5),\n    W = rbinom(n, size = 1, prob = 0.5),\n    p_A = log_odds_to_prob(-1 + 0.4*Z + 0.4*W + 0.9*Z*W),\n    A = rbinom(n, size = 1, prob = p_A),\n    mean_Y = 10 + 5*A + 6*Z + 7*W + 5*Z*W,\n    noise_Y = rnorm(n, 0, 2),\n    Y = mean_Y + noise_Y\n)\n\n\nWhat is the underlying causal graph?\nExplain why the following models do not accurately capture the data generating process:\n\nPropensity score: glm(A ~ Z + W, data = sim_data, family = \"binomial\")\nOutcome: lm(Y ~ A + Z + W, data = sim_data)\n\nWhat is the true ATE?\nWhy are the ATE, ATT, and ATC all the same in this setting? For the ATT and ATC to differ from the ATE, what would need to be different about the data generation process?",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Model Specification / Doubly Robust Estimation</span>"
+    ]
+  },
+  {
+    "objectID": "activities/08-model-spec-doubly-robust.html#exercise-2-inspect-a-doubly-robust-estimator",
+    "href": "activities/08-model-spec-doubly-robust.html#exercise-2-inspect-a-doubly-robust-estimator",
+    "title": "8  Model Specification / Doubly Robust Estimation",
+    "section": "Exercise 2: Inspect a doubly robust estimator",
+    "text": "Exercise 2: Inspect a doubly robust estimator\nOne example of a doubly robust estimator is the augmented inverse probability weighting (AIPW) estimator:\n\\[\n\\widehat{\\mathrm{ATE}}_{\\mathrm{AIPW}}\n=\n\\frac{1}{n}\\sum_{i=1}^{n}\n\\left[\n\\widehat{Y}_i^{a=1}\n-\n\\widehat{Y_i}^{a=0}\n\\right]\n\\]\nDefine the following:\n\n\\(X_i\\): values of covariates needed to block noncausal paths for unit \\(i\\)\n\\(\\widehat{m}_1(X_i)\\): predicted outcome for individual \\(i\\) under treatment (predicted by plugging in A=1 in the model for \\(Y\\))\n\\(\\widehat{m}_0(X_i)\\): predicted outcome for individual \\(i\\) under control (predicted by plugging in A=0 in the model for \\(Y\\))\n\\(\\widehat{e}(X_i)\\): estimated propensity score, \\(P(A_i=1\\mid X_i)\\).\n\\(A_i\\): observed treatment indicator (1 or 0) for unit \\(i\\)\n\\(Y_i\\): observed outcome for unit \\(i\\)\n\\(n\\): sample size\n\nThe predicted potential outcomes \\(\\widehat{Y}^{a=1}\\) and \\(\\widehat{Y}^{a=0}\\) are:\n\\[\n\\widehat{Y}_i^{a=1}\n=\n\\widehat{m}_1(X_i)\n+\n\\frac{A_i\\left(Y_i-\\widehat{m}_1(X_i)\\right)}\n{\\widehat{e}(X_i)}\n\\]\n\\[\n\\widehat{Y}_i^{a=0}\n=\n\\widehat{m}_0(X_i)\n+\n\\frac{(1-A_i)\\left(Y_i-\\widehat{m}_0(X_i)\\right)}\n{1-\\widehat{e}(X_i)}\n\\]\nWhen approaching new notation, it is helpful to scan for parts that resemble concepts you are already aware of.\n\nFirst, scan for parts that are related to using a model for \\(Y\\) to predict potential outcomes. What seems familiar?\nNext, scan for parts of \\(\\widehat{Y}_i^{a=1}\\) and \\(\\widehat{Y}_i^{a=0}\\) that seem related to inverse probability weighting. What seems familiar?\n\nNow let’s dig deeper into the formulas. For the questions below, focus on the \\(\\widehat{Y}_i^{a=1}\\) formula. (The thinking is parallel for the other formula.)\n\nIf we have an accurate model for \\(Y\\), what do you expect about the \\(Y_i-\\widehat{m}_1(X_i)\\) term? How does the formula simplify, and what is the implication of this?\nIf we have an accurate propensity score model, it turns out that \\(A_i/\\widehat{e}(X_i)\\) approaches 1 with large sample sizes. In this case, how does the formula simplify, and what is the implication of this?\nHow do the above two insights combine to form the doubly robust property?",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Model Specification / Doubly Robust Estimation</span>"
+    ]
+  },
+  {
+    "objectID": "activities/08-model-spec-doubly-robust.html#exercise-3-implement-the-aipw-estimator",
+    "href": "activities/08-model-spec-doubly-robust.html#exercise-3-implement-the-aipw-estimator",
+    "title": "8  Model Specification / Doubly Robust Estimation",
+    "section": "Exercise 3: Implement the AIPW estimator",
+    "text": "Exercise 3: Implement the AIPW estimator\nThe following functions implement the AIPW estimator as well as the IPW estimator and an estimator based on an outcome model. The code is complete, but step through the code slowly to ensure that the steps make sense.\n\nget_aipw_estimate &lt;- function(data, formula_Y, formula_A) {\n    # Fit outcome model\n    outcome_model &lt;- lm(formula_Y, data = data)\n    \n    # Fit propensity score model\n    ps_model &lt;- glm(formula_A, data = data, family = \"binomial\")\n    \n    # Predict each unit's outcome under A = 1 and A = 0\n    data_all_treated &lt;- data |&gt; mutate(A = 1)\n    data_all_ctrl &lt;- data |&gt; mutate(A = 0)\n    \n    m1_hat &lt;- predict(outcome_model, newdata = data_all_treated)\n    m0_hat &lt;- predict(outcome_model, newdata = data_all_ctrl)\n    \n    # Compute estimated propensity scores\n    e_hat &lt;- predict(ps_model, newdata = data, type = \"response\")\n    \n    # Compute AIPW estimates of ATE for each unit\n    aipw_Ya1 &lt;- m1_hat + data$A * (data$Y - m1_hat) / e_hat\n    aipw_Ya0 &lt;- m0_hat + (1 - data$A) * (data$Y - m0_hat) / (1 - e_hat)\n    \n    # Average the unit-level AIPW estimates to get overall estimate\n    mean(aipw_Ya1 - aipw_Ya0)\n}\n\nget_ipw_estimate &lt;- function(data, formula_A) {\n    # Fit propensity score model\n    ps_model &lt;- glm(formula_A, data = data, family = \"binomial\")\n    \n    # Compute ATE weights\n    data &lt;- data |&gt; \n        mutate(\n            ps = predict(ps_model, newdata = data, type = \"response\"),\n            w_ate = case_when(\n                A==1 ~ 1/ps,\n                A==0 ~ 1/(1-ps)\n            )\n        )\n    \n    # Compute a weighted mean as the treatment effect estimate\n    mod &lt;- lm(Y ~ A, data = data, weights = w_ate)\n    tidy(mod) %&gt;% filter(term==\"A\") %&gt;% pull(estimate)\n}\n\nget_regression_estimate &lt;- function(data, formula_Y) {\n    # Fit model\n    mod &lt;- lm(formula_Y, data = data)\n    \n    # Create a dataset where everyone is treated:\n    data_A1 &lt;- data |&gt; mutate(A = 1)\n    # Create a dataset where everyone is untreated:\n    data_A0 &lt;- data |&gt; mutate(A = 0)\n    \n    # Compute outcome predictions for both datasets\n    # The average difference is the ACE\n    mean(predict(mod, newdata = data_A1) - predict(mod, newdata = data_A0))\n}\n\nThe code below runs 100 iterations of a simulation study for each of 4 different sample sizes. In each iteration, we estimate the ATE using different methods.\n\nComplete the code by filling in the ??? part of formula_Y_correct and formula_A_correct which give the correctly specified model formulas for the outcome and propensity score models respectively.\nWhy do we have to run many (here, 100) simulations in order to compare the performance of different estimation methods?\n\n\nset.seed(451)\nrun_simulation_for_sample_size &lt;- function(n) {\n    sim_results &lt;- purrr::map(1:100, function(i) {\n        # Generate data\n        sim_data &lt;- tibble(\n            Z = rbinom(n, size = 1, prob = 0.5),\n            W = rbinom(n, size = 1, prob = 0.5),\n            p_A = log_odds_to_prob(-1 + 0.4*Z + 0.4*W + 0.9*Z*W),\n            A = rbinom(n, size = 1, prob = p_A),\n            mean_Y = 10 + 5*A + 6*Z + 7*W + 5*Z*W,\n            noise_Y = rnorm(n, 0, 2),\n            Y = mean_Y + noise_Y\n        )\n        \n        # Correctly specified model formulas\n        formula_Y_correct &lt;- Y ~ ???\n        formula_A_correct &lt;- A ~ ???\n        \n        # Misspecified model formulas\n        formula_Y_wrong &lt;- Y ~ A + Z + W\n        formula_A_wrong &lt;- A ~ Z + W\n        \n        # Scenario 1: Both correct\n        ate_1 &lt;- get_aipw_estimate(sim_data, formula_Y_correct, formula_A_correct)\n        \n        # Scenario 2: Both wrong\n        ate_2 &lt;- get_aipw_estimate(sim_data, formula_Y_wrong, formula_A_wrong)\n        \n        # Scenario 3: Y correct, A wrong\n        ate_3 &lt;- get_aipw_estimate(sim_data, formula_Y_correct, formula_A_wrong)\n        \n        # Scenario 4: Y wrong, A correct\n        ate_4 &lt;- get_aipw_estimate(sim_data, formula_Y_wrong, formula_A_correct)\n        \n        # Inverse probability weighting estimate\n        ate_ipw &lt;- get_ipw_estimate(sim_data, formula_A_correct)\n        \n        # Regression estimate\n        ate_reg &lt;- get_regression_estimate(sim_data, formula_Y_correct)\n        \n        # Collect the estimates\n        tibble(\n            scenario = c(\"Both correct\", \"Both wrong\", \"Y correct, A wrong\", \"Y wrong, A correct\", \"IPW (correct spec.)\", \"Regression (correct spec.)\"),\n            estimate = c(ate_1, ate_2, ate_3, ate_4, ate_ipw, ate_reg)\n        )\n    }) |&gt; bind_rows()\n    sim_results |&gt; mutate(n = n)\n}\n\nsim_results &lt;- purrr::map(c(100,500,1000,5000), run_simulation_for_sample_size) |&gt; bind_rows()\n\nCreate a plot that allows you to compare estimates across the different estimation methods and across sample sizes. Summarize your findings.\n\n# Your plot",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Model Specification / Doubly Robust Estimation</span>"
+    ]
+  },
+  {
+    "objectID": "activities/08-model-spec-doubly-robust.html#exercise-4-using-the-aipw-package",
+    "href": "activities/08-model-spec-doubly-robust.html#exercise-4-using-the-aipw-package",
+    "title": "8  Model Specification / Doubly Robust Estimation",
+    "section": "Exercise 4: Using the AIPW package",
+    "text": "Exercise 4: Using the AIPW package\nThe AIPW package provides functionality for using the AIPW estimator where the outcome and propensity score models can be estimated by a variety of machine learning models. Machine learning models have the power to be more flexible than regression models and can automatically account for interactions and nonlinearities in the data.\nThe code below creates a single simulated dataset and computes the AIPW estimator using regression, random forest, and boosting models for the outcome and propensity score models. (To learn about these methods, take STAT 253 Statistical Machine Learning!)\nTake a look at this documentation page and this example to see how the code was written.\n\nset.seed(451)\nn &lt;- 1000\nsim_data &lt;- tibble(\n    Z = rbinom(n, size = 1, prob = 0.5),\n    W = rbinom(n, size = 1, prob = 0.5),\n    p_A = log_odds_to_prob(-1 + 0.4*Z + 0.4*W + 0.9*Z*W),\n    A = rbinom(n, size = 1, prob = p_A),\n    mean_Y = 10 + 5*A + 6*Z + 7*W + 5*Z*W,\n    noise_Y = rnorm(n, 0, 2),\n    Y = mean_Y + noise_Y\n)\n\naipw &lt;- AIPW$new(\n    Y = sim_data$Y,\n    A = sim_data$A,\n    W = sim_data |&gt; select(Z, W),\n    # The lines below estimate the outcome and PS models\n    # using an *ensemble* of regression (glm), random forest (ranger),\n    # and boosting (xgboost) models\n    Q.SL.library = c(\"SL.glm\", \"SL.ranger\", \"SL.xgboost\"),\n    g.SL.library = c(\"SL.glm\", \"SL.ranger\", \"SL.xgboost\")\n)\n\naipw$fit()\n\nInspect the results below:\n\nThe ATE estimate is in the “Mean Difference” row. How close is the estimate to the truth?\nDoes the common support plot show good overlap between the groups? (Just as with matching, units that have a lack of overlap will not have a good match in the other group.)\nInspect the distribution of the weights to get a sense for if there are extreme weights that would make the estimate unstable/variable.\n\n\n# Display estimates\naipw$summary()\n\n# Make common support plots to compare the PS distribution in the treatment groups\naipw$plot.p_score()\n\n# Look at the distribution of the weights\naipw$plot.ip_weights()",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Model Specification / Doubly Robust Estimation</span>"
+    ]
+  },
+  {
     "objectID": "hw/assignment1.html",
     "href": "hw/assignment1.html",
     "title": "Assignment 1",
@@ -1041,94 +1184,6 @@
     "crumbs": [
       "Appendices",
       "R Resources"
-    ]
-  },
-  {
-    "objectID": "logistics/schedule.html#day11",
-    "href": "logistics/schedule.html#day11",
-    "title": "Schedule",
-    "section": "Day 1: Model misspecification/doubly robust estimation (10/13)",
-    "text": "Day 1: Model misspecification/doubly robust estimation (10/13)\nBefore class: No required reading or videos for today.\nDuring class:\n🍁 Fall Break: Thursday, October 15 - Sunday, October 18 🍁\n🍁 No class on Thursday, October 15 🍁",
-    "crumbs": [
-      "Course Logistics",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "logistics/schedule.html#day12",
-    "href": "logistics/schedule.html#day12",
-    "title": "Schedule",
-    "section": "Day 1: Sensitivity analyses for unmeasured confounding (10/20)",
-    "text": "Day 1: Sensitivity analyses for unmeasured confounding (10/20)\nBefore class: No required reading or videos for today.\nDuring class:",
-    "crumbs": [
-      "Course Logistics",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "logistics/schedule.html#day13",
-    "href": "logistics/schedule.html#day13",
-    "title": "Schedule",
-    "section": "Day 2: Regression discontinuity (10/22)",
-    "text": "Day 2: Regression discontinuity (10/22)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 20: Regression Discontinuity (~130 minutes)\n\nVideo alternatives:\n\nRegression Discontinuity (~10 minutes)\nEstimating Regression Discontinuity (~11 minutes)\nAdjustments to Regression Discontinuity (~8 minutes)\nChecking Regression Discontinuity Assumptions (~11 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 6: Regression Discontinuity (~170 minutes)",
-    "crumbs": [
-      "Course Logistics",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "logistics/schedule.html#day14",
-    "href": "logistics/schedule.html#day14",
-    "title": "Schedule",
-    "section": "Day 1: Interrupted time series (10/27)",
-    "text": "Day 1: Interrupted time series (10/27)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 17: Event Studies (~70 minutes)\n\nVideo alternatives:\n\nEvent Studies (~12 minutes)\nInterrupted Time Series (~8 minutes)\nEvent Studies in Finance (~11 minutes)",
-    "crumbs": [
-      "Course Logistics",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "logistics/schedule.html#day15",
-    "href": "logistics/schedule.html#day15",
-    "title": "Schedule",
-    "section": "Day 2: Synthetic control (10/29)",
-    "text": "Day 2: Synthetic control (10/29)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Section 21.2.1: Synthetic Control (~10 minutes)\n\nVideo alternatives:\n\nOther Standard Research Designs (~5 minutes) (Just the part on the synthetic control method)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 10: Synthetic Control (~70 minutes)",
-    "crumbs": [
-      "Course Logistics",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "logistics/schedule.html#day16",
-    "href": "logistics/schedule.html#day16",
-    "title": "Schedule",
-    "section": "Day 1: Fixed effects models (11/3)",
-    "text": "Day 1: Fixed effects models (11/3)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 16: Fixed Effects (~70 minutes)\n\nVideo alternatives:\n\nFixed Effects (~12 minutes)\nEstimating Fixed Effects (~8 minutes)\nRandom Effects (~6 minutes)",
-    "crumbs": [
-      "Course Logistics",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "logistics/schedule.html#day17",
-    "href": "logistics/schedule.html#day17",
-    "title": "Schedule",
-    "section": "Day 2: Difference-in-differences designs (11/5)",
-    "text": "Day 2: Difference-in-differences designs (11/5)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 18: Difference-in-Differences (~80 minutes)\n\nVideo alternatives:\n\nDifference in Differences (~11 minutes)\nParallel Trends (~9 minutes)\nEstimating Difference in Differences (~10 minutes)\nSupporting Parallel Trends (~9 minutes)\nDynamic Difference-in-Differences (~10 minutes)\nStaggered Treatment in Difference-in-Differences (~9 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 9: Difference-in-Differences (~230 minutes)",
-    "crumbs": [
-      "Course Logistics",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "logistics/schedule.html#day18",
-    "href": "logistics/schedule.html#day18",
-    "title": "Schedule",
-    "section": "Day 1: Instrumental variables (11/10)",
-    "text": "Day 1: Instrumental variables (11/10)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 19: Instrumental Variables (~85 minutes)\n\nVideo alternatives:\n\nInstrumental Variables (~10 minutes)\nInstrumental Variable Validity (~10 minutes)\nEstimating Instrumental Variables (~12 minutes)\nTesting Instrumental Variables Assumptions (~11 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 7: Instrumental Variables (~150 minutes)",
-    "crumbs": [
-      "Course Logistics",
-      "Schedule"
     ]
   }
 ]
