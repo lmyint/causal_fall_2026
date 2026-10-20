@@ -58,6 +58,8 @@ book:
           href: activities/07-weighting.qmd
         - icon: check2-all
           href: activities/08-model-spec-doubly-robust.qmd
+        - icon: exclamation-circle
+          href: activities/09-quantitative-bias-analysis.qmd
     - part: "Assignments"
       chapters:
         - hw/assignment1.qmd

@@ -945,6 +945,72 @@
     ]
   },
   {
+    "objectID": "activities/09-quantitative-bias-analysis.html",
+    "href": "activities/09-quantitative-bias-analysis.html",
+    "title": "9  Quantitative Bias Analysis",
+    "section": "",
+    "text": "Small Group Discussion\nSlides for today are available here.\nYou can download a template file for this activity here.\nlibrary(tidyverse)\nlibrary(broom)",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Quantitative Bias Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "activities/09-quantitative-bias-analysis.html#prompt-1",
+    "href": "activities/09-quantitative-bias-analysis.html#prompt-1",
+    "title": "9  Quantitative Bias Analysis",
+    "section": "Prompt 1",
+    "text": "Prompt 1\nTwo data-generating processes (DGP) are shown below for the smoking-lung cancer-genetic variant situation.\n\nWhat is the true causal effect of smoking on lung cancer on the risk difference (probability difference) scale? What estimand is this (the ATE, ATT, or ATC)? Write an interpretation for this effect.\nFor what DGP do you expect the estimated causal effect to be more biased? Explain your reasoning by indicating how the U-&gt;A and the U-&gt;Y affect the comparison of lung cancer rates across smokers and nonsmokers. Use numbers from the output in your explanation.\nCheck your hypothesis from part b by computing an unadjusted estimate of the causal effect (risk difference). (An unadjusted estimate only uses Y and A.)\nDo you think that DGP1 or DGP2 is more likely? Explain your rationale.\n\n\n# U = genetic variant (1 = present, 0 = absent) (unmeasured confounder)\n# A = smoking (1 = yes regular smoker, 0 = nonsmoker)\n# Y = lung cancer in lifetime (1 = yes, 0 = no)\nset.seed(451)\nn &lt;- 100000 # We are only running one simulation here because of the large n\n# DGP 1\nsim_data1 &lt;- tibble(\n    U = rbinom(n, size = 1, prob = 0.05),\n    A = rbinom(n, size = 1, prob = 0.1 + 0.1*U),\n    Y = rbinom(n, size = 1, prob = 0.05 + 0.45*A + 0.1*U)\n)\n# DGP 2\nsim_data2 &lt;- tibble(\n    U = rbinom(n, size = 1, prob = 0.05),\n    A = rbinom(n, size = 1, prob = 0.1 + 0.4*U),\n    Y = rbinom(n, size = 1, prob = 0.05 + 0.45*A + 0.45*U)\n)",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Quantitative Bias Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "activities/09-quantitative-bias-analysis.html#prompt-2",
+    "href": "activities/09-quantitative-bias-analysis.html#prompt-2",
+    "title": "9  Quantitative Bias Analysis",
+    "section": "Prompt 2",
+    "text": "Prompt 2\nThe following code implements a simulation study where the magnitudes of the associations between U and A and between U and Y vary from 0.01 to 0.51 on the risk difference scale. We can refer to these different association magnitudes as the sensitivity parameters.\nNote that the causal effect in the simulation is zero. We’ll return to this at the end.\n\nLooking at the plot of results, roughly how large do the sensitivity parameters have to be for the estimated relationship between Y and A to be 0.1 on the risk difference scale? What about if the estimated relationship between Y and A is a risk difference of 0.05?\nSuppose that using study data we estimated the causal effect to be 0.1 (without incorporating U because it’s unmeasured). Using the filter() code at the end, how large do the sensitivity parameters have to be for the confounding association to match or exceed the effect we estimated? How do you think we can use this information to say how robust our results are to bias from unmeasured confounding?\nWhy did we set the causal effect to be zero in these investigations?\n\n\nu_param_combos &lt;- expand_grid(\n    u_to_a = seq(0.01, by = 0.02, to = 0.51),\n    u_to_y = seq(0.01, by = 0.02, to = 0.51)\n)\n\nset.seed(451)\nsens_results &lt;- pmap_dbl(u_param_combos, function(u_to_a, u_to_y) {\n    # Set sample size\n    n &lt;- 100000\n    \n    # Generate data using U-&gt;A and U-&gt;Y parameters\n    sim_data &lt;- tibble(\n        U = rbinom(n, size = 1, prob = 0.05),\n        A = rbinom(n, size = 1, prob = 0.1 + u_to_a*U),\n        Y = rbinom(n, size = 1, prob = 0.05 + 0*A + u_to_y*U)\n    )\n    \n    # Estimate the relationship between Y and A as a mean difference\n    # The approach below is quicker than using lm()\n    sim_data |&gt; group_by(A) |&gt; summarize(mean_Y = mean(Y)) |&gt; pull(mean_Y) |&gt; diff()\n})\n\nsens_results &lt;- u_param_combos |&gt; \n    mutate(estim_effect = sens_results)\n\n# Plot how the estimated relationships between Y and A change\n# as the sensitivity analysis parameters change\nggplot(sens_results, aes(x = u_to_a, y = u_to_y, fill = estim_effect)) +\n    geom_raster() +\n    theme_classic() +\n    scale_fill_binned()\n\n# Show the exact values of the sensitivity parameters\n# that result in an estimated risk difference of at least 0.1\nsens_results |&gt; \n    filter(estim_effect &gt;= 0.1) |&gt; \n    arrange(estim_effect)",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Quantitative Bias Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "activities/09-quantitative-bias-analysis.html#exercise-1",
+    "href": "activities/09-quantitative-bias-analysis.html#exercise-1",
+    "title": "9  Quantitative Bias Analysis",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nSome conceptual questions about E-values:\n\nIf the estimated effect magnitude decreases, what do you expect would happen to the E-values? Explain. In other words, are smaller effects more or less robust to unmeasured confounding? (Feel free to run evalues.RR() for a few different estimates to check.)\nIn a given context, how might you go about investigating whether a given E-value is large? (For concreteness, you can use the smoking-lung cancer-genetics example.)\nSome researchers argue that usage of the E-value is prone to publication bias. That is, researchers are more likely to report E-value results if they show that their causal effect estimate is robust and not report them otherwise. What are your thoughts on this issue?",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Quantitative Bias Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "activities/09-quantitative-bias-analysis.html#exercise-2",
+    "href": "activities/09-quantitative-bias-analysis.html#exercise-2",
+    "title": "9  Quantitative Bias Analysis",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nThe E-value is one example of deterministic sensitivity analysis/deterministic quantitative bias analysis.\nThe article Monte Carlo Simulation Approaches for Quantitative Bias Analysis: A Tutorial describes other approaches, including a simulation-based approach.\n\nOpen this PDF of the article from Moodle.\nExamine Figure 4 at the top of page 6. This figure describes a simulation-based approach to quantitative bias analysis.\n\nIf you’d like more detail about the steps, you can skim/read the section “APPROACH 2: BIAS ANALYSIS APPROACHES INVOLVING DATA GENERATION” starting at the bottom of page 5.\n\nHow similar is this process to the simulation studies we’ve done in class?\nThe authors make the claim: “An advantage of this approach is that it can be used to evaluate the plausibility of specific hypotheses related to bias that are difficult, or impossible, to investigate using real data.”\n\nDo you agree with this claim? Explain.\nWhat might be some downsides to this approach?",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Quantitative Bias Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "activities/09-quantitative-bias-analysis.html#exercise-3",
+    "href": "activities/09-quantitative-bias-analysis.html#exercise-3",
+    "title": "9  Quantitative Bias Analysis",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nUnmeasured confounding is one source of bias in a causal analysis. Another important one is measurement error. In this exercise we’ll explore the potential for simulation to perform nuanced investigations about the impact of measurement error.\nSuppose we knew that non-white race and low socioeconomic status increased the rate of misclassification of a binary covariate X. Using the steps of the simulation-based approach in the previous exercise, plan a simulation study to investigate how much this misclassification could bias results.\n\nDraw a causal graph that would underpin this investigation.\nFor the other steps, provide general descriptions of implementation.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Quantitative Bias Analysis</span>"
+    ]
+  },
+  {
     "objectID": "hw/assignment1.html",
     "href": "hw/assignment1.html",
     "title": "Assignment 1",
