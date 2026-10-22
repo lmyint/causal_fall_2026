@@ -80,6 +80,8 @@ Hilton Boon et al ([2021](http://dx.doi.org/10.1097/EDE.0000000000001274)) provi
 
 ![](https://www.theeffectbook.net/the-effect_files/figure-html/regressiondiscontinuity-treatmentshare-1.png){fig-alt="Difference betwen sharp and fuzzy regression discontinuity designs. Both panels show the proportion treated as a function of the cutoff.}
 
+The distinction between sharp and fuzzy designs matter because in fuzzy designs, the cutoff causes a smaller change in the proportion of units treated, so any changes we see in the outcome at the cutoff need to take that into account.
+
 We'll focus on sharp RDDs for now. We'll revisit fuzzy RDDs after we talk about instrumental variables.
 
 
@@ -359,6 +361,19 @@ rdrobust(y = dwi$white, x = dwi$bac_centered, c = 0) |> summary()
 rdrobust(y = dwi$acc, x = dwi$bac_centered, c = 0) |> summary()
 rdrobust(y = dwi$aged, x = dwi$bac_centered, c = 0) |> summary()
 ```
+
+
+
+
+
+
+# Synthesis {.unnumbered}
+
+- If you were to explain the RD design in a capstone presentation, what slides would you create, and what would you plan to say on each slide?
+- Why do we need different methods for sharp and fuzzy RD designs?
+- Why is it important to assess potential manipulation of the running variable?
+- How do we interpret the treatment effect from RDD? What are the strengths and limitations of this?
+- Why is it important to conduct placebo tests in an RDD?
 
 
 

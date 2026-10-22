@@ -597,6 +597,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#step-4-placebo-tests" id="toc-step-4-placebo-tests" class="nav-link" data-scroll-target="#step-4-placebo-tests">Step 4: Placebo tests</a></li>
   </ul></li>
+  <li><a href="#synthesis" id="toc-synthesis" class="nav-link" data-scroll-target="#synthesis">Synthesis</a></li>
   </ul>
 </nav>
     </div>
@@ -698,6 +699,7 @@ window.Quarto = {
 <li>Scenario 2 is a fuzzy RDD because the probability of treatment changes sharply at the cutoff but not necessarily from 0 to 1.</li>
 </ul>
 <p><img src="https://www.theeffectbook.net/the-effect_files/figure-html/regressiondiscontinuity-treatmentshare-1.png" class="img-fluid">{fig-alt=“Difference betwen sharp and fuzzy regression discontinuity designs. Both panels show the proportion treated as a function of the cutoff.}</p>
+<p>The distinction between sharp and fuzzy designs matter because in fuzzy designs, the cutoff causes a smaller change in the proportion of units treated, so any changes we see in the outcome at the cutoff need to take that into account.</p>
 <p>We’ll focus on sharp RDDs for now. We’ll revisit fuzzy RDDs after we talk about instrumental variables.</p>
 </section>
 <section id="continuity-assumption" class="level2 unnumbered">
@@ -906,9 +908,19 @@ E[\text{recidivism} \mid \text{BAC, DUI}] = \beta_0 + \beta_1 (BAC-0.08) + \beta
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rdrobust</span>(<span class="at">y =</span> dwi<span class="sc">$</span>acc, <span class="at">x =</span> dwi<span class="sc">$</span>bac_centered, <span class="at">c =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> <span class="fu">summary</span>()</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rdrobust</span>(<span class="at">y =</span> dwi<span class="sc">$</span>aged, <span class="at">x =</span> dwi<span class="sc">$</span>bac_centered, <span class="at">c =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> <span class="fu">summary</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-
-
 </section>
+</section>
+<section id="synthesis" class="level1 unnumbered">
+<h1 class="unnumbered">Synthesis</h1>
+<ul>
+<li>If you were to explain the RD design in a capstone presentation, what slides would you create, and what would you plan to say on each slide?</li>
+<li>Why do we need different methods for sharp and fuzzy RD designs?</li>
+<li>Why is it important to assess potential manipulation of the running variable?</li>
+<li>How do we interpret the treatment effect from RDD? What are the strengths and limitations of this?</li>
+<li>Why is it important to conduct placebo tests in an RDD?</li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
