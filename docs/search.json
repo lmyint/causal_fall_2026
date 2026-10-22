@@ -1011,6 +1011,160 @@
     ]
   },
   {
+    "objectID": "activities/10-rdd.html",
+    "href": "activities/10-rdd.html",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "",
+    "text": "Small Group Discussion\nYou can download a template file for this activity here.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/10-rdd.html#prompt-1",
+    "href": "activities/10-rdd.html#prompt-1",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "Prompt 1",
+    "text": "Prompt 1\nSuppose Macalester’s Sustainability office did a study of the impact of the green-to-go containers on students’ perception of sustainability efforts at the college. They did a matching analysis and found that on average, students who used the containers were 70% more likely to have a more positive perception of college sustainability efforts than they would have had they not used the containers.\n\nWhat causal effect is this? (ATE, ATT, or ATC)\nWhat steps should Mac’s Sustainability office have taken before conducting matching?\n\nA critic comes in and says “The containers don’t do anything for students’ perceptions! It’s because you didn’t account for prior engagement in sustainability efforts!”\n\nWhat role would calculating an E-value or undertaking a simulation-based quantitative bias analysis play here?\n\nSuppose we calculated an E-value of 4.\n\nInterpret this E-value by explaining what it says about the associations between the unmeasured confounder, treatment, and outcome?\nHow could you investigate whether this E-value is high or low?\nHow would we put all of these results together to assess the robustness of the estimated causal effect?",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/10-rdd.html#prompt-2",
+    "href": "activities/10-rdd.html#prompt-2",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "Prompt 2",
+    "text": "Prompt 2\nSuppose we are studying the effect of a tutoring program on reading scores on the state’s standardized test. 3rd graders take a pre-test and all 3rd graders who score below a 50% on the test are required to enroll in the tutoring program. No one with scores above 50% enroll.\n\nDraw a plot of how you would expect pre-test scores to relate to scores on the standardized test (in the absence of the tutoring program).\nUpdate your plot to show what might happen if the tutoring program has a beneficial impact. Label the estimated causal impact on your plot.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/10-rdd.html#big-idea",
+    "href": "activities/10-rdd.html#big-idea",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "Big idea",
+    "text": "Big idea\n\nCutoff on a continuous variable assigns units to treatment vs. control.\n\nCalled the running or forcing variable and often denoted as \\(X\\)\n\nAre units just above the cutoff vs. just below really all that different?\n\nProbably not, and that’s helpful to us!\nThose just above the cutoff are good guesses for the counterfactual outcome for those just below, and vice versa.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/10-rdd.html#examples",
+    "href": "activities/10-rdd.html#examples",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "Examples",
+    "text": "Examples\n\nElections: Cutoff at 50% determines party in governance within a geographical unit\n\nVariety of social, political, and economic outcomes of interest\nAre districts with 50.1% of votes for Democrats really different from those with 49.9%?\nThe former are definitely governed by Democrats, and the latter are not.\n\nEnvironmental exposures: Thresholds define “high” levels of exposure\n\nRadon test when buying a home: if measured radon exceeds 4 pCi/L (picocuries/liter), seller is more likely to pay for a radon mitigation system as part of closing the deal.\nAre homes with 4 pCi/L really different from those with 3.9 pCi/L?\nThe former are more likely to have a radon mitigation system.\n\n\nHilton Boon et al (2021) provide an overview of forcing variables that are commonly used in health studies—take (see Table 1).",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/10-rdd.html#sharp-vs.-fuzzy-rdds",
+    "href": "activities/10-rdd.html#sharp-vs.-fuzzy-rdds",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "Sharp vs. fuzzy RDDs",
+    "text": "Sharp vs. fuzzy RDDs\n\nScenario 1: Districts with over 50% of votes for a candidate are wholly governed by that candidate.\nScenario 2: Homes with over 4 pCi/L of radon don’t always get a radon mitigation system.\nScenario 1 is a sharp RDD because the probability of treatment goes from 0 to 1 at the cutoff.\nScenario 2 is a fuzzy RDD because the probability of treatment changes sharply at the cutoff but not necessarily from 0 to 1.\n\n{fig-alt=“Difference betwen sharp and fuzzy regression discontinuity designs. Both panels show the proportion treated as a function of the cutoff.}\nWe’ll focus on sharp RDDs for now. We’ll revisit fuzzy RDDs after we talk about instrumental variables.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/10-rdd.html#continuity-assumption",
+    "href": "activities/10-rdd.html#continuity-assumption",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "Continuity assumption",
+    "text": "Continuity assumption\nThe continuity assumption is the identification assumption underlying RDDs.\nIt says that the potential outcomes as functions of the running variable \\(X\\) are continuous.\nThis allows us to identify the treatment effect as the size of the discontinuity at the cutoff. Notably, this means that our estimand is a local average treatment effect. It is a treatment effect (expected difference in potential outcomes only for units close to the cutoff).",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/10-rdd.html#analyzing-an-rdd-overview",
+    "href": "activities/10-rdd.html#analyzing-an-rdd-overview",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "Analyzing an RDD: overview",
+    "text": "Analyzing an RDD: overview\n\nDetermine if the RDD is sharp or fuzzy\nAssess potential manipulation of the running variable (via context and inspecting the data)\nEstimate treatment effect\nPlacebo tests",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/10-rdd.html#data-context",
+    "href": "activities/10-rdd.html#data-context",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "Data context",
+    "text": "Data context\nHansen, Benjamin. 2015. “Punishment and Deterrence: Evidence from Drunk Driving.” American Economic Review, 105 (4): 1581–1617. Link.\n\nThis paper offers quasi-experimental evidence concerning the effects that punishment severity has on the commission of future crimes. Taking advantage of administrative records on 512,964 DUI stops from the state of Washington (WA), I exploit discrete thresholds that determine both the current as well as potential future punishments for drunk drivers. Specifically, in WA [blood alcohol content] (BAC) measured above 0.08 is considered a DUI while a BAC above 0.15 is considered an aggravated DUI, or a DUI that results in higher fines, increased jail time, and a longer license suspension period. Importantly, the statutory future penalties increase for each DUI received, regardless of whether the previous offense was an ordinary DUI or aggravated DUI. The quantifiable nature of BAC, use of thresholds to determine punishment severity, and the inability of either drivers or police to manipulate BAC allows for a unique quasi-experiment to test whether the harsher punishments and sanctions offenders experience at the BAC thresholds are effective in reducing drunk driving.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/10-rdd.html#read-in-data",
+    "href": "activities/10-rdd.html#read-in-data",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "Read in data",
+    "text": "Read in data\n\nlibrary(tidyverse)\nlibrary(rdrobust)\nlibrary(rddensity)\n\ndwi &lt;- haven::read_dta(\"https://github.com/scunning1975/causal-inference-class/raw/master/hansen_dwi.dta\")\n\ndwi &lt;- dwi %&gt;% \n    select(-c(Alcohol1, Alcohol2, bac2)) %&gt;% \n    rename(bac = bac1)\n\nCodebook\n\nrecidivism: Outcome (1 if the unit committed an offense after the breathalyzer, 0 otherwise)\nbac: Blood alcohol content (running/forcing variable)\nlow_score: portable breath test (PBT) value\nmale: Indicator of male sex\nwhite: Indicator of white race\nacc: Indicator of an accident at the scene\naged: Age in years\n\nWe create a treatment variable called dui that equals 1 if bac &gt;= 0.08 and 0 otherwise. For convenience, we also create a centered version of bac (centered at 0.08) so that values greater than 0 indicate being above the DUI cutoff.\n\ndwi &lt;- dwi %&gt;% \n    mutate(\n        dui = bac &gt;= 0.08,\n        bac_centered = bac - 0.08\n    )",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/10-rdd.html#step-1-sharp-or-fuzzy",
+    "href": "activities/10-rdd.html#step-1-sharp-or-fuzzy",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "Step 1: Sharp or fuzzy?",
+    "text": "Step 1: Sharp or fuzzy?\nThe treatment of interest in our study is being subject to a DUI law (fines, jail time, and a period of driver’s license suspension if DUI is above 0.08). We want to understand the impact of this punishment on the chance of repeat offenses (recidivism).\nQuestion: Is this a sharp or fuzzy RD design and why?",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/10-rdd.html#step-2-assess-potential-manipulation-of-the-running-variable",
+    "href": "activities/10-rdd.html#step-2-assess-potential-manipulation-of-the-running-variable",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "Step 2: Assess potential manipulation of the running variable",
+    "text": "Step 2: Assess potential manipulation of the running variable\n\nVia context\nThe study needs to describe how the values of the running variable were determined (often called a scoring process) and how treatment was assigned based on the values of the running variable. This description should include:\n\nWhat running variable was used? Who determined values of the running variables? (e.g., Who scored a test?)\nWhat cutoff value was selected? Who selected the cutoff?\nWhen was the cutoff selected relative to when the values of the running variable were determined?\n\n\n\nVia plots\nFirst make a histogram. Default bin settings (binwidth, # of bins) might not always be what you want.\n\nset.seed(451)\nx &lt;- rnorm(1000, 0, 1) # Generate 1000 values from a std. normal distribution\nx[x &gt; 0] &lt;- x[x &gt; 0] + 0.05 # Shift the positive x's up by 0.05 to create a discontinuity in the density\nsim_data &lt;- tibble(\n    x_discont = round(x, 3)\n)\n\nggplot(sim_data, aes(x = x_discont)) +\n    geom_histogram() +\n    labs(title = \"Default binwidth (30 bins)\") +\n    theme_classic()\nggplot(sim_data, aes(x = x_discont)) +\n    geom_histogram(bins = nrow(sim_data)/10) +\n    labs(title = \"~10 cases per bin\") +\n    theme_classic()\n\n\n\nVia tests\nThe rddensity() functions tests for possible manipulation by testing the null hypothesis that the density of the running variable is smooth (continuous). Rejecting the null hypothesis makes the claim that there was some sort of discontinuity (possible manipulation) in the running variable.\nThe key arguments are:\n\nX: the running variable (in vector form)\nc: the cutoff on the running variable\nfitselect: how the density of X should be estimated. Let’s look at the documentation page by entering ?rddensity in the Console.\n\n\nrddens_res_unrestricted &lt;- rddensity(X = sim_data$x_discont, c = 0, fitselect = \"unrestricted\")\nsummary(rddens_res_unrestricted)\n\nrddens_res_restricted &lt;- rddensity(X = sim_data$x_discont, c = 0, fitselect = \"restricted\")\nsummary(rddens_res_restricted)\n\nThe top part of the output tells us how the command was run. In the second part of the output, we want to pay attention to the “Number of obs” and “Eff. Number of obs”, which give the sample size and effective sample size (after considering units with duplicate X values).\nThe third part of the output is the test statistic and p-value.\nThe fourth part of the output (p-values from binomial test) is one that we would generally ignore because it claims that if there is no manipulation, the proportions of cases in small windows above and below the cutoff should be 0.5, which won’t be true for curved distributions that are indeed continuous.\n\nWe cam use a simulation study to better understand the difference between fitselect = \"unrestricted\" and fitselect = \"restricted\":\n\nset.seed(451)\nsystem.time({\nfitselect_sim_results &lt;- purrr::map(1:1000, function(i) {\n    x &lt;- rnorm(1000, 0, 1)\n    x[x &gt; 0] &lt;- x[x &gt; 0] + 0.05\n    sim_data &lt;- tibble(\n        x_discont = round(x, 3),\n        x_cont = rnorm(1000, 0, 1) %&gt;% round(3)\n    )\n    \n    res_discont_unrestricted &lt;- rddensity(X = sim_data$x_discont, c = 0, fitselect = \"unrestricted\")\n    res_cont_unrestricted &lt;- rddensity(X = sim_data$x_cont, c = 0, fitselect = \"unrestricted\")\n    res_discont_restricted &lt;- rddensity(X = sim_data$x_discont, c = 0, fitselect = \"restricted\")\n    res_cont_restricted &lt;- rddensity(X = sim_data$x_cont, c = 0, fitselect = \"restricted\")\n    \n    tibble(\n        pval = c(res_discont_unrestricted$test$p_jk, res_cont_unrestricted$test$p_jk, res_discont_restricted$test$p_jk, res_cont_restricted$test$p_jk),\n        fitselect = rep(c(\"unrestricted\", \"restricted\"), each = 2),\n        type = rep(c(\"Discontinuous in X\", \"Continuous in X\"), 2)\n    )\n}) |&gt; bind_rows()\n})\n\nggplot(fitselect_sim_results, aes(x = fitselect, y = pval)) +\n    geom_boxplot() +\n    facet_grid(~type) +\n    theme_classic()\n\nfitselect_sim_results %&gt;% \n    group_by(fitselect, type) %&gt;% \n    count(pval &lt; 0.05)\n\nWe don’t see much of a difference between the two fitselect options in the left panel (when there is no manipulation).\nWe see that in the “Discontinuous in X” panel, the “restricted” option results in lower p-values, which translates to better power to detect manipulation when it exists.\n\n\nApplication to the DWI data\nExercise: Evaluate potential manipulation of the running variable in the DWI study using (1) data context, (2) plots, and (3) statistical testing.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/10-rdd.html#step-3-estimate-treatment-effect",
+    "href": "activities/10-rdd.html#step-3-estimate-treatment-effect",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "Step 3: Estimate treatment effect",
+    "text": "Step 3: Estimate treatment effect\n\nGet a sense of the treatment effect with a plot\nExercise: Make a plot that shows the trend in our outcome (recidivism) as a function of our running variable (bac_centered) both before and after the cutoff. Is there a clear discontinuity?\n\n\nGlobal model\nTo get a sense for things, we can first fit a global model using all of our data. This is a reasonable main model to fit if the RDD plot above (Y vs running variable) shows linear relationships before and after the cutoff.\nNote that when fitting a global model the importance of correct functional form becomes quite important:\n\nIn our DWI study, let’s fit the following model:\n\\[\nE[\\text{recidivism} \\mid \\text{BAC, DUI}] = \\beta_0 + \\beta_1 (BAC-0.08) + \\beta_2 DUI + \\beta_3 DUI (BAC-0.08)\n\\]\n\nlm(recidivism ~ bac_centered*dui, data = dwi) |&gt; \n    summary()\n\nExercise: What coefficient corresponds to our estimate of the treatment effect? How can we interpret this treatment effect? Also make sure that you know what the other coefficients represent.\n\n\nLocal model\nIf we’re not confident that a global model is a good fit for our data, we can focus on just modeling the small region near the cutoff.\nAn ad-hoc way to do this would be to use the same process as with our global model but filter our cases down to a small window about the cutoff:\n\nlm(recidivism ~ bac_centered*dui, \n   data = dwi |&gt; filter(abs(bac_centered) &lt; 0.05)) |&gt; \n    summary()\n\nA better alternative is to use the rdrobust which chooses the bandwidth (window size around the cutoff) for us, implements local regression, and provides us standard error estimates that account for unequal variance (heteroskedasticity) and adjust for bias in standard error estimation:\n\nrd_all_data &lt;- rdrobust(y = dwi$recidivism, x = dwi$bac_centered, c = 0)\nsummary(rd_all_data)",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
+    "objectID": "activities/10-rdd.html#step-4-placebo-tests",
+    "href": "activities/10-rdd.html#step-4-placebo-tests",
+    "title": "10  Regression Discontinuity Designs",
+    "section": "Step 4: Placebo tests",
+    "text": "Step 4: Placebo tests\nA placebo test is a test for which we expect to not reject the null hypothesis.\nIf the theoretical underlying causal graph for RDD is true, then RDD is like a randomized experiment near the cutoff on the running variable. We can run identical RDD analyses except replacing our outcome with covariates that we expect to be balanced around the cutoff:\nExercise: Summarize your finding from the following placebo tests.\n\nrdrobust(y = dwi$male, x = dwi$bac_centered, c = 0) |&gt; summary()\nrdrobust(y = dwi$white, x = dwi$bac_centered, c = 0) |&gt; summary()\nrdrobust(y = dwi$acc, x = dwi$bac_centered, c = 0) |&gt; summary()\nrdrobust(y = dwi$aged, x = dwi$bac_centered, c = 0) |&gt; summary()",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Regression Discontinuity Designs</span>"
+    ]
+  },
+  {
     "objectID": "hw/assignment1.html",
     "href": "hw/assignment1.html",
     "title": "Assignment 1",
