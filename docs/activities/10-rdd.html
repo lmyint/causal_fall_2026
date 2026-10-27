@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../hw/assignment1.html" rel="next">
+<link href="../activities/11-its.html" rel="next">
 <link href="../activities/09-quantitative-bias-analysis.html" rel="prev">
 <link href="../images/451_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -488,6 +488,13 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Regression Discontinuity Designs</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/11-its.html" class="sidebar-item-text sidebar-link"><i class="bi bi-graph-up-arrow" role="img">
+</i> 
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interrupted time series designs</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -698,7 +705,7 @@ window.Quarto = {
 <li>Scenario 1 is a sharp RDD because the probability of treatment goes from 0 to 1 at the cutoff.</li>
 <li>Scenario 2 is a fuzzy RDD because the probability of treatment changes sharply at the cutoff but not necessarily from 0 to 1.</li>
 </ul>
-<p><img src="https://www.theeffectbook.net/the-effect_files/figure-html/regressiondiscontinuity-treatmentshare-1.png" class="img-fluid">{fig-alt=“Difference betwen sharp and fuzzy regression discontinuity designs. Both panels show the proportion treated as a function of the cutoff.}</p>
+<p><img src="https://www.theeffectbook.net/the-effect_files/figure-html/regressiondiscontinuity-treatmentshare-1.png" class="img-fluid" alt="Difference betwen sharp and fuzzy regression discontinuity designs. Both panels show the proportion treated as a function of the cutoff."></p>
 <p>The distinction between sharp and fuzzy designs matter because in fuzzy designs, the cutoff causes a smaller change in the proportion of units treated, so any changes we see in the outcome at the cutoff need to take that into account.</p>
 <p>We’ll focus on sharp RDDs for now. We’ll revisit fuzzy RDDs after we talk about instrumental variables.</p>
 </section>
@@ -707,6 +714,15 @@ window.Quarto = {
 <p>The continuity assumption is the identification assumption underlying RDDs.</p>
 <p>It says that the potential outcomes as functions of the running variable <span class="math inline">\(X\)</span> are continuous.</p>
 <p>This allows us to identify the treatment effect as the size of the discontinuity at the cutoff. Notably, this means that our estimand is a <strong>local average treatment effect</strong>. It is a treatment effect (expected difference in potential outcomes only for units close to the cutoff).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="10-rdd_files/figure-html/10_rdd_continuity_assumption-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="analyzing-an-rdd-overview" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="analyzing-an-rdd-overview">Analyzing an RDD: overview</h2>
@@ -1344,8 +1360,8 @@ E[\text{recidivism} \mid \text{BAC, DUI}] = \beta_0 + \beta_1 (BAC-0.08) + \beta
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../hw/assignment1.html" class="pagination-link" aria-label="Assignment 1">
-        <span class="nav-page-text">Assignment 1</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../activities/11-its.html" class="pagination-link" aria-label="Interrupted time series designs">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interrupted time series designs</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

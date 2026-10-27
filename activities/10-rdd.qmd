@@ -78,7 +78,7 @@ Hilton Boon et al ([2021](http://dx.doi.org/10.1097/EDE.0000000000001274)) provi
 - Scenario 1 is a sharp RDD because the probability of treatment goes from 0 to 1 at the cutoff.
 - Scenario 2 is a fuzzy RDD because the probability of treatment changes sharply at the cutoff but not necessarily from 0 to 1.
 
-![](https://www.theeffectbook.net/the-effect_files/figure-html/regressiondiscontinuity-treatmentshare-1.png){fig-alt="Difference betwen sharp and fuzzy regression discontinuity designs. Both panels show the proportion treated as a function of the cutoff.}
+![](https://www.theeffectbook.net/the-effect_files/figure-html/regressiondiscontinuity-treatmentshare-1.png){fig-alt="Difference betwen sharp and fuzzy regression discontinuity designs. Both panels show the proportion treated as a function of the cutoff."}
 
 The distinction between sharp and fuzzy designs matter because in fuzzy designs, the cutoff causes a smaller change in the proportion of units treated, so any changes we see in the outcome at the cutoff need to take that into account.
 
@@ -94,7 +94,9 @@ It says that the potential outcomes as functions of the running variable $X$ are
 
 This allows us to identify the treatment effect as the size of the discontinuity at the cutoff. Notably, this means that our estimand is a **local average treatment effect**. It is a treatment effect (expected difference in potential outcomes only for units close to the cutoff).
 
-```{r echo=FALSE}
+```{r 10_rdd_continuity_assumption, echo=FALSE, eval=TRUE, message=FALSE}
+library(tidyverse)
+
 n <- 1000
 set.seed(451)
 sim_data <- tibble(

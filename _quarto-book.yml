@@ -62,6 +62,16 @@ book:
           href: activities/09-quantitative-bias-analysis.qmd
         - icon: graph-up
           href: activities/10-rdd.qmd
+        - icon: graph-up-arrow
+          href: activities/11-its.qmd
+        # - icon: back
+        #   href: activities/12-synthetic-control.qmd
+        # - icon: bar-chart-steps
+        #   href: activities/13-fixed-effects.qmd
+        # - icon: columns-gap
+        #   href: activities/14-did.qmd
+        # - icon: gear-fill
+        #   href: activities/15-iv.qmd
     - part: "Assignments"
       chapters:
         - hw/assignment1.qmd

@@ -382,7 +382,7 @@ If you would like to have an additional reference throughout the course that lea
 - *Mixtape* [Chapter 6: Regression Discontinuity](https://mixtape.scunning.com/06-regression_discontinuity) (~170 minutes)
 :::
 
-<!-- **During class:** [Regression discontinuity designs](../activities/11-rdd.qmd) -->
+**During class:** [Regression discontinuity designs](../activities/10-rdd.qmd)
 
 
 
@@ -404,7 +404,7 @@ If you would like to have an additional reference throughout the course that lea
         - [Event Studies in Finance](https://youtu.be/1cBKzjp4_MI) (~11 minutes)
 :::
 
-<!-- **During class:** [Event studies / interrupted time series](../activities/12-es-its-synth.qmd) -->
+**During class:** [Interrupted time series designs](../activities/11-its.qmd)
 
 ## Day 2: Synthetic control (10/29) {#day15}
 

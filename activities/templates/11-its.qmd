@@ -1,0 +1,310 @@
+---
+title: "Interrupted time series designs"
+author: "YOUR NAME"
+format: 
+  html:
+    embed-resources: true
+    toc: true
+---
+
+# Small Group Discussion
+
+## Prompt 1
+
+Suppose we have data from a regression discontinuity design (RDD) with running variable $X$, binary treatment variable $A$, and several pre-treatment covariates.
+
+Suppose we fit the following model. What is the interpretation of the $\beta_2$ coefficient, and what do we expect about this coefficient in an RDD? Explain.
+
+$$
+E[\text{covariate} \mid X, A] = \beta_0 + \beta_1 (X-c) + \beta_2 A + \beta_3 A (X-c)
+$$
+
+## Prompt 2
+
+What are some similarities and differences between RDDs and interrupted time series designs?
+
+## Prompt 3
+
+Let's examine how interrupted time series ideas are relevant in an environmental policy context.
+
+Minnesota uses two different methods for dealing with trash: (1) disposing of trash in landfills and (2) burning trash in incinerators. Advocates who oppose incineration for its health impacts on surrounding communities also point to incineration as a barrier to building a just system that is waste-free (also called **Zero Waste**) because of the large financial resources that incineration requires.
+
+A [Hennepin County staff report](https://www.hennepincounty.gov/-/media/hennepinus/your-government/projects-initiatives/solid-waste-planning/herc-report-board-briefing-september212023.pdf) takes issue with the position of advocates.
+
+- Navigate to the report and read the paragraph at the bottom of page 29 ("Advocates for...").
+- Examine Figures 9 and 10 on page 30. What do these figures show? What do they not show? Do these figures support the position of the County or advocates? What interrupted time series ideas are you drawing on to make these assessments?
+
+
+
+<br><br><br><br>
+
+
+
+# Discussion
+
+## What are interrupted time series designs?
+
+Interrupted times series (event studies) are a natural study design for assessing causal effects:
+
+- An event happens
+- Then we compare what was happening before and after the event (hence the name "event study")
+- To frame it another way, we have a time series of the outcome evolving over time, an event happens, and that time series gets interrupted and changes after the event (hence the name "interrupted time series" (ITS))
+
+![](https://www.theeffectbook.net/the-effect_files/figure-html/eventstudies-twoexamples-1.png)
+
+
+
+## Autocorrelation
+
+**Autocorrelation** is an important statistical consideration when looking at ITS data: the outcome at a given time will almost certainly be correlated with the outcome at previous times.
+
+- We need to account for this autocorrelation when estimating standard errors.
+- If we don't, we will likely underestimate standard errors.
+    - Correlation between cases reduces the effective sample size. If we have two observations that are highly correlated, we don't really have two full units of information.
+    - In the most extreme case, we could take our dataset and just copy and paste it twice. We really only have one dataset's worth of information even if we have twice as many cases.
+
+
+
+## History bias
+
+An ITS design is rather similar to a regression discontinuity design with time as the running variable.
+
+But when time is the running variable, an important source of bias is relevant: **history bias**. 
+
+- This refers to the fact that other events that influence the outcome can happen at (or around) the same time as the intervention.
+- e.g., If the intervention is a new law, confounding events could include other laws that were introduced at roughly the same time or major economic events (like recessions).
+- We need to think carefully about the data context to identify confounding historical events.
+
+
+
+## Comparative interrupted time series
+
+A **comparative interrupted time series design** is an extension of the ITS that not only looks at the outcome time series in the treatment unit(s) but also in **control units**.
+
+- Control units will not have experienced the intervention during the time period under study but SHOULD have experienced the confounding events.
+
+One example:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Wow this is a pretty compelling comparative interrupted time series graph. Don&#39;t usually see such a stark effect. <a href="https://t.co/VCPLwUrXby">https://t.co/VCPLwUrXby</a></p>&mdash; Elizabeth Stuart (@Lizstuartdc) <a href="https://twitter.com/Lizstuartdc/status/1302604052753244161?ref_src=twsrc%5Etfw">September 6, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Another example: [Figure 3](https://academic.oup.com/view-large/figure/226574210/dyaa152f3.tif) from the article [Can synthetic controls improve causal inference in interrupted time series evaluations of public health interventions?](https://doi.org/10.1093/ije/dyaa152)
+
+
+
+## Modeling for CITS
+
+**Exercise:** A general model for the trends in outcomes before and after the intervention in treatment and control units is given below. (This model doesn't adjust for any seasonal cyclic fluctuations in the outcome. Accounting for seasonality doesn't change the fundamental insights from this exercise.)
+
+Variables:
+
+- `post`: 1 if observation is in the post-intervention time period, 0 if in pre-period
+- `treated`: 1 if observation is from a treated unit, 0 if control
+- `T`: time (will be centered at the time of intervention $T_0$)
+
+$$
+E[Y \mid \text{post,treated},T] = \beta_0 + \beta_1\text{post} + \beta_2\text{treated} + \beta_3(T-T_0) + \beta_4\text{post}\times\text{treated} + \beta_5\text{treated}\times(T-T_0) + \beta_6\text{post}\times (T-T_0) + \beta_7\text{post}\times\text{treated}\times (T-T_0)
+$$
+
+Write out the model formulas for $Y$ as a function of (centered) time ($T-T_0$) in the treated and controls units, in the pre-intervention and post-intervention periods. Draw a diagram showing the 4 trends. Label slopes and intercepts.
+
+- What coefficient(s) govern how similar the treatment and control units are in the pre-intervention time period?
+- What coefficient(s) govern the discontinuity in the trend at $T_0$?
+
+
+
+## Selection of control units
+
+Our upcoming data example: what was the effect of Florida's 2005 Stand Your Ground law on homicide rates and homicide rates by firearm?
+
+- Control states: New York, New Jersey, Ohio, and Virginia
+
+
+Selection of control units:
+
+- In the CITS design, choosing control units can be a difficult process:
+    - Choose units that don't experience the intervention but do experience the hypothesized confounding event and have "similar" characteristics to the treated units.
+    - Matching can be helpful here!
+
+
+
+
+
+# Data exploration
+
+Before continuing, install required packages by entering `install.packages(c("sandwich", "lmtest"))` in the Console.
+
+We will be looking at data from the article [Can synthetic controls improve causal inference in interrupted time series evaluations of public health interventions?](https://doi.org/10.1093/ije/dyaa152)
+
+> **Research question:** What was the effect of Florida's 2005 Stand Your Ground law on homicide rates and homicide rates by firearm?
+
+Codebook: 16 years of monthly data from 1999-2014
+
+- `year` and `month`
+- `hom`, `suic`, `fhom`, `fsuic`: Number of homicide, suicide, homicide by firearm, suicide by firearm deaths
+- `time`: time index from 1 to 192 (1 = Jan 1999, 192 = Dec 2014)
+- `post`: 1 if SYG law is in effect in Florida and 0 otherwise. (Indicator for the post intervention time period, which is Oct 2005 and beyond)
+- `treated`: 1 if Florida (treatment state) and 0 if control state (New York, New Jersey, Ohio, Virginia)
+    - Note: It seems that the study authors processed the data to pool the 4 control states because there are only 192 observations each for the treated and controls.
+
+```{r}
+library(tidyverse)
+library(sandwich)
+library(lmtest)
+library(broom)
+
+syg <- read_csv("../../../data/its_synthcont_supplementary_data/syg_dat2.csv")
+
+# Some data cleaning
+syg <- syg %>% 
+    mutate(
+        hom_rate = fhom*100000/stdpop,
+        time_c = time - 82 # Create centered version of time (IMPORTANT!)
+    ) %>%
+    select(-`...1`, -stdpop2) %>% 
+    rename(post = Effective, treated = case) %>% 
+    mutate(zone = case_when(
+        post==0 & treated==0 ~ "Controls (pre)",
+        post==0 & treated==1 ~ "Treated (pre)",
+        post==1 & treated==0 ~ "Controls (post)",
+        post==1 & treated==1 ~ "Treated (post)",
+    ))
+```
+
+## Comparative ITS model
+
+Recall the general comparative interrupted time series model:
+
+$$
+E[Y \mid \text{post,treated},T] = \beta_0 + \beta_1\text{post} + \beta_2\text{treated} + \beta_3(T-T_0) + \beta_4\text{post}\times\text{treated} + \beta_5\text{treated}\times(T-T_0) + \beta_6\text{post}\times (T-T_0) + \beta_7\text{post}\times\text{treated}\times (T-T_0)
+$$
+
+It is helpful to break down the time trend into 4 components:
+
+- Pre-intervention period:
+    - Controls: $\beta_0 + \beta_3(T-T_0)$
+    - Treated: $(\beta_0+\beta_2) + (\beta_3+\beta_5)(T-T_0)$
+
+- Post-intervention period:
+    - Controls: $(\beta_0+\beta_1) + (\beta_3+\beta_6)(T-T_0)$
+    - Treated: $(\beta_0+\beta_1+\beta_2+\beta_4) + (\beta_3+\beta_5+\beta_6+\beta_7)(T-T_0)$
+
+- For the controls, the pre- to post-intervention jump is $\beta_1$.
+    - $\beta_1$ captures the impact of the confounding event(s).
+
+- For the treated, the pre- to post-intervention jump is $\beta_1+\beta_4$.
+    - $\beta_1+\beta_4$ captures the impact of the confounding event(s) AND the intervention of interest.
+    - So to remove the impact of the confounding event(s) and just leave the intervention effect, we subtract off $\beta_1$.
+    - $\beta_4$ represents the intervention effect.
+
+## Initial data visualization
+
+**Exercise:** Summarize what you learn about the similarity of the treated and control units and the apparent impact of the Stand Your Ground law from the plots below.
+
+```{r}
+ggplot(syg, aes(x = time, y = hom_rate, color = zone)) +
+    geom_point() +
+    geom_smooth(se = FALSE) +
+    theme_classic() +
+    geom_vline(xintercept = 81.5) +
+    scale_color_manual(values = c("Controls (pre)" = "lightblue", "Controls (post)" = "steelblue", "Treated (pre)" = "peachpuff", "Treated (post)" = "darkorange"))
+
+ggplot(syg, aes(x = time, y = hom_rate, color = zone)) +
+    geom_point() +
+    geom_smooth(method = "lm", se = FALSE) +
+    theme_classic() +
+    geom_vline(xintercept = 81.5) +
+    scale_color_manual(values = c("Controls (pre)" = "lightblue", "Controls (post)" = "steelblue", "Treated (pre)" = "peachpuff", "Treated (post)" = "darkorange"))
+```
+
+
+
+## Modeling
+
+The code provided in the supplement of the paper provides an interaction model that is not a full interaction model---it excludes the `post*time_c*treated` term which corresponds to the $\beta_7$ coefficient. We will explore theirs in `cits_mod1` and our own full interaction model in `cits_mod2`.
+
+**Exercise:** Conceptually what is the impact of excluding the `post*time_c*treated` term?
+
+```{r}
+cits_mod1 <- glm(hom_rate ~ post*treated + time_c*treated + factor(month), family = gaussian(link = "log"), data = syg)
+cits_mod2 <- glm(hom_rate ~ post*time_c*treated + factor(month), family = gaussian(link = "log"), data = syg)
+```
+
+**Exercise:** Inspect the residual plots below to evaluate the quality of the models. Which model seems to fit the data better? Explain.
+
+```{r}
+residual_plot <- function(mod) {
+    mod_output <- augment(mod)
+    ggplot(mod_output, aes(x = time_c, y = .resid)) +
+        geom_point() +
+        geom_smooth(se = FALSE) +
+        theme_classic() +
+        geom_hline(yintercept = 0)
+}
+
+residual_plot(cits_mod1) + labs(title = "Not full interaction + month effects")
+residual_plot(cits_mod2) + labs(title = "Full interaction + month effects")
+```
+
+**Exercise:** Inspect the code below and the resulting plots to see how the plots we made earlier can be overlaid with model predictions.
+
+```{r}
+predicted_plot <- function(mod) {
+    # augment() adds model predictions to a dataset
+    mod_output <- augment(mod, newdata = syg, type.predict = "response")
+    ggplot(mod_output, aes(x = time, y = hom_rate, color = zone)) +
+        geom_point() +
+        geom_line(aes(x = time, y = .fitted)) +
+        geom_smooth(method = "lm", se = FALSE) +
+        theme_classic() +
+        geom_vline(xintercept = 81.5) +
+    scale_color_manual(values = c("Controls (pre)" = "lightblue", "Controls (post)" = "steelblue", "Treated (pre)" = "peachpuff", "Treated (post)" = "darkorange"))
+}
+
+predicted_plot(cits_mod1) + labs(title = "Not full interaction + month effects")
+predicted_plot(cits_mod2) + labs(title = "Full interaction + month effects")
+```
+
+Let's look at the results (just for the coefficient estimates). We'll account for the autocorrelation in the data to adjust standard errors next.
+
+**Exercise:** Interpret the coefficient corresponding to the treatment effect in the better of the 2 models. Note that the coefficients have been exponentiated (with `exponentiate = TRUE`) because the model used logged homicide rates.
+
+```{r}
+tidy(cits_mod1, exponentiate = TRUE) %>% select(-std.error)
+tidy(cits_mod2, exponentiate = TRUE) %>% select(-std.error)
+```
+
+## Adjusting the standard errors for autocorrelation
+
+Time series data tend to exhibit autoregressive behavior. For example, an outcome in 2005 is likely a function of its 2004, 2003, 2002, ..., EARLIEST_RELEVANT_YEAR values. 2005 - EARLIEST_RELEVANT_YEAR is called the order of a an autoregressive process.
+
+We can use the **partial autocorrelation function (PACF)** to get a sense of what this order could be for a given time series.
+
+- The PACF at a given lag L tells us how correlated a time series is with a version of itself lagged by L time periods.
+- For an order $p$ autoregressive process, the PACF drops to effectively zero (stays within the dashed confidence band) at lags greater than $p$.
+
+```{r}
+# The first argument in pacf() is a single time series
+# Need to make sure that the data are sorted temporally
+# na.action = na.pass allows the PACF to still be computed when there are missing values
+pacf(syg |> filter(treated==1) |> pull(hom_rate), na.action = na.pass)
+pacf(syg |> filter(treated==0) |> pull(hom_rate), na.action = na.pass)
+```
+
+The `coeftest()` function in the `lmtest` package implements Newey-West standard errors which account for this autocorrelation (and heteroskedasticity). We specify the order of the autoregressive process in the `lag` argument.
+
+**Exercise:** 
+
+```{r}
+coeftest(cits_mod2, vcov = NeweyWest, lag = 4)
+coeftest(cits_mod2, vcov = NeweyWest, lag = 12)
+```
+
+## Control outcomes
+
+It is a common practice with ITS designs to use a **control outcome**. This is an outcome that is not expected to be impacted by the intervention. In this case, the researchers use suicide rates by firearm as a control outcome because this outcome is not expected to be impacted by a self-defense law like the Stand Your Ground law.
+
+Step through the above investigations again using suicide rates by firearm (`fsuic`) as the outcome of interest. How do results compare to the main outcome of homicide rates by firearm?
+
+
+
+

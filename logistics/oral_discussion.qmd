@@ -61,7 +61,7 @@ Being able to answer the following questions will prepare you to answer clarifyi
     - What are the benefits of this approach?
     - What are things to be wary of/watch out for with this approach?
     - *Important concepts:* causal and noncausal paths, building block structures, d-separation, blocking paths, confounding bias, selection bias
-- What is matching? What is weighting?
+- What is [insert method here]? (The questions below are general to all methods. Important concepts for each method are listed below.)
     - How does it work?
     - What are the benefits of this approach?
     - What are things to be wary of/watch out for with this approach?
