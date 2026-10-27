@@ -141,6 +141,8 @@ We will be looking at data from the article [Can synthetic controls improve caus
 
 > **Research question:** What was the effect of Florida's 2005 Stand Your Ground law on homicide rates and homicide rates by firearm?
 
+You can download the data on Moodle [here](https://moodle.macalester.edu/mod/resource/view.php?id=333297).
+
 Codebook: 16 years of monthly data from 1999-2014
 
 - `year` and `month`

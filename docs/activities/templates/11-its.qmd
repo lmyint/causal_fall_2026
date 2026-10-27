@@ -152,7 +152,7 @@ library(sandwich)
 library(lmtest)
 library(broom)
 
-syg <- read_csv("../../../data/its_synthcont_supplementary_data/syg_dat2.csv")
+syg <- read_csv("syg_dat2.csv")
 
 # Some data cleaning
 syg <- syg %>% 
