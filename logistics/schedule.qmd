@@ -65,16 +65,16 @@ Check here to see what you should be doing before, during, and after each class 
     <td class="topleft">9 (11/2 - 11/6)</td>
     <td class="topleft"><a href="#day16">Fixed effects models</a></td>
     <td class="topleft"><a href="#day17">Difference-in-differences designs</a></td>
-    <td class="topleft"></td>
+    <td class="topleft"><a href="../hw/assignment5.html">Assignment 5</a> due Fri 11/6 at midnight</td>
   </tr>
   <tr>
     <td class="topleft">10 (11/9 - 11/13)</td>
     <td class="topleft"><a href="#day18">Instrumental variables designs</a></td>
     <td class="topleft"></td>
-    <td class="topleft"></td>
+    <td class="topleft"><a href="../hw/assignment6.html">Assignment 6</a> due Fri 11/13 at midnight</td>
   </tr>
   <tr>
-    <td class="topleft">11 (11/9 - 11/13)</td>
+    <td class="topleft">11 (11/16 - 11/20)</td>
     <td class="topleft" colspan=2>Oral discussions - no class this week</td>
     <td class="topleft"></td>
   </tr>

@@ -161,13 +161,13 @@ library(broom)
 syg <- read_csv("../../../data/its_synthcont_supplementary_data/syg_dat2.csv")
 
 # Some data cleaning
-syg <- syg %>% 
+syg <- syg |> 
     mutate(
         hom_rate = fhom*100000/stdpop,
         time_c = time - 82 # Create centered version of time (IMPORTANT!)
-    ) %>%
-    select(-`...1`, -stdpop2) %>% 
-    rename(post = Effective, treated = case) %>% 
+    ) |>
+    select(-`...1`, -stdpop2) |> 
+    rename(post = Effective, treated = case) |> 
     mutate(zone = case_when(
         post==0 & treated==0 ~ "Controls (pre)",
         post==0 & treated==1 ~ "Treated (pre)",
@@ -275,8 +275,8 @@ Let's look at the results (just for the coefficient estimates). We'll account fo
 **Exercise:** Interpret the coefficient corresponding to the treatment effect in the better of the 2 models. Note that the coefficients have been exponentiated (with `exponentiate = TRUE`) because the model used logged homicide rates.
 
 ```{r}
-tidy(cits_mod1, exponentiate = TRUE) %>% select(-std.error)
-tidy(cits_mod2, exponentiate = TRUE) %>% select(-std.error)
+tidy(cits_mod1, exponentiate = TRUE) |> select(-std.error)
+tidy(cits_mod2, exponentiate = TRUE) |> select(-std.error)
 ```
 
 ## Adjusting the standard errors for autocorrelation {.unnumbered}

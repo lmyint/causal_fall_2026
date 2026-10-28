@@ -1,0 +1,18 @@
+# Assignment 6 {.unnumbered}
+
+**Due:** Friday, 11/13 at midnight on Moodle
+
+
+**Motivation and description:** This last assignment is an effort to promote an underlying goal of the course: thinking causally in everyday life.
+
+Take time in the coming weeks to pay attention to various aspects of your life from the standpoint of a causal scientist keen on understanding what interventions can make things better for you or for key groups that you are interested in/connected to.
+
+- What did you pay attention to?
+- What ideas come to mind for how you might use causal inference tools to build the information base needed to make change? Share specifics on how you might carry this out and what barriers you might face.
+- I'd also be curious to hear about the process of doing this assignment. Did you notice anything about your thought processes that was different/noteworthy?
+
+
+**Earning a Satisfactory:** At the end of this, you should have a piece of writing *that only you could write*. I would like you to think across the tools we've used over the entire semester and push yourself to make as many connections as possible, but I cannot put requirements into place about discussing specific tools/methods (or a specific number of them) without artificially constraining you, so please view this wish as an encouragement. There are no length requirements---just use as many words as needed to convey your ideas.
+
+
+**Logistics:** On the Moodle assignment page, please submit a link to a Google Doc, and make sure that I am added as an Editor or Commenter.

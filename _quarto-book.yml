@@ -78,6 +78,8 @@ book:
         - hw/assignment2.qmd
         - hw/assignment3.qmd
         - hw/assignment4.qmd
+        - hw/assignment5.qmd
+        - hw/assignment6.qmd
   appendices:
     - appendices/stat155.qmd
     - appendices/r_rstudio.qmd

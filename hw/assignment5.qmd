@@ -1,0 +1,95 @@
+# Assignment 5 {.unnumbered}
+
+<!-- Next time: explore First Steps dataset as a potential dataset -->
+
+```{r a5_setup, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(AIPW)
+library(SuperLearner)
+library(EValue)
+```
+
+**Due:** Friday, 11/6 at midnight on Moodle
+
+**Format:** Please submit a rendered HTML document containing your responses. You can work from [this template](assignment5_YOURNAME.qmd).
+
+
+## Exercise 1
+
+We will return the the National Longitudinal Study of Adolescent to Adult Health (Add Health) from Assignment 4. For the codebook, refer to the Assignment 4 description.
+
+**Research question:** What is the causal effect of adolescent substance use (specifically marijuana smoking) on adulthood substance use (specifically cigarette smoking)?
+
+```{r eval=FALSE}
+addhealth <- read_csv("https://mac-stat.github.io/data/addhealth.csv")
+```
+
+### Part a
+
+Use the `AIPW` package to estimate causal effects.
+
+- Instead of `aipw$fit()`, you will need to use `aipw$stratified_fit()`. (`aipw$fit()` only allows estimation of the ATE, but `aipw$stratified_fit()` fits models separately in the treated and in the controls to allow for ATT and ATC estimation.)
+- Use just random forest and boosting models for the outcome and propensity score models ("SL.ranger" and "SL.xgboost").
+- Change the `Y, A, W` arguments to reflect the outcome, treatment, and key covariates in this setting. We will use the following set of proxy variables to approximately block noncausal paths: `male, white, susp, mathG, readG, parentED, housesmoke`.
+- Wait to use `aipw$summary()` until later parts.
+
+
+### Part b
+
+Use `aipw$plot.p_score()` to assess common support violations. What does this plot show us about the availability of comparable control units for treated units and vice-versa?
+
+```{r eval=FALSE}
+aipw$plot.p_score()
+```
+
+
+### Part c
+
+Display the causal effect estimates (on the risk difference scale) using the code below. The `g.bound = 0` argument means that the propensity scores (and thus the inverse probability weights) are not trimmed. (You can pull up the `?summary.AIPW_base` documentation to see more details.)
+
+```{r eval=FALSE}
+aipw$summary(g.bound = 0)
+```
+
+Interpret the ATT and its 95% confidence interval (the 95% LCL and UCL columns) by using units (as appropriate) and avoiding generic language like "treatment" and "outcome". Write your interpretation for an audience of health professionals who focus on adolescent health.
+
+
+### Part d
+
+Let's take a look at the weight distribution to understand if there are extreme weights. `plot.ip_weights()` specifically plots only the ATE weights, but we can still roughly infer the ATT weights from this information.
+
+- When estimating the ATT, what weight is given to treated units, and why?
+- Roughly eyeballing the plot, the ATE weights for the control weights appear to range roughly from 1.2 to 1.6. When estimating the ATT, how do we compute the weights for control units? Based on this, roughly infer the range of the weights for the control units, and determine if we have extreme weights less than 0.1 or greater than 10.
+
+```{r eval=FALSE}
+aipw$plot.ip_weights()
+```
+
+### Part e
+
+What if the models we used to estimate the propensity score were wrong (misspecified)? What would you expect about the performance of our doubly robust estimator (AIPW)? Explain.
+
+
+
+
+
+## Exercise 2
+
+### Part a
+
+Identify a potential unmeasured confounding variable that is not accounted for by the proxy variables we used in Exercise 1. Explain why this variable might confound the relationship between adolescent marijuana smoking and adulthood cigarette smoking.
+
+### Part b
+
+Compute an E-value for the ATT you estimated in Exercise 1 part c. Because this effect is a risk difference, you will need to use the `evalues.RD()` function. Pull up the documentation page with `?evalues.RD`.
+
+- In the documentation, "exposed" and "unexposed" mean treated and untreated, respectively.
+- "Diseased" and "non-diseased" mean Y=1 (adult smokers) and Y=0 (adult non-smokers), respectively.
+- The code `addhealth |> count(exposure, smoke)` might be helpful in tabulating the information you need for this function.
+- In your output, the `$est.Evalue` part of the output gives the E-value for the risk difference itself. The `$lower.Evalue` part gives the E-value for the lower endpoint of a 95% confidence interval.
+
+### Part c
+
+- Interpret the E-value in the `$lower.Evalue` part of the output from part b.
+- What is your assessment of the robustness of the estimated causal effect?
+- What could you do to follow up on your assessment to gather more information?
