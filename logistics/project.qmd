@@ -53,16 +53,16 @@ If none of these options piques your interest, I'm happy to discuss alternatives
 
 <br><br><br><br>
 
-::: {.content-hidden}
+
 
 # Deliverables
 
-Each group will turn in a **paper** and give a **presentation**.
+Each group will turn in a **paper**, give a **presentation**, and participate in the **synthesis session** during our final exam period
 
 **Important dates:**
 
-- Final paper due Wednesday, December 18 at 5pm
-- Final presentations will span the last 2 class days of class (Monday 12/9 and Wednesday 12/11) and our final exam period (Tuesday 12/17 from 10:30-12:30)
+- Final paper due Thursday, December 10 at midnight
+- Final presentations TBD
 
 ## Paper
 
@@ -97,10 +97,29 @@ Each group will turn in a **paper** and give a **presentation**.
 
 ## Presentation
 
+- Format TBD. Options include (1) in-class presentations that are 10-12 minutes long with 2-5 minutes for questions
+- Decision will depend on how many groups there are and what we decide is the best option 
+
+<!--
 - 10-12 minute presentation with 2-5 minutes for questions
     - Schedule posted [here](https://moodle.macalester.edu/mod/url/view.php?id=147560)
 - Target audience is our class (students who have taken causal inference)
 - Share your slides with the instructor the day before your presentation. We will use the instructor's laptop for presentations to streamline and avoid technical difficulties.
+-->
+
+
+## Synthesis session
+
+**When?** During our final exam slot on Wednesday, December 16, 10:30am-12:30pm
+
+- Come prepared to share reflections on working on the project.
+- What did you learn?
+- What were some of the highs and lows of the project?
+- What was (unexpectedly) challenging? How did you overcome those challenges?
+- What do you want to remember/take with you from this experience?
+
+
+
 
 
 <br><br><br><br>
@@ -110,7 +129,7 @@ Each group will turn in a **paper** and give a **presentation**.
 
 ## Milestone 1
 
-**Due date:** Friday, November 8 at 5PM
+**Due date:** Friday, November 13 at midnight
 
 As part of this milestone, you will pick a project option, pick a specific topic, and form a group (if not working alone).
 
@@ -130,14 +149,12 @@ You will submit a short write-up that varies by project option. (No page length 
 
 ## Milestone 2
 
-**Due date:** Friday, November 22 at 5PM
+**Due date:** Tuesday, November 24 at midnight
 
 For both the data analysis and advanced topic options:
 
 - Conduct analyses according to your Milestone 1 plan as well as updates to your plan based on instructor feedback
 - Submit a rendered HTML of your analyses and interpretations.
 
-
-:::
 
 

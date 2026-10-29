@@ -37,24 +37,24 @@ You will take the role of a peer consultant who is helping me design my statisti
 
 Note that because I will be roleplaying a help-seeker, any gestures or facial expressions that I make reflect the role that I'm playing (not me as your instructor).
 
-**Options:** You can tailor this discussion to a context that would be most useful for you. Please share any requests for tailoring 1 week in advance of your discussion.
+## Options
+
+You can tailor this discussion to a context that would be most useful for you. Please share any requests for tailoring 1 week in advance of your discussion.
 
 - You can pick a different data context.
 - You can ask me to take the role of someone with a different level of expertise. (e.g., an interviewer at a company you'd like to work at, a professor in a department related to the data context, etc.)
 
 
-\
-\
-\
+## Details
 
+The discussion will start with this:
 
-# Details
+"My supervisor wants me to evaluate whether usage of the Hamre Center leads to increased perceptions of support at Mac. We have data on a yearly survey that goes out to the student body that asks a bunch of different things---like what resources on campus do they use, what are their opinions of different parts of campus and academic life. I need help thinking through how to do this. My supervisor is open to using other sources of data too or collecting data differently."
 
-My supervisor wants me to evaluate whether usage of the Hamre Center leads to increased perceptions of support at Mac. We have data on a yearly survey that goes out to the student body that asks a bunch of different things---like what resources on campus do they use, what are their opinions of different parts of campus and academic life.
+Some follow-up questions that I will likely ask:
 
-My supervisor is open to using other sources of data too or collecting data differently.
-
-- "So that is a method that will allow me to prove whether or not the Hamre Center causes increased feelings of support?"
+- "So that is a method that will allow me to prove whether or not the Hamre Center *causes* increased feelings of support?"
+- "How do I know that I've accounted for everything that I need to?"
 - "I'm worried about messing up the analysis. What do I need to watch out for?"
 
 
@@ -82,6 +82,10 @@ Being able to answer the following questions will prepare you to answer clarifyi
     - What are things to be wary of/watch out for with this approach?
     - *Important concepts for matching:* different causal estimands, different matching methods and their parameters, balance, sample size, common support
     - *Important concepts for weighting:* different causal estimands, pseudopopulation, balance, weight variability
+    - *Important concepts for doubly robust estimation:* model specification, double robustness property, consistency
+    - *Important concepts for quantitative bias analysis:* what questions can be answered with this tool, unmeasured confounding, E-values, simulation-based approaches
+    - *Important concepts for regression discontinuity:* sharp vs. fuzzy designs, continuity assumption, manipulation of the running variable, global vs. local modeling, resemblance to a randomized experiment
+    - *Important concepts for interrupted time series/synthetic control:* history bias, why control units are important, modeling approaches, autocorrelation, significance testing in synthetic control
 
 (This question list will be updated throughout the semester.)
 

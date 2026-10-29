@@ -366,7 +366,7 @@
     "href": "logistics/oral_discussion.html",
     "title": "Oral Discussion",
     "section": "",
-    "text": "Purpose\nMuch like an athlete tests their skills by playing in a match or a musician through a recital, an oral discussion can provide a genuine context for you to show your learning.\n\n\n\n\n\n\nLogistics\nWhen: We will have these discussions the week of 11/16-11/20. We will not have class this week.\nHow to sign up for a discussion: I will be posting a sign-up link so that you can choose an appointment slot for a 20 minute discussion slot. Some slots will be during our normal class time, but some will have to be outside of that time. (I will ask auditors to wait to sign up until everyone else does.)\nRetakes: Retakes of the discussion can happen once each during the following periods:\n\n11/23-11/24\n11/30-12/4\n12/7-12/11\n12/14-12/16\n\n\n\n\n\n\n\nFormat\nBy default, I will take the role of a student seeking help on a health-related research project who has only taken STAT 155.\nYou will take the role of a peer consultant who is helping me design my statistical analysis plan and can help me understand the core details behind the methods you’re recommending.\nNote that because I will be roleplaying a help-seeker, any gestures or facial expressions that I make reflect the role that I’m playing (not me as your instructor).\nOptions: You can tailor this discussion to a context that would be most useful for you. Please share any requests for tailoring 1 week in advance of your discussion.\n\nYou can pick a different data context.\nYou can ask me to take the role of someone with a different level of expertise. (e.g., an interviewer at a company you’d like to work at, a professor in a department related to the data context, etc.)\n\n\n\n\n\n\n\nPreparing for the discussion\nBeing able to answer the following questions will prepare you to answer clarifying questions posed to you during the discussion.\n\nWhat exactly is causal inference? What is this area about?\nWhat is a causal effect?\n\nImportant concepts: potential outcomes, different causal estimands\n\nWhat role does a causal graph play in a causal analysis?\n\nHow do we use them appropriately?\nHow do they fit into an overall analysis?\nWhat are the benefits of this approach?\nWhat are things to be wary of/watch out for with this approach?\nImportant concepts: causal and noncausal paths, building block structures, d-separation, blocking paths, confounding bias, selection bias\n\nWhat is [insert method here]? (The questions below are general to all methods. Important concepts for each method are listed below.)\n\nHow does it work?\nWhat are the benefits of this approach?\nWhat are things to be wary of/watch out for with this approach?\nImportant concepts for matching: different causal estimands, different matching methods and their parameters, balance, sample size, common support\nImportant concepts for weighting: different causal estimands, pseudopopulation, balance, weight variability\n\n\n(This question list will be updated throughout the semester.)\nTip: Practice role playing the discussion with a peer.\n\nDecide on who will be the consultant and who will be the student (or other person) asking for help.\nThe help seeker should come up with a research question that has a treatment and outcome, but it’s possible that the help seeker does not use the terminology of “treatment” and “outcome” when role playing.\n\nExample: Was participation in a healthy eating support group helpful for mood and energy levels?",
+    "text": "Purpose\nMuch like an athlete tests their skills by playing in a match or a musician through a recital, an oral discussion can provide a genuine context for you to show your learning.",
     "crumbs": [
       "Course Logistics",
       "Oral Discussion"
@@ -1679,6 +1679,83 @@
     "crumbs": [
       "Appendices",
       "R Resources"
+    ]
+  },
+  {
+    "objectID": "logistics/oral_discussion.html#options",
+    "href": "logistics/oral_discussion.html#options",
+    "title": "Oral Discussion",
+    "section": "Options",
+    "text": "Options\nYou can tailor this discussion to a context that would be most useful for you. Please share any requests for tailoring 1 week in advance of your discussion.\n\nYou can pick a different data context.\nYou can ask me to take the role of someone with a different level of expertise. (e.g., an interviewer at a company you’d like to work at, a professor in a department related to the data context, etc.)",
+    "crumbs": [
+      "Course Logistics",
+      "Oral Discussion"
+    ]
+  },
+  {
+    "objectID": "logistics/oral_discussion.html#details",
+    "href": "logistics/oral_discussion.html#details",
+    "title": "Oral Discussion",
+    "section": "Details",
+    "text": "Details\nThe discussion will start with this:\n“My supervisor wants me to evaluate whether usage of the Hamre Center leads to increased perceptions of support at Mac. We have data on a yearly survey that goes out to the student body that asks a bunch of different things—like what resources on campus do they use, what are their opinions of different parts of campus and academic life. I need help thinking through how to do this. My supervisor is open to using other sources of data too or collecting data differently.”\nSome follow-up questions that I will likely ask:\n\n“So that is a method that will allow me to prove whether or not the Hamre Center causes increased feelings of support?”\n“How do I know that I’ve accounted for everything that I need to?”\n“I’m worried about messing up the analysis. What do I need to watch out for?”",
+    "crumbs": [
+      "Course Logistics",
+      "Oral Discussion"
+    ]
+  },
+  {
+    "objectID": "logistics/project.html#paper",
+    "href": "logistics/project.html#paper",
+    "title": "Project",
+    "section": "Paper",
+    "text": "Paper\n\nFormat (data analysis option): Your paper should resemble an academic journal article and have the following sections:\n\nIntroduction:\n\nConduct a literature review using at least 3 sources. This literature review should provide necessary background for your investigation and explain how your work provides new understanding.\n\nData and Methods:\n\nDescribe the context behind and contents of your data. (Examine who, what, when, where, why, and how questions)\nDescribe any data cleaning and/or processing that you performed.\nShow the causal graph that you use to identify what variables need to be included in the analysis. Discuss key decision points in your causal graph construction.\nDescribe the statistical analyses performed. This should include modeling to estimate treatment effects as well as placebo tests and/or sensitivity analyses.\n\nResults:\n\nInterpret causal effect estimates in context, being careful to note the particular estimand that was targeted.\nInterpret measures of uncertainty (confidence intervals and/or p-values).\nDiscuss results from placebo tests and/or sensitivity analyses.\n\nDiscussion:\n\nSummarize key results and the extent to which they were what you expected or were surprising.\nDiscuss limitations of the analysis in terms of data quality, scope of the analysis, and generalizability.\nDiscuss concrete future directions for the project.\n\n\nFormat (advanced topic option): Your paper should resemble a textbook chapter and have the following general structure:\n\nIntroduction:\n\nGive an overview of the method/topic and its importance in causal inference.\nHow does this method/topic relate to topics that we have covered in class?\n\nSubsequent sections: These sections should correspond to key concepts for this topic. Each section should explain a concept and show examples.\nConclusion:\n\nSummarize when researchers would want to use this method/topic in their own work.\nDiscuss the limitations of this tutorial paper in terms of scope. e.g., “We did discuss concepts X, Y, and Z in this tutorial, but important subareas within this topic include A, B, and C (include citations to relevant articles where readers can learn more).”\n\n\nBibliography: In-text citations and references should follow the APA format.",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "logistics/project.html#presentation",
+    "href": "logistics/project.html#presentation",
+    "title": "Project",
+    "section": "Presentation",
+    "text": "Presentation\n\nFormat TBD. Options include (1) in-class presentations that are 10-12 minutes long with 2-5 minutes for questions\nDecision will depend on how many groups there are and what we decide is the best option",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "logistics/project.html#synthesis-session",
+    "href": "logistics/project.html#synthesis-session",
+    "title": "Project",
+    "section": "Synthesis session",
+    "text": "Synthesis session\nWhen? During our final exam slot on Wednesday, December 16, 10:30am-12:30pm\n\nCome prepared to share reflections on working on the project.\nWhat did you learn?\nWhat were some of the highs and lows of the project?\nWhat was (unexpectedly) challenging? How did you overcome those challenges?\nWhat do you want to remember/take with you from this experience?",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "logistics/project.html#milestone-1",
+    "href": "logistics/project.html#milestone-1",
+    "title": "Project",
+    "section": "Milestone 1",
+    "text": "Milestone 1\nDue date: Friday, November 13 at midnight\nAs part of this milestone, you will pick a project option, pick a specific topic, and form a group (if not working alone).\nYou will submit a short write-up that varies by project option. (No page length requirements—just convey the information that you need to.)\n\nData analysis option: You will write a draft of the Introduction, Data, and Methods sections of your paper.\n\nIntroduction: Give background for your topic, including relevant theory, domain knowledge, and prior research. Incorporate findings from at least 3 journal articles.\nData: Describe the data that you have and how it was collected. Include any limitations or cautions that are important to keep in mind about the data. Think about the who, what, when, where, why, and how behind your data to inform your discussion in this section.\nMethods: Write a detailed plan for the analyses that you will conduct. This part can be written in bullet points.\n\nAdvanced topic option: Your final paper will be structured as a tutorial, and for this milestone, you’ll make progress towards writing this tutorial.\n\nIntroduce the big idea behind this topic. Make connections between your topic and the topics we covered in class so that others can have a better sense of how this topic fits into the field of causal inference.\nExplain 1 idea that you learned from your research so far. Include a citation to at least 1 journal article.\nWrite a plan for your remaining research. Describe the ideas are you planning to learn in the remaining time. Describe a simulation study that you will perform to explore some of the theory behind your topic.",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "logistics/project.html#milestone-2",
+    "href": "logistics/project.html#milestone-2",
+    "title": "Project",
+    "section": "Milestone 2",
+    "text": "Milestone 2\nDue date: Tuesday, November 24 at midnight\nFor both the data analysis and advanced topic options:\n\nConduct analyses according to your Milestone 1 plan as well as updates to your plan based on instructor feedback\nSubmit a rendered HTML of your analyses and interpretations.",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
     ]
   }
 ]
