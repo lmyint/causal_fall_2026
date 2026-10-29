@@ -3,6 +3,9 @@ title: "Interrupted time series designs"
 eval: false
 ---
 
+<!-- Post content advisory about this lesson beforehand -->
+<!-- Explore using syg_dat3.csv for this activity -->
+
 **You can download a template file for this activity [here](templates/11-its.qmd).**
 
 

@@ -64,8 +64,8 @@ book:
           href: activities/10-rdd.qmd
         - icon: graph-up-arrow
           href: activities/11-its.qmd
-        # - icon: back
-        #   href: activities/12-synthetic-control.qmd
+        - icon: back
+          href: activities/12-synthetic-control.qmd
         # - icon: bar-chart-steps
         #   href: activities/13-fixed-effects.qmd
         # - icon: columns-gap
