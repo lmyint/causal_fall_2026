@@ -28,7 +28,7 @@ Check here to see what you should be doing before, during, and after each class 
   <tr>
     <td class="topleft">3 (9/21 - 9/25)</td>
     <td class="topleft"><a href="#day5">Identifying causal effects with causal graphs</a>
-    <td class="topleft"><a href="#day6">Synthesis: causal graphs</a></td>
+    <td class="topleft"><a href="#day6">Testing causal graphs / synthesis</a></td>
     <td class="topleft"><a href="../hw/assignment3.html">Assignment 3</a> due Tues 9/29 at midnight</td>
   </tr>
   <tr>
@@ -63,19 +63,19 @@ Check here to see what you should be doing before, during, and after each class 
   </tr>
   <tr>
     <td class="topleft">9 (11/2 - 11/6)</td>
-    <td class="topleft"><a href="#day16">Fixed effects models</a></td>
-    <td class="topleft"><a href="#day17">Difference-in-differences designs</a></td>
+    <td class="topleft"><a href="#day16">Survey of fixed effects models, difference-in-differences designs, and instrumental variables</a></td>
+    <td class="topleft">Project work</td>
     <td class="topleft"><a href="../hw/assignment5.html">Assignment 5</a> due Fri 11/6 at midnight</td>
   </tr>
   <tr>
     <td class="topleft">10 (11/9 - 11/13)</td>
-    <td class="topleft"><a href="#day18">Instrumental variables designs</a></td>
-    <td class="topleft"></td>
+    <td class="topleft">Project work</td>
+    <td class="topleft">Project work</td>
     <td class="topleft"><a href="../hw/assignment6.html">Assignment 6</a> due Fri 11/13 at midnight</td>
   </tr>
   <tr>
     <td class="topleft">11 (11/16 - 11/20)</td>
-    <td class="topleft" colspan=2>Oral discussions - no class this week</td>
+    <td class="topleft" colspan=2>Oral discussions - no class this week. Please continue working on your projects.</td>
     <td class="topleft"></td>
   </tr>
   <tr>
@@ -429,27 +429,29 @@ If you would like to have an additional reference throughout the course that lea
 
 
 
-# Week 9: Longitudinal Data Designs
+# Week 9: Longitudinal data designs, instrumental variables, project work
 
-## Day 1: Fixed effects models (11/3) {#day16}
+## Day 1: Survey of remaining methods (11/3) {#day16}
+
+We will do a survey of fixed effects models, difference-in-differences designs, and instrumental variables designs.
 
 **Before class:**
 
 ::: {.callout-note title="Required" icon=false}
+- [Fixed Effects](https://youtu.be/Z1QmFuPV9JA) (~12 minutes)
+- [Difference in Differences](https://youtu.be/ggYnrOGG97o) (~11 minutes)
+- [Instrumental Variables](https://youtu.be/bfQgLnFdLSg) (~10 minutes)
+- [Estimating Instrumental Variables](https://youtu.be/DjLXqFTvVWg) (~12 minutes)
+:::
+
+
+::: {.callout-note title="Full set of materials" appearance="simple" collapse="true"}
 - *The Effect* [Chapter 16: Fixed Effects](https://www.theeffectbook.net/ch-FixedEffects.html) (~70 minutes)
     - Video alternatives:
         - [Fixed Effects](https://youtu.be/Z1QmFuPV9JA) (~12 minutes)
         - [Estimating Fixed Effects](https://youtu.be/2Kz1g0RoTtI) (~8 minutes)
         - [Random Effects](https://youtu.be/Esp0LWTBuk4) (~6 minutes)
-:::
 
-<!-- **During class:** [Fixed effects models](../activities/13-fe.qmd) -->
-
-## Day 2: Difference-in-differences designs (11/5) {#day17}
-
-**Before class:**
-
-::: {.callout-note title="Required" icon=false}
 - *The Effect* [Chapter 18: Difference-in-Differences](https://www.theeffectbook.net/ch-DifferenceinDifference.html) (~80 minutes)
     - Video alternatives:
         - [Difference in Differences](https://youtu.be/ggYnrOGG97o) (~11 minutes)
@@ -458,42 +460,27 @@ If you would like to have an additional reference throughout the course that lea
         - [Supporting Parallel Trends](https://youtu.be/ihIWuC6ULjo) (~9 minutes)
         - [Dynamic Difference-in-Differences](https://youtu.be/_nknBbw-HFQ) (~10 minutes)
         - [Staggered Treatment in Difference-in-Differences](https://youtu.be/hu2nDbnpALA) (~9 minutes)
-:::
 
-::: {.callout-note title="Optional" appearance="simple" collapse="true"}
 - *Mixtape* [Chapter 9: Difference-in-Differences](https://mixtape.scunning.com/09-difference_in_differences) (~230 minutes)
-:::
 
-<!-- **During class:** [Difference-in-Differences](../activities/14-did.qmd) -->
-
-
-
-<!-- ============================================================= -->
-
-
-
-
-
-# Week 10: Instrumental variables and project work
-
-## Day 1: Instrumental variables (11/10) {#day18}
-
-**Before class:**
-
-::: {.callout-note title="Required" icon=false}
 - *The Effect* [Chapter 19: Instrumental Variables](https://www.theeffectbook.net/ch-InstrumentalVariables.html) (~85 minutes)
     - Video alternatives:
         - [Instrumental Variables](https://youtu.be/bfQgLnFdLSg) (~10 minutes)
         - [Instrumental Variable Validity](https://youtu.be/HL8jR9CDlfA) (~10 minutes)
         - [Estimating Instrumental Variables](https://youtu.be/DjLXqFTvVWg) (~12 minutes)
         - [Testing Instrumental Variables Assumptions](https://youtu.be/B8MUeudCoWo) (~11 minutes)
-:::
 
-::: {.callout-note title="Optional" appearance="simple" collapse="true"}
 - *Mixtape* [Chapter 7: Instrumental Variables](https://mixtape.scunning.com/07-instrumental_variables) (~150 minutes)
 :::
 
-<!-- **During class:** [Instrumental Variables](../activities/16-iv.qmd) -->
+<!-- **During class:** [Fixed effects models](../activities/13-fe.qmd) -->
+<!-- **During class:** [Difference-in-Differences](../activities/14-did.qmd) -->
+<!-- **During class:** [Instrumental Variables](../activities/15-iv.qmd) -->
+
+## Day 2: Project work (11/5) {#day17}
+
+
+
 
 
 <!-- ============================================================= -->

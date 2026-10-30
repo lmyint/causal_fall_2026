@@ -189,8 +189,8 @@
     "objectID": "logistics/schedule.html#day16",
     "href": "logistics/schedule.html#day16",
     "title": "Schedule",
-    "section": "Day 1: Fixed effects models (11/3)",
-    "text": "Day 1: Fixed effects models (11/3)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 16: Fixed Effects (~70 minutes)\n\nVideo alternatives:\n\nFixed Effects (~12 minutes)\nEstimating Fixed Effects (~8 minutes)\nRandom Effects (~6 minutes)",
+    "section": "Day 1: Survey of remaining methods (11/3)",
+    "text": "Day 1: Survey of remaining methods (11/3)\nWe will do a survey of fixed effects models, difference-in-differences designs, and instrumental variables designs.\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nFixed Effects (~12 minutes)\nDifference in Differences (~11 minutes)\nInstrumental Variables (~10 minutes)\nEstimating Instrumental Variables (~12 minutes)\n\n\n\n\n\n\n\n\n\nNoteFull set of materials\n\n\n\n\n\n\nThe Effect Chapter 16: Fixed Effects (~70 minutes)\n\nVideo alternatives:\n\nFixed Effects (~12 minutes)\nEstimating Fixed Effects (~8 minutes)\nRandom Effects (~6 minutes)\n\n\nThe Effect Chapter 18: Difference-in-Differences (~80 minutes)\n\nVideo alternatives:\n\nDifference in Differences (~11 minutes)\nParallel Trends (~9 minutes)\nEstimating Difference in Differences (~10 minutes)\nSupporting Parallel Trends (~9 minutes)\nDynamic Difference-in-Differences (~10 minutes)\nStaggered Treatment in Difference-in-Differences (~9 minutes)\n\n\nMixtape Chapter 9: Difference-in-Differences (~230 minutes)\nThe Effect Chapter 19: Instrumental Variables (~85 minutes)\n\nVideo alternatives:\n\nInstrumental Variables (~10 minutes)\nInstrumental Variable Validity (~10 minutes)\nEstimating Instrumental Variables (~12 minutes)\nTesting Instrumental Variables Assumptions (~11 minutes)\n\n\nMixtape Chapter 7: Instrumental Variables (~150 minutes)",
     "crumbs": [
       "Course Logistics",
       "Schedule"
@@ -200,8 +200,8 @@
     "objectID": "logistics/schedule.html#day17",
     "href": "logistics/schedule.html#day17",
     "title": "Schedule",
-    "section": "Day 2: Difference-in-differences designs (11/5)",
-    "text": "Day 2: Difference-in-differences designs (11/5)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 18: Difference-in-Differences (~80 minutes)\n\nVideo alternatives:\n\nDifference in Differences (~11 minutes)\nParallel Trends (~9 minutes)\nEstimating Difference in Differences (~10 minutes)\nSupporting Parallel Trends (~9 minutes)\nDynamic Difference-in-Differences (~10 minutes)\nStaggered Treatment in Difference-in-Differences (~9 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 9: Difference-in-Differences (~230 minutes)",
+    "section": "Day 2: Project work (11/5)",
+    "text": "Day 2: Project work (11/5)",
     "crumbs": [
       "Course Logistics",
       "Schedule"
