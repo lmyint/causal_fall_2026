@@ -44,11 +44,12 @@ It's fine with me if you use a dataset associated with an existing project (like
 If none of these options piques your interest, I'm happy to discuss alternatives with you. Some ideas:
 
 - Design a Shiny app to illustrate causal concepts to students
-- Write (part of) an R package for making it easier to work with causal graphs
+<!-- - Write (part of) an R package for making it easier to work with causal graphs -->
 - Critique of applied research
     - This is a good option for those who would like to do a data analysis but cannot find adequate data to pursue their question.
     - Find and read papers that study a question of interest to you. Critique these papers from a causal inference lens. This will involve constructing your own causal graph to guide a critique of the authors' data collection and analysis methods.
     - Discuss what remains uncertain in this line of research, and propose an analysis plan for a new causal study to rectify the limitations of prior research.
+    - Conduct a simulation-based quantitative bias analysis to understand how published results might have changed due to various factors that weren't accounted for
 
 
 <br><br><br><br>
