@@ -1,5 +1,5 @@
 ---
-title: "Synthetic control"
+title: "Synthetic Control"
 eval: false
 ---
 

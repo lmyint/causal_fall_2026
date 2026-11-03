@@ -208,17 +208,6 @@
     ]
   },
   {
-    "objectID": "logistics/schedule.html#day18",
-    "href": "logistics/schedule.html#day18",
-    "title": "Schedule",
-    "section": "Day 1: Instrumental variables (11/10)",
-    "text": "Day 1: Instrumental variables (11/10)\nBefore class:\n\n\n\n\n\n\nNoteRequired\n\n\n\n\nThe Effect Chapter 19: Instrumental Variables (~85 minutes)\n\nVideo alternatives:\n\nInstrumental Variables (~10 minutes)\nInstrumental Variable Validity (~10 minutes)\nEstimating Instrumental Variables (~12 minutes)\nTesting Instrumental Variables Assumptions (~11 minutes)\n\n\n\n\n\n\n\n\n\n\n\nNoteOptional\n\n\n\n\n\n\nMixtape Chapter 7: Instrumental Variables (~150 minutes)",
-    "crumbs": [
-      "Course Logistics",
-      "Schedule"
-    ]
-  },
-  {
     "objectID": "logistics/syllabus.html",
     "href": "logistics/syllabus.html",
     "title": "Syllabus",
@@ -362,11 +351,88 @@
     ]
   },
   {
+    "objectID": "logistics/project.html#paper",
+    "href": "logistics/project.html#paper",
+    "title": "Project",
+    "section": "Paper",
+    "text": "Paper\n\nFormat (data analysis option): Your paper should resemble an academic journal article and have the following sections:\n\nIntroduction:\n\nConduct a literature review using at least 3 sources. This literature review should provide necessary background for your investigation and explain how your work provides new understanding.\n\nData and Methods:\n\nDescribe the context behind and contents of your data. (Examine who, what, when, where, why, and how questions)\nDescribe any data cleaning and/or processing that you performed.\nShow the causal graph that you use to identify what variables need to be included in the analysis. Discuss key decision points in your causal graph construction.\nDescribe the statistical analyses performed. This should include modeling to estimate treatment effects as well as placebo tests and/or sensitivity analyses.\n\nResults:\n\nInterpret causal effect estimates in context, being careful to note the particular estimand that was targeted.\nInterpret measures of uncertainty (confidence intervals and/or p-values).\nDiscuss results from placebo tests and/or sensitivity analyses.\n\nDiscussion:\n\nSummarize key results and the extent to which they were what you expected or were surprising.\nDiscuss limitations of the analysis in terms of data quality, scope of the analysis, and generalizability.\nDiscuss concrete future directions for the project.\n\n\nFormat (advanced topic option): Your paper should resemble a textbook chapter and have the following general structure:\n\nIntroduction:\n\nGive an overview of the method/topic and its importance in causal inference.\nHow does this method/topic relate to topics that we have covered in class?\n\nSubsequent sections: These sections should correspond to key concepts for this topic. Each section should explain a concept and show examples.\nConclusion:\n\nSummarize when researchers would want to use this method/topic in their own work.\nDiscuss the limitations of this tutorial paper in terms of scope. e.g., “We did discuss concepts X, Y, and Z in this tutorial, but important subareas within this topic include A, B, and C (include citations to relevant articles where readers can learn more).”\n\n\nBibliography: In-text citations and references should follow the APA format.",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "logistics/project.html#presentation",
+    "href": "logistics/project.html#presentation",
+    "title": "Project",
+    "section": "Presentation",
+    "text": "Presentation\n\nFormat TBD. Options include (1) in-class presentations that are 10-12 minutes long with 2-5 minutes for questions\nDecision will depend on how many groups there are and what we decide is the best option",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "logistics/project.html#synthesis-session",
+    "href": "logistics/project.html#synthesis-session",
+    "title": "Project",
+    "section": "Synthesis session",
+    "text": "Synthesis session\nWhen? During our final exam slot on Wednesday, December 16, 10:30am-12:30pm\n\nCome prepared to share reflections on working on the project.\nWhat did you learn?\nWhat were some of the highs and lows of the project?\nWhat was (unexpectedly) challenging? How did you overcome those challenges?\nWhat do you want to remember/take with you from this experience?",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "logistics/project.html#milestone-1",
+    "href": "logistics/project.html#milestone-1",
+    "title": "Project",
+    "section": "Milestone 1",
+    "text": "Milestone 1\nDue date: Friday, November 13 at midnight\nAs part of this milestone, you will pick a project option, pick a specific topic, and form a group (if not working alone).\nYou will submit a short write-up that varies by project option. (No page length requirements—just convey the information that you need to.)\n\nData analysis option: You will write a draft of the Introduction, Data, and Methods sections of your paper.\n\nIntroduction: Give background for your topic, including relevant theory, domain knowledge, and prior research. Incorporate findings from at least 3 journal articles.\nData: Describe the data that you have and how it was collected. Include any limitations or cautions that are important to keep in mind about the data. Think about the who, what, when, where, why, and how behind your data to inform your discussion in this section.\nMethods: Write a detailed plan for the analyses that you will conduct. This part can be written in bullet points.\n\nAdvanced topic option: Your final paper will be structured as a tutorial, and for this milestone, you’ll make progress towards writing this tutorial.\n\nIntroduce the big idea behind this topic. Make connections between your topic and the topics we covered in class so that others can have a better sense of how this topic fits into the field of causal inference.\nExplain 1 idea that you learned from your research so far. Include a citation to at least 1 journal article.\nWrite a plan for your remaining research. Describe the ideas are you planning to learn in the remaining time. Describe a simulation study that you will perform to explore some of the theory behind your topic.",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
+    ]
+  },
+  {
+    "objectID": "logistics/project.html#milestone-2",
+    "href": "logistics/project.html#milestone-2",
+    "title": "Project",
+    "section": "Milestone 2",
+    "text": "Milestone 2\nDue date: Tuesday, November 24 at midnight\nFor both the data analysis and advanced topic options:\n\nConduct analyses according to your Milestone 1 plan as well as updates to your plan based on instructor feedback\nSubmit a rendered HTML of your analyses and interpretations.",
+    "crumbs": [
+      "Course Logistics",
+      "Project"
+    ]
+  },
+  {
     "objectID": "logistics/oral_discussion.html",
     "href": "logistics/oral_discussion.html",
     "title": "Oral Discussion",
     "section": "",
     "text": "Purpose\nMuch like an athlete tests their skills by playing in a match or a musician through a recital, an oral discussion can provide a genuine context for you to show your learning.",
+    "crumbs": [
+      "Course Logistics",
+      "Oral Discussion"
+    ]
+  },
+  {
+    "objectID": "logistics/oral_discussion.html#options",
+    "href": "logistics/oral_discussion.html#options",
+    "title": "Oral Discussion",
+    "section": "Options",
+    "text": "Options\nYou can tailor this discussion to a context that would be most useful for you. Please share any requests for tailoring 1 week in advance of your discussion.\n\nYou can pick a different data context.\nYou can ask me to take the role of someone with a different level of expertise. (e.g., an interviewer at a company you’d like to work at, a professor in a department related to the data context, etc.)",
+    "crumbs": [
+      "Course Logistics",
+      "Oral Discussion"
+    ]
+  },
+  {
+    "objectID": "logistics/oral_discussion.html#details",
+    "href": "logistics/oral_discussion.html#details",
+    "title": "Oral Discussion",
+    "section": "Details",
+    "text": "Details\nThe discussion will start with this:\n“My supervisor wants me to evaluate whether usage of the Hamre Center leads to increased perceptions of support at Mac. We have data on a yearly survey that goes out to the student body that asks a bunch of different things—like what resources on campus do they use, what are their opinions of different parts of campus and academic life. I need help thinking through how to do this. My supervisor is open to using other sources of data too or collecting data differently.”\nSome follow-up questions that I will likely ask:\n\n“So that is a method that will allow me to prove whether or not the Hamre Center causes increased feelings of support?”\n“How do I know that I’ve accounted for everything that I need to?”\n“I’m worried about messing up the analysis. What do I need to watch out for?”",
     "crumbs": [
       "Course Logistics",
       "Oral Discussion"
@@ -1167,232 +1233,364 @@
   {
     "objectID": "activities/11-its.html",
     "href": "activities/11-its.html",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "",
     "text": "Small Group Discussion\nYou can download a template file for this activity here.",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#prompt-1",
     "href": "activities/11-its.html#prompt-1",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "Prompt 1",
     "text": "Prompt 1\nSuppose we have data from a regression discontinuity design (RDD) with running variable \\(X\\), binary treatment variable \\(A\\), and several pre-treatment covariates.\nSuppose we fit the following model. What is the interpretation of the \\(\\beta_2\\) coefficient, and what do we expect about this coefficient in an RDD? Explain.\n\\[\nE[\\text{covariate} \\mid X, A] = \\beta_0 + \\beta_1 (X-c) + \\beta_2 A + \\beta_3 A (X-c)\n\\]",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#prompt-2",
     "href": "activities/11-its.html#prompt-2",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "Prompt 2",
     "text": "Prompt 2\nWhat are some similarities and differences between RDDs and interrupted time series designs?",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#prompt-3",
     "href": "activities/11-its.html#prompt-3",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "Prompt 3",
     "text": "Prompt 3\nLet’s examine how interrupted time series ideas are relevant in an environmental policy context.\nMinnesota uses two different methods for dealing with trash: (1) disposing of trash in landfills and (2) burning trash in incinerators. Advocates who oppose incineration for its health impacts on surrounding communities also point to incineration as a barrier to building a just system that is waste-free (also called Zero Waste) because of the large financial resources that incineration requires.\nA Hennepin County staff report takes issue with the position of advocates.\n\nNavigate to the report and read the paragraph at the bottom of page 29 (“Advocates for…”).\nExamine Figures 9 and 10 on page 30. What do these figures show? What do they not show? Do these figures support the position of the County or advocates? What interrupted time series ideas are you drawing on to make these assessments?",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#what-are-interrupted-time-series-designs",
     "href": "activities/11-its.html#what-are-interrupted-time-series-designs",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "What are interrupted time series designs?",
     "text": "What are interrupted time series designs?\nInterrupted times series (event studies) are a natural study design for assessing causal effects:\n\nAn event happens\nThen we compare what was happening before and after the event (hence the name “event study”)\nTo frame it another way, we have a time series of the outcome evolving over time, an event happens, and that time series gets interrupted and changes after the event (hence the name “interrupted time series” (ITS))",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#autocorrelation",
     "href": "activities/11-its.html#autocorrelation",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "Autocorrelation",
     "text": "Autocorrelation\nAutocorrelation is an important statistical consideration when looking at ITS data: the outcome at a given time will almost certainly be correlated with the outcome at previous times.\n\nWe need to account for this autocorrelation when estimating standard errors.\nIf we don’t, we will likely underestimate standard errors.\n\nCorrelation between cases reduces the effective sample size. If we have two observations that are highly correlated, we don’t really have two full units of information.\nIn the most extreme case, we could take our dataset and just copy and paste it twice. We really only have one dataset’s worth of information even if we have twice as many cases.",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#history-bias",
     "href": "activities/11-its.html#history-bias",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "History bias",
     "text": "History bias\nAn ITS design is rather similar to a regression discontinuity design with time as the running variable.\nBut when time is the running variable, an important source of bias is relevant: history bias.\n\nThis refers to the fact that other events that influence the outcome can happen at (or around) the same time as the intervention.\ne.g., If the intervention is a new law, confounding events could include other laws that were introduced at roughly the same time or major economic events (like recessions).\nWe need to think carefully about the data context to identify confounding historical events.",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#comparative-interrupted-time-series",
     "href": "activities/11-its.html#comparative-interrupted-time-series",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "Comparative interrupted time series",
     "text": "Comparative interrupted time series\nA comparative interrupted time series design is an extension of the ITS that not only looks at the outcome time series in the treatment unit(s) but also in control units.\n\nControl units will not have experienced the intervention during the time period under study but SHOULD have experienced the confounding events.\n\nOne example:\n\n\nWow this is a pretty compelling comparative interrupted time series graph. Don't usually see such a stark effect. https://t.co/VCPLwUrXby\n\n— Elizabeth Stuart (@Lizstuartdc) September 6, 2020\n\n\nAnother example: Figure 3 from the article Can synthetic controls improve causal inference in interrupted time series evaluations of public health interventions?",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#modeling-for-cits",
     "href": "activities/11-its.html#modeling-for-cits",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "Modeling for CITS",
     "text": "Modeling for CITS\nExercise: A general model for the trends in outcomes before and after the intervention in treatment and control units is given below. (This model doesn’t adjust for any seasonal cyclic fluctuations in the outcome. Accounting for seasonality doesn’t change the fundamental insights from this exercise.)\nVariables:\n\npost: 1 if observation is in the post-intervention time period, 0 if in pre-period\ntreated: 1 if observation is from a treated unit, 0 if control\nT: time (will be centered at the time of intervention \\(T_0\\))\n\n\\[\nE[Y \\mid \\text{post,treated},T] = \\beta_0 + \\beta_1\\text{post} + \\beta_2\\text{treated} + \\beta_3(T-T_0) + \\beta_4\\text{post}\\times\\text{treated} + \\beta_5\\text{treated}\\times(T-T_0) + \\beta_6\\text{post}\\times (T-T_0) + \\beta_7\\text{post}\\times\\text{treated}\\times (T-T_0)\n\\]\nWrite out the model formulas for \\(Y\\) as a function of (centered) time (\\(T-T_0\\)) in the treated and controls units, in the pre-intervention and post-intervention periods. Draw a diagram showing the 4 trends. Label slopes and intercepts.\n\nWhat coefficient(s) govern how similar the treatment and control units are in the pre-intervention time period?\nWhat coefficient(s) govern the discontinuity in the trend at \\(T_0\\)?",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#selection-of-control-units",
     "href": "activities/11-its.html#selection-of-control-units",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "Selection of control units",
     "text": "Selection of control units\nOur upcoming data example: what was the effect of Florida’s 2005 Stand Your Ground law on homicide rates and homicide rates by firearm?\n\nControl states: New York, New Jersey, Ohio, and Virginia\n\nSelection of control units:\n\nIn the CITS design, choosing control units can be a difficult process:\n\nChoose units that don’t experience the intervention but do experience the hypothesized confounding event and have “similar” characteristics to the treated units.\nMatching can be helpful here!",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#comparative-its-model",
     "href": "activities/11-its.html#comparative-its-model",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "Comparative ITS model",
     "text": "Comparative ITS model\nRecall the general comparative interrupted time series model:\n\\[\nE[Y \\mid \\text{post,treated},T] = \\beta_0 + \\beta_1\\text{post} + \\beta_2\\text{treated} + \\beta_3(T-T_0) + \\beta_4\\text{post}\\times\\text{treated} + \\beta_5\\text{treated}\\times(T-T_0) + \\beta_6\\text{post}\\times (T-T_0) + \\beta_7\\text{post}\\times\\text{treated}\\times (T-T_0)\n\\]\nIt is helpful to break down the time trend into 4 components:\n\nPre-intervention period:\n\nControls: \\(\\beta_0 + \\beta_3(T-T_0)\\)\nTreated: \\((\\beta_0+\\beta_2) + (\\beta_3+\\beta_5)(T-T_0)\\)\n\nPost-intervention period:\n\nControls: \\((\\beta_0+\\beta_1) + (\\beta_3+\\beta_6)(T-T_0)\\)\nTreated: \\((\\beta_0+\\beta_1+\\beta_2+\\beta_4) + (\\beta_3+\\beta_5+\\beta_6+\\beta_7)(T-T_0)\\)\n\nFor the controls, the pre- to post-intervention jump is \\(\\beta_1\\).\n\n\\(\\beta_1\\) captures the impact of the confounding event(s).\n\nFor the treated, the pre- to post-intervention jump is \\(\\beta_1+\\beta_4\\).\n\n\\(\\beta_1+\\beta_4\\) captures the impact of the confounding event(s) AND the intervention of interest.\nSo to remove the impact of the confounding event(s) and just leave the intervention effect, we subtract off \\(\\beta_1\\).\n\\(\\beta_4\\) represents the intervention effect.",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#initial-data-visualization",
     "href": "activities/11-its.html#initial-data-visualization",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "Initial data visualization",
     "text": "Initial data visualization\nExercise: Summarize what you learn about the similarity of the treated and control units and the apparent impact of the Stand Your Ground law from the plots below.\n\nggplot(syg, aes(x = time, y = hom_rate, color = zone)) +\n    geom_point() +\n    geom_smooth(se = FALSE) +\n    theme_classic() +\n    geom_vline(xintercept = 81.5) +\n    scale_color_manual(values = c(\"Controls (pre)\" = \"lightblue\", \"Controls (post)\" = \"steelblue\", \"Treated (pre)\" = \"peachpuff\", \"Treated (post)\" = \"darkorange\"))\n\nggplot(syg, aes(x = time, y = hom_rate, color = zone)) +\n    geom_point() +\n    geom_smooth(method = \"lm\", se = FALSE) +\n    theme_classic() +\n    geom_vline(xintercept = 81.5) +\n    scale_color_manual(values = c(\"Controls (pre)\" = \"lightblue\", \"Controls (post)\" = \"steelblue\", \"Treated (pre)\" = \"peachpuff\", \"Treated (post)\" = \"darkorange\"))",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#modeling",
     "href": "activities/11-its.html#modeling",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "Modeling",
     "text": "Modeling\nThe code provided in the supplement of the paper provides an interaction model that is not a full interaction model—it excludes the post*time_c*treated term which corresponds to the \\(\\beta_7\\) coefficient. We will explore theirs in cits_mod1 and our own full interaction model in cits_mod2.\nExercise: Conceptually what is the impact of excluding the post*time_c*treated term?\n\ncits_mod1 &lt;- glm(hom_rate ~ post*treated + time_c*treated + factor(month), family = gaussian(link = \"log\"), data = syg)\ncits_mod2 &lt;- glm(hom_rate ~ post*time_c*treated + factor(month), family = gaussian(link = \"log\"), data = syg)\n\nExercise: Inspect the residual plots below to evaluate the quality of the models. Which model seems to fit the data better? Explain.\n\nresidual_plot &lt;- function(mod) {\n    mod_output &lt;- augment(mod)\n    ggplot(mod_output, aes(x = time_c, y = .resid)) +\n        geom_point() +\n        geom_smooth(se = FALSE) +\n        theme_classic() +\n        geom_hline(yintercept = 0)\n}\n\nresidual_plot(cits_mod1) + labs(title = \"Not full interaction + month effects\")\nresidual_plot(cits_mod2) + labs(title = \"Full interaction + month effects\")\n\nExercise: Inspect the code below and the resulting plots to see how the plots we made earlier can be overlaid with model predictions.\n\npredicted_plot &lt;- function(mod) {\n    # augment() adds model predictions to a dataset\n    mod_output &lt;- augment(mod, newdata = syg, type.predict = \"response\")\n    ggplot(mod_output, aes(x = time, y = hom_rate, color = zone)) +\n        geom_point() +\n        geom_line(aes(x = time, y = .fitted)) +\n        geom_smooth(method = \"lm\", se = FALSE) +\n        theme_classic() +\n        geom_vline(xintercept = 81.5) +\n    scale_color_manual(values = c(\"Controls (pre)\" = \"lightblue\", \"Controls (post)\" = \"steelblue\", \"Treated (pre)\" = \"peachpuff\", \"Treated (post)\" = \"darkorange\"))\n}\n\npredicted_plot(cits_mod1) + labs(title = \"Not full interaction + month effects\")\npredicted_plot(cits_mod2) + labs(title = \"Full interaction + month effects\")\n\nLet’s look at the results (just for the coefficient estimates). We’ll account for the autocorrelation in the data to adjust standard errors next.\nExercise: Interpret the coefficient corresponding to the treatment effect in the better of the 2 models. Note that the coefficients have been exponentiated (with exponentiate = TRUE) because the model used logged homicide rates.\n\ntidy(cits_mod1, exponentiate = TRUE) |&gt; select(-std.error)\ntidy(cits_mod2, exponentiate = TRUE) |&gt; select(-std.error)",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#adjusting-the-standard-errors-for-autocorrelation",
     "href": "activities/11-its.html#adjusting-the-standard-errors-for-autocorrelation",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "Adjusting the standard errors for autocorrelation",
     "text": "Adjusting the standard errors for autocorrelation\nTime series data tend to exhibit autoregressive behavior. For example, an outcome in 2005 is likely a function of its 2004, 2003, 2002, …, EARLIEST_RELEVANT_YEAR values. 2005 - EARLIEST_RELEVANT_YEAR is called the order of a an autoregressive process.\nWe can use the partial autocorrelation function (PACF) to get a sense of what this order could be for a given time series.\n\nThe PACF at a given lag L tells us how correlated a time series is with a version of itself lagged by L time periods.\nFor an order \\(p\\) autoregressive process, the PACF drops to effectively zero (stays within the dashed confidence band) at lags greater than \\(p\\).\n\n\n# The first argument in pacf() is a single time series\n# Need to make sure that the data are sorted temporally\n# na.action = na.pass allows the PACF to still be computed when there are missing values\npacf(syg |&gt; filter(treated==1) |&gt; pull(hom_rate), na.action = na.pass)\npacf(syg |&gt; filter(treated==0) |&gt; pull(hom_rate), na.action = na.pass)\n\nThe coeftest() function in the lmtest package implements Newey-West standard errors which account for this autocorrelation (and heteroskedasticity). We specify the order of the autoregressive process in the lag argument.\nExercise:\n\ncoeftest(cits_mod2, vcov = NeweyWest, lag = 4)\ncoeftest(cits_mod2, vcov = NeweyWest, lag = 12)",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/11-its.html#control-outcomes",
     "href": "activities/11-its.html#control-outcomes",
-    "title": "11  Interrupted time series designs",
+    "title": "11  Interrupted Time Series Designs",
     "section": "Control outcomes",
     "text": "Control outcomes\nIt is a common practice with ITS designs to use a control outcome. This is an outcome that is not expected to be impacted by the intervention. In this case, the researchers use suicide rates by firearm as a control outcome because this outcome is not expected to be impacted by a self-defense law like the Stand Your Ground law.\nStep through the above investigations again using suicide rates by firearm (fsuic) as the outcome of interest. How do results compare to the main outcome of homicide rates by firearm?",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted time series designs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interrupted Time Series Designs</span>"
     ]
   },
   {
     "objectID": "activities/12-synthetic-control.html",
     "href": "activities/12-synthetic-control.html",
-    "title": "12  Synthetic control",
+    "title": "12  Synthetic Control",
     "section": "",
     "text": "Data exploration\nSlides for today are available here.\nYou can download a template file for this activity here.\nBefore continuing, install required packages by entering install.packages(c(\"Synth\", \"SCtools\")) in the Console.\nWe will continue looking at data from the article Can synthetic controls improve causal inference in interrupted time series evaluations of public health interventions?\nCodebook: 16 years of monthly data from 1999-2014\nRead in data, load packages, and do some data cleaning.\nlibrary(tidyverse)\nlibrary(Synth)\nlibrary(SCtools)\n\nsyg_full &lt;- read_csv(\"../../../data/its_synthcont_supplementary_data/syg_dat3.csv\")\n\nsyg_full_clean &lt;- syg_full |&gt; \n    rename(treated = Case) |&gt; \n    select(-`...1`, -Year.month,) |&gt; \n    mutate(across(!State, as.numeric))\n\nsyg_full_clean &lt;- syg_full_clean |&gt; \n    filter(!is.na(State.Code)) |&gt; \n    mutate(\n        HomicideRates = homicide_total*100000/Population,\n        Firearm.suicides = Firearm.suicides*100000/Population,\n        Suicides = Suicides*100000/Population\n    )\n\n# Force the data to be of the data.frame class (rather than tbl)\n# Weird errors will result otherwise!\nsyg_full_clean &lt;- as.data.frame(syg_full_clean)",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Synthetic control</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Synthetic Control</span>"
     ]
   },
   {
     "objectID": "activities/12-synthetic-control.html#data-preparation",
     "href": "activities/12-synthetic-control.html#data-preparation",
-    "title": "12  Synthetic control",
+    "title": "12  Synthetic Control",
     "section": "Data preparation",
     "text": "Data preparation\nThe dataprep() function in the Synth package prepares the data for the optimization process that gives us good weights that make the synthetic control as similar as possible to the treated unit before the intervention.\n\nsc_prep &lt;- dataprep(\n    foo = syg_full_clean, \n    predictors = c(\"Unemployment_adj\",\"Firearm.suicides\", \"Suicides\"),\n    predictors.op = \"mean\", \n    time.predictors.prior = c(1:81),\n    special.predictors = list(\n        # Format: list(VARNAME, PERIOD, AVERAGING METHOD)\n        # Yearly data\n        list(\"Paid.Hunting.License.Holders\", seq(1,81,12), \"mean\"),\n        list(\"Annual.Burglary.Rate\", seq(1,81,12), \"mean\"),\n        list(\"Personal.income.per.capita..dollars.\", seq(1,81,12), \"mean\"),\n        list(\"Annual.robbery.rate\", seq(1,81,12), \"mean\"),\n        list(\"Annual.incarceration.rate\", seq(1,81,12), \"mean\"),\n        list(\"Num_pop_over15\", seq(1,81,12), \"mean\"),\n        list(\"Proportion.of.population.hispanic\", seq(1,81,12), \"mean\"),\n        list(\"Proportion.of.population.AA.or.B\", seq(1,81,12), \"mean\"),\n        list(\"Percentage.4.year.bachelors.or.above..25.years.old.and.over\", seq(1,81,12), \"mean\"),\n        list(\"Proportion.of.15.24\", seq(1,81,12), \"mean\"),\n        list(\"Gallons.of.ethanol\", seq(1,81,12), \"mean\"),\n        list(\"Num_pov\", seq(1,81,12), \"mean\"),\n        # Less than yearly (e.g., every 4 years)\n        list(\"Number.of.sworn.officers.per.1.000.U.S..residents\", seq(13,81,48), \"mean\"), # every 4 years: 2000, 2004\n        list(\"Percentage.of.republican.voters.in.presidential.election\", seq(13,81,48), \"mean\"), # every 4 years: 2000, 2004\n        list(\"Density\", seq(13,81,120), \"mean\"), # every decade starting 2000\n        list(\"MSA\", seq(13,81,120), \"mean\"), # every decade starting 2000\n        list(\"prop_urban\", seq(13,81,120), \"mean\") # every decade starting 2000\n    ),\n    dependent = \"HomicideRates\", # outcome variable\n    unit.variable = \"State.Code\", # variable identifying unit number\n    unit.names.variable = \"State\", # variable identifying unit name\n    time.variable = \"time\", # time variable\n    treatment.identifier = \"Florida\", # The unit name for the treatment unit\n    controls.identifier = c(\"Arkansas\", \"Connecticut\", \"Delaware\", \"Hawaii\", \"Iowa\", \"Maine\", \"Maryland\", \"Massachusetts\", \"Nebraska\", \"New Jersey\", \"New York\", \"North Dakota\", \"Ohio\", \"Rhode Island\", \"Wyoming\"), # The unit names for the controls\n    time.optimize.ssr = 1:81, # Time period over which to optimize similarity of treated and controls\n    time.plot = c(1:192) # Time period for making the time series plot\n)",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Synthetic control</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Synthetic Control</span>"
     ]
   },
   {
     "objectID": "activities/12-synthetic-control.html#running-the-synthetic-control-method",
     "href": "activities/12-synthetic-control.html#running-the-synthetic-control-method",
-    "title": "12  Synthetic control",
+    "title": "12  Synthetic Control",
     "section": "Running the synthetic control method",
     "text": "Running the synthetic control method\n\n# Run the synthetic control method\nsynth_out &lt;- synth(sc_prep)",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Synthetic control</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Synthetic Control</span>"
     ]
   },
   {
     "objectID": "activities/12-synthetic-control.html#inspecting-the-results",
     "href": "activities/12-synthetic-control.html#inspecting-the-results",
-    "title": "12  Synthetic control",
+    "title": "12  Synthetic Control",
     "section": "Inspecting the results",
     "text": "Inspecting the results\nThe synth.tab() function in the Synth package extracts some useful tables. We can first look at the weight assigned to each control unit by accessing the tab.w component:\n\nsc_tables &lt;- synth.tab(dataprep.res = sc_prep, synth.res = synth_out)\n\n# What was the weight for each control unit?\nsc_tables$tab.w\n\nWe can take a look at the relative importance of each covariate by accessing the tab.v component. (Here, the variable names are so long that it’s easier to enter sc_tables$tab.v |&gt; View() in the Console.)\n\nsc_tables$tab.v\n\nThe tab.pred component gives a table comparing pre-treatment covariate values for the treated unit (column 1), the synthetic control unit (column 2), and all the units in the sample (column 3). (Enter sc_tables$tab.pred |&gt; View() in the Console for easier viewing.)\n\nsc_tables$tab.pred",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Synthetic control</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Synthetic Control</span>"
     ]
   },
   {
     "objectID": "activities/12-synthetic-control.html#visualizing-the-results",
     "href": "activities/12-synthetic-control.html#visualizing-the-results",
-    "title": "12  Synthetic control",
+    "title": "12  Synthetic Control",
     "section": "Visualizing the results",
     "text": "Visualizing the results\nWe can manually plot the treated unit and synthetic control time series.\n\n# Save treatment and synthetic control for subsequent data analysis & figures\ndf_paths &lt;- tibble(\n    time = 1:192,\n    treated = as.numeric(sc_prep$Y1plot),\n    synth_control = as.numeric(sc_prep$Y0plot %*% synth_out$solution.w) # Note that %*% is the matrix multiplication operator in R\n)\nggplot(df_paths, aes(x = time, y = treated)) +\n    geom_line(color = \"black\") +\n    geom_line(aes(x = time, y = synth_control), color = \"gray70\", lty = \"dashed\") +\n    theme_classic() +\n    geom_vline(xintercept = 81.5, color = \"red\")\n\n# We can also plot the time series using path.plot() in the Synth package\npath.plot(\n    synth.res = synth_out,\n    dataprep.res = sc_prep,\n    Ylab = \"Homicide rate\",\n    Xlab = \"year\",\n    Legend = c(\"Florida\", \"Synthetic Florida\"),\n    tr.intake = 81.5\n)\n\nWe can also plot the difference (gap) between these series:\n\n# Manually with ggplot\nggplot(df_paths, aes(x = time, y = treated-synth_control)) +\n    geom_line(color = \"black\") +\n    theme_classic() +\n    geom_vline(xintercept = 81.5, color = \"red\") +\n    geom_hline(yintercept = 0, color = \"gray70\", lty = \"dashed\")\n\n# Using gaps.plot() in the Synth package\ngaps.plot(synth_out, sc_prep, tr.intake = 81.5)",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Synthetic control</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Synthetic Control</span>"
     ]
   },
   {
     "objectID": "activities/12-synthetic-control.html#placebo-tests-and-statistical-inference",
     "href": "activities/12-synthetic-control.html#placebo-tests-and-statistical-inference",
-    "title": "12  Synthetic control",
+    "title": "12  Synthetic Control",
     "section": "Placebo tests and statistical inference",
     "text": "Placebo tests and statistical inference\nWe can generate statistical inferential measures (p-values) for the synthetic control effect with placebo tests. We will have each control unit serve as the treated unit in turn. For each of these iterations, we’ll run the synthetic control method as normal.\nThe generate.placebos() function in the SCtools package implements these placebo tests.\n\nsystem.time({\nplacebos &lt;- generate.placebos(sc_prep, synth_out)\n})\n\nThe SCtools::plot_placebos() function plots the following gap:\nactual time series for unit i - synthetic control time series for unit i\nThis gap is shown for all units (our actual treated unit of Florida and the 15 control states).\nBut the function has a bug in which the legend labels are switched, so we will use the following custom plotting function:\n\nplot_placebos_custom &lt;- function (tdf = tdf, xlab = NULL, ylab = NULL, title = NULL, ...) {\n    year &lt;- cont &lt;- id &lt;- Y1 &lt;- synthetic.Y1 &lt;- NULL\n    if (!is_tdf(tdf)) {\n        stop(\"Please pass a valid `tdf` object the tdf argument.\\nThese are generated by the `generate.placebos` function.\")\n    }\n    n &lt;- tdf$n\n    t1 &lt;- unique(tdf$df$year)[which(tdf$df$year == tdf$t1) - \n        1]\n    tr &lt;- tdf$tr\n    names.and.numbers &lt;- tdf$names.and.numbers\n    treated.name &lt;- as.character(tdf$treated.name)\n    df.plot &lt;- NULL\n    for (i in 1:n) {\n        a &lt;- cbind(tdf$df$year, tdf$df[, i], tdf$df[, n + i], i)\n        df.plot &lt;- rbind(df.plot, a)\n    }\n    df.plot &lt;- data.frame(df.plot)\n    colnames(df.plot) &lt;- c(\"year\", \"cont\", \"tr\", \"id\")\n    \n    df.plot &lt;- bind_rows(\n        df.plot |&gt; mutate(id = as.character(id)),\n        data.frame(year = tdf$df$year, cont = tdf$df$synthetic.Y1, tr = tdf$df$Y1, id = \"treated\")\n    ) |&gt; \n        mutate(treated = id==\"treated\")\n    p.gaps &lt;- ggplot(data = data.frame(df.plot), aes(x = year, \n        y = (tr - cont))) + \n        geom_line(aes(group = id, color = treated)) +\n        geom_vline(xintercept = t1, linetype = \"dotted\") +\n        geom_hline(yintercept = 0, linetype = \"dashed\") +\n        ylim(c(1.5 * min(c(min(tdf$df$Y1 - tdf$df$synthetic.Y1), min(df.plot$tr - df.plot$cont))), \n        1.5 * max(c(max(tdf$df$Y1 - tdf$df$synthetic.Y1), max(df.plot$tr - \n            df.plot$cont))))) + \n        labs(y = ylab, x = xlab, title = title) + \n        scale_color_manual(\n            values = c(\"FALSE\" = \"gray80\", \"TRUE\" = \"black\"),\n            labels = c(\"Control units\", tdf$treated.name),\n            guide = guide_legend(NULL)\n        ) +\n        theme(\n            panel.background = element_blank(), \n            panel.grid.major = element_blank(),\n            panel.grid.minor = element_blank(), \n            axis.line.x = element_line(colour = \"black\"), \n            axis.line.y = element_line(colour = \"black\"), \n            legend.key = element_blank(),\n            axis.text.x = element_text(colour = \"black\"), \n            axis.text.y = element_text(colour = \"black\"), \n            legend.position = \"bottom\"\n        )\n    return(p.gaps)\n}\n\n\nplot_placebos(placebos)\nplot_placebos_custom(placebos)\n\nSCtools::mspe_plot() shows the post MSPE/pre MSPE ratio for all units serving as the “treated” unit. From this we get a sense of how extreme the ratio is for the treated unit.\n\nmspe_plot(placebos, plot.hist = TRUE)\n\nSCtools::mspe_test() shows the MSPE ratios for every unit and computes the p-value as the proportion of units with an MSPE ratio as or more extreme than Florida’s:\n\nmspe_test(placebos)",
     "crumbs": [
       "Methods",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Synthetic control</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Synthetic Control</span>"
+    ]
+  },
+  {
+    "objectID": "activities/13-fixed-effects.html",
+    "href": "activities/13-fixed-effects.html",
+    "title": "13  Fixed Effects Models",
+    "section": "",
+    "text": "Data Explorations\nSlides for today are available here.\nYou can download a template file for this activity here.\nBefore continuing, install required packages by entering install.packages(c(\"causaldata\", \"fixest\", \"lme4)) in the Console.\nlibrary(tidyverse)\nlibrary(fixest)\nlibrary(lme4)\nlibrary(broom)\nlibrary(causaldata)",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Fixed Effects Models</span>"
+    ]
+  },
+  {
+    "objectID": "activities/13-fixed-effects.html#gapminder-data",
+    "href": "activities/13-fixed-effects.html#gapminder-data",
+    "title": "13  Fixed Effects Models",
+    "section": "Gapminder data",
+    "text": "Gapminder data\nWe have yearly life expectancy data for all countries of the world from the Gapminder Institute. We also have yearly GDP data.\nLet’s first load the Gapminder data:\n\ngm &lt;- causaldata::gapminder\n\n\nVisualizations\nThe first plot shows the relationship between log(GDP) and life expectancy that would be estimated using the overall data without looking at variation within a geographical unit.\nThe second plot shows trends by country.\nQuestion: How do these plots motivate the need to look at within country variation?\n\n\n# One overall trend line\nggplot(gm, aes(x = log(gdpPercap), y = lifeExp)) +\n    geom_point(alpha = 0.1) +\n    geom_smooth(color = \"red\", size = 2, method = \"lm\") +\n    coord_cartesian(xlim = c(5,12), ylim = c(20,95)) +\n    theme_classic()\n\n\n\n\n\n\n\n# Overall trend line + country-specific trends\nggplot(gm, aes(x = log(gdpPercap), y = lifeExp, color = country)) +\n    geom_point(alpha = 0.1) +\n    geom_smooth(aes(x = log(gdpPercap), y = lifeExp), data = gm, color = \"red\", size = 2, method = \"lm\") +\n    geom_smooth(method = \"lm\", se = FALSE) +\n    coord_cartesian(xlim = c(5,12), ylim = c(20,95)) +\n    theme_classic() +\n    guides(color = FALSE) +\n    scale_color_viridis_d()\n\n\n\n\n\n\n\n\n\n\nFixed effects in fixest\nThe fixest package provides a fast way of estimating fixed effects models. The coefficient estimates are the same as from lm(), but it provides ways of adjusting the standard errors for correlation within a group.\nBelow we use feols() function from fixest to fit a fixed effects model with country-specific indicator variables.\n\n# Model formula: Y ~ A + time invariant covariates + time fixed covariates | variables that we want indicators for\ngm_mod_fe &lt;- feols(lifeExp ~ log(gdpPercap) | country, data = gm)\n# The cluster argument indicates that observations are clustered (correlated) within countries\nsummary(gm_mod_fe, cluster = ~ country)\n\nOLS estimation, Dep. Var.: lifeExp\nObservations: 1,704\nFixed-effects: country: 142\nStandard-errors: Clustered (country) \n               Estimate Std. Error t value  Pr(&gt;|t|)    \nlog(gdpPercap)  9.76896   0.701507 13.9257 &lt; 2.2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\nRMSE: 5.06038     Adj. R2: 0.832467\n                Within R2: 0.410119\n\n\n\nInterpretation: Within a given country, every one unit increase in log(GDP) is associated with an average increase in life expectancy of 9.77 years.\n\nWe can also have more than one set of fixed effects. It is common to have multiple observations for a unit over time, so we can have fixed effects for both unit and time (indicator variables for each unit and indicators for each time period). This is called a two-way fixed effects (TWFE) model.\n\ngm_mod_twfe &lt;- feols(lifeExp ~ log(gdpPercap) | country + year, data = gm)\n# The cluster argument indicates that observations are clustered (correlated) within countries and within years\nsummary(gm_mod_twfe, cluster = ~ country+year)\n\nOLS estimation, Dep. Var.: lifeExp\nObservations: 1,704\nFixed-effects: country: 142,  year: 12\nStandard-errors: Clustered (country & year) \n               Estimate Std. Error t value Pr(&gt;|t|)    \nlog(gdpPercap)  1.44986   0.644125  2.2509 0.045818 *  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\nRMSE: 3.26675     Adj. R2: 0.929686\n                Within R2: 0.018593\n\n\n\nInterpretation: Within a given country and within a given year (separately), every one unit increase in log(GDP) is expected to increase life expectancy by 1.45 years.\n\nFor comparison purposes, let’s look at the results from using lm().\n\nWe see the same coefficient estimates.\nWe have lower standard errors with lm() because assuming all observations are independent is assuming that we have a lot more information than if some observations are correlated (as within a country).\n\n\ngm_mod_fe_lm &lt;- lm(lifeExp ~ log(gdpPercap) + country, data = gm)\ntidy(gm_mod_fe_lm) |&gt; \n    filter(str_detect(term, \"gdp\"))\n\n# A tibble: 1 × 5\n  term           estimate std.error statistic   p.value\n  &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 log(gdpPercap)     9.77     0.297      32.9 3.80e-181\n\ngm_mod_twfe_lm &lt;- lm(lifeExp ~ log(gdpPercap) + country + factor(year), data = gm)\ntidy(gm_mod_twfe_lm) |&gt; \n    filter(str_detect(term, \"gdp\"))\n\n# A tibble: 1 × 5\n  term           estimate std.error statistic      p.value\n  &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;\n1 log(gdpPercap)     1.45     0.268      5.42 0.0000000694\n\n\n\n\nRandom effects using lmer\nAnother approach to fitting fixed effects models is to fit what are known as random effects models. Here we don’t estimate\nA standard fixed effects model with one set of fixed effects for units can be written as:\n\\[\nY_{it} = \\beta_0 + b_i + \\beta X_{it} + \\epsilon_{it}\n\\]\nwhere\n\n\\(b_i\\) are independent random variables following a \\(\\text{Normal}(0, \\sigma_b^2)\\) distribution\n\\(X_{it}\\) is a set of covariates\n\\(\\epsilon_{it}\\) are independent random variables following a \\(\\text{Normal}(0, \\sigma_e^2)\\) distribution.\n\nKey points:\n\nEach observation from unit \\(i\\) share the same \\(b_i\\). This induces correlation between repeated observations from the same unit.\nThe individual \\(b_i\\)’s are not estimated. Only the variance of the normal distribution \\(\\sigma_b^2\\) is estimated. Estimating fewer parameters increases statistical power.\n\nWe can use the lmer() function in the lme4 package to estimate this random effects model. (In the statistical literature, such a model is called a mixed effects model.)\n\n# Model formula for one-way FEs: Y ~ (1|unit_var) + covariates\n# Model formula for two-way FEs: Y ~ (1|unit_var) + (1|time_var) + covariates\ngm_mod_re &lt;- lmer(lifeExp ~ (1|country) + (1|year) + log(gdpPercap), data = gm)\nsummary(gm_mod_re)\n\nLinear mixed model fit by REML ['lmerMod']\nFormula: lifeExp ~ (1 | country) + (1 | year) + log(gdpPercap)\n   Data: gm\n\nREML criterion at convergence: 9727.8\n\nScaled residuals: \n    Min      1Q  Median      3Q     Max \n-6.5735 -0.5559 -0.0012  0.5723  2.5075 \n\nRandom effects:\n Groups   Name        Variance Std.Dev.\n country  (Intercept) 75.35    8.680   \n year     (Intercept) 26.75    5.172   \n Residual             11.85    3.443   \nNumber of obs: 1704, groups:  country, 142; year, 12\n\nFixed effects:\n               Estimate Std. Error t value\n(Intercept)     38.8176     2.6135   14.85\nlog(gdpPercap)   2.5318     0.2471   10.25\n\nCorrelation of Fixed Effects:\n            (Intr)\nlg(gdpPrcp) -0.771\n\n\n\nInterpretation: Within a given country and within a given year (separately), a one unit increase in log(GDP) is expected to increase life expectancy by 2.53 years.\n\nNote that this estimate is different from our fixed effects models. Why?\nImportant note: The statistical formulation of a random effects model assumes that \\(b_i\\) (the unit specific effects) are independent of (and thus uncorrelated with) the covariates in the model.\n\nIn other words, this says that all the time-fixed covariates that go into a unit-specific effect \\(b_i\\) are unrelated to the other variables in our model.\n\nIn causal inference, the key other variable in our model is the treatment variable.\nSo in a random effects model, the unit-specific factors are assumed to be uncorrelated with other variables in our model, including treatment.\n\nIn this context, time-fixed covariates that likely affect life expectancy include country geography, climate, environment, …\n\nIn our random effects model, these covariates are assumed to be uncorrelated with GDP. This seems unlikely.\n\n\nThe last section of our textbook chapter discusses alterations to standard random effects models that can handle this.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Fixed Effects Models</span>"
+    ]
+  },
+  {
+    "objectID": "activities/13-fixed-effects.html#data-on-school-expenditures-and-student-outcomes",
+    "href": "activities/13-fixed-effects.html#data-on-school-expenditures-and-student-outcomes",
+    "title": "13  Fixed Effects Models",
+    "section": "Data on school expenditures and student outcomes",
+    "text": "Data on school expenditures and student outcomes\nResearch question: What is the effect of expenditures on math outcomes for 4th graders?\nWe have data across many school districts over multiple years. Focus on the following variables:\n\ndistid: the district identifier\nyear: the year the data is from\nmath4: the percentage of 4th grade students who are “satisfactory” or better in math (outcome)\nexpp: expenditure per pupil (treatment)\nlunch: the percentage of students eligible for free lunch (time-varying confounder as a proxy for district socioeconomic status)\n\n\nschool &lt;- read_csv(\"https://raw.githubusercontent.com/NickCH-K/TheEffectAssignments/refs/heads/main/mathpnl.csv\")\n\n# Make distid and year categorical\nschool &lt;- school %&gt;% \n    mutate(distid = factor(distid), year = factor(year))\n\nExercise:\n\nExplore the difference between lm() and feols() to fit two-way fixed effects models that address our research question.\nCompare results to a random effects model using lmer().",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Fixed Effects Models</span>"
+    ]
+  },
+  {
+    "objectID": "activities/14-did.html",
+    "href": "activities/14-did.html",
+    "title": "14  Difference-in-differences",
+    "section": "",
+    "text": "Investigation: superstitions and apartment pricing\nSlides for today are available here.\nYou can download a template file for this activity here.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Difference-in-differences</span>"
+    ]
+  },
+  {
+    "objectID": "activities/14-did.html#conceptual-investigation",
+    "href": "activities/14-did.html#conceptual-investigation",
+    "title": "14  Difference-in-differences",
+    "section": "Conceptual investigation",
+    "text": "Conceptual investigation\nRead the article Why do buildings skip the thirteenth floor?.\nThis is a slightly different application of the DiD design: how did the authors apply the difference-in-differences (DiD) framework to this setting?\nWhat are other ways that the authors could have estimated the causal effect of relabeling the 13th floor on apartment prices?",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Difference-in-differences</span>"
+    ]
+  },
+  {
+    "objectID": "activities/14-did.html#unpacking-the-analysis",
+    "href": "activities/14-did.html#unpacking-the-analysis",
+    "title": "14  Difference-in-differences",
+    "section": "Unpacking the analysis",
+    "text": "Unpacking the analysis\nThe data and code underlying the analysis in the article are available in this GitHub repository. We can read in the data as follows:\n\n# Load packages and read in data\nlibrary(tidyverse)\n\nnyc &lt;- read_csv(\"https://raw.githubusercontent.com/MadisonHardesty/13th-Floor/refs/heads/main/dataNYC.csv\")\n\n\nTake a look at the analysis code here to see the methods they used and how they were implemented.\nImplement your own DiD analysis using regression models (rather than the mean differences shown in the code).\nImplement a purely matching analysis (no DiD) to estimate the causal effect and compare to your DiD results.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Difference-in-differences</span>"
+    ]
+  },
+  {
+    "objectID": "activities/15-iv.html",
+    "href": "activities/15-iv.html",
+    "title": "15  Instrumental Variables",
+    "section": "",
+    "text": "Exercises\nSlides for today are available here.\nYou can download a template file for this activity here.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Instrumental Variables</span>"
+    ]
+  },
+  {
+    "objectID": "activities/15-iv.html#exercise-1",
+    "href": "activities/15-iv.html#exercise-1",
+    "title": "15  Instrumental Variables",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nIn health services research, the distance that one lives from a specialty care provider is often considered as an instrument. In particular, studies have looked at the causal effect of high-level vs low-level neonatal intensive care units (high vs. low level NICUs) on birth outcomes. (High vs. low is differentiated by the amount of technology available and number of babies delivered per year.)\nThe instrument used in this setting was a differential distance (excess travel time): travel time to the nearest high-level NICU minus travel time to the nearest low-level NICU. This instrument was binarized as follows:\n\n\\(IV = 1\\) if this excess travel time was ≤ 10 minutes\n\\(IV = 0\\) if this excess travel time was &gt; 10 minutes\n\nDistance to these health services is known to be a reflection of where mothers live which, in turn, is often a reflection of socioeconomic status indicators.\n\nBased on the context provided here, draw the underlying causal graph.\nBased on your graph, identify a conditioning set such that the instrument would be valid.\nLet’s consider if there might be other important variables missing from the graph.\n\nDo you think that there might be other variables that would make the unconfoundedness assumption not hold?\nDo you think that there might be other variables that would make the exclusion restriction assumption not hold?",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Instrumental Variables</span>"
+    ]
+  },
+  {
+    "objectID": "activities/15-iv.html#exercise-2",
+    "href": "activities/15-iv.html#exercise-2",
+    "title": "15  Instrumental Variables",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nConsider the following canonical causal graph for an IV design:\n\n\n\n\n\n\n\n\n\nSome analysts have believed that it is possible to perform a hypothesis test to test the exclusion restriction assumption with the regression Y ~ A + IV. Their rationale is that conditioning on A blocks the IV -&gt; A -&gt; Y path, and if IV and Y are still associated, there must be a direct path IV -&gt; Y.\nExplain why this reasoning is flawed.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Instrumental Variables</span>"
+    ]
+  },
+  {
+    "objectID": "activities/15-iv.html#exercise-3",
+    "href": "activities/15-iv.html#exercise-3",
+    "title": "15  Instrumental Variables",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nWhile randomized experiments are the gold standard for causal inference when everything runs perfectly, noncompliance can be an issue. Noncompliance occurs when an individual does not comply with the treatment that was randomly assigned.\nDraw a causal graph illustrating how the instrumental variables design can be applied in this situation.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Instrumental Variables</span>"
+    ]
+  },
+  {
+    "objectID": "activities/15-iv.html#exercise-4",
+    "href": "activities/15-iv.html#exercise-4",
+    "title": "15  Instrumental Variables",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nIn regression discontinuity designs (RDD), a sharp RDD is one in which being on one side of a cutoff results in a 100% chance of being treated. A fuzzy RDD is one in which the probability of treatment changes suddenly at the cutoff but not necessarily from 0 to 100%.\n\nDraw a causal graph illustrating or explain in words how the instrumental variables design can be applied for analyzing fuzzy RDDs.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Instrumental Variables</span>"
+    ]
+  },
+  {
+    "objectID": "activities/15-iv.html#exercise-5",
+    "href": "activities/15-iv.html#exercise-5",
+    "title": "15  Instrumental Variables",
+    "section": "Exercise 5",
+    "text": "Exercise 5\nLet’s take a look at simulated data to see how to fit a two-stage least squares model in an instrumental variable setting.\n\nFirst verify that sim_data1 and sim_data2 follow a canonical causal graph for an IV design shown in Exercise 2.\nHow do the 2 datasets differ in how strongly related the instrument is to the treatment?\nPull up the feols() documentation with ?feols to understand the formula syntax for the IV model.\nInterpreting the summary() output:\n\nThe “F-test (1st stage)” lines at the end of the output show results from a hypothesis test (an F-test) of the first stage IV model: the relationship between the instrument and the treatment. Larger values of the F-statistic indicate a stronger relationship between the instrument and the treatment and give stronger confidence that the ultimate treatment effect estimate will not be too variable or biased.\nThe actual treatment effect (the complier average causal effect) is displayed in the “Estimate” column of the coefficients table (row “fit_A”).\n\n\n\nlibrary(tidyverse)\nlibrary(fixest)\n\nset.seed(451)\nn &lt;- 5000\nsim_data1 &lt;- tibble(\n    IV = rbinom(n, size = 1, prob = 0.5),\n    U = rbinom(n, size = 1, prob = 0.5),\n    p_A = 0.1 + 0.05*IV + 0.3*U,\n    A = rbinom(n, size = 1, prob = p_A),\n    mean_Y = 10 + 3*U + 2*A,\n    noise_Y = rnorm(n, 0, 2),\n    Y = mean_Y + noise_Y\n)\n\nm1 &lt;- feols(Y ~ 1 | A ~ IV, data = sim_data1)\nsummary(m1)\n\nsim_data2 &lt;- tibble(\n    IV = rbinom(n, size = 1, prob = 0.5),\n    U = rbinom(n, size = 1, prob = 0.5),\n    p_A = 0.1 + 0.2*IV + 0.3*U,\n    A = rbinom(n, size = 1, prob = p_A),\n    mean_Y = 10 + 3*U + 2*A,\n    noise_Y = rnorm(n, 0, 2),\n    Y = mean_Y + noise_Y\n)\n\nm2 &lt;- feols(Y ~ 1 | A ~ IV, data = sim_data2)\nsummary(m2)\n\nNow take a look at the results of a simulation study where we use the same data-generating processes as above and compare the estimates and the standard errors. Summarize your findings from this simulation study, and explain why stronger instruments are preferred.\n\nset.seed(451)\nsim_results &lt;- purrr::map(1:100, function(i) {\n    n &lt;- 5000\n    sim_data1 &lt;- tibble(\n        IV = rbinom(n, size = 1, prob = 0.5),\n        U = rbinom(n, size = 1, prob = 0.5),\n        p_A = 0.1 + 0.05*IV + 0.3*U,\n        A = rbinom(n, size = 1, prob = p_A),\n        mean_Y = 10 + 3*U + 2*A,\n        noise_Y = rnorm(n, 0, 2),\n        Y = mean_Y + noise_Y\n    )\n    \n    m1 &lt;- feols(Y ~ 1 | A ~ IV, data = sim_data1)\n    \n    sim_data2 &lt;- tibble(\n        IV = rbinom(n, size = 1, prob = 0.5),\n        U = rbinom(n, size = 1, prob = 0.5),\n        p_A = 0.1 + 0.2*IV + 0.3*U,\n        A = rbinom(n, size = 1, prob = p_A),\n        mean_Y = 10 + 3*U + 2*A,\n        noise_Y = rnorm(n, 0, 2),\n        Y = mean_Y + noise_Y\n    )\n    \n    m2 &lt;- feols(Y ~ 1 | A ~ IV, data = sim_data2)\n    \n    tibble(\n        estimate = c(m1$coeftable[[\"Estimate\"]][2], m2$coeftable[[\"Estimate\"]][2]),\n        se = c(m1$coeftable[[\"Std. Error\"]][2], m2$coeftable[[\"Std. Error\"]][2]),\n        dataset = c(\"Weak IV\", \"Strong IV\")\n    )\n}) |&gt; bind_rows()\n\nggplot(sim_results, aes(x = dataset, y = estimate)) +\n    geom_boxplot() + \n    geom_hline(yintercept = 2) +\n    theme_classic()\nggplot(sim_results, aes(x = dataset, y = se)) +\n    geom_boxplot() + \n    theme_classic()",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Instrumental Variables</span>"
     ]
   },
   {
@@ -1679,83 +1877,6 @@
     "crumbs": [
       "Appendices",
       "R Resources"
-    ]
-  },
-  {
-    "objectID": "logistics/oral_discussion.html#options",
-    "href": "logistics/oral_discussion.html#options",
-    "title": "Oral Discussion",
-    "section": "Options",
-    "text": "Options\nYou can tailor this discussion to a context that would be most useful for you. Please share any requests for tailoring 1 week in advance of your discussion.\n\nYou can pick a different data context.\nYou can ask me to take the role of someone with a different level of expertise. (e.g., an interviewer at a company you’d like to work at, a professor in a department related to the data context, etc.)",
-    "crumbs": [
-      "Course Logistics",
-      "Oral Discussion"
-    ]
-  },
-  {
-    "objectID": "logistics/oral_discussion.html#details",
-    "href": "logistics/oral_discussion.html#details",
-    "title": "Oral Discussion",
-    "section": "Details",
-    "text": "Details\nThe discussion will start with this:\n“My supervisor wants me to evaluate whether usage of the Hamre Center leads to increased perceptions of support at Mac. We have data on a yearly survey that goes out to the student body that asks a bunch of different things—like what resources on campus do they use, what are their opinions of different parts of campus and academic life. I need help thinking through how to do this. My supervisor is open to using other sources of data too or collecting data differently.”\nSome follow-up questions that I will likely ask:\n\n“So that is a method that will allow me to prove whether or not the Hamre Center causes increased feelings of support?”\n“How do I know that I’ve accounted for everything that I need to?”\n“I’m worried about messing up the analysis. What do I need to watch out for?”",
-    "crumbs": [
-      "Course Logistics",
-      "Oral Discussion"
-    ]
-  },
-  {
-    "objectID": "logistics/project.html#paper",
-    "href": "logistics/project.html#paper",
-    "title": "Project",
-    "section": "Paper",
-    "text": "Paper\n\nFormat (data analysis option): Your paper should resemble an academic journal article and have the following sections:\n\nIntroduction:\n\nConduct a literature review using at least 3 sources. This literature review should provide necessary background for your investigation and explain how your work provides new understanding.\n\nData and Methods:\n\nDescribe the context behind and contents of your data. (Examine who, what, when, where, why, and how questions)\nDescribe any data cleaning and/or processing that you performed.\nShow the causal graph that you use to identify what variables need to be included in the analysis. Discuss key decision points in your causal graph construction.\nDescribe the statistical analyses performed. This should include modeling to estimate treatment effects as well as placebo tests and/or sensitivity analyses.\n\nResults:\n\nInterpret causal effect estimates in context, being careful to note the particular estimand that was targeted.\nInterpret measures of uncertainty (confidence intervals and/or p-values).\nDiscuss results from placebo tests and/or sensitivity analyses.\n\nDiscussion:\n\nSummarize key results and the extent to which they were what you expected or were surprising.\nDiscuss limitations of the analysis in terms of data quality, scope of the analysis, and generalizability.\nDiscuss concrete future directions for the project.\n\n\nFormat (advanced topic option): Your paper should resemble a textbook chapter and have the following general structure:\n\nIntroduction:\n\nGive an overview of the method/topic and its importance in causal inference.\nHow does this method/topic relate to topics that we have covered in class?\n\nSubsequent sections: These sections should correspond to key concepts for this topic. Each section should explain a concept and show examples.\nConclusion:\n\nSummarize when researchers would want to use this method/topic in their own work.\nDiscuss the limitations of this tutorial paper in terms of scope. e.g., “We did discuss concepts X, Y, and Z in this tutorial, but important subareas within this topic include A, B, and C (include citations to relevant articles where readers can learn more).”\n\n\nBibliography: In-text citations and references should follow the APA format.",
-    "crumbs": [
-      "Course Logistics",
-      "Project"
-    ]
-  },
-  {
-    "objectID": "logistics/project.html#presentation",
-    "href": "logistics/project.html#presentation",
-    "title": "Project",
-    "section": "Presentation",
-    "text": "Presentation\n\nFormat TBD. Options include (1) in-class presentations that are 10-12 minutes long with 2-5 minutes for questions\nDecision will depend on how many groups there are and what we decide is the best option",
-    "crumbs": [
-      "Course Logistics",
-      "Project"
-    ]
-  },
-  {
-    "objectID": "logistics/project.html#synthesis-session",
-    "href": "logistics/project.html#synthesis-session",
-    "title": "Project",
-    "section": "Synthesis session",
-    "text": "Synthesis session\nWhen? During our final exam slot on Wednesday, December 16, 10:30am-12:30pm\n\nCome prepared to share reflections on working on the project.\nWhat did you learn?\nWhat were some of the highs and lows of the project?\nWhat was (unexpectedly) challenging? How did you overcome those challenges?\nWhat do you want to remember/take with you from this experience?",
-    "crumbs": [
-      "Course Logistics",
-      "Project"
-    ]
-  },
-  {
-    "objectID": "logistics/project.html#milestone-1",
-    "href": "logistics/project.html#milestone-1",
-    "title": "Project",
-    "section": "Milestone 1",
-    "text": "Milestone 1\nDue date: Friday, November 13 at midnight\nAs part of this milestone, you will pick a project option, pick a specific topic, and form a group (if not working alone).\nYou will submit a short write-up that varies by project option. (No page length requirements—just convey the information that you need to.)\n\nData analysis option: You will write a draft of the Introduction, Data, and Methods sections of your paper.\n\nIntroduction: Give background for your topic, including relevant theory, domain knowledge, and prior research. Incorporate findings from at least 3 journal articles.\nData: Describe the data that you have and how it was collected. Include any limitations or cautions that are important to keep in mind about the data. Think about the who, what, when, where, why, and how behind your data to inform your discussion in this section.\nMethods: Write a detailed plan for the analyses that you will conduct. This part can be written in bullet points.\n\nAdvanced topic option: Your final paper will be structured as a tutorial, and for this milestone, you’ll make progress towards writing this tutorial.\n\nIntroduce the big idea behind this topic. Make connections between your topic and the topics we covered in class so that others can have a better sense of how this topic fits into the field of causal inference.\nExplain 1 idea that you learned from your research so far. Include a citation to at least 1 journal article.\nWrite a plan for your remaining research. Describe the ideas are you planning to learn in the remaining time. Describe a simulation study that you will perform to explore some of the theory behind your topic.",
-    "crumbs": [
-      "Course Logistics",
-      "Project"
-    ]
-  },
-  {
-    "objectID": "logistics/project.html#milestone-2",
-    "href": "logistics/project.html#milestone-2",
-    "title": "Project",
-    "section": "Milestone 2",
-    "text": "Milestone 2\nDue date: Tuesday, November 24 at midnight\nFor both the data analysis and advanced topic options:\n\nConduct analyses according to your Milestone 1 plan as well as updates to your plan based on instructor feedback\nSubmit a rendered HTML of your analyses and interpretations.",
-    "crumbs": [
-      "Course Logistics",
-      "Project"
     ]
   }
 ]

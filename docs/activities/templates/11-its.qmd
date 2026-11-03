@@ -1,5 +1,5 @@
 ---
-title: "Interrupted time series designs"
+title: "Interrupted Time Series Designs"
 author: "YOUR NAME"
 format: 
   html:

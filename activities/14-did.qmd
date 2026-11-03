@@ -1,0 +1,37 @@
+---
+title: "Difference-in-differences"
+eval: false
+---
+
+Slides for today are available [here](https://docs.google.com/presentation/d/1yDIWubkGXB7WAhnFIno2T2MtJ0gvfql-clTenpf5IAg/edit?usp=sharing).
+
+<br>
+
+**You can download a template file for this activity [here](templates/14-did.qmd).**
+
+# Investigation: superstitions and apartment pricing {.unnumbered}
+
+## Conceptual investigation {.unnumbered}
+
+Read the article [Why do buildings skip the thirteenth floor?](https://academic.oup.com/jrssig/article/21/2/16/7641894).
+
+This is a slightly different application of the DiD design: how did the authors apply the difference-in-differences (DiD) framework to this setting?
+
+What are other ways that the authors could have estimated the causal effect of relabeling the 13th floor on apartment prices?
+
+## Unpacking the analysis {.unnumbered}
+
+The data and code underlying the analysis in the article are available in [this GitHub repository](https://github.com/MadisonHardesty/13th-Floor). We can read in the data as follows:
+
+```{r}
+# Load packages and read in data
+library(tidyverse)
+
+nyc <- read_csv("https://raw.githubusercontent.com/MadisonHardesty/13th-Floor/refs/heads/main/dataNYC.csv")
+```
+
+- Take a look at the analysis code [here](https://github.com/MadisonHardesty/13th-Floor/blob/main/13th_Floor_Analysis.Rmd) to see the methods they used and how they were implemented.
+
+- Implement your own DiD analysis using regression models (rather than the mean differences shown in the code).
+
+- Implement a purely matching analysis (no DiD) to estimate the causal effect and compare to your DiD results.

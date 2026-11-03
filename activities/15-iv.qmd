@@ -1,0 +1,179 @@
+---
+title: "Instrumental Variables"
+eval: FALSE
+---
+
+Slides for today are available [here](https://docs.google.com/presentation/d/1rcuFKg7WhwKC5UJA_MZ4fBTdpgYa3qhEX8Fi6GJ8Jt4/edit?usp=sharing).
+
+<br>
+
+**You can download a template file for this activity [here](templates/15-iv.qmd).**
+
+
+# Exercises {.unnumbered}
+
+## Exercise 1 {.unnumbered}
+
+In health services research, the distance that one lives from a specialty care provider is often considered as an instrument. In particular, studies have looked at the causal effect of high-level vs low-level neonatal intensive care units (high vs. low level NICUs) on birth outcomes. (High vs. low is differentiated by the amount of technology available and number of babies delivered per year.)
+
+The instrument used in this setting was a *differential distance (excess travel time)*: travel time to the nearest high-level NICU *minus* travel time to the nearest low-level NICU. This instrument was binarized as follows:
+
+- $IV = 1$ if this excess travel time was ≤ 10 minutes
+- $IV = 0$ if this excess travel time was > 10 minutes
+
+Distance to these health services is known to be a reflection of where mothers live which, in turn, is often a reflection of socioeconomic status indicators.
+
+a. Based on the context provided here, draw the underlying causal graph.
+
+b. Based on your graph, identify a conditioning set such that the instrument would be valid.
+
+c. Let's consider if there might be other important variables missing from the graph.
+    - Do you think that there might be other variables that would make the unconfoundedness assumption not hold?
+    - Do you think that there might be other variables that would make the exclusion restriction assumption not hold?
+
+
+
+
+
+## Exercise 2 {.unnumbered}
+
+Consider the following canonical causal graph for an IV design:
+
+```{r eval=TRUE, echo=FALSE}
+library(dagitty)
+dag <- dagitty('
+dag {
+bb="0,0,1,1"
+A [exposure,pos="0.264,0.498"]
+IV [pos="0.115,0.294"]
+U [latent,pos="0.456,0.220"]
+Y [outcome,pos="0.657,0.494"]
+A -> Y
+IV -> A
+U -> A
+U -> Y
+}
+')
+plot(dag)
+```
+
+
+Some analysts have believed that it is possible to perform a hypothesis test to test the exclusion restriction assumption with the regression `Y ~ A + IV`. Their rationale is that conditioning on A blocks the `IV -> A -> Y` path, and if IV and Y are still associated, there must be a direct path `IV -> Y`.
+
+Explain why this reasoning is flawed.
+
+
+
+
+
+## Exercise 3 {.unnumbered}
+
+While randomized experiments are the gold standard for causal inference when everything runs perfectly, **noncompliance** can be an issue. Noncompliance occurs when an individual does not comply with the treatment that was randomly assigned.
+
+Draw a causal graph illustrating how the instrumental variables design can be applied in this situation.
+
+
+
+
+
+## Exercise 4 {.unnumbered}
+
+In regression discontinuity designs (RDD), a sharp RDD is one in which being on one side of a cutoff results in a 100% chance of being treated. A fuzzy RDD is one in which the probability of treatment changes suddenly at the cutoff but not necessarily from 0 to 100%.
+
+![](https://www.theeffectbook.net/the-effect_files/figure-html/regressiondiscontinuity-treatmentshare-1.png){fig-alt="Difference betwen sharp and fuzzy regression discontinuity designs. Both panels show the proportion treated as a function of the cutoff."}
+
+Draw a causal graph illustrating or explain in words how the instrumental variables design can be applied for analyzing fuzzy RDDs.
+
+
+
+## Exercise 5 {.unnumbered}
+
+Let's take a look at simulated data to see how to fit a two-stage least squares model in an instrumental variable setting.
+
+- First verify that `sim_data1` and `sim_data2` follow a canonical causal graph for an IV design shown in Exercise 2.
+- How do the 2 datasets differ in how strongly related the instrument is to the treatment?
+- Pull up the `feols()` documentation with `?feols` to understand the formula syntax for the IV model.
+- Interpreting the `summary()` output:
+    - The "F-test (1st stage)" lines at the end of the output show results from a hypothesis test (an F-test) of the first stage IV model: the relationship between the instrument and the treatment. Larger values of the F-statistic indicate a stronger relationship between the instrument and the treatment and give stronger confidence that the ultimate treatment effect estimate will not be too variable or biased.
+    - The actual treatment effect (the complier average causal effect) is displayed in the "Estimate" column of the coefficients table (row "fit_A").
+
+```{r}
+library(tidyverse)
+library(fixest)
+
+set.seed(451)
+n <- 5000
+sim_data1 <- tibble(
+    IV = rbinom(n, size = 1, prob = 0.5),
+    U = rbinom(n, size = 1, prob = 0.5),
+    p_A = 0.1 + 0.05*IV + 0.3*U,
+    A = rbinom(n, size = 1, prob = p_A),
+    mean_Y = 10 + 3*U + 2*A,
+    noise_Y = rnorm(n, 0, 2),
+    Y = mean_Y + noise_Y
+)
+
+m1 <- feols(Y ~ 1 | A ~ IV, data = sim_data1)
+summary(m1)
+
+sim_data2 <- tibble(
+    IV = rbinom(n, size = 1, prob = 0.5),
+    U = rbinom(n, size = 1, prob = 0.5),
+    p_A = 0.1 + 0.2*IV + 0.3*U,
+    A = rbinom(n, size = 1, prob = p_A),
+    mean_Y = 10 + 3*U + 2*A,
+    noise_Y = rnorm(n, 0, 2),
+    Y = mean_Y + noise_Y
+)
+
+m2 <- feols(Y ~ 1 | A ~ IV, data = sim_data2)
+summary(m2)
+```
+
+Now take a look at the results of a simulation study where we use the same data-generating processes as above and compare the estimates and the standard errors. Summarize your findings from this simulation study, and explain why stronger instruments are preferred.
+
+```{r}
+set.seed(451)
+sim_results <- purrr::map(1:100, function(i) {
+    n <- 5000
+    sim_data1 <- tibble(
+        IV = rbinom(n, size = 1, prob = 0.5),
+        U = rbinom(n, size = 1, prob = 0.5),
+        p_A = 0.1 + 0.05*IV + 0.3*U,
+        A = rbinom(n, size = 1, prob = p_A),
+        mean_Y = 10 + 3*U + 2*A,
+        noise_Y = rnorm(n, 0, 2),
+        Y = mean_Y + noise_Y
+    )
+    
+    m1 <- feols(Y ~ 1 | A ~ IV, data = sim_data1)
+    
+    sim_data2 <- tibble(
+        IV = rbinom(n, size = 1, prob = 0.5),
+        U = rbinom(n, size = 1, prob = 0.5),
+        p_A = 0.1 + 0.2*IV + 0.3*U,
+        A = rbinom(n, size = 1, prob = p_A),
+        mean_Y = 10 + 3*U + 2*A,
+        noise_Y = rnorm(n, 0, 2),
+        Y = mean_Y + noise_Y
+    )
+    
+    m2 <- feols(Y ~ 1 | A ~ IV, data = sim_data2)
+    
+    tibble(
+        estimate = c(m1$coeftable[["Estimate"]][2], m2$coeftable[["Estimate"]][2]),
+        se = c(m1$coeftable[["Std. Error"]][2], m2$coeftable[["Std. Error"]][2]),
+        dataset = c("Weak IV", "Strong IV")
+    )
+}) |> bind_rows()
+
+ggplot(sim_results, aes(x = dataset, y = estimate)) +
+    geom_boxplot() + 
+    geom_hline(yintercept = 2) +
+    theme_classic()
+ggplot(sim_results, aes(x = dataset, y = se)) +
+    geom_boxplot() + 
+    theme_classic()
+```
+
+
